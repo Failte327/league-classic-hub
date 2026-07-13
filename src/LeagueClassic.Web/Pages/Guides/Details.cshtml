@@ -8,6 +8,10 @@
 
 <article class="guide-view">
     <header class="guide-header">
+        @if (Model.Guide.Champion?.Slug is not null)
+        {
+            <div class="guide-bg" style="background-image:url('/assets/splash/@(Model.Guide.Champion.Slug).jpg')"></div>
+        }
         @if (Model.Guide.Champion?.IconPath is not null)
         {
             <img src="~/@Model.Guide.Champion.IconPath" alt="@Model.Guide.Champion.Name" class="champ-icon-lg" />

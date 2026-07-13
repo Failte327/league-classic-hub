@@ -12,9 +12,18 @@ public class IndexModel : PageModel
 
     public List<Guide> LatestGuides { get; private set; } = new();
     public List<ForumThread> LatestThreads { get; private set; } = new();
+    public string? HeroSplash { get; private set; }
 
     public async Task OnGetAsync()
     {
+        // A rotating featured champion splash behind the welcome text.
+        var splashSlugs = await _db.Champions
+            .Where(c => c.IsAvailable)
+            .Select(c => c.Slug)
+            .ToListAsync();
+        if (splashSlugs.Count > 0)
+            HeroSplash = $"assets/splash/{splashSlugs[Random.Shared.Next(splashSlugs.Count)]}.jpg";
+
         LatestGuides = await _db.Guides
             .Where(g => g.Status == GuideStatus.Published)
             .Include(g => g.Champion)

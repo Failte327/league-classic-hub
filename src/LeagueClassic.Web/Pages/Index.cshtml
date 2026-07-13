@@ -5,6 +5,10 @@
 }
 
 <section class="hero">
+    @if (Model.HeroSplash is not null)
+    {
+        <div class="hero-bg" style="background-image:url('/@Model.HeroSplash')"></div>
+    }
     <h1>Welcome, Summoners!</h1>
     <p class="hero-lede">
         Welcome to League Classic Hub, a sanctuary for weary Summoners after a long day

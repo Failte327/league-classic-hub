@@ -279,9 +279,21 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 
 /* Guide view */
 .guide-view { background: var(--panel); border: 1px solid var(--line); padding: 16px 20px; }
-.guide-header { display: flex; gap: 14px; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 12px; }
-.guide-header h1 { margin: 0; }
-.guide-meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
+.guide-header {
+    position: relative; overflow: hidden;
+    display: flex; gap: 16px; align-items: center;
+    margin: -16px -20px 16px; padding: 22px 20px;
+    border-bottom: 3px solid var(--gold);
+}
+.guide-header > * { position: relative; z-index: 1; }
+.guide-bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center 25%; }
+.guide-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(8,16,30,.9) 0%, rgba(8,16,30,.68) 60%, rgba(8,16,30,.5) 100%);
+}
+.guide-header h1 { margin: 0; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
+.guide-header .champ-icon-lg { border-color: var(--gold); box-shadow: 0 2px 8px rgba(0,0,0,.5); }
+.guide-meta { color: #cdd9e6; font-size: 12px; margin-top: 4px; }
 .badge-draft { background: #999; color: #fff; padding: 1px 6px; font-size: 10px; text-transform: uppercase; }
 .loadout { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 12px; }
 .loadout-block { margin-bottom: 12px; }
@@ -314,11 +326,22 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 
 /* ============================ Home page ============================ */
 .hero {
+    position: relative; overflow: hidden;
     background: linear-gradient(180deg, #0a2647 0%, #0e2f52 100%);
     border: 1px solid #0a1a2e; border-top: 3px solid var(--gold);
-    padding: 30px 34px; margin-bottom: 20px;
+    padding: 34px 38px; margin-bottom: 20px;
 }
-.hero h1 { color: var(--gold); font-size: 30px; margin: 0 0 10px; }
+.hero > * { position: relative; z-index: 1; }
+.hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background-size: cover; background-position: center 22%;
+}
+/* Darken toward the left so the welcome text stays readable over the splash. */
+.hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(8,16,30,.96) 0%, rgba(8,16,30,.82) 42%, rgba(8,16,30,.45) 100%);
+}
+.hero h1 { color: var(--gold); font-size: 30px; margin: 0 0 10px; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
 .hero-lede { color: #d5e0ec; font-size: 16px; max-width: 900px; margin: 0 0 18px; line-height: 1.7; }
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-cta .btn-primary, .hero-cta .btn-plain { padding: 11px 22px; font-size: 14px; }
