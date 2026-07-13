@@ -41,6 +41,7 @@ builder.Services.AddOutputCache(options =>
 });
 
 builder.Services.AddSingleton<MarkdownRenderer>();
+builder.Services.AddScoped<GuideEditorService>();
 
 var app = builder.Build();
 

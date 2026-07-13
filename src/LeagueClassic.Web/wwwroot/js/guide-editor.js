@@ -32,6 +32,11 @@
     const skillInput = document.getElementById('skill-order');
     const ABILITIES = ['Q', 'W', 'E', 'R'];
     const LEVELS = 18;
+    // Per-champion ability names/icons injected by the page.
+    let abilityInfo = {};
+    try {
+        abilityInfo = JSON.parse(document.getElementById('champ-abilities').textContent);
+    } catch (e) { /* fall back to bare Q/W/E/R labels */ }
     const R_LEVELS = new Set([6, 11, 16]); // 1-based levels R is allowed
     const levelState = {}; // level(1..18) -> ability letter
 
@@ -56,7 +61,22 @@
             const tr = document.createElement('tr');
             const label = document.createElement('th');
             label.className = 'ab-label ab-' + ab;
-            label.textContent = ab;
+            const info = abilityInfo[ab];
+            if (info) {
+                label.title = info.name;
+                if (info.icon) {
+                    const img = document.createElement('img');
+                    img.src = '/' + info.icon;
+                    img.alt = info.name;
+                    label.appendChild(img);
+                }
+                const key = document.createElement('span');
+                key.className = 'slot-key slot-' + ab;
+                key.textContent = ab;
+                label.appendChild(key);
+            } else {
+                label.textContent = ab;
+            }
             tr.appendChild(label);
             for (let lvl = 1; lvl <= LEVELS; lvl++) {
                 const td = document.createElement('td');
@@ -142,6 +162,22 @@
         build.splice(Number(chip.dataset.idx), 1);
         renderBuild();
     });
+
+    // pre-populate from an existing guide (edit mode)
+    try {
+        const init = JSON.parse(document.getElementById('initial-state').textContent);
+        if (init) {
+            if (Array.isArray(init.spells)) selectedSpells = init.spells.slice(0, 2).map(Number);
+            if (Array.isArray(init.build))
+                build = init.build.map(b => ({ id: Number(b.id), name: b.name, icon: b.icon }));
+            if (typeof init.skill === 'string' && init.skill) {
+                init.skill.split(',').forEach((slot, i) => {
+                    const s = slot.trim().toUpperCase();
+                    if (['Q', 'W', 'E', 'R'].includes(s)) levelState[i + 1] = s;
+                });
+            }
+        }
+    } catch (e) { /* create mode — nothing to restore */ }
 
     // init
     buildGrid();

@@ -17,6 +17,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Guide> Guides => Set<Guide>();
     public DbSet<Comment> Comments => Set<Comment>();
     public DbSet<Champion> Champions => Set<Champion>();
+    public DbSet<ChampionAbility> ChampionAbilities => Set<ChampionAbility>();
     public DbSet<Item> Items => Set<Item>();
     public DbSet<SummonerSpell> SummonerSpells => Set<SummonerSpell>();
     public DbSet<GuideItem> GuideItems => Set<GuideItem>();
@@ -102,6 +103,17 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             e.HasIndex(c => c.Slug).IsUnique();
             e.Property(c => c.Name).HasMaxLength(60);
             e.Property(c => c.Slug).HasMaxLength(60);
+        });
+
+        builder.Entity<ChampionAbility>(e =>
+        {
+            e.HasIndex(a => new { a.ChampionId, a.Slot });
+            e.Property(a => a.Slot).HasMaxLength(1);
+            e.Property(a => a.Name).HasMaxLength(80);
+            e.HasOne(a => a.Champion)
+                .WithMany(c => c.Abilities)
+                .HasForeignKey(a => a.ChampionId)
+                .OnDelete(DeleteBehavior.Cascade);
         });
 
         builder.Entity<Item>(e =>

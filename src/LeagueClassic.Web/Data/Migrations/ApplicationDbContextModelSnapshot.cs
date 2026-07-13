@@ -199,6 +199,37 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.ToTable("Champions");
                 });
 
+            modelBuilder.Entity("LeagueClassic.Web.Data.ChampionAbility", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChampionId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("IconPath")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.Property<string>("Slot")
+                        .IsRequired()
+                        .HasMaxLength(1)
+                        .HasColumnType("character varying(1)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChampionId", "Slot");
+
+                    b.ToTable("ChampionAbilities");
+                });
+
             modelBuilder.Entity("LeagueClassic.Web.Data.Comment", b =>
                 {
                     b.Property<int>("Id")
@@ -615,6 +646,17 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("LeagueClassic.Web.Data.ChampionAbility", b =>
+                {
+                    b.HasOne("LeagueClassic.Web.Data.Champion", "Champion")
+                        .WithMany("Abilities")
+                        .HasForeignKey("ChampionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Champion");
+                });
+
             modelBuilder.Entity("LeagueClassic.Web.Data.Comment", b =>
                 {
                     b.HasOne("LeagueClassic.Web.Data.ApplicationUser", "Author")
@@ -779,6 +821,11 @@ namespace LeagueClassic.Web.Data.Migrations
             modelBuilder.Entity("LeagueClassic.Web.Data.Category", b =>
                 {
                     b.Navigation("Boards");
+                });
+
+            modelBuilder.Entity("LeagueClassic.Web.Data.Champion", b =>
+                {
+                    b.Navigation("Abilities");
                 });
 
             modelBuilder.Entity("LeagueClassic.Web.Data.ForumThread", b =>

@@ -24,6 +24,16 @@
                 }
             </div>
         </div>
+        @if (Model.CanEdit)
+        {
+            <div class="owner-actions">
+                <a class="mini-btn" asp-page="/Guides/Edit" asp-route-id="@Model.Guide.Id">Edit</a>
+                <form method="post" asp-page="/Guides/Mine" asp-page-handler="Delete" asp-route-id="@Model.Guide.Id"
+                      onsubmit="return confirm('Delete this guide? This cannot be undone.');">
+                    <button type="submit" class="mini-btn danger">Delete</button>
+                </form>
+            </div>
+        }
     </header>
 
     <div class="loadout">
@@ -63,6 +73,30 @@
         }
     </div>
 
+    <!-- Abilities overview -->
+    @if (Model.AbilityBySlot.Count > 0)
+    {
+        <div class="loadout-block">
+            <h3>Abilities</h3>
+            <div class="ability-bar">
+                @foreach (var slot in new[] { "P", "Q", "W", "E", "R" })
+                {
+                    if (Model.AbilityBySlot.TryGetValue(slot, out var ab))
+                    {
+                        <span class="ability-chip" title="@ab.Name">
+                            <span class="slot-key slot-@slot">@slot</span>
+                            @if (ab.IconPath is not null)
+                            {
+                                <img src="~/@ab.IconPath" alt="@ab.Name" />
+                            }
+                            <span class="ability-name">@ab.Name</span>
+                        </span>
+                    }
+                }
+            </div>
+        </div>
+    }
+
     <!-- Skill order -->
     @if (Model.SkillLevels.Count > 0)
     {
@@ -81,8 +115,15 @@
                 <tbody>
                     @foreach (var ab in abilities)
                     {
+                        Model.AbilityBySlot.TryGetValue(ab, out var info);
                         <tr>
-                            <th class="ab-label ab-@ab">@ab</th>
+                            <th class="ab-label ab-@ab" title="@info?.Name">
+                                @if (info?.IconPath is not null)
+                                {
+                                    <img src="~/@info.IconPath" alt="@info.Name" />
+                                }
+                                <span class="slot-key slot-@ab">@ab</span>
+                            </th>
                             @for (var i = 0; i < Model.SkillLevels.Count; i++)
                             {
                                 var on = Model.SkillLevels[i] == ab;

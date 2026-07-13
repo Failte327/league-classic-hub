@@ -1,0 +1,22 @@
+@page "{id:int}"
+@model LeagueClassic.Web.Pages.Guides.EditModel
+@{
+    ViewData["Title"] = Model.Vm.Heading;
+}
+
+<div class="page-head">
+    <h1 class="compose-title">
+        @if (Model.Vm.Champion.IconPath is not null)
+        {
+            <img src="~/@Model.Vm.Champion.IconPath" alt="@Model.Vm.Champion.Name" class="champ-icon-md" />
+        }
+        Editing <span>@Model.Vm.Champion.Name</span> guide
+    </h1>
+    <a class="btn-plain" asp-page="/Guides/Mine">&larr; My guides</a>
+</div>
+
+<partial name="_EditorForm" model="Model.Vm" />
+
+@section Scripts {
+    <script src="~/js/guide-editor.js" asp-append-version="true"></script>
+}

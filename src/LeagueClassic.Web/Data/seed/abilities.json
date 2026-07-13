@@ -1,0 +1,2042 @@
+[
+ {
+  "champ": "ahri",
+  "slot": "P",
+  "name": "Essence Theft",
+  "icon": "assets/abilities/ahri/passive.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "Q",
+  "name": "Orb of Deception",
+  "icon": "assets/abilities/ahri/q.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "W",
+  "name": "Fox-Fire",
+  "icon": "assets/abilities/ahri/w.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "E",
+  "name": "Charm",
+  "icon": "assets/abilities/ahri/e.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "R",
+  "name": "Spirit Rush",
+  "icon": "assets/abilities/ahri/r.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "P",
+  "name": "Trample",
+  "icon": "assets/abilities/alistar/passive.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "Q",
+  "name": "Pulverize",
+  "icon": "assets/abilities/alistar/q.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "W",
+  "name": "Headbutt",
+  "icon": "assets/abilities/alistar/w.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "E",
+  "name": "Triumphant Roar",
+  "icon": "assets/abilities/alistar/e.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "R",
+  "name": "Unbreakable Will",
+  "icon": "assets/abilities/alistar/r.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "P",
+  "name": "Cursed Touch",
+  "icon": "assets/abilities/amumu/passive.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "Q",
+  "name": "Bandage Toss",
+  "icon": "assets/abilities/amumu/q.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "W",
+  "name": "Despair",
+  "icon": "assets/abilities/amumu/w.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "E",
+  "name": "Tantrum",
+  "icon": "assets/abilities/amumu/e.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "R",
+  "name": "Curse of the Sad Mummy",
+  "icon": "assets/abilities/amumu/r.png"
+ },
+ {
+  "champ": "anivia",
+  "slot": "P",
+  "name": "Rebirth",
+  "icon": "assets/abilities/anivia/passive.png"
+ },
+ {
+  "champ": "anivia",
+  "slot": "Q",
+  "name": "Flash Frost",
+  "icon": "assets/abilities/anivia/q.png"
+ },
+ {
+  "champ": "anivia",
+  "slot": "W",
+  "name": "Crystallize",
+  "icon": "assets/abilities/anivia/w.png"
+ },
+ {
+  "champ": "anivia",
+  "slot": "E",
+  "name": "Frostbite",
+  "icon": "assets/abilities/anivia/e.png"
+ },
+ {
+  "champ": "anivia",
+  "slot": "R",
+  "name": "Glacial Storm",
+  "icon": "assets/abilities/anivia/r.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "P",
+  "name": "Pyromania",
+  "icon": "assets/abilities/annie/passive.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "Q",
+  "name": "Disintegrate",
+  "icon": "assets/abilities/annie/q.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "W",
+  "name": "Incinerate",
+  "icon": "assets/abilities/annie/w.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "E",
+  "name": "Molten Shield",
+  "icon": "assets/abilities/annie/e.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "R",
+  "name": "Summon: Tibbers",
+  "icon": "assets/abilities/annie/r.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "P",
+  "name": "Focus",
+  "icon": "assets/abilities/ashe/passive.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "Q",
+  "name": "Frost Shot",
+  "icon": "assets/abilities/ashe/q.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "W",
+  "name": "Volley",
+  "icon": "assets/abilities/ashe/w.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "E",
+  "name": "Hawkshot",
+  "icon": "assets/abilities/ashe/e.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "R",
+  "name": "Enchanted Crystal Arrow",
+  "icon": "assets/abilities/ashe/r.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "P",
+  "name": "Mana Barrier",
+  "icon": "assets/abilities/blitzcrank/passive.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "Q",
+  "name": "Rocket Grab",
+  "icon": "assets/abilities/blitzcrank/q.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "W",
+  "name": "Overdrive",
+  "icon": "assets/abilities/blitzcrank/w.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "E",
+  "name": "Power Fist",
+  "icon": "assets/abilities/blitzcrank/e.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "R",
+  "name": "Static Field",
+  "icon": "assets/abilities/blitzcrank/r.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "P",
+  "name": "Blaze",
+  "icon": "assets/abilities/brand/passive.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "Q",
+  "name": "Sear",
+  "icon": "assets/abilities/brand/q.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "W",
+  "name": "Pillar of Flame",
+  "icon": "assets/abilities/brand/w.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "E",
+  "name": "Conflagration",
+  "icon": "assets/abilities/brand/e.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "R",
+  "name": "Pyroclasm",
+  "icon": "assets/abilities/brand/r.png"
+ },
+ {
+  "champ": "chogath",
+  "slot": "P",
+  "name": "Carnivore",
+  "icon": "assets/abilities/chogath/passive.png"
+ },
+ {
+  "champ": "chogath",
+  "slot": "Q",
+  "name": "Rupture",
+  "icon": "assets/abilities/chogath/q.png"
+ },
+ {
+  "champ": "chogath",
+  "slot": "W",
+  "name": "Feral Scream",
+  "icon": "assets/abilities/chogath/w.png"
+ },
+ {
+  "champ": "chogath",
+  "slot": "E",
+  "name": "Vorpal Spikes",
+  "icon": "assets/abilities/chogath/e.png"
+ },
+ {
+  "champ": "chogath",
+  "slot": "R",
+  "name": "Feast",
+  "icon": "assets/abilities/chogath/r.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "P",
+  "name": "Hextech Shrapnel Shells",
+  "icon": "assets/abilities/corki/passive.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "Q",
+  "name": "Phosphorus Bomb",
+  "icon": "assets/abilities/corki/q.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "W",
+  "name": "Valkyrie",
+  "icon": "assets/abilities/corki/w.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "E",
+  "name": "Gatling Gun",
+  "icon": "assets/abilities/corki/e.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "R",
+  "name": "Missile Barrage",
+  "icon": "assets/abilities/corki/r.png"
+ },
+ {
+  "champ": "dr-mundo",
+  "slot": "P",
+  "name": "Adrenaline Rush",
+  "icon": "assets/abilities/dr-mundo/passive.png"
+ },
+ {
+  "champ": "dr-mundo",
+  "slot": "Q",
+  "name": "Infected Cleaver",
+  "icon": "assets/abilities/dr-mundo/q.png"
+ },
+ {
+  "champ": "dr-mundo",
+  "slot": "W",
+  "name": "Burning Agony",
+  "icon": "assets/abilities/dr-mundo/w.png"
+ },
+ {
+  "champ": "dr-mundo",
+  "slot": "E",
+  "name": "Masochism",
+  "icon": "assets/abilities/dr-mundo/e.png"
+ },
+ {
+  "champ": "dr-mundo",
+  "slot": "R",
+  "name": "Sadism",
+  "icon": "assets/abilities/dr-mundo/r.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "P",
+  "name": "Shadow Walk",
+  "icon": "assets/abilities/evelynn/passive.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "Q",
+  "name": "Hate Spike",
+  "icon": "assets/abilities/evelynn/q.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "W",
+  "name": "Dark Frenzy",
+  "icon": "assets/abilities/evelynn/w.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "E",
+  "name": "Ravage",
+  "icon": "assets/abilities/evelynn/e.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "R",
+  "name": "Agony's Embrace",
+  "icon": "assets/abilities/evelynn/r.png"
+ },
+ {
+  "champ": "ezreal",
+  "slot": "P",
+  "name": "Rising Spell Force",
+  "icon": "assets/abilities/ezreal/passive.png"
+ },
+ {
+  "champ": "ezreal",
+  "slot": "Q",
+  "name": "Mystic Shot",
+  "icon": "assets/abilities/ezreal/q.png"
+ },
+ {
+  "champ": "ezreal",
+  "slot": "W",
+  "name": "Essence Flux",
+  "icon": "assets/abilities/ezreal/w.png"
+ },
+ {
+  "champ": "ezreal",
+  "slot": "E",
+  "name": "Arcane Shift",
+  "icon": "assets/abilities/ezreal/e.png"
+ },
+ {
+  "champ": "ezreal",
+  "slot": "R",
+  "name": "Trueshot Barrage",
+  "icon": "assets/abilities/ezreal/r.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "P",
+  "name": "Dread",
+  "icon": "assets/abilities/fiddlesticks/passive.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "Q",
+  "name": "Terrify",
+  "icon": "assets/abilities/fiddlesticks/q.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "W",
+  "name": "Drain",
+  "icon": "assets/abilities/fiddlesticks/w.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "E",
+  "name": "Dark Wind",
+  "icon": "assets/abilities/fiddlesticks/e.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "R",
+  "name": "Crowstorm",
+  "icon": "assets/abilities/fiddlesticks/r.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "P",
+  "name": "Grog-Soaked Blade",
+  "icon": "assets/abilities/gangplank/passive.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "Q",
+  "name": "Parrrley",
+  "icon": "assets/abilities/gangplank/q.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "W",
+  "name": "Remove Scurvy",
+  "icon": "assets/abilities/gangplank/w.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "E",
+  "name": "Raise Morale",
+  "icon": "assets/abilities/gangplank/e.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "R",
+  "name": "Cannon Barrage",
+  "icon": "assets/abilities/gangplank/r.png"
+ },
+ {
+  "champ": "garen",
+  "slot": "P",
+  "name": "Perseverance",
+  "icon": "assets/abilities/garen/passive.png"
+ },
+ {
+  "champ": "garen",
+  "slot": "Q",
+  "name": "Decisive Strike",
+  "icon": "assets/abilities/garen/q.png"
+ },
+ {
+  "champ": "garen",
+  "slot": "W",
+  "name": "Courage",
+  "icon": "assets/abilities/garen/w.png"
+ },
+ {
+  "champ": "garen",
+  "slot": "E",
+  "name": "Judgment",
+  "icon": "assets/abilities/garen/e.png"
+ },
+ {
+  "champ": "garen",
+  "slot": "R",
+  "name": "Demacian Justice",
+  "icon": "assets/abilities/garen/r.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "P",
+  "name": "Happy Hour",
+  "icon": "assets/abilities/gragas/passive.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "Q",
+  "name": "Barrel Roll",
+  "icon": "assets/abilities/gragas/q.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "W",
+  "name": "Drunken Rage",
+  "icon": "assets/abilities/gragas/w.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "E",
+  "name": "Body Slam",
+  "icon": "assets/abilities/gragas/e.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "R",
+  "name": "Explosive Cask",
+  "icon": "assets/abilities/gragas/r.png"
+ },
+ {
+  "champ": "heimerdinger",
+  "slot": "P",
+  "name": "Techmaturgical Repair Bots",
+  "icon": "assets/abilities/heimerdinger/passive.png"
+ },
+ {
+  "champ": "heimerdinger",
+  "slot": "Q",
+  "name": "H-28G Evolution Turret",
+  "icon": "assets/abilities/heimerdinger/q.png"
+ },
+ {
+  "champ": "heimerdinger",
+  "slot": "W",
+  "name": "Hextech Micro-Rockets",
+  "icon": "assets/abilities/heimerdinger/w.png"
+ },
+ {
+  "champ": "heimerdinger",
+  "slot": "E",
+  "name": "CH-2 Electron Storm Grenade",
+  "icon": "assets/abilities/heimerdinger/e.png"
+ },
+ {
+  "champ": "heimerdinger",
+  "slot": "R",
+  "name": "UPGRADE!!!",
+  "icon": "assets/abilities/heimerdinger/r.png"
+ },
+ {
+  "champ": "janna",
+  "slot": "P",
+  "name": "Tailwind",
+  "icon": "assets/abilities/janna/passive.png"
+ },
+ {
+  "champ": "janna",
+  "slot": "Q",
+  "name": "Howling Gale",
+  "icon": "assets/abilities/janna/q.png"
+ },
+ {
+  "champ": "janna",
+  "slot": "W",
+  "name": "Zephyr",
+  "icon": "assets/abilities/janna/w.png"
+ },
+ {
+  "champ": "janna",
+  "slot": "E",
+  "name": "Eye Of The Storm",
+  "icon": "assets/abilities/janna/e.png"
+ },
+ {
+  "champ": "janna",
+  "slot": "R",
+  "name": "Monsoon",
+  "icon": "assets/abilities/janna/r.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "P",
+  "name": "Martial Cadence",
+  "icon": "assets/abilities/jarvan-iv/passive.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "Q",
+  "name": "Dragon Strike",
+  "icon": "assets/abilities/jarvan-iv/q.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "W",
+  "name": "Golden Aegis",
+  "icon": "assets/abilities/jarvan-iv/w.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "E",
+  "name": "Demacian Standard",
+  "icon": "assets/abilities/jarvan-iv/e.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "R",
+  "name": "Cataclysm",
+  "icon": "assets/abilities/jarvan-iv/r.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "P",
+  "name": "Relentless Assault",
+  "icon": "assets/abilities/jax/passive.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "Q",
+  "name": "Leap Strike",
+  "icon": "assets/abilities/jax/q.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "W",
+  "name": "Empower",
+  "icon": "assets/abilities/jax/w.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "E",
+  "name": "Counter Strike",
+  "icon": "assets/abilities/jax/e.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "R",
+  "name": "Grandmaster's Might",
+  "icon": "assets/abilities/jax/r.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "P",
+  "name": "Death Defied",
+  "icon": "assets/abilities/karthus/passive.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "Q",
+  "name": "Lay Waste",
+  "icon": "assets/abilities/karthus/q.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "W",
+  "name": "Wall of Pain",
+  "icon": "assets/abilities/karthus/w.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "E",
+  "name": "Defile",
+  "icon": "assets/abilities/karthus/e.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "R",
+  "name": "Requiem",
+  "icon": "assets/abilities/karthus/r.png"
+ },
+ {
+  "champ": "kassadin",
+  "slot": "P",
+  "name": "Void Stone",
+  "icon": "assets/abilities/kassadin/passive.png"
+ },
+ {
+  "champ": "kassadin",
+  "slot": "Q",
+  "name": "Null Sphere",
+  "icon": "assets/abilities/kassadin/q.png"
+ },
+ {
+  "champ": "kassadin",
+  "slot": "W",
+  "name": "Nether Blade",
+  "icon": "assets/abilities/kassadin/w.png"
+ },
+ {
+  "champ": "kassadin",
+  "slot": "E",
+  "name": "Force Pulse",
+  "icon": "assets/abilities/kassadin/e.png"
+ },
+ {
+  "champ": "kassadin",
+  "slot": "R",
+  "name": "Riftwalk",
+  "icon": "assets/abilities/kassadin/r.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "P",
+  "name": "Voracity",
+  "icon": "assets/abilities/katarina/passive.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "Q",
+  "name": "Bouncing Blades",
+  "icon": "assets/abilities/katarina/q.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "W",
+  "name": "Sinister Steel",
+  "icon": "assets/abilities/katarina/w.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "E",
+  "name": "Shunpo",
+  "icon": "assets/abilities/katarina/e.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "R",
+  "name": "Death Lotus",
+  "icon": "assets/abilities/katarina/r.png"
+ },
+ {
+  "champ": "kayle",
+  "slot": "P",
+  "name": "Holy Fervor",
+  "icon": "assets/abilities/kayle/passive.png"
+ },
+ {
+  "champ": "kayle",
+  "slot": "Q",
+  "name": "Reckoning",
+  "icon": "assets/abilities/kayle/q.png"
+ },
+ {
+  "champ": "kayle",
+  "slot": "W",
+  "name": "Divine Blessing",
+  "icon": "assets/abilities/kayle/w.png"
+ },
+ {
+  "champ": "kayle",
+  "slot": "E",
+  "name": "Righteous Fury",
+  "icon": "assets/abilities/kayle/e.png"
+ },
+ {
+  "champ": "kayle",
+  "slot": "R",
+  "name": "Intervention",
+  "icon": "assets/abilities/kayle/r.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "P",
+  "name": "Icathian Surprise",
+  "icon": "assets/abilities/kogmaw/passive.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "Q",
+  "name": "Caustic Spittle",
+  "icon": "assets/abilities/kogmaw/q.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "W",
+  "name": "Bio-Arcane Barrage",
+  "icon": "assets/abilities/kogmaw/w.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "E",
+  "name": "Void Ooze",
+  "icon": "assets/abilities/kogmaw/e.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "R",
+  "name": "Living Artillery",
+  "icon": "assets/abilities/kogmaw/r.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "P",
+  "name": "Flurry",
+  "icon": "assets/abilities/lee-sin/passive.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "Q",
+  "name": "Sonic Wave / Resonating Strike",
+  "icon": "assets/abilities/lee-sin/q.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "W",
+  "name": "Safeguard / Iron Will",
+  "icon": "assets/abilities/lee-sin/w.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "E",
+  "name": "Tempest / Cripple",
+  "icon": "assets/abilities/lee-sin/e.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "R",
+  "name": "Dragon's Rage",
+  "icon": "assets/abilities/lee-sin/r.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "P",
+  "name": "Sunlight",
+  "icon": "assets/abilities/leona/passive.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "Q",
+  "name": "Shield of Daybreak",
+  "icon": "assets/abilities/leona/q.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "W",
+  "name": "Eclipse",
+  "icon": "assets/abilities/leona/w.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "E",
+  "name": "Zenith Blade",
+  "icon": "assets/abilities/leona/e.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "R",
+  "name": "Solar Flare",
+  "icon": "assets/abilities/leona/r.png"
+ },
+ {
+  "champ": "lulu",
+  "slot": "P",
+  "name": "Pix, Faerie Companion",
+  "icon": "assets/abilities/lulu/passive.png"
+ },
+ {
+  "champ": "lulu",
+  "slot": "Q",
+  "name": "Glitterlance",
+  "icon": "assets/abilities/lulu/q.png"
+ },
+ {
+  "champ": "lulu",
+  "slot": "W",
+  "name": "Whimsy",
+  "icon": "assets/abilities/lulu/w.png"
+ },
+ {
+  "champ": "lulu",
+  "slot": "E",
+  "name": "Help, Pix!",
+  "icon": "assets/abilities/lulu/e.png"
+ },
+ {
+  "champ": "lulu",
+  "slot": "R",
+  "name": "Wild Growth",
+  "icon": "assets/abilities/lulu/r.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "P",
+  "name": "Illumination",
+  "icon": "assets/abilities/lux/passive.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "Q",
+  "name": "Light Binding",
+  "icon": "assets/abilities/lux/q.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "W",
+  "name": "Prismatic Barrier",
+  "icon": "assets/abilities/lux/w.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "E",
+  "name": "Lucent Singularity",
+  "icon": "assets/abilities/lux/e.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "R",
+  "name": "Final Spark",
+  "icon": "assets/abilities/lux/r.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "P",
+  "name": "Granite Shield",
+  "icon": "assets/abilities/malphite/passive.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "Q",
+  "name": "Seismic Shard",
+  "icon": "assets/abilities/malphite/q.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "W",
+  "name": "Brutal Strikes",
+  "icon": "assets/abilities/malphite/w.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "E",
+  "name": "Ground Slam",
+  "icon": "assets/abilities/malphite/e.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "R",
+  "name": "Unstoppable Force",
+  "icon": "assets/abilities/malphite/r.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "P",
+  "name": "Summon Voidling",
+  "icon": "assets/abilities/malzahar/passive.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "Q",
+  "name": "Call of the Void",
+  "icon": "assets/abilities/malzahar/q.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "W",
+  "name": "Null Zone",
+  "icon": "assets/abilities/malzahar/w.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "E",
+  "name": "Malefic Visions",
+  "icon": "assets/abilities/malzahar/e.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "R",
+  "name": "Nether Grasp",
+  "icon": "assets/abilities/malzahar/r.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "P",
+  "name": "Double Strike",
+  "icon": "assets/abilities/master-yi/passive.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "Q",
+  "name": "Alpha Strike",
+  "icon": "assets/abilities/master-yi/q.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "W",
+  "name": "Meditate",
+  "icon": "assets/abilities/master-yi/w.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "E",
+  "name": "Wuju Style",
+  "icon": "assets/abilities/master-yi/e.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "R",
+  "name": "Highlander",
+  "icon": "assets/abilities/master-yi/r.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "P",
+  "name": "Strut",
+  "icon": "assets/abilities/miss-fortune/passive.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "Q",
+  "name": "Double Up",
+  "icon": "assets/abilities/miss-fortune/q.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "W",
+  "name": "Impure Shots",
+  "icon": "assets/abilities/miss-fortune/w.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "E",
+  "name": "Make It Rain",
+  "icon": "assets/abilities/miss-fortune/e.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "R",
+  "name": "Bullet Time",
+  "icon": "assets/abilities/miss-fortune/r.png"
+ },
+ {
+  "champ": "morgana",
+  "slot": "P",
+  "name": "Soul Siphon",
+  "icon": "assets/abilities/morgana/passive.png"
+ },
+ {
+  "champ": "morgana",
+  "slot": "Q",
+  "name": "Dark Binding",
+  "icon": "assets/abilities/morgana/q.png"
+ },
+ {
+  "champ": "morgana",
+  "slot": "W",
+  "name": "Tormented Soil",
+  "icon": "assets/abilities/morgana/w.png"
+ },
+ {
+  "champ": "morgana",
+  "slot": "E",
+  "name": "Black Shield",
+  "icon": "assets/abilities/morgana/e.png"
+ },
+ {
+  "champ": "morgana",
+  "slot": "R",
+  "name": "Soul Shackles",
+  "icon": "assets/abilities/morgana/r.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "P",
+  "name": "Soul Eater",
+  "icon": "assets/abilities/nasus/passive.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "Q",
+  "name": "Siphoning Strike",
+  "icon": "assets/abilities/nasus/q.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "W",
+  "name": "Wither",
+  "icon": "assets/abilities/nasus/w.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "E",
+  "name": "Spirit Fire",
+  "icon": "assets/abilities/nasus/e.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "R",
+  "name": "Fury of the Sands",
+  "icon": "assets/abilities/nasus/r.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "P",
+  "name": "Prowl",
+  "icon": "assets/abilities/nidalee/passive.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "Q",
+  "name": "Javelin Toss / Takedown",
+  "icon": "assets/abilities/nidalee/q.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "W",
+  "name": "Bushwhack / Pounce",
+  "icon": "assets/abilities/nidalee/w.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "E",
+  "name": "Primal Surge / Swipe",
+  "icon": "assets/abilities/nidalee/e.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "R",
+  "name": "Aspect Of The Cougar",
+  "icon": "assets/abilities/nidalee/r.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "P",
+  "name": "Visionary",
+  "icon": "assets/abilities/nunu/passive.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "Q",
+  "name": "Consume",
+  "icon": "assets/abilities/nunu/q.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "W",
+  "name": "Blood Boil",
+  "icon": "assets/abilities/nunu/w.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "E",
+  "name": "Ice Blast",
+  "icon": "assets/abilities/nunu/e.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "R",
+  "name": "Absolute Zero",
+  "icon": "assets/abilities/nunu/r.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "P",
+  "name": "Berserker Rage",
+  "icon": "assets/abilities/olaf/passive.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "Q",
+  "name": "Undertow",
+  "icon": "assets/abilities/olaf/q.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "W",
+  "name": "Vicious Strikes",
+  "icon": "assets/abilities/olaf/w.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "E",
+  "name": "Reckless Swing",
+  "icon": "assets/abilities/olaf/e.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "R",
+  "name": "Ragnarok",
+  "icon": "assets/abilities/olaf/r.png"
+ },
+ {
+  "champ": "pantheon",
+  "slot": "P",
+  "name": "Aegis Protection",
+  "icon": "assets/abilities/pantheon/passive.png"
+ },
+ {
+  "champ": "pantheon",
+  "slot": "Q",
+  "name": "Spear Shot",
+  "icon": "assets/abilities/pantheon/q.png"
+ },
+ {
+  "champ": "pantheon",
+  "slot": "W",
+  "name": "Aegis of Zeonia",
+  "icon": "assets/abilities/pantheon/w.png"
+ },
+ {
+  "champ": "pantheon",
+  "slot": "E",
+  "name": "Heartseeker Strike",
+  "icon": "assets/abilities/pantheon/e.png"
+ },
+ {
+  "champ": "pantheon",
+  "slot": "R",
+  "name": "Grand Skyfall",
+  "icon": "assets/abilities/pantheon/r.png"
+ },
+ {
+  "champ": "rammus",
+  "slot": "P",
+  "name": "Spiked Shell",
+  "icon": "assets/abilities/rammus/passive.png"
+ },
+ {
+  "champ": "rammus",
+  "slot": "Q",
+  "name": "Powerball",
+  "icon": "assets/abilities/rammus/q.png"
+ },
+ {
+  "champ": "rammus",
+  "slot": "W",
+  "name": "Defensive Ball Curl",
+  "icon": "assets/abilities/rammus/w.png"
+ },
+ {
+  "champ": "rammus",
+  "slot": "E",
+  "name": "Puncturing Taunt",
+  "icon": "assets/abilities/rammus/e.png"
+ },
+ {
+  "champ": "rammus",
+  "slot": "R",
+  "name": "Tremors",
+  "icon": "assets/abilities/rammus/r.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "P",
+  "name": "Arcane Mastery",
+  "icon": "assets/abilities/ryze/passive.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "Q",
+  "name": "Overload",
+  "icon": "assets/abilities/ryze/q.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "W",
+  "name": "Rune Prison",
+  "icon": "assets/abilities/ryze/w.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "E",
+  "name": "Spell Flux",
+  "icon": "assets/abilities/ryze/e.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "R",
+  "name": "Desperate Power",
+  "icon": "assets/abilities/ryze/r.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "P",
+  "name": "Backstab",
+  "icon": "assets/abilities/shaco/passive.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "Q",
+  "name": "Deceive",
+  "icon": "assets/abilities/shaco/q.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "W",
+  "name": "Jack In The Box",
+  "icon": "assets/abilities/shaco/w.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "E",
+  "name": "Two-Shiv Poison",
+  "icon": "assets/abilities/shaco/e.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "R",
+  "name": "Hallucinate",
+  "icon": "assets/abilities/shaco/r.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "P",
+  "name": "Glory in Death",
+  "icon": "assets/abilities/sion/passive.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "Q",
+  "name": "Decimating Smash",
+  "icon": "assets/abilities/sion/q.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "W",
+  "name": "Soul Furnace",
+  "icon": "assets/abilities/sion/w.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "E",
+  "name": "Roar of the Slayer",
+  "icon": "assets/abilities/sion/e.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "R",
+  "name": "Unstoppable Onslaught",
+  "icon": "assets/abilities/sion/r.png"
+ },
+ {
+  "champ": "singed",
+  "slot": "P",
+  "name": "Empowered Bulwark",
+  "icon": "assets/abilities/singed/passive.png"
+ },
+ {
+  "champ": "singed",
+  "slot": "Q",
+  "name": "Poison Trail",
+  "icon": "assets/abilities/singed/q.png"
+ },
+ {
+  "champ": "singed",
+  "slot": "W",
+  "name": "Mega Adhesive",
+  "icon": "assets/abilities/singed/w.png"
+ },
+ {
+  "champ": "singed",
+  "slot": "E",
+  "name": "Fling",
+  "icon": "assets/abilities/singed/e.png"
+ },
+ {
+  "champ": "singed",
+  "slot": "R",
+  "name": "Insanity Potion",
+  "icon": "assets/abilities/singed/r.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "P",
+  "name": "Fleet of Foot",
+  "icon": "assets/abilities/sivir/passive.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "Q",
+  "name": "Boomerang Blade",
+  "icon": "assets/abilities/sivir/q.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "W",
+  "name": "Ricochet",
+  "icon": "assets/abilities/sivir/w.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "E",
+  "name": "Spell Shield",
+  "icon": "assets/abilities/sivir/e.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "R",
+  "name": "On The Hunt",
+  "icon": "assets/abilities/sivir/r.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "P",
+  "name": "Crystallizing Sting",
+  "icon": "assets/abilities/skarner/passive.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "Q",
+  "name": "Crystal Slash",
+  "icon": "assets/abilities/skarner/q.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "W",
+  "name": "Crystalline Exoskeleton",
+  "icon": "assets/abilities/skarner/w.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "E",
+  "name": "Fracture",
+  "icon": "assets/abilities/skarner/e.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "R",
+  "name": "Impale",
+  "icon": "assets/abilities/skarner/r.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "P",
+  "name": "Power Chord",
+  "icon": "assets/abilities/sona/passive.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "Q",
+  "name": "Hymn of Valor",
+  "icon": "assets/abilities/sona/q.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "W",
+  "name": "Aria of Perseverance",
+  "icon": "assets/abilities/sona/w.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "E",
+  "name": "Song of Celerity",
+  "icon": "assets/abilities/sona/e.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "R",
+  "name": "Crescendo",
+  "icon": "assets/abilities/sona/r.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "P",
+  "name": "Salvation",
+  "icon": "assets/abilities/soraka/passive.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "Q",
+  "name": "Starcall",
+  "icon": "assets/abilities/soraka/q.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "W",
+  "name": "Astral Infusion",
+  "icon": "assets/abilities/soraka/w.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "E",
+  "name": "Equinox",
+  "icon": "assets/abilities/soraka/e.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "R",
+  "name": "Wish",
+  "icon": "assets/abilities/soraka/r.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "P",
+  "name": "Gemcraft",
+  "icon": "assets/abilities/taric/passive.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "Q",
+  "name": "Imbue",
+  "icon": "assets/abilities/taric/q.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "W",
+  "name": "Shatter",
+  "icon": "assets/abilities/taric/w.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "E",
+  "name": "Dazzle",
+  "icon": "assets/abilities/taric/e.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "R",
+  "name": "Radiance",
+  "icon": "assets/abilities/taric/r.png"
+ },
+ {
+  "champ": "teemo",
+  "slot": "P",
+  "name": "Camouflage",
+  "icon": "assets/abilities/teemo/passive.png"
+ },
+ {
+  "champ": "teemo",
+  "slot": "Q",
+  "name": "Blinding Dart",
+  "icon": "assets/abilities/teemo/q.png"
+ },
+ {
+  "champ": "teemo",
+  "slot": "W",
+  "name": "Move Quick",
+  "icon": "assets/abilities/teemo/w.png"
+ },
+ {
+  "champ": "teemo",
+  "slot": "E",
+  "name": "Toxic Shot",
+  "icon": "assets/abilities/teemo/e.png"
+ },
+ {
+  "champ": "teemo",
+  "slot": "R",
+  "name": "Noxious Trap",
+  "icon": "assets/abilities/teemo/r.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "P",
+  "name": "Draw a Bead",
+  "icon": "assets/abilities/tristana/passive.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "Q",
+  "name": "Rapid Fire",
+  "icon": "assets/abilities/tristana/q.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "W",
+  "name": "Rocket Jump",
+  "icon": "assets/abilities/tristana/w.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "E",
+  "name": "Explosive Shot",
+  "icon": "assets/abilities/tristana/e.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "R",
+  "name": "Buster Shot",
+  "icon": "assets/abilities/tristana/r.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "P",
+  "name": "Battle Fury",
+  "icon": "assets/abilities/tryndamere/passive.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "Q",
+  "name": "Bloodlust",
+  "icon": "assets/abilities/tryndamere/q.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "W",
+  "name": "Mocking Shout",
+  "icon": "assets/abilities/tryndamere/w.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "E",
+  "name": "Spinning Slash",
+  "icon": "assets/abilities/tryndamere/e.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "R",
+  "name": "Undying Rage",
+  "icon": "assets/abilities/tryndamere/r.png"
+ },
+ {
+  "champ": "twisted-fate",
+  "slot": "P",
+  "name": "Loaded Dice",
+  "icon": "assets/abilities/twisted-fate/passive.png"
+ },
+ {
+  "champ": "twisted-fate",
+  "slot": "Q",
+  "name": "Wild Cards",
+  "icon": "assets/abilities/twisted-fate/q.png"
+ },
+ {
+  "champ": "twisted-fate",
+  "slot": "W",
+  "name": "Pick A Card",
+  "icon": "assets/abilities/twisted-fate/w.png"
+ },
+ {
+  "champ": "twisted-fate",
+  "slot": "E",
+  "name": "Stacked Deck",
+  "icon": "assets/abilities/twisted-fate/e.png"
+ },
+ {
+  "champ": "twisted-fate",
+  "slot": "R",
+  "name": "Destiny",
+  "icon": "assets/abilities/twisted-fate/r.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "P",
+  "name": "Deadly Venom",
+  "icon": "assets/abilities/twitch/passive.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "Q",
+  "name": "Ambush",
+  "icon": "assets/abilities/twitch/q.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "W",
+  "name": "Venom Cask",
+  "icon": "assets/abilities/twitch/w.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "E",
+  "name": "Contaminate",
+  "icon": "assets/abilities/twitch/e.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "R",
+  "name": "Rat-Ta-Tat-Tat",
+  "icon": "assets/abilities/twitch/r.png"
+ },
+ {
+  "champ": "vayne",
+  "slot": "P",
+  "name": "Night Hunter",
+  "icon": "assets/abilities/vayne/passive.png"
+ },
+ {
+  "champ": "vayne",
+  "slot": "Q",
+  "name": "Tumble",
+  "icon": "assets/abilities/vayne/q.png"
+ },
+ {
+  "champ": "vayne",
+  "slot": "W",
+  "name": "Silver Bolts",
+  "icon": "assets/abilities/vayne/w.png"
+ },
+ {
+  "champ": "vayne",
+  "slot": "E",
+  "name": "Condemn",
+  "icon": "assets/abilities/vayne/e.png"
+ },
+ {
+  "champ": "vayne",
+  "slot": "R",
+  "name": "Final Hour",
+  "icon": "assets/abilities/vayne/r.png"
+ },
+ {
+  "champ": "veigar",
+  "slot": "P",
+  "name": "Equilibrium",
+  "icon": "assets/abilities/veigar/passive.png"
+ },
+ {
+  "champ": "veigar",
+  "slot": "Q",
+  "name": "Baleful Strike",
+  "icon": "assets/abilities/veigar/q.png"
+ },
+ {
+  "champ": "veigar",
+  "slot": "W",
+  "name": "Dark Matter",
+  "icon": "assets/abilities/veigar/w.png"
+ },
+ {
+  "champ": "veigar",
+  "slot": "E",
+  "name": "Event Horizon",
+  "icon": "assets/abilities/veigar/e.png"
+ },
+ {
+  "champ": "veigar",
+  "slot": "R",
+  "name": "Primordial Burst",
+  "icon": "assets/abilities/veigar/r.png"
+ },
+ {
+  "champ": "warwick",
+  "slot": "P",
+  "name": "Eternal Thirst",
+  "icon": "assets/abilities/warwick/passive.png"
+ },
+ {
+  "champ": "warwick",
+  "slot": "Q",
+  "name": "Hungering Strike",
+  "icon": "assets/abilities/warwick/q.png"
+ },
+ {
+  "champ": "warwick",
+  "slot": "W",
+  "name": "Hunters Call",
+  "icon": "assets/abilities/warwick/w.png"
+ },
+ {
+  "champ": "warwick",
+  "slot": "E",
+  "name": "Blood Scent",
+  "icon": "assets/abilities/warwick/e.png"
+ },
+ {
+  "champ": "warwick",
+  "slot": "R",
+  "name": "Infinite Duress",
+  "icon": "assets/abilities/warwick/r.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "P",
+  "name": "Stone Skin",
+  "icon": "assets/abilities/wukong/passive.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "Q",
+  "name": "Crushing Blow",
+  "icon": "assets/abilities/wukong/q.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "W",
+  "name": "Decoy",
+  "icon": "assets/abilities/wukong/w.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "E",
+  "name": "Nimbus Strike",
+  "icon": "assets/abilities/wukong/e.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "R",
+  "name": "Cyclone",
+  "icon": "assets/abilities/wukong/r.png"
+ },
+ {
+  "champ": "zilean",
+  "slot": "P",
+  "name": "Heightened Learning",
+  "icon": "assets/abilities/zilean/passive.png"
+ },
+ {
+  "champ": "zilean",
+  "slot": "Q",
+  "name": "Time Bomb",
+  "icon": "assets/abilities/zilean/q.png"
+ },
+ {
+  "champ": "zilean",
+  "slot": "W",
+  "name": "Rewind",
+  "icon": "assets/abilities/zilean/w.png"
+ },
+ {
+  "champ": "zilean",
+  "slot": "E",
+  "name": "Time Warp",
+  "icon": "assets/abilities/zilean/e.png"
+ },
+ {
+  "champ": "zilean",
+  "slot": "R",
+  "name": "Chronoshift",
+  "icon": "assets/abilities/zilean/r.png"
+ },
+ {
+  "champ": "akali",
+  "slot": "P",
+  "name": "Twin Disciplines",
+  "icon": "assets/abilities/akali/passive.png"
+ },
+ {
+  "champ": "akali",
+  "slot": "Q",
+  "name": "Mark of the Assassin",
+  "icon": "assets/abilities/akali/q.png"
+ },
+ {
+  "champ": "akali",
+  "slot": "W",
+  "name": "Twilight Shroud",
+  "icon": "assets/abilities/akali/w.png"
+ },
+ {
+  "champ": "akali",
+  "slot": "E",
+  "name": "Crescent Slash",
+  "icon": "assets/abilities/akali/e.png"
+ },
+ {
+  "champ": "akali",
+  "slot": "R",
+  "name": "Shadow Dance",
+  "icon": "assets/abilities/akali/r.png"
+ },
+ {
+  "champ": "caitlyn",
+  "slot": "P",
+  "name": "Headshot",
+  "icon": "assets/abilities/caitlyn/passive.png"
+ },
+ {
+  "champ": "caitlyn",
+  "slot": "Q",
+  "name": "Piltover Peacemaker",
+  "icon": "assets/abilities/caitlyn/q.png"
+ },
+ {
+  "champ": "caitlyn",
+  "slot": "W",
+  "name": "Yordle Snap Trap",
+  "icon": "assets/abilities/caitlyn/w.png"
+ },
+ {
+  "champ": "caitlyn",
+  "slot": "E",
+  "name": "90 Caliber Net",
+  "icon": "assets/abilities/caitlyn/e.png"
+ },
+ {
+  "champ": "caitlyn",
+  "slot": "R",
+  "name": "Ace in the Hole",
+  "icon": "assets/abilities/caitlyn/r.png"
+ },
+ {
+  "champ": "fiora",
+  "slot": "P",
+  "name": "Duelist",
+  "icon": "assets/abilities/fiora/passive.png"
+ },
+ {
+  "champ": "fiora",
+  "slot": "Q",
+  "name": "Lunge",
+  "icon": "assets/abilities/fiora/q.png"
+ },
+ {
+  "champ": "fiora",
+  "slot": "W",
+  "name": "Riposte",
+  "icon": "assets/abilities/fiora/w.png"
+ },
+ {
+  "champ": "fiora",
+  "slot": "E",
+  "name": "Burst of Speed",
+  "icon": "assets/abilities/fiora/e.png"
+ },
+ {
+  "champ": "fiora",
+  "slot": "R",
+  "name": "Blade Waltz",
+  "icon": "assets/abilities/fiora/r.png"
+ },
+ {
+  "champ": "graves",
+  "slot": "P",
+  "name": "True Grit",
+  "icon": "assets/abilities/graves/passive.png"
+ },
+ {
+  "champ": "graves",
+  "slot": "Q",
+  "name": "Buckshot",
+  "icon": "assets/abilities/graves/q.png"
+ },
+ {
+  "champ": "graves",
+  "slot": "W",
+  "name": "Smoke Screen",
+  "icon": "assets/abilities/graves/w.png"
+ },
+ {
+  "champ": "graves",
+  "slot": "E",
+  "name": "Quickdraw",
+  "icon": "assets/abilities/graves/e.png"
+ },
+ {
+  "champ": "graves",
+  "slot": "R",
+  "name": "Collateral Damage",
+  "icon": "assets/abilities/graves/r.png"
+ },
+ {
+  "champ": "irelia",
+  "slot": "P",
+  "name": "Ionian Fervor",
+  "icon": "assets/abilities/irelia/passive.png"
+ },
+ {
+  "champ": "irelia",
+  "slot": "Q",
+  "name": "Bladesurge",
+  "icon": "assets/abilities/irelia/q.png"
+ },
+ {
+  "champ": "irelia",
+  "slot": "W",
+  "name": "Hiten Style",
+  "icon": "assets/abilities/irelia/w.png"
+ },
+ {
+  "champ": "irelia",
+  "slot": "E",
+  "name": "Equilibrium Strike",
+  "icon": "assets/abilities/irelia/e.png"
+ },
+ {
+  "champ": "irelia",
+  "slot": "R",
+  "name": "Transcendent Blades",
+  "icon": "assets/abilities/irelia/r.png"
+ },
+ {
+  "champ": "leblanc",
+  "slot": "P",
+  "name": "Mirror Image",
+  "icon": "assets/abilities/leblanc/passive.png"
+ },
+ {
+  "champ": "leblanc",
+  "slot": "Q",
+  "name": "Sigil of Malice",
+  "icon": "assets/abilities/leblanc/q.png"
+ },
+ {
+  "champ": "leblanc",
+  "slot": "W",
+  "name": "Distortion",
+  "icon": "assets/abilities/leblanc/w.png"
+ },
+ {
+  "champ": "leblanc",
+  "slot": "E",
+  "name": "Ethereal Chains",
+  "icon": "assets/abilities/leblanc/e.png"
+ },
+ {
+  "champ": "leblanc",
+  "slot": "R",
+  "name": "Mimic",
+  "icon": "assets/abilities/leblanc/r.png"
+ },
+ {
+  "champ": "mordekaiser",
+  "slot": "P",
+  "name": "Iron Man",
+  "icon": "assets/abilities/mordekaiser/passive.png"
+ },
+ {
+  "champ": "mordekaiser",
+  "slot": "Q",
+  "name": "Mace of Spades",
+  "icon": "assets/abilities/mordekaiser/q.png"
+ },
+ {
+  "champ": "mordekaiser",
+  "slot": "W",
+  "name": "Creeping Death",
+  "icon": "assets/abilities/mordekaiser/w.png"
+ },
+ {
+  "champ": "mordekaiser",
+  "slot": "E",
+  "name": "Siphon of Destruction",
+  "icon": "assets/abilities/mordekaiser/e.png"
+ },
+ {
+  "champ": "mordekaiser",
+  "slot": "R",
+  "name": "Children of the Grave",
+  "icon": "assets/abilities/mordekaiser/r.png"
+ },
+ {
+  "champ": "urgot",
+  "slot": "P",
+  "name": "Zaun-Touched Bolt Augmenter",
+  "icon": "assets/abilities/urgot/passive.png"
+ },
+ {
+  "champ": "urgot",
+  "slot": "Q",
+  "name": "Acid Hunter",
+  "icon": "assets/abilities/urgot/q.png"
+ },
+ {
+  "champ": "urgot",
+  "slot": "W",
+  "name": "Terror Capacitor",
+  "icon": "assets/abilities/urgot/w.png"
+ },
+ {
+  "champ": "urgot",
+  "slot": "E",
+  "name": "Noxian Corrosive Charge",
+  "icon": "assets/abilities/urgot/e.png"
+ },
+ {
+  "champ": "urgot",
+  "slot": "R",
+  "name": "Hyper-Kinetic Position Reverser",
+  "icon": "assets/abilities/urgot/r.png"
+ }
+]

@@ -113,6 +113,8 @@ h2 { font-size: 16px; margin: 18px 0 8px; }
     border-top: 1px solid var(--brand-dark);
 }
 .site-footer a { color: var(--gold); }
+.site-footer p { margin: 4px 0; }
+.disclaimer { max-width: 780px; margin: 6px auto 0 !important; color: #63758c; font-size: 10px; line-height: 1.5; }
 
 /* Basic form styling for the Identity pages */
 .form-narrow { max-width: 420px; }
@@ -187,11 +189,28 @@ button.btn:hover { background: var(--brand-dark); }
 .spell-opt img { width: 40px; height: 40px; }
 .spell-opt.selected { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(193,70,43,.35); background: #fff; }
 
+/* Ability overview bar */
+.ability-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.ability-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #eef2f7; border: 1px solid var(--line); padding: 3px 8px 3px 3px; font-size: 12px;
+}
+.ability-chip img { width: 30px; height: 30px; display: block; }
+.ability-name { color: var(--ink); }
+.slot-key {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 16px; height: 16px; font-size: 10px; font-weight: bold; color: #fff; border-radius: 2px;
+}
+.slot-P { background: #718096; } .slot-Q { background: #2b6cb0; }
+.slot-W { background: #2f855a; } .slot-E { background: #b7791f; } .slot-R { background: #c1462b; }
+
 /* Skill grid */
 .skill-table { border-collapse: collapse; margin-top: 6px; }
 .skill-table th { background: #d9e2ec; color: var(--brand-dark); font-size: 10px; padding: 2px 5px; text-align: center; border: 1px solid var(--line); }
 .skill-table td { border: 1px solid var(--line); padding: 0; }
-.ab-label { width: 22px; }
+.ab-label { padding: 2px 4px !important; white-space: nowrap; }
+.ab-label img { width: 22px; height: 22px; vertical-align: middle; margin-right: 3px; }
+.ab-label .slot-key { vertical-align: middle; }
 .ab-Q { color: #2b6cb0; } .ab-W { color: #2f855a; } .ab-E { color: #b7791f; } .ab-R { color: #c1462b; }
 .skill-cell {
     width: 24px; height: 22px; display: block; background: #fff; border: 0; cursor: pointer; padding: 0;
@@ -245,4 +264,20 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 .guide-body img { max-width: 100%; }
 .guide-body table { border-collapse: collapse; }
 .guide-body td, .guide-body th { border: 1px solid var(--line); padding: 4px 8px; }
+
+/* My Guides + owner actions */
+.flash { background: #eaf6ec; border: 1px solid #b7ddbc; color: #216e2b; padding: 8px 12px; margin-bottom: 12px; }
+.actions { white-space: nowrap; }
+.actions form, .owner-actions form { display: inline; }
+.owner-actions { margin-left: auto; display: flex; gap: 6px; align-items: flex-start; }
+.mini-btn {
+    display: inline-block; font-size: 11px; font-weight: bold; padding: 3px 9px; cursor: pointer;
+    background: #e2e9f1; color: var(--brand-dark); border: 1px solid var(--line); text-decoration: none;
+}
+.mini-btn:hover { background: #d3ddea; text-decoration: none; }
+.mini-btn.danger { background: #f6e5e1; color: #a5341c; border-color: #e6c3ba; }
+.mini-btn.danger:hover { background: #efd2ca; }
+.status-Published { color: #216e2b; font-weight: bold; }
+.status-Draft { color: #97701c; font-weight: bold; }
+.status-Archived { color: var(--muted); }
 

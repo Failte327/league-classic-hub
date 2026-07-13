@@ -1,0 +1,64 @@
+@page
+@model LeagueClassic.Web.Pages.Guides.MineModel
+@{
+    ViewData["Title"] = "My Guides";
+}
+
+<div class="page-head">
+    <h1>My Guides</h1>
+    <a class="btn-primary" asp-page="/Guides/Create">+ Create Guide</a>
+</div>
+
+@if (TempData["Message"] is string msg)
+{
+    <div class="flash">@msg</div>
+}
+
+@if (Model.Guides.Count == 0)
+{
+    <div class="empty">You haven't written any guides yet.</div>
+}
+else
+{
+    <table class="forum-table">
+        <caption class="cat-header">Your Guides</caption>
+        <thead>
+            <tr><th>Champion</th><th>Title</th><th class="stat">Status</th><th class="stat">Updated</th><th class="stat">Actions</th></tr>
+        </thead>
+        <tbody>
+        @foreach (var g in Model.Guides)
+        {
+            <tr>
+                <td class="champ-cell">
+                    @if (g.Champion?.IconPath is not null)
+                    {
+                        <img src="~/@g.Champion.IconPath" alt="@g.Champion.Name" class="champ-icon-sm" />
+                    }
+                    <span>@g.Champion?.Name</span>
+                </td>
+                <td class="board-name">
+                    @if (g.Status == GuideStatus.Published)
+                    {
+                        <a asp-page="/Guides/Details" asp-route-slug="@g.Slug">@g.Title</a>
+                    }
+                    else
+                    {
+                        @g.Title
+                    }
+                </td>
+                <td class="stat">
+                    <span class="status-@g.Status">@g.Status</span>
+                </td>
+                <td class="stat">@g.UpdatedAt.ToString("MMM d, yyyy")</td>
+                <td class="stat actions">
+                    <a class="mini-btn" asp-page="/Guides/Edit" asp-route-id="@g.Id">Edit</a>
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@g.Id"
+                          onsubmit="return confirm('Delete this guide? This cannot be undone.');">
+                        <button type="submit" class="mini-btn danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

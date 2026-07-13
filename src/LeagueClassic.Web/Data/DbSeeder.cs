@@ -40,6 +40,25 @@ public static class DbSeeder
             }
         }
 
+        // Abilities depend on champions existing (need their ids). Persist champions first.
+        if (db.ChangeTracker.HasChanges())
+            await db.SaveChangesAsync();
+
+        if (!await db.ChampionAbilities.AnyAsync())
+        {
+            var champBySlug = await db.Champions.ToDictionaryAsync(c => c.Slug, c => c.Id);
+            foreach (var a in Load<AbilitySeed>(seedDir, "abilities.json"))
+            {
+                if (champBySlug.TryGetValue(a.Champ, out var champId))
+                {
+                    db.ChampionAbilities.Add(new ChampionAbility
+                    {
+                        ChampionId = champId, Slot = a.Slot, Name = a.Name, IconPath = a.Icon,
+                    });
+                }
+            }
+        }
+
         if (!await db.Items.AnyAsync())
         {
             foreach (var i in Load<ItemSeed>(seedDir, "items.json"))
@@ -94,4 +113,5 @@ public static class DbSeeder
     private sealed record ChampionSeed(string Name, string Slug, string? Icon, bool Available);
     private sealed record ItemSeed(string Name, string Slug, string Category, string? Icon);
     private sealed record SpellSeed(string Name, string Slug, string? Icon);
+    private sealed record AbilitySeed(string Champ, string Slot, string Name, string? Icon);
 }

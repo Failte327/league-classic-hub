@@ -10,6 +10,21 @@ public class Champion
     public required string Slug { get; set; }
     public string? IconPath { get; set; }      // e.g. "assets/champions/ahri.png"
     public bool IsAvailable { get; set; }       // false = confirmed-but-not-yet-playable
+
+    public List<ChampionAbility> Abilities { get; set; } = new();
+}
+
+// One ability of a champion. Slot: "P" (passive) or "Q"/"W"/"E"/"R".
+// Sourced from Data Dragon patch 5.1.1 — the oldest classic-era data available.
+public class ChampionAbility
+{
+    public int Id { get; set; }
+    public int ChampionId { get; set; }
+    public Champion? Champion { get; set; }
+
+    public required string Slot { get; set; }
+    public required string Name { get; set; }
+    public string? IconPath { get; set; }
 }
 
 public class Item
