@@ -179,6 +179,46 @@
         }
     } catch (e) { /* create mode — nothing to restore */ }
 
+    // ---- Hover description panel (items + spells) ----
+    const hoverPanel = document.createElement('div');
+    hoverPanel.className = 'hover-desc';
+    hoverPanel.style.display = 'none';
+    document.body.appendChild(hoverPanel);
+
+    function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+    function positionHover(e) {
+        const pad = 14, w = hoverPanel.offsetWidth, h = hoverPanel.offsetHeight;
+        let x = e.clientX + pad, y = e.clientY + pad;
+        if (x + w > window.innerWidth) x = e.clientX - w - pad;
+        if (y + h > window.innerHeight) y = Math.max(4, window.innerHeight - h - pad);
+        hoverPanel.style.left = x + 'px';
+        hoverPanel.style.top = y + 'px';
+    }
+    function showHover(el, e) {
+        const name = el.dataset.name, desc = el.dataset.desc;
+        if (!name) return;
+        hoverPanel.innerHTML = '<div class="hd-name">' + esc(name) + '</div>' +
+            (desc && desc.trim()
+                ? '<div class="hd-desc">' + esc(desc).replace(/\n/g, '<br>') + '</div>'
+                : '<div class="hd-desc hd-none">No description available.</div>');
+        hoverPanel.style.display = 'block';
+        positionHover(e);
+    }
+    [document.querySelector('.item-palette'), document.getElementById('spell-palette')].forEach(c => {
+        if (!c) return;
+        c.addEventListener('mouseover', e => {
+            const el = e.target.closest('.item-opt, .spell-opt');
+            if (el) showHover(el, e);
+        });
+        c.addEventListener('mousemove', e => {
+            if (hoverPanel.style.display === 'block') positionHover(e);
+        });
+        c.addEventListener('mouseout', e => {
+            if (e.target.closest('.item-opt, .spell-opt')) hoverPanel.style.display = 'none';
+        });
+    });
+
     // init
     buildGrid();
     renderSpells();

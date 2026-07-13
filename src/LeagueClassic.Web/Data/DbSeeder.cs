@@ -66,6 +66,7 @@ public static class DbSeeder
                 db.Items.Add(new Item
                 {
                     Name = i.Name, Slug = i.Slug, Category = i.Category, IconPath = i.Icon,
+                    Description = i.Desc,
                 });
             }
         }
@@ -76,12 +77,32 @@ public static class DbSeeder
             {
                 db.SummonerSpells.Add(new SummonerSpell
                 {
-                    Name = s.Name, Slug = s.Slug, IconPath = s.Icon,
+                    Name = s.Name, Slug = s.Slug, IconPath = s.Icon, Description = s.Desc,
                 });
             }
         }
 
         await db.SaveChangesAsync();
+
+        await BackfillDescriptionsAsync(db, seedDir);
+    }
+
+    // Fills Description onto item/spell rows that were seeded before the column
+    // existed. Non-destructive: only touches rows where Description is null.
+    private static async Task BackfillDescriptionsAsync(ApplicationDbContext db, string seedDir)
+    {
+        var itemDesc = Load<ItemSeed>(seedDir, "items.json")
+            .Where(i => i.Desc != null).ToDictionary(i => i.Slug, i => i.Desc!);
+        var spellDesc = Load<SpellSeed>(seedDir, "spells.json")
+            .Where(s => s.Desc != null).ToDictionary(s => s.Slug, s => s.Desc!);
+
+        var changed = false;
+        foreach (var item in await db.Items.Where(i => i.Description == null).ToListAsync())
+            if (itemDesc.TryGetValue(item.Slug, out var d)) { item.Description = d; changed = true; }
+        foreach (var spell in await db.SummonerSpells.Where(s => s.Description == null).ToListAsync())
+            if (spellDesc.TryGetValue(spell.Slug, out var d)) { spell.Description = d; changed = true; }
+
+        if (changed) await db.SaveChangesAsync();
     }
 
     private static List<T> Load<T>(string seedDir, string file)
@@ -93,7 +114,7 @@ public static class DbSeeder
     }
 
     private const string WelcomePost =
-        "Welcome, Summoners! I am so glad to have all of you here, in a haven where all builds, " +
+        "Welcome, Summoners! I am so glad to have all of you here -- League Classic Hub is a haven where all builds, " +
         "all champions, and all playstyles are welcome. A place where Teemo Mains and AP Sion " +
         "nostalgists can share a drink and a story. A place where AP Master Yis can Meditate under " +
         "tower for hours. A place where we can rejoice in the return of our beloved Fields of Justice. " +
@@ -105,15 +126,15 @@ public static class DbSeeder
         // General starter boards — one-time (skipped once any category exists).
         if (!await db.Categories.AnyAsync())
         {
-            var general = new Category { Name = "The Rift", Slug = "the-rift", SortOrder = 1 };
-            var strategy = new Category { Name = "Strategy & Guides", Slug = "strategy", SortOrder = 2 };
+            var general = new Category { Name = "The Fields of Justice", Slug = "the-fields-of-justice", SortOrder = 2 };
+            var site = new Category { Name = "League Classic Hub", Slug = "hub", SortOrder = 1 };
 
-            general.Boards.Add(new Board { Name = "Announcements", Slug = "announcements", Description = "Site news and League Classic updates.", SortOrder = 1 });
-            general.Boards.Add(new Board { Name = "General Discussion", Slug = "general", Description = "Everything League Classic — plays, patches, hot takes.", SortOrder = 2 });
-            strategy.Boards.Add(new Board { Name = "Champion Discussion", Slug = "champions", Description = "Deep dives on individual champions.", SortOrder = 1 });
-            strategy.Boards.Add(new Board { Name = "Build & Guide Workshop", Slug = "guide-workshop", Description = "Share and critique builds and written guides.", SortOrder = 2 });
+            site.Boards.Add(new Board { Name = "News", Slug = "announcements", Description = "Dev Updates.", SortOrder = 1 });
+            general.Boards.Add(new Board { Name = "The Tavern", Slug = "tavern", Description = "Your home for discussion of all things League Classic.", SortOrder = 1 });
+            general.Boards.Add(new Board { Name = "Champion Discussion", Slug = "champions", Description = "Champions - their backstory, their playstyle, their builds.", SortOrder = 2 });
+            general.Boards.Add(new Board { Name = "Strategy Discussion", Slug = "strategy", Description = "Non-Champion-Specific Strategy - how to destroy the enemy Nexus.", SortOrder = 3 });
 
-            db.Categories.AddRange(general, strategy);
+            db.Categories.AddRange(general, site);
             await db.SaveChangesAsync();
         }
 
@@ -133,9 +154,9 @@ public static class DbSeeder
             var board = new Board
             {
                 CategoryId = welcomeCat.Id,
-                Name = "Welcome & Rules",
+                Name = "Welcome",
                 Slug = "welcome",
-                Description = "New here? Start with a warm welcome and the community guidelines.",
+                Description = "New here? Start with a warm welcome and a summary of the community guidelines.",
                 SortOrder = 1,
                 ThreadCount = 1,
                 PostCount = 1,
@@ -143,8 +164,8 @@ public static class DbSeeder
             };
             var thread = new ForumThread
             {
-                Title = "Welcome to LeagueClassicGuides.net!",
-                Slug = "welcome-to-leagueclassicguides-net",
+                Title = "Welcome to LeagueClassicHub.net!",
+                Slug = "welcome-to-leagueclassichub-net",
                 IsPinned = true,
                 CreatedAt = now,
                 LastPostAt = now,
@@ -158,7 +179,7 @@ public static class DbSeeder
 
     // Seed DTOs matching Data/seed/*.json
     private sealed record ChampionSeed(string Name, string Slug, string? Icon, bool Available);
-    private sealed record ItemSeed(string Name, string Slug, string Category, string? Icon);
-    private sealed record SpellSeed(string Name, string Slug, string? Icon);
+    private sealed record ItemSeed(string Name, string Slug, string Category, string? Icon, string? Desc);
+    private sealed record SpellSeed(string Name, string Slug, string? Icon, string? Desc);
     private sealed record AbilitySeed(string Champ, string Slot, string Name, string? Icon);
 }

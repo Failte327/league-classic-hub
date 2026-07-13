@@ -34,6 +34,7 @@ public class Item
     public required string Slug { get; set; }
     public required string Category { get; set; }
     public string? IconPath { get; set; }
+    public string? Description { get; set; }   // classic stats/passive text (DDragon 5.1.1)
 }
 
 public class SummonerSpell
@@ -42,6 +43,7 @@ public class SummonerSpell
     public required string Name { get; set; }
     public required string Slug { get; set; }
     public string? IconPath { get; set; }
+    public string? Description { get; set; }
 }
 
 // Ordered build-order entry linking a Guide to an Item.

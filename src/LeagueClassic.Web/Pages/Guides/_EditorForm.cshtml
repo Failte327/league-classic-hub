@@ -20,7 +20,8 @@
         <div class="spell-palette" id="spell-palette">
             @foreach (var s in Model.Spells)
             {
-                <button type="button" class="spell-opt" data-id="@s.Id" title="@s.Name">
+                <button type="button" class="spell-opt" data-id="@s.Id"
+                        data-name="@s.Name" data-desc="@s.Description">
                     <img src="~/@s.IconPath" alt="@s.Name" loading="lazy" />
                     <span>@s.Name</span>
                 </button>
@@ -77,8 +78,9 @@
                         @foreach (var item in group)
                         {
                             <button type="button" class="item-opt" data-id="@item.Id"
-                                    data-name="@item.Name" data-icon="@item.IconPath" title="@item.Name">
+                                    data-name="@item.Name" data-icon="@item.IconPath" data-desc="@item.Description">
                                 <img src="~/@item.IconPath" alt="@item.Name" loading="lazy" />
+                                <span class="item-opt-name">@item.Name</span>
                             </button>
                         }
                     </div>
@@ -99,8 +101,16 @@
             <code>[link](https://…)</code> &middot;
             <code>`code`</code> &middot; blank line = new paragraph.
         </div>
-        <textarea asp-for="Input.BodyMarkdown" rows="16"
-                  placeholder="Explain the playstyle, matchups, combos, power spikes…"></textarea>
+        <div class="editor-split">
+            <textarea asp-for="Input.BodyMarkdown" rows="18"
+                      placeholder="Explain the playstyle, matchups, combos, power spikes…"
+                      hx-post="/guides/preview" hx-trigger="load, keyup changed delay:400ms"
+                      hx-target="#md-preview" hx-swap="innerHTML"></textarea>
+            <div class="md-preview-wrap">
+                <div class="md-preview-label">Live Preview</div>
+                <div id="md-preview" class="md-preview guide-body"></div>
+            </div>
+        </div>
     </section>
 
     <div class="form-actions">

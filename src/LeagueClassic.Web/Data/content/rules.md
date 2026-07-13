@@ -1,6 +1,6 @@
 # Community Rules & Guidelines
 
-Welcome to **LeagueClassicGuides.net**. These rules exist for one reason: to keep this a place everyone is glad to log into. Read them once, play nice, and we'll all get along just fine.
+Welcome to **League Classic Hub**. These rules exist for one reason: to keep this a place everyone is glad to log into. Read them once, play nice, and we'll all get along just fine.
 
 ## The Golden Rule
 

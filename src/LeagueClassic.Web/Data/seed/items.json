@@ -3,768 +3,896 @@
   "name": "Berserker's Greaves",
   "slug": "berserkers-greaves",
   "category": "Boots",
-  "icon": "assets/items/berserkers-greaves.png"
+  "icon": "assets/items/berserkers-greaves.png",
+  "desc": "+25% Attack Speed\n\nUNIQUE Passive - Enhanced Movement: +45 Movement Speed\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Boots of Mobility",
   "slug": "boots-of-mobility",
   "category": "Boots",
-  "icon": "assets/items/boots-of-mobility.png"
+  "icon": "assets/items/boots-of-mobility.png",
+  "desc": "UNIQUE Passive - Enhanced Movement: +25 Movement Speed. Increases to +105 Movement Speed when out of combat for 5 seconds.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Boots of Speed",
   "slug": "boots-of-speed",
   "category": "Boots",
-  "icon": "assets/items/boots-of-speed.png"
+  "icon": "assets/items/boots-of-speed.png",
+  "desc": "Limited to 1.\n\nUNIQUE Passive - Enhanced Movement: +25 Movement Speed\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Boots of Swiftness",
   "slug": "boots-of-swiftness",
   "category": "Boots",
-  "icon": "assets/items/boots-of-swiftness.png"
+  "icon": "assets/items/boots-of-swiftness.png",
+  "desc": "UNIQUE Passive - Enhanced Movement: +60 Movement Speed\nUNIQUE Passive - Slow Resist: Movement slowing effects are reduced by 25%.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Ionian Boots of Lucidity",
   "slug": "ionian-boots-of-lucidity",
   "category": "Boots",
-  "icon": "assets/items/ionian-boots-of-lucidity.png"
+  "icon": "assets/items/ionian-boots-of-lucidity.png",
+  "desc": "UNIQUE Passive: +15% Cooldown Reduction\nUNIQUE Passive - Enhanced Movement: +45 Movement Speed\n\n(Unique Passives with the same name don't stack.)\n\n''This item is dedicated in honor of Ionia's victory over Noxus in the Rematch for the Southern Provinces on 10 December, 20 CLE.''"
  },
  {
   "name": "Mercury's Treads",
   "slug": "mercurys-treads",
   "category": "Boots",
-  "icon": "assets/items/mercurys-treads.png"
+  "icon": "assets/items/mercurys-treads.png",
+  "desc": "+25 Magic Resist\n\nUNIQUE Passive - Enhanced Movement: +45 Movement Speed\nUNIQUE Passive - Tenacity: Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Ninja Tabi",
   "slug": "ninja-tabi",
   "category": "Boots",
-  "icon": "assets/items/ninja-tabi.png"
+  "icon": "assets/items/ninja-tabi.png",
+  "desc": "+25 Armor\n\nUNIQUE Passive: Blocks 10% of the damage from basic attacks.\nUNIQUE Passive - Enhanced Movement: +45 Movement Speed\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Sorcerer's Shoes",
   "slug": "sorcerers-shoes",
   "category": "Boots",
-  "icon": "assets/items/sorcerers-shoes.png"
+  "icon": "assets/items/sorcerers-shoes.png",
+  "desc": "+15 Magic Penetration\n\nUNIQUE Passive - Enhanced Movement: +45 Movement Speed\n\n(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Bloodthirster",
   "slug": "bloodthirster",
   "category": "Offense",
-  "icon": "assets/items/bloodthirster.png"
+  "icon": "assets/items/bloodthirster.png",
+  "desc": null
  },
  {
   "name": "Infinity Edge",
   "slug": "infinity-edge",
   "category": "Offense",
-  "icon": "assets/items/infinity-edge.png"
+  "icon": "assets/items/infinity-edge.png",
+  "desc": "+80 Attack Damage\n+20% Critical Strike Chance\n\nUNIQUE Passive: Critical strikes deal 250% damage instead of 200%."
  },
  {
   "name": "The Black Cleaver",
   "slug": "the-black-cleaver",
   "category": "Offense",
-  "icon": "assets/items/the-black-cleaver.png"
+  "icon": "assets/items/the-black-cleaver.png",
+  "desc": "+200 Health\n+50 Attack Damage\n+10% Cooldown Reduction\n\nUNIQUE Passive: +10 Armor Penetration\nPassive: Dealing physical damage to an enemy champion reduces their Armor by 5% for 4 seconds (stacks up to 5 times, up to 25%).\n\n(Armor Penetration: Physical damage is increased by ignoring an amount of the target's Armor equal to Armor Penetration.)"
  },
  {
   "name": "Trinity Force",
   "slug": "trinity-force",
   "category": "Offense",
-  "icon": "assets/items/trinity-force.png"
+  "icon": "assets/items/trinity-force.png",
+  "desc": "+30 Attack Damage\n+30 Ability Power\n+30% Attack Speed\n+10% Critical Strike Chance\n+8% Movement Speed\n+250 Health\n+200 Mana\n\nUNIQUE Passive - Rage: Basic attacks grant 20 Movement Speed for 2 seconds. Kills grant 60 Movement Speed instead. This Movement Speed bonus is halved for ranged champions.\nUNIQUE Passive - Spellblade: After using an ability, the next basic attack deals bonus physical damage equal to 200% of base Attack Damage on hit (1.5 second cooldown).\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Ravenous Hydra",
   "slug": "ravenous-hydra",
   "category": "Offense",
-  "icon": "assets/items/ravenous-hydra.png"
+  "icon": "assets/items/ravenous-hydra.png",
+  "desc": null
  },
  {
   "name": "Blade of the Ruined King",
   "slug": "blade-of-the-ruined-king",
   "category": "Offense",
-  "icon": "assets/items/blade-of-the-ruined-king.png"
+  "icon": "assets/items/blade-of-the-ruined-king.png",
+  "desc": "+25 Attack Damage\n+40% Attack Speed\n+10% Life Steal\n\nUNIQUE Passive: Basic attacks deal 8% of the target's current Health in bonus physical damage (max 60 vs. monsters and minions) on hit.\nUNIQUE Active: Deals 10% of target champion's maximum Health (min. 100) as physical damage, heals for the same amount, and steals 25% of the target's Movement Speed for 3 seconds (90 second cooldown)."
  },
  {
   "name": "Guinsoo's Rageblade",
   "slug": "guinsoos-rageblade",
   "category": "Offense",
-  "icon": "assets/items/guinsoos-rageblade.png"
+  "icon": "assets/items/guinsoos-rageblade.png",
+  "desc": "+30 Attack Damage\n+40 Ability Power\n\nPassive: Basic attacks (on attack) and spell casts grant +4% Attack Speed and +4 Ability Power for 8 seconds (stacks up to 8 times).\nUNIQUE Passive: Falling below 50% Health grants +20% Attack Speed, +10% Life Steal, and +10% Spell Vamp until out of combat (30 second cooldown)."
  },
  {
   "name": "Last Whisper",
   "slug": "last-whisper",
   "category": "Offense",
-  "icon": "assets/items/last-whisper.png"
+  "icon": "assets/items/last-whisper.png",
+  "desc": "+40 Attack Damage\n\nUNIQUE Passive: Physical damage ignores 35% of the target's Armor (applies before Armor Penetration)."
  },
  {
   "name": "Youmuu's Ghostblade",
   "slug": "youmuus-ghostblade",
   "category": "Offense",
-  "icon": "assets/items/youmuus-ghostblade.png"
+  "icon": "assets/items/youmuus-ghostblade.png",
+  "desc": "+30 Attack Damage\n+15% Critical Strike Chance\n+10% Cooldown Reduction\n\nUNIQUE Passive: +20 Armor Penetration\nUNIQUE Active: Grants +20% Movement Speed and +40% Attack Speed for 6 seconds (45 second cooldown).\n\n(Armor Penetration: Physical damage is increased by ignoring an amount of the target's Armor equal to Armor Penetration.)"
  },
  {
   "name": "Rabadon's Deathcap",
   "slug": "rabadons-deathcap",
   "category": "Magic",
-  "icon": "assets/items/rabadons-deathcap.png"
+  "icon": "assets/items/rabadons-deathcap.png",
+  "desc": "+120 Ability Power \n\nUNIQUE Passive: Increases Ability Power by 30%."
  },
  {
   "name": "Zhonya's Hourglass",
   "slug": "zhonyas-hourglass",
   "category": "Magic",
-  "icon": "assets/items/zhonyas-hourglass.png"
+  "icon": "assets/items/zhonyas-hourglass.png",
+  "desc": "+120 Ability Power\n+50 Armor \n\nUNIQUE Active - Stasis: Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown)."
  },
  {
   "name": "Void Staff",
   "slug": "void-staff",
   "category": "Magic",
-  "icon": "assets/items/void-staff.png"
+  "icon": "assets/items/void-staff.png",
+  "desc": "+70 Ability Power\n\nUNIQUE Passive: Magic damage ignores 35% of the target's Magic Resist (applies before Magic Penetration)."
  },
  {
   "name": "Liandry's Torment",
   "slug": "liandrys-torment",
   "category": "Magic",
-  "icon": "assets/items/liandrys-torment.png"
+  "icon": "assets/items/liandrys-torment.png",
+  "desc": "+50 Ability Power\n+300 Health\n\nUNIQUE Passive - Eyes of Pain: +15 Magic Penetration\nUNIQUE Passive: Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters.\n\n(A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.)\n\n(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Morellonomicon",
   "slug": "morellonomicon",
   "category": "Magic",
-  "icon": "assets/items/morellonomicon.png"
+  "icon": "assets/items/morellonomicon.png",
+  "desc": "+80 Ability Power\n+100% Base Mana Regen \n+20% Cooldown Reduction\n\nUNIQUE Passive: Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds.\n\n(Grievous Wounds reduces incoming healing and regeneration effects by 50%.)"
  },
  {
   "name": "Rylai's Crystal Scepter",
   "slug": "rylais-crystal-scepter",
   "category": "Magic",
-  "icon": "assets/items/rylais-crystal-scepter.png"
+  "icon": "assets/items/rylais-crystal-scepter.png",
+  "desc": "+400 Health\n+100 Ability Power\n\nUNIQUE Passive: Dealing spell damage slows the target's Movement Speed by 35% for 1.5 seconds (15% for multi-target and damage-over-time spells)."
  },
  {
   "name": "Lich Bane",
   "slug": "lich-bane",
   "category": "Magic",
-  "icon": "assets/items/lich-bane.png"
+  "icon": "assets/items/lich-bane.png",
+  "desc": "+80 Ability Power\n+250 Mana\n+5% Movement Speed\n\nUNIQUE Passive - Spellblade: After using an ability, the next basic attack deals 75% Base Attack Damage (+50% of Ability Power) bonus magic damage on hit (1.5 second cooldown).\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Deathfire Grasp",
   "slug": "deathfire-grasp",
   "category": "Magic",
-  "icon": "assets/items/deathfire-grasp.png"
+  "icon": "assets/items/deathfire-grasp.png",
+  "desc": "+120 Ability Power\n+10% Cooldown Reduction\n\nUNIQUE Active: Deals 15% of target champion's maximum Health in magic damage and increases all subsequent magic damage taken by the target by 20% for 4 seconds (90 second cooldown)."
  },
  {
   "name": "Sightstone",
   "slug": "sightstone",
   "category": "Support",
-  "icon": "assets/items/sightstone.png"
+  "icon": "assets/items/sightstone.png",
+  "desc": "+150 Health\n\nUNIQUE Passive - Ward Refresh: Holds 4 charges and refills upon visiting the shop.\nUNIQUE Active - Ghost Ward: Consumes a charge to place a Stealth Ward that reveals the surrounding area for 3 minutes. A player may only have 3 Stealth Wards on the map at one time.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Ruby Sightstone",
   "slug": "ruby-sightstone",
   "category": "Support",
-  "icon": "assets/items/ruby-sightstone.png"
+  "icon": "assets/items/ruby-sightstone.png",
+  "desc": "+400 Health\n\nUNIQUE Passive - Ward Refresh: Holds 5 charges and refills upon visiting the shop.\nUNIQUE Active - Ghost Ward: Consumes a charge to place a Stealth Ward that reveals the surrounding area for 3 minutes. A player may only have 3 Stealth Wards on the map at one time.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Locket of the Iron Solari",
   "slug": "locket-of-the-iron-solari",
   "category": "Support",
-  "icon": "assets/items/locket-of-the-iron-solari.png"
+  "icon": "assets/items/locket-of-the-iron-solari.png",
+  "desc": "+400 Health\n+20 Magic Resistance\n+10% Cooldown Reduction\n\nUNIQUE Active: Grants a shield to nearby allies for 5 seconds that absorbs up to 50 (+10 per level) damage (60 second cooldown).\nUNIQUE Aura - Legion: Grants nearby allies +20 Magic Resist and +75% Base Health Regen.\n\n(Unique Auras with the same name don't stack.)"
  },
  {
   "name": "Aegis of the Legion",
   "slug": "aegis-of-the-legion",
   "category": "Support",
-  "icon": "assets/items/aegis-of-the-legion.png"
+  "icon": "assets/items/aegis-of-the-legion.png",
+  "desc": "+200 Health\n+20 Magic Resistance\n\nUNIQUE Aura - Legion: Grants nearby allies +20 Magic Resist and +75% Base Health Regen.\n\n(Unique Auras with the same name don't stack.)"
  },
  {
   "name": "Runic Bulwark",
   "slug": "runic-bulwark",
   "category": "Support",
-  "icon": "assets/items/runic-bulwark.png"
+  "icon": "assets/items/runic-bulwark.png",
+  "desc": "+300 Health\n+10 Health Regeneration\n+30 Armor\n+55 Magic Resistance\n+10 Health Regeneration\n+10 Armor\n+25 Magic Resistance"
  },
  {
   "name": "Mikael's Crucible",
   "slug": "mikaels-crucible",
   "category": "Support",
-  "icon": "assets/items/mikaels-crucible.png"
+  "icon": "assets/items/mikaels-crucible.png",
+  "desc": "+40 Magic Resist\n+100% Base Mana Regen \n+10% Cooldown Reduction\n\nUNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds.\nUNIQUE Active: Removes all stuns, roots, taunts, fears, silences, and slows on an allied champion and heals that champion for 150 (+10% of maximum Health) (180 second cooldown).\n\n(Unique Passives with the same name do not stack.)"
  },
  {
   "name": "Shurelya's Reverie",
   "slug": "shurelyas-reverie",
   "category": "Support",
-  "icon": "assets/items/shurelyas-reverie.png"
+  "icon": "assets/items/shurelyas-reverie.png",
+  "desc": "+10% Heal And Shield Power\n+100% Base Health Regeneration\n+10% Cooldown Reduction\n+300 Health\n+100% Base Mana Regeneration\n+40% Movement Speed"
  },
  {
   "name": "Ohmwrecker",
   "slug": "ohmwrecker",
   "category": "Support",
-  "icon": "assets/items/ohmwrecker.png"
+  "icon": "assets/items/ohmwrecker.png",
+  "desc": "+300 Health\n+50 Armor\n+100% Base Health Regen \n+10% Cooldown Reduction\n\nUNIQUE Active: Prevents nearby enemy turrets from attacking for 3 seconds (120 second cooldown). This effect cannot be used against the same turret more than once every 8 seconds.\n\nUNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets."
  },
  {
   "name": "Banner of Command",
   "slug": "banner-of-command",
   "category": "Support",
-  "icon": "assets/items/banner-of-command.png"
+  "icon": "assets/items/banner-of-command.png",
+  "desc": "+200 Health\n+60 Ability Power\n+20 Magic Resist\n+10% Cooldown Reduction\n\nUNIQUE Aura - Legion: Grants nearby allies +20 Magic Resist and +75% Base Health Regen.\nUNIQUE Active - Promote: Greatly increases the power of a lane minion and grants it immunity to magic damage (120 second cooldown).\n\n(Unique Auras with the same name do not stack.)"
  },
  {
   "name": "Kage's Lucky Pick",
   "slug": "kages-lucky-pick",
   "category": "Support",
-  "icon": "assets/items/kages-lucky-pick.png"
+  "icon": "assets/items/kages-lucky-pick.png",
+  "desc": "+25 Ability Power"
  },
  {
   "name": "Philosopher's Stone",
   "slug": "philosophers-stone",
   "category": "Support",
-  "icon": "assets/items/philosophers-stone.png"
+  "icon": "assets/items/philosophers-stone.png",
+  "desc": "+7 Health Regeneration\n+9 Mana Regeneration"
  },
  {
   "name": "Emblem of Valor",
   "slug": "emblem-of-valor",
   "category": "Support",
-  "icon": "assets/items/emblem-of-valor.png"
+  "icon": "assets/items/emblem-of-valor.png",
+  "desc": "+20 Armor\n+7 Health Regeneration\n+7 Health Regeneration"
  },
  {
   "name": "Heart of Gold",
   "slug": "heart-of-gold",
   "category": "Support",
-  "icon": "assets/items/heart-of-gold.png"
+  "icon": "assets/items/heart-of-gold.png",
+  "desc": null
  },
  {
   "name": "Mejai's Soulstealer",
   "slug": "mejais-soulstealer",
   "category": "Support",
-  "icon": "assets/items/mejais-soulstealer.png"
+  "icon": "assets/items/mejais-soulstealer.png",
+  "desc": "+20 Ability Power \n\nUNIQUE Passive: Grants +8 Ability Power per stack and 5 stacks upon first purchase. Grants 2 stacks for a kill or 1 stack for an assist (max 20 stacks). Half of the stacks are lost upon death. At 20 stacks, grants +15% Cooldown Reduction."
  },
  {
   "name": "Sword of the Occult",
   "slug": "sword-of-the-occult",
   "category": "Support",
-  "icon": "assets/items/sword-of-the-occult.png"
+  "icon": "assets/items/sword-of-the-occult.png",
+  "desc": "+10 Attack Damage \n\nUNIQUE Passive: Grants +5 Attack Damage per stack and 5 stacks upon first purchase. Grants 2 stacks for a kill or 1 stack for an assist (max 20 stacks). Half of the stacks are lost upon death. At 20 stacks, grants +20% bonus Attack Speed."
  },
  {
   "name": "Leviathan",
   "slug": "leviathan",
   "category": "Support",
-  "icon": "assets/items/leviathan.png"
+  "icon": "assets/items/leviathan.png",
+  "desc": null
  },
  {
   "name": "Avarice Blade",
   "slug": "avarice-blade",
   "category": "Support",
-  "icon": "assets/items/avarice-blade.png"
+  "icon": "assets/items/avarice-blade.png",
+  "desc": "+10% Critical Strike Chance\n\nUNIQUE Passive - Avarice: +3 Gold per 10 seconds\nUNIQUE Passive - Greed: Grants 2 Gold upon killing a unit.\n\nMay be bought with another Gold Income item"
  },
  {
   "name": "Warmog's Armor",
   "slug": "warmogs-armor",
   "category": "Defense",
-  "icon": "assets/items/warmogs-armor.png"
+  "icon": "assets/items/warmogs-armor.png",
+  "desc": "+800 Health\n\nUNIQUE Passive: Restores 1% of maximum Health every 5 seconds. Health restore increases to 3% of maximum Health if damage hasn't been taken within 8 seconds."
  },
  {
   "name": "Frozen Heart",
   "slug": "frozen-heart",
   "category": "Defense",
-  "icon": "assets/items/frozen-heart.png"
+  "icon": "assets/items/frozen-heart.png",
+  "desc": "+100 Armor\n+400 Mana\n+20% Cooldown Reduction\n\nUNIQUE Aura: Reduces the Attack Speed of nearby enemies by 15%."
  },
  {
   "name": "Randuin's Omen",
   "slug": "randuins-omen",
   "category": "Defense",
-  "icon": "assets/items/randuins-omen.png"
+  "icon": "assets/items/randuins-omen.png",
+  "desc": "+500 Health\n+70 Armor\n\nUNIQUE Passive - Cold Steel: When hit by basic attacks, reduces the attacker's Attack Speed by 15%.\nUNIQUE Active: Slows the Movement Speed of nearby enemy units by 35% for 2 seconds (+1 second per 200 Armor and +1 second per 200 Magic Resist) (60 second cooldown).\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Spirit Visage",
   "slug": "spirit-visage",
   "category": "Defense",
-  "icon": "assets/items/spirit-visage.png"
+  "icon": "assets/items/spirit-visage.png",
+  "desc": "+400 Health\n+55 Magic Resist\n+100% Base Health Regen \n+10% Cooldown Reduction\n\nUNIQUE Passive: Increases self-healing, Health Regen, Lifesteal, and Spell Vamp effects by 20%."
  },
  {
   "name": "Maw of Malmortius",
   "slug": "maw-of-malmortius",
   "category": "Defense",
-  "icon": "assets/items/maw-of-malmortius.png"
+  "icon": "assets/items/maw-of-malmortius.png",
+  "desc": "+60 Attack Damage\n+40 Magic Resist\n\nUNIQUE Passive: Grants +1 Attack Damage for every 2% of missing Health, up to a maximum of 35 Attack Damage.\nUNIQUE Passive - Lifeline: Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 400 magic damage for 5 seconds (90 second cooldown).\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Hexdrinker",
   "slug": "hexdrinker",
   "category": "Defense",
-  "icon": "assets/items/hexdrinker.png"
+  "icon": "assets/items/hexdrinker.png",
+  "desc": "+25 Attack Damage\n+30 Magic Resist\n\nUNIQUE Passive - Lifeline: Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 250 magic damage for 5 seconds (90 second cooldown).\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Banshee's Veil",
   "slug": "banshees-veil",
   "category": "Defense",
-  "icon": "assets/items/banshees-veil.png"
+  "icon": "assets/items/banshees-veil.png",
+  "desc": "+450 Health\n+55 Magic Resist\n+100% Base Health Regeneration \n\nUNIQUE Passive: Grants a spell shield that blocks the next enemy ability. This shield refreshes after no damage is taken from enemy champions for 40 seconds."
  },
  {
   "name": "Abyssal Scepter",
   "slug": "abyssal-scepter",
   "category": "Defense",
-  "icon": "assets/items/abyssal-scepter.png"
+  "icon": "assets/items/abyssal-scepter.png",
+  "desc": "+70 Ability Power\n+50 Magic Resist\n\nUNIQUE Aura: Reduces the Magic Resist of nearby enemies by 20."
  },
  {
   "name": "Force of Nature",
   "slug": "force-of-nature",
   "category": "Defense",
-  "icon": "assets/items/force-of-nature.png"
+  "icon": "assets/items/force-of-nature.png",
+  "desc": "+6% Movement Speed\n+70 Magic Resistance"
  },
  {
   "name": "Thornmail",
   "slug": "thornmail",
   "category": "Defense",
-  "icon": "assets/items/thornmail.png"
+  "icon": "assets/items/thornmail.png",
+  "desc": "+100 Armor \n\nUNIQUE Passive: Upon being hit by a basic attack, returns 30% of the incoming damage (before being reduced by defenses) to the attacker as magic damage."
  },
  {
   "name": "Sunfire Cape",
   "slug": "sunfire-cape",
   "category": "Defense",
-  "icon": "assets/items/sunfire-cape.png"
+  "icon": "assets/items/sunfire-cape.png",
+  "desc": "+450 Health\n+45 Armor \n\nUNIQUE Passive: Deals 25 (+1 per champion level) magic damage per second to nearby enemies."
  },
  {
   "name": "Warden's Mail",
   "slug": "wardens-mail",
   "category": "Defense",
-  "icon": "assets/items/wardens-mail.png"
+  "icon": "assets/items/wardens-mail.png",
+  "desc": "+45 Armor\n\nUNIQUE Passive - Cold Steel: When hit by basic attacks, reduces the attacker's Attack Speed by 15% for 1 seconds.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Chalice of Harmony",
   "slug": "chalice-of-harmony",
   "category": "Defense",
-  "icon": "assets/items/chalice-of-harmony.png"
+  "icon": "assets/items/chalice-of-harmony.png",
+  "desc": "+25 Magic Resist\n+50% Base Mana Regen \n\nUNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Feral Flare",
   "slug": "feral-flare",
   "category": "Jungle",
-  "icon": "assets/items/feral-flare.png"
+  "icon": "assets/items/feral-flare.png",
+  "desc": "+12 Attack Damage\n+30% Attack Speed"
  },
  {
   "name": "Wriggle's Lantern",
   "slug": "wriggles-lantern",
   "category": "Jungle",
-  "icon": "assets/items/wriggles-lantern.png"
+  "icon": "assets/items/wriggles-lantern.png",
+  "desc": "+12 Attack Damage\n+30% Attack Speed\n\nUNIQUE Passive - Maim: Basic attacks against monsters deal 75 bonus magic damage and heal 10 Health on hit.\nUNIQUE Passive: Gain 30% increased Gold from monsters.\nUNIQUE Active: Places a Stealth Ward that reveals the surrounding area for 180 seconds (180 second cooldown).\n\nTransforms into Feral Flare at 30 kills, assists and large monster kills.\n(Champions and monsters killed with Hunter's Machete and Madred's Razors count toward this transformation)\n\nLimited to 1 Gold Income item"
  },
  {
   "name": "Hunter's Machete",
   "slug": "hunters-machete",
   "category": "Jungle",
-  "icon": "assets/items/hunters-machete.png"
+  "icon": "assets/items/hunters-machete.png",
+  "desc": "+15 Bonus Gold per Large Monster Kill\nPassive - Jungler: Deal 30 magic damage on hit to monsters over 2 seconds and gain 7 Health and 3 Mana per second while in combat with monsters.\n\nLimited to 1 Jungle item"
  },
  {
   "name": "Spirit Stone",
   "slug": "spirit-stone",
   "category": "Jungle",
-  "icon": "assets/items/spirit-stone.png"
+  "icon": "assets/items/spirit-stone.png",
+  "desc": null
  },
  {
   "name": "Spirit of the Ancient Golem",
   "slug": "spirit-of-the-ancient-golem",
   "category": "Jungle",
-  "icon": "assets/items/spirit-of-the-ancient-golem.png"
+  "icon": "assets/items/spirit-of-the-ancient-golem.png",
+  "desc": "+200 Health\n+20 Armor\n+10% Cooldown Reduction"
  },
  {
   "name": "Spirit of the Elder Lizard",
   "slug": "spirit-of-the-elder-lizard",
   "category": "Jungle",
-  "icon": "assets/items/spirit-of-the-elder-lizard.png"
+  "icon": "assets/items/spirit-of-the-elder-lizard.png",
+  "desc": "+30 Attack Damage\n+10% Cooldown Reduction"
  },
  {
   "name": "Spirit of the Spectral Wraith",
   "slug": "spirit-of-the-spectral-wraith",
   "category": "Jungle",
-  "icon": "assets/items/spirit-of-the-spectral-wraith.png"
+  "icon": "assets/items/spirit-of-the-spectral-wraith.png",
+  "desc": "+50 Ability Power\n+10% Cooldown Reduction\n+30 Ability Power"
  },
  {
   "name": "Madred's Bloodrazor",
   "slug": "madreds-bloodrazor",
   "category": "Jungle",
-  "icon": "assets/items/madreds-bloodrazor.png"
+  "icon": "assets/items/madreds-bloodrazor.png",
+  "desc": "+25 Armor\n+40 Attack Damage\n+40% Attack Speed"
  },
  {
   "name": "Madred's Razors",
   "slug": "madreds-razors",
   "category": "Jungle",
-  "icon": "assets/items/madreds-razors.png"
+  "icon": "assets/items/madreds-razors.png",
+  "desc": "+15% Attack Speed\n\nUNIQUE Passive - Maim: Basic attacks against monsters deal 50 bonus magic damage and heal 8 Health on hit.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Statikk Shiv",
   "slug": "statikk-shiv",
   "category": "AttackSpeed",
-  "icon": "assets/items/statikk-shiv.png"
+  "icon": "assets/items/statikk-shiv.png",
+  "desc": "+40% Attack Speed\n+20% Critical Strike Chance\n+6% Movement Speed\n\nUNIQUE Passive: Grants Static Charges upon moving or attacking. At 100 Charges, basic attacking expends all Charges to deal 100 bonus magic damage to up to 4 targets on hit (this damage can critically strike)."
  },
  {
   "name": "Runaan's Hurricane",
   "slug": "runaans-hurricane",
   "category": "AttackSpeed",
-  "icon": "assets/items/runaans-hurricane.png"
+  "icon": "assets/items/runaans-hurricane.png",
+  "desc": null
  },
  {
   "name": "Phantom Dancer",
   "slug": "phantom-dancer",
   "category": "AttackSpeed",
-  "icon": "assets/items/phantom-dancer.png"
+  "icon": "assets/items/phantom-dancer.png",
+  "desc": "+50% Attack Speed\n+35% Critical Strike Chance\n+5% Movement Speed\n\nUNIQUE Passive: Champion can move through units."
  },
  {
   "name": "Sword of the Divine",
   "slug": "sword-of-the-divine",
   "category": "AttackSpeed",
-  "icon": "assets/items/sword-of-the-divine.png"
+  "icon": "assets/items/sword-of-the-divine.png",
+  "desc": null
  },
  {
   "name": "Ionic Spark",
   "slug": "ionic-spark",
   "category": "AttackSpeed",
-  "icon": "assets/items/ionic-spark.png"
+  "icon": "assets/items/ionic-spark.png",
+  "desc": null
  },
  {
   "name": "Malady",
   "slug": "malady",
   "category": "AttackSpeed",
-  "icon": "assets/items/malady.png"
+  "icon": "assets/items/malady.png",
+  "desc": "+25 Ability Power\n+45% Attack Speed"
  },
  {
   "name": "Zephyr",
   "slug": "zephyr",
   "category": "AttackSpeed",
-  "icon": "assets/items/zephyr.png"
+  "icon": "assets/items/zephyr.png",
+  "desc": "+25 Attack Damage\n+50% Attack Speed\n+10% Movement Speed\n+10% Cooldown Reduction\n\nUNIQUE Passive - Tenacity: Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%.\n\n(Unique Passives with the same name do not stack.)"
  },
  {
   "name": "Zz'Rot Portal",
   "slug": "zzrot-portal",
   "category": "AttackSpeed",
-  "icon": "assets/items/zzrot-portal.png"
+  "icon": "assets/items/zzrot-portal.png",
+  "desc": "+50 Armor\n+50 Magic Resist\n+100% Base Health Regen \n\nUNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets or Void Gates.\n\nUNIQUE Active: Spawns a Void Gate at target location for 150 seconds. Every 4 seconds the gate makes a Voidspawn that travels down the nearest lane. Voidspawn explodes when attacking structures. Voidspawn ignore champions and void targets (150 second cooldown.)\n\nAfter the third Voidspawn made by a Void Gate, additional Voidspawn gain 50% of your Armor and Magic Resistance as damage."
  },
  {
   "name": "Recurve Bow",
   "slug": "recurve-bow",
   "category": "AttackSpeed",
-  "icon": "assets/items/recurve-bow.png"
+  "icon": "assets/items/recurve-bow.png",
+  "desc": "+30% Attack Speed"
  },
  {
   "name": "Zeal",
   "slug": "zeal",
   "category": "AttackSpeed",
-  "icon": "assets/items/zeal.png"
+  "icon": "assets/items/zeal.png",
+  "desc": "+20% Attack Speed\n+10% Critical Strike Chance\n+5% Movement Speed"
  },
  {
   "name": "Tear of the Goddess",
   "slug": "tear-of-the-goddess",
   "category": "Mana",
-  "icon": "assets/items/tear-of-the-goddess.png"
+  "icon": "assets/items/tear-of-the-goddess.png",
+  "desc": "+250 Mana\n+25% Base Mana Regen \n\nUNIQUE Passive - Mana Charge: Grants 4 maximum Mana on spell cast or Mana expenditure (up to 2 times per 8 seconds). Grants 1 maximum Mana every 8 seconds.\n\nCaps at +750 Mana.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Manamune",
   "slug": "manamune",
   "category": "Mana",
-  "icon": "assets/items/manamune.png"
+  "icon": "assets/items/manamune.png",
+  "desc": "+250 Mana\n+25 Attack Damage\n+25% Base Mana Regen \n\nUNIQUE Passive - Awe: Grants bonus Attack Damage equal to 2% of maximum Mana.\nUNIQUE Passive - Mana Charge: Grants +4 maximum Mana (max +750 Mana) for each basic attack, spell cast, and Mana expenditure (occurs up to 2 times every 8 seconds).\n\nTransforms into Muramana at +750 Mana.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Muramana",
   "slug": "muramana",
   "category": "Mana",
-  "icon": "assets/items/muramana.png"
+  "icon": "assets/items/muramana.png",
+  "desc": "+1000 Mana\n+25 Attack Damage\n+25% Base Mana Regen \n\nUNIQUE Passive - Awe: Grants bonus Attack Damage equal to 2% of maximum Mana.\nUNIQUE Toggle: Single target spells and attacks (on hit) consume 3% of current Mana to deal bonus physical damage equal to twice the amount of Mana consumed.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Seraph's Embrace",
   "slug": "seraphs-embrace",
   "category": "Mana",
-  "icon": "assets/items/seraphs-embrace.png"
+  "icon": "assets/items/seraphs-embrace.png",
+  "desc": "+1000 Mana\n+60 Ability Power\n+50% Base Mana Regen \n\nUNIQUE Passive - Insight: Grants Ability Power equal to 3% of maximum Mana.\nUNIQUE Active - Mana Shield: Consumes 20% of current Mana to grant a shield for 3 seconds that absorbs damage equal to 150 plus the amount of Mana consumed (120 second cooldown).\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Archangel's Staff",
   "slug": "archangels-staff",
   "category": "Mana",
-  "icon": "assets/items/archangels-staff.png"
+  "icon": "assets/items/archangels-staff.png",
+  "desc": "+250 Mana\n+60 Ability Power\n+50% Base Mana Regen \n\nUNIQUE Passive - Insight: Grants Ability Power equal to 3% of maximum Mana.\nUNIQUE Passive - Mana Charge: Grants +8 maximum Mana (max +750 Mana) for each spell cast and Mana expenditure (occurs up to 2 times every 8 seconds). Transforms into Seraph's Embrace at +750 Mana.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Rod of Ages",
   "slug": "rod-of-ages",
   "category": "Mana",
-  "icon": "assets/items/rod-of-ages.png"
+  "icon": "assets/items/rod-of-ages.png",
+  "desc": "+450 Health\n+450 Mana\n+60 Ability Power\n\nPassive: Grants +20 Health, +20 Mana, and +2 Ability Power per stack (max +200 Health, +200 Mana, and +20 Ability Power). Grants 1 stack per minute (max 10 stacks).\nUNIQUE Passive - Valor's Reward: Upon leveling up, restores 150 Health and 200 Mana over 8 seconds.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Catalyst the Protector",
   "slug": "catalyst-the-protector",
   "category": "Mana",
-  "icon": "assets/items/catalyst-the-protector.png"
+  "icon": "assets/items/catalyst-the-protector.png",
+  "desc": "+200 Health\n+300 Mana\n\nUNIQUE Passive - Valor's Reward: Upon leveling up, restores 150 Health and 200 Mana over 8 seconds.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Stealth Ward",
   "slug": "stealth-ward",
   "category": "Vision",
-  "icon": "assets/items/stealth-ward.png"
+  "icon": "assets/items/stealth-ward.png",
+  "desc": "Can only carry 3 Stealth Wards in inventory.\n\nClick to Consume: Places an invisible ward that reveals the surrounding area for 3 minutes. Limit 3 Stealth Wards on the map per player."
  },
  {
   "name": "Vision Ward",
   "slug": "vision-ward",
   "category": "Vision",
-  "icon": "assets/items/vision-ward.png"
+  "icon": "assets/items/vision-ward.png",
+  "desc": "Can only carry 2 Vision Wards in inventory.\n\nClick to Consume: Places a visible ward that reveals the surrounding area and invisible units in the area until killed. Limit 1 Vision Ward on the map per player.\n\n(Revealing a ward in this manner grants a portion of the gold reward when that unit is killed.)"
  },
  {
   "name": "Oracle's Elixir",
   "slug": "oracles-elixir",
   "category": "Vision",
-  "icon": "assets/items/oracles-elixir.png"
+  "icon": "assets/items/oracles-elixir.png",
+  "desc": null
  },
  {
   "name": "Health Potion",
   "slug": "health-potion",
   "category": "Consumable",
-  "icon": "assets/items/health-potion.png"
+  "icon": "assets/items/health-potion.png",
+  "desc": "Limited to 5 at one time.\n\nClick to Consume: Restores 150 Health over 15 seconds."
  },
  {
   "name": "Mana Potion",
   "slug": "mana-potion",
   "category": "Consumable",
-  "icon": "assets/items/mana-potion.png"
+  "icon": "assets/items/mana-potion.png",
+  "desc": "Limited to 5 at one time.\n\nClick to Consume: Restores 100 Mana over 15 seconds."
  },
  {
   "name": "Total Biscuit of Rejuvenation",
   "slug": "total-biscuit-of-rejuvenation",
   "category": "Consumable",
-  "icon": "assets/items/total-biscuit-of-rejuvenation.png"
+  "icon": "assets/items/total-biscuit-of-rejuvenation.png",
+  "desc": "Click to Consume: Restores 20 health and 10 mana immediately and then 150 Health over 15 seconds."
  },
  {
   "name": "Crystalline Flask",
   "slug": "crystalline-flask",
   "category": "Consumable",
-  "icon": "assets/items/crystalline-flask.png"
+  "icon": "assets/items/crystalline-flask.png",
+  "desc": "UNIQUE Passive: Holds 3 charges and refills upon visiting the shop.\nUNIQUE Active: Consumes a charge to restore 120 Health and 60 Mana over 12 seconds."
  },
  {
   "name": "Elixir of Agility",
   "slug": "elixir-of-agility",
   "category": "Consumable",
-  "icon": "assets/items/elixir-of-agility.png"
+  "icon": "assets/items/elixir-of-agility.png",
+  "desc": "+12% Attack Speed\n+8% Critical Strike Chance\n+22% Attack Speed\n+8% Critical Strike Chance"
  },
  {
   "name": "Elixir of Brilliance",
   "slug": "elixir-of-brilliance",
   "category": "Consumable",
-  "icon": "assets/items/elixir-of-brilliance.png"
+  "icon": "assets/items/elixir-of-brilliance.png",
+  "desc": "+25 Ability Power\n+10% Cooldown Reduction\n+40 Ability Power\n+10% Cooldown Reduction"
  },
  {
   "name": "Elixir of Fortitude",
   "slug": "elixir-of-fortitude",
   "category": "Consumable",
-  "icon": "assets/items/elixir-of-fortitude.png"
+  "icon": "assets/items/elixir-of-fortitude.png",
+  "desc": "+120 Health\n+15 Attack Damage\n+235 Health\n+15 Attack Damage"
  },
  {
   "name": "Elixir of Sorcery",
   "slug": "elixir-of-sorcery",
   "category": "Consumable",
-  "icon": "assets/items/elixir-of-sorcery.png"
+  "icon": "assets/items/elixir-of-sorcery.png",
+  "desc": "Level 9 required to purchase.\n\nClick to Consume: Grants +40 Ability Power, 15 bonus Mana Regen per 5 seconds and Sorcery for 3 minutes. \n\nSorcery: Damaging a champion or turret deals 25 bonus True Damage. This effect has a 5 second cooldown versus champions but no cooldown versus turrets.\n\n(Only one Flask effect may be active at a time.)"
  },
  {
   "name": "Long Sword",
   "slug": "long-sword",
   "category": "Component",
-  "icon": "assets/items/long-sword.png"
+  "icon": "assets/items/long-sword.png",
+  "desc": "+10 Attack Damage"
  },
  {
   "name": "B.F. Sword",
   "slug": "bf-sword",
   "category": "Component",
-  "icon": "assets/items/bf-sword.png"
+  "icon": "assets/items/bf-sword.png",
+  "desc": "+50 Attack Damage"
  },
  {
   "name": "Pickaxe",
   "slug": "pickaxe",
   "category": "Component",
-  "icon": "assets/items/pickaxe.png"
+  "icon": "assets/items/pickaxe.png",
+  "desc": "+25 Attack Damage"
  },
  {
   "name": "Blasting Wand",
   "slug": "blasting-wand",
   "category": "Component",
-  "icon": "assets/items/blasting-wand.png"
+  "icon": "assets/items/blasting-wand.png",
+  "desc": "+40 Ability Power"
  },
  {
   "name": "Needlessly Large Rod",
   "slug": "needlessly-large-rod",
   "category": "Component",
-  "icon": "assets/items/needlessly-large-rod.png"
+  "icon": "assets/items/needlessly-large-rod.png",
+  "desc": "+80 Ability Power"
  },
  {
   "name": "Amplifying Tome",
   "slug": "amplifying-tome",
   "category": "Component",
-  "icon": "assets/items/amplifying-tome.png"
+  "icon": "assets/items/amplifying-tome.png",
+  "desc": "+20 Ability Power"
  },
  {
   "name": "Fiendish Codex",
   "slug": "fiendish-codex",
   "category": "Component",
-  "icon": "assets/items/fiendish-codex.png"
+  "icon": "assets/items/fiendish-codex.png",
+  "desc": "+30 Ability Power\n\nUNIQUE Passive: +10% Cooldown Reduction"
  },
  {
   "name": "Sheen",
   "slug": "sheen",
   "category": "Component",
-  "icon": "assets/items/sheen.png"
+  "icon": "assets/items/sheen.png",
+  "desc": "+200 Mana\n+25 Ability Power\n\nUNIQUE Passive - Spellblade: After using an ability, the next basic attack deals bonus physical damage equal to 100% base Attack Damage on hit (1.5 second cooldown).\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Phage",
   "slug": "phage",
   "category": "Component",
-  "icon": "assets/items/phage.png"
+  "icon": "assets/items/phage.png",
+  "desc": "+200 Health\n+20 Attack Damage\n\nUNIQUE Passive - Rage: Basic attacks grant 20 Movement Speed for 2 seconds. Kills grant 60 Movement Speed instead. This Movement Speed bonus is halved for ranged champions.\n\n(Unique Passives with the same name don't stack.)"
  },
  {
   "name": "Kindlegem",
   "slug": "kindlegem",
   "category": "Component",
-  "icon": "assets/items/kindlegem.png"
+  "icon": "assets/items/kindlegem.png",
+  "desc": "+200 Health \n\nUNIQUE Passive: +10% Cooldown Reduction"
  },
  {
   "name": "Giant's Belt",
   "slug": "giants-belt",
   "category": "Component",
-  "icon": "assets/items/giants-belt.png"
+  "icon": "assets/items/giants-belt.png",
+  "desc": "+380 Health"
  },
  {
   "name": "Glacial Shroud",
   "slug": "glacial-shroud",
   "category": "Component",
-  "icon": "assets/items/glacial-shroud.png"
+  "icon": "assets/items/glacial-shroud.png",
+  "desc": "+250 Mana\n+20 Armor\n\nUNIQUE Passive: +10% Cooldown Reduction"
  },
  {
   "name": "Negatron Cloak",
   "slug": "negatron-cloak",
   "category": "Component",
-  "icon": "assets/items/negatron-cloak.png"
+  "icon": "assets/items/negatron-cloak.png",
+  "desc": "+45 Magic Resist"
  },
  {
   "name": "Null-Magic Mantle",
   "slug": "null-magic-mantle",
   "category": "Component",
-  "icon": "assets/items/null-magic-mantle.png"
+  "icon": "assets/items/null-magic-mantle.png",
+  "desc": "+25 Magic Resist"
  },
  {
   "name": "Cloth Armor",
   "slug": "cloth-armor",
   "category": "Component",
-  "icon": "assets/items/cloth-armor.png"
+  "icon": "assets/items/cloth-armor.png",
+  "desc": "+15 Armor"
  },
  {
   "name": "Dagger",
   "slug": "dagger",
   "category": "Component",
-  "icon": "assets/items/dagger.png"
+  "icon": "assets/items/dagger.png",
+  "desc": "+15% Attack Speed"
  },
  {
   "name": "Brawler's Gloves",
   "slug": "brawlers-gloves",
   "category": "Component",
-  "icon": "assets/items/brawlers-gloves.png"
+  "icon": "assets/items/brawlers-gloves.png",
+  "desc": "+8% Critical Strike Chance"
  },
  {
   "name": "Cloak of Agility",
   "slug": "cloak-of-agility",
   "category": "Component",
-  "icon": "assets/items/cloak-of-agility.png"
+  "icon": "assets/items/cloak-of-agility.png",
+  "desc": "+15% Critical Strike Chance"
  },
  {
   "name": "Faerie Charm",
   "slug": "faerie-charm",
   "category": "Component",
-  "icon": "assets/items/faerie-charm.png"
+  "icon": "assets/items/faerie-charm.png",
+  "desc": "+25% Base Mana Regen"
  },
  {
   "name": "Sapphire Crystal",
   "slug": "sapphire-crystal",
   "category": "Component",
-  "icon": "assets/items/sapphire-crystal.png"
+  "icon": "assets/items/sapphire-crystal.png",
+  "desc": "+200 Mana"
  },
  {
   "name": "Ruby Crystal",
   "slug": "ruby-crystal",
   "category": "Component",
-  "icon": "assets/items/ruby-crystal.png"
+  "icon": "assets/items/ruby-crystal.png",
+  "desc": "+150 Health"
  },
  {
   "name": "Rejuvenation Bead",
   "slug": "rejuvenation-bead",
   "category": "Component",
-  "icon": "assets/items/rejuvenation-bead.png"
+  "icon": "assets/items/rejuvenation-bead.png",
+  "desc": "+50% Base Health Regen"
  },
  {
   "name": "Bilgewater Cutlass",
   "slug": "bilgewater-cutlass",
   "category": "Component",
-  "icon": "assets/items/bilgewater-cutlass.png"
+  "icon": "assets/items/bilgewater-cutlass.png",
+  "desc": "+25 Attack Damage\n+8% Life Steal\n\nUNIQUE Active: Deals 100 magic damage and slows the target champion's Movement Speed by 25% for 2 seconds (90 second cooldown)."
  },
  {
   "name": "Hextech Revolver",
   "slug": "hextech-revolver",
   "category": "Component",
-  "icon": "assets/items/hextech-revolver.png"
+  "icon": "assets/items/hextech-revolver.png",
+  "desc": "+40 Ability Power\n\nUNIQUE Passive: +12% Spell Vamp\n\n(Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)"
  },
  {
   "name": "Hextech Gunblade",
   "slug": "hextech-gunblade",
   "category": "Component",
-  "icon": "assets/items/hextech-gunblade.png"
+  "icon": "assets/items/hextech-gunblade.png",
+  "desc": "+45 Attack Damage\n+65 Ability Power\n+12% Life Steal\n\nUNIQUE Passive: +20% Spell Vamp\nUNIQUE Passive: Basic attacks (on hit) and single-target spells against champions reduce the cooldown of this item by 3 seconds.\nUNIQUE Active: Deals 150 (+40% of Ability Power) magic damage and slows the target champion's Movement Speed by 40% for 2 seconds (60 second cooldown).\n\n(Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)"
  },
  {
   "name": "Quicksilver Sash",
   "slug": "quicksilver-sash",
   "category": "Component",
-  "icon": "assets/items/quicksilver-sash.png"
+  "icon": "assets/items/quicksilver-sash.png",
+  "desc": "+30 Magic Resist\n\nUNIQUE Active - Quicksilver: Removes all debuffs (90 second cooldown)."
  },
  {
   "name": "Mercurial Scimitar",
   "slug": "mercurial-scimitar",
   "category": "Component",
-  "icon": "assets/items/mercurial-scimitar.png"
+  "icon": "assets/items/mercurial-scimitar.png",
+  "desc": "+80 Attack Damage\n+35 Magic Resist\n\nUNIQUE Active - Quicksilver: Removes all debuffs and also grants +50% bonus Movement Speed for 1 second (90 second cooldown)."
  },
  {
   "name": "Tiamat",
   "slug": "tiamat",
   "category": "Other",
-  "icon": "assets/items/tiamat.png"
+  "icon": "assets/items/tiamat.png",
+  "desc": null
  },
  {
   "name": "Innervating Locket",
   "slug": "innervating-locket",
   "category": "Other",
-  "icon": "assets/items/innervating-locket.png"
+  "icon": "assets/items/innervating-locket.png",
+  "desc": null
  },
  {
   "name": "Eleisa's Miracle",
   "slug": "eleisas-miracle",
   "category": "Other",
-  "icon": "assets/items/eleisas-miracle.png"
+  "icon": "assets/items/eleisas-miracle.png",
+  "desc": null
  },
  {
   "name": "Twin Shadows",
   "slug": "twin-shadows",
   "category": "Other",
-  "icon": "assets/items/twin-shadows.png"
+  "icon": "assets/items/twin-shadows.png",
+  "desc": "+80 Ability Power\n+10% Cooldown Reduction\n+6% Movement Speed\n\nUNIQUE Passive - Trap Detection: Nearby stealthed enemy traps are revealed.\nUNIQUE Active - Hunt: Summons up to 2 invulnerable ghosts that seek out the 2 nearest enemy champions for 6 seconds. If a ghost reaches its target, it reveals the target and reduces their Movement Speed by 40% for 2.5 seconds.\n\nIf a ghost cannot find a target, it tries to return to the caster. Ghosts that successfully return in this way reduce the item's cooldown by 20 seconds (60 second cooldown)."
  },
  {
   "name": "Will of the Ancients",
   "slug": "will-of-the-ancients",
   "category": "Other",
-  "icon": "assets/items/will-of-the-ancients.png"
+  "icon": "assets/items/will-of-the-ancients.png",
+  "desc": "+80 Ability Power\n+10% Cooldown Reduction\n\nUNIQUE Passive: +20% Spell Vamp\n\n(Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)"
  },
  {
   "name": "Mana Manipulator",
   "slug": "mana-manipulator",
   "category": "Other",
-  "icon": "assets/items/mana-manipulator.png"
+  "icon": "assets/items/mana-manipulator.png",
+  "desc": "+5 Mana Regeneration\n+5 Mana Regeneration"
  },
  {
   "name": "Haunting Guise",
   "slug": "haunting-guise",
   "category": "Other",
-  "icon": "assets/items/haunting-guise.png"
+  "icon": "assets/items/haunting-guise.png",
+  "desc": "+25 Ability Power\n+200 Health\n\nUNIQUE Passive - Eyes of Pain: +15 Magic Penetration\n\n(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)\n\n(Unique Passives with the same name do not stack.)"
  },
  {
   "name": "Shard of True Ice",
   "slug": "shard-of-true-ice",
   "category": "Other",
-  "icon": "assets/items/shard-of-true-ice.png"
+  "icon": "assets/items/shard-of-true-ice.png",
+  "desc": null
  },
  {
   "name": "Soul Shroud",
   "slug": "soul-shroud",
   "category": "Other",
-  "icon": "assets/items/soul-shroud.png"
+  "icon": "assets/items/soul-shroud.png",
+  "desc": null
  }
 ]

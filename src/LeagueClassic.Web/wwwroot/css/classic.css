@@ -57,9 +57,14 @@ h1, h2 { color: #e6ecf3; }
 .logo { display: inline-flex; align-items: center; }
 .logo img { height: 62px; width: auto; display: block; }
 .logo:hover { text-decoration: none; }
-.tagline { color: #8fa6bd; font-style: italic; flex: 1; font-size: 14px; }
+.site-title {
+    font: bold 30px/1 "Trebuchet MS", Verdana, sans-serif;
+    color: var(--gold); letter-spacing: .5px; white-space: nowrap;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+@media (max-width: 600px) { .site-title { font-size: 20px; white-space: normal; } }
 
-.user-nav { list-style: none; display: flex; gap: 12px; margin: 0; padding: 0; }
+.user-nav { list-style: none; display: flex; gap: 12px; margin: 0 0 0 auto; padding: 0; }
 .user-nav a { color: #cfe0f0; }
 .linklike { background: none; border: 0; color: #cfe0f0; cursor: pointer; font: inherit; padding: 0; }
 .linklike:hover { text-decoration: underline; }
@@ -239,9 +244,35 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 .item-palette { max-height: 340px; overflow-y: auto; border-top: 1px solid var(--line); padding-top: 8px; }
 .item-group h3 { font-size: 11px; text-transform: uppercase; color: var(--muted); margin: 8px 0 4px; }
 .item-row { display: flex; flex-wrap: wrap; gap: 4px; }
-.item-opt { background: none; border: 1px solid var(--line); padding: 1px; cursor: pointer; }
-.item-opt:hover { border-color: var(--accent); }
+.item-opt {
+    display: inline-flex; flex-direction: column; align-items: center; gap: 3px;
+    width: 76px; padding: 5px 3px; background: var(--panel); border: 1px solid var(--line);
+    cursor: pointer; text-align: center;
+}
+.item-opt:hover { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(193,70,43,.2); }
 .item-opt img { width: 34px; height: 34px; display: block; }
+.item-opt-name { font-size: 10px; line-height: 1.15; color: var(--muted); }
+
+/* Hover description panel (items + spells) */
+.hover-desc {
+    position: fixed; z-index: 1000; max-width: 300px; pointer-events: none;
+    background: #0a1a2e; color: #e6ecf3; border: 1px solid var(--gold);
+    padding: 9px 11px; font-size: 12px; line-height: 1.5; box-shadow: 0 6px 18px rgba(0,0,0,.55);
+}
+.hd-name { font-weight: bold; color: var(--gold); margin-bottom: 4px; }
+.hd-none { color: #93a6bd; font-style: italic; }
+
+/* Live markdown preview */
+.editor-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 860px) { .editor-split { grid-template-columns: 1fr; } }
+.editor-split textarea { width: 100%; }
+.md-preview-wrap { border: 1px solid var(--line); background: var(--panel); display: flex; flex-direction: column; }
+.md-preview-label {
+    background: #d9e2ec; color: var(--brand-dark); font-size: 11px; text-transform: uppercase;
+    letter-spacing: .5px; padding: 5px 10px; font-weight: bold; border-bottom: 1px solid var(--line);
+}
+.md-preview { padding: 12px 14px; color: var(--ink); overflow-y: auto; min-height: 220px; }
+.md-preview:empty::before { content: "Start typing to see a preview…"; color: var(--muted); font-style: italic; }
 
 .markdown-help { background: #fbfaf0; border: 1px solid #e3dfb8; padding: 8px 10px; font-size: 11px; margin-bottom: 8px; }
 .markdown-help code { background: #efedd8; padding: 1px 4px; }
@@ -333,34 +364,57 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 /* ============================ Content pages ============================ */
 .content-page {
     background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold);
-    padding: 24px 32px; max-width: 860px;
+    padding: 24px 32px; max-width: 860px; color: var(--ink);
 }
 .content-page h1 { color: var(--brand-dark); }
 .content-page h2 { color: var(--brand-dark); margin-top: 24px; }
+.content-page a { color: var(--brand); }
+.content-page em { color: var(--muted); }
 
 /* ============================ Auth pages (Identity UI) ============================ */
-.content h1 { }
+/* The default Identity UI uses Bootstrap classes; without Bootstrap loaded we
+   style the real elements (col-lg-*, form-floating, form-label, etc.) directly. */
 main .row { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
-main .col-md-4, main .col-md-6 { flex: 1 1 320px; min-width: 280px; }
-main section > h2, main section > h4 { font-size: 16px; color: #e6ecf3; margin-bottom: 4px; }
+main [class*="col-"] { flex: 1 1 320px; min-width: 260px; }
+main .col-lg-6, main .col-md-6 { flex: 1 1 420px; max-width: 560px; }
+main .col-lg-4, main .col-md-4 { flex: 0 1 320px; color: #9fb2c8; }
+
+/* Local-account form is a light panel. */
 main form[method=post] {
     background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold);
-    padding: 20px 22px; color: var(--ink);
+    padding: 22px 24px; color: var(--ink);
 }
-main form[method=post] hr { border: 0; border-top: 1px solid var(--line); margin: 10px 0 16px; }
-/* Bootstrap floating labels degrade to label-above-input without Bootstrap. */
+main form[method=post] h2 { color: var(--brand-dark); font-size: 17px; margin: 0 0 4px; }
+main form[method=post] hr { border: 0; border-top: 1px solid var(--line); margin: 10px 0 18px; }
+main form[method=post] p { margin: 8px 0; }
+/* External-logins column heading sits on the navy page. */
+main .col-lg-4 h3, main .col-lg-4 h4 { color: #e6ecf3; font-size: 15px; }
+
+/* Floating labels degrade to label-above-input without Bootstrap. */
 .form-floating { display: flex; flex-direction: column-reverse; margin-bottom: 14px; }
-.form-floating > label { font-weight: bold; margin-bottom: 4px; color: var(--ink); }
-.form-control { width: 100%; padding: 8px 10px; border: 1px solid var(--line); font: inherit; }
-.checkbox, .form-check { margin: 8px 0 14px; color: var(--ink); }
-.checkbox label, .form-check label { color: var(--ink); }
+.form-floating .form-label, .form-floating > label {
+    display: block; font-weight: bold; margin-bottom: 4px; color: var(--ink);
+}
+.form-control {
+    width: 100%; padding: 9px 11px; border: 1px solid var(--line); font: inherit;
+    background: #fff; color: var(--ink);
+}
+.form-control:focus { outline: 2px solid rgba(43,93,139,.4); border-color: var(--brand); }
+
+/* Remember-me checkbox row. */
+.checkbox, .form-check { margin: 10px 0 16px; color: var(--ink); }
+.checkbox .form-label, .form-check .form-label, .checkbox label, .form-check label {
+    display: inline-flex; align-items: center; gap: 7px; font-weight: normal; margin: 0; color: var(--ink);
+}
+.form-check-input { width: 16px; height: 16px; }
+
 .btn.btn-primary, .w-100.btn, button.btn-lg, a.btn {
     background: var(--gold); color: var(--brand-dark); border: 1px solid var(--gold-dark);
-    padding: 9px 18px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block;
+    padding: 10px 18px; font-weight: bold; cursor: pointer; text-decoration: none;
+    display: inline-block; font-size: 14px;
 }
-.btn.btn-primary:hover, .w-100.btn:hover { background: #d8bd88; }
+.btn.btn-primary:hover, .w-100.btn:hover, a.btn:hover { background: #d8bd88; text-decoration: none; }
 .w-100 { width: 100%; }
-.text-danger { color: var(--accent); }
-main .row a { color: var(--brand); }
-main form[method=post] a { color: var(--brand); }
+.text-danger { color: var(--accent); font-size: 12px; }
+main form[method=post] a, main .row a { color: var(--brand); }
 

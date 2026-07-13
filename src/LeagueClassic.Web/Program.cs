@@ -86,6 +86,15 @@ app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();
 
+// Live markdown preview for the guide editor — renders through the same
+// sanitizer as the real page, so the preview matches what gets published.
+app.MapPost("/guides/preview", async (HttpContext ctx, MarkdownRenderer md) =>
+{
+    var form = await ctx.Request.ReadFormAsync();
+    var body = form["Input.BodyMarkdown"].ToString();
+    return Results.Content(md.ToHtml(body).Value ?? string.Empty, "text/html");
+}).RequireAuthorization().DisableAntiforgery();
+
 // Apply migrations + seed starter content on startup.
 await DbSeeder.MigrateAndSeedAsync(app.Services);
 
