@@ -10,8 +10,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
     }
 
-    public DbSet<Category> Categories => Set<Category>();
-    public DbSet<Board> Boards => Set<Board>();
     public DbSet<ForumThread> Threads => Set<ForumThread>();
     public DbSet<Post> Posts => Set<Post>();
     public DbSet<Guide> Guides => Set<Guide>();
@@ -29,34 +27,13 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         base.OnModelCreating(builder); // Identity tables
 
-        builder.Entity<Category>(e =>
-        {
-            e.HasIndex(c => c.Slug).IsUnique();
-            e.Property(c => c.Name).HasMaxLength(100);
-            e.Property(c => c.Slug).HasMaxLength(120);
-        });
-
-        builder.Entity<Board>(e =>
-        {
-            e.HasIndex(b => b.Slug).IsUnique();
-            e.Property(b => b.Name).HasMaxLength(120);
-            e.Property(b => b.Slug).HasMaxLength(140);
-            e.HasOne(b => b.Category)
-                .WithMany(c => c.Boards)
-                .HasForeignKey(b => b.CategoryId)
-                .OnDelete(DeleteBehavior.Cascade);
-        });
-
         builder.Entity<ForumThread>(e =>
         {
-            // Board + last-post ordering is the hottest list query.
-            e.HasIndex(t => new { t.BoardId, t.LastPostAt });
+            // Pinned-first, then most-recent activity is the main list query.
+            e.HasIndex(t => new { t.IsPinned, t.LastPostAt });
             e.HasIndex(t => t.Slug);
             e.Property(t => t.Title).HasMaxLength(250);
-            e.HasOne(t => t.Board)
-                .WithMany(b => b.Threads)
-                .HasForeignKey(t => t.BoardId)
-                .OnDelete(DeleteBehavior.Cascade);
+            e.Property(t => t.Excerpt).HasMaxLength(300);
             e.HasOne(t => t.Author)
                 .WithMany()
                 .HasForeignKey(t => t.AuthorId)

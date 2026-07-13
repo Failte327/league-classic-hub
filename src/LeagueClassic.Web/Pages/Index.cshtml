@@ -68,7 +68,7 @@
                 {
                     <li>
                         <a asp-page="/Forums/Thread" asp-route-id="@t.Id" asp-route-slug="@t.Slug">@t.Title</a>
-                        <span class="tf-meta">in @t.Board?.Name &middot; @t.LastPostAt.ToString("MMM d")</span>
+                        <span class="tf-meta">@(t.Author?.UserName ?? "staff") &middot; @t.LastPostAt.ToString("MMM d")</span>
                     </li>
                 }
             </ul>

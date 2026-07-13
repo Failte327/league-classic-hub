@@ -1,0 +1,22 @@
+@model (LeagueClassic.Web.Data.ForumThread Thread, bool Pinned)
+@{
+    var t = Model.Thread;
+}
+<li class="thread-row @(Model.Pinned ? "pinned" : "")">
+    <div class="tr-main">
+        <a class="tr-title" asp-page="/Forums/Thread" asp-route-id="@t.Id" asp-route-slug="@t.Slug">
+            @if (Model.Pinned) { <span class="pin" title="Pinned">📌</span> }
+            @if (t.IsLocked) { <span class="lock" title="Locked">🔒</span> }
+            @t.Title
+        </a>
+        @if (!string.IsNullOrEmpty(t.Excerpt))
+        {
+            <div class="tr-preview">@t.Excerpt</div>
+        }
+    </div>
+    <div class="tr-meta">
+        <span class="tr-author">@(t.Author?.UserName ?? "staff")</span>
+        <span>@t.ReplyCount @(t.ReplyCount == 1 ? "reply" : "replies")</span>
+        <span>@t.LastPostAt.ToString("MMM d, yyyy")</span>
+    </div>
+</li>

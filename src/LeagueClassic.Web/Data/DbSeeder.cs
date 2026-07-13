@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeagueClassic.Web.Data;
@@ -21,7 +22,7 @@ public static class DbSeeder
         await db.Database.MigrateAsync();
 
         await SeedReferenceAsync(db, env.ContentRootPath);
-        await SeedBoardsAsync(db);
+        await SeedWelcomeThreadAsync(db);
     }
 
     private static async Task SeedReferenceAsync(ApplicationDbContext db, string contentRoot)
@@ -145,60 +146,35 @@ public static class DbSeeder
         "I only ask that you keep the discourse respectful and safe for those of all ages.\n\n" +
         "Thank you, and once again, welcome!";
 
-    private static async Task SeedBoardsAsync(ApplicationDbContext db)
+    private static async Task SeedWelcomeThreadAsync(ApplicationDbContext db)
     {
-        // General starter boards — one-time (skipped once any category exists).
-        if (!await db.Categories.AnyAsync())
+        // Pinned welcome thread — idempotent, so the flat forum always has it.
+        const string slug = "welcome-to-league-classic-hub";
+        if (await db.Threads.AnyAsync(t => t.Slug == slug))
+            return;
+
+        var now = DateTimeOffset.UtcNow;
+        var thread = new ForumThread
         {
-            var general = new Category { Name = "The Fields of Justice", Slug = "the-fields-of-justice", SortOrder = 2 };
-            var site = new Category { Name = "League Classic Hub", Slug = "hub", SortOrder = 1 };
+            Title = "Welcome to League Classic Hub!",
+            Slug = slug,
+            Excerpt = Excerpt(WelcomePost),
+            IsPinned = true,
+            ReplyCount = 0,
+            CreatedAt = now,
+            LastPostAt = now,
+        };
+        thread.Posts.Add(new Post { BodyMarkdown = WelcomePost, CreatedAt = now }); // null author = staff
+        db.Threads.Add(thread);
+        await db.SaveChangesAsync();
+    }
 
-            site.Boards.Add(new Board { Name = "News", Slug = "announcements", Description = "Dev Updates.", SortOrder = 1 });
-            general.Boards.Add(new Board { Name = "The Tavern", Slug = "tavern", Description = "Your home for discussion of all things League Classic.", SortOrder = 1 });
-            general.Boards.Add(new Board { Name = "Champion Discussion", Slug = "champions", Description = "Champions - their backstory, their playstyle, their builds.", SortOrder = 2 });
-            general.Boards.Add(new Board { Name = "Strategy Discussion", Slug = "strategy", Description = "Non-Champion-Specific Strategy - how to destroy the enemy Nexus.", SortOrder = 3 });
-
-            db.Categories.AddRange(general, site);
-            await db.SaveChangesAsync();
-        }
-
-        // Welcome board + pinned welcome thread — idempotent (added even to an
-        // existing database), so the default landing board is always present.
-        if (!await db.Boards.AnyAsync(b => b.Slug == "welcome"))
-        {
-            var welcomeCat = await db.Categories.FirstOrDefaultAsync(c => c.Slug == "welcome");
-            if (welcomeCat is null)
-            {
-                welcomeCat = new Category { Name = "Welcome", Slug = "welcome", SortOrder = 0 };
-                db.Categories.Add(welcomeCat);
-                await db.SaveChangesAsync();
-            }
-
-            var now = DateTimeOffset.UtcNow;
-            var board = new Board
-            {
-                CategoryId = welcomeCat.Id,
-                Name = "Welcome",
-                Slug = "welcome",
-                Description = "New here? Start with a warm welcome and a summary of the community guidelines.",
-                SortOrder = 1,
-                ThreadCount = 1,
-                PostCount = 1,
-                LastPostAt = now,
-            };
-            var thread = new ForumThread
-            {
-                Title = "Welcome to LeagueClassicHub.net!",
-                Slug = "welcome-to-leagueclassichub-net",
-                IsPinned = true,
-                CreatedAt = now,
-                LastPostAt = now,
-            };
-            thread.Posts.Add(new Post { BodyMarkdown = WelcomePost, CreatedAt = now }); // null author = staff
-            board.Threads.Add(thread);
-            db.Boards.Add(board);
-            await db.SaveChangesAsync();
-        }
+    // Plain-text peek at a post body for the thread list.
+    public static string Excerpt(string markdown, int max = 160)
+    {
+        var text = Regex.Replace(markdown, @"[#*_`>\[\]]", "");         // strip common markdown
+        text = Regex.Replace(text, @"\s+", " ").Trim();
+        return text.Length <= max ? text : text[..max].TrimEnd() + "…";
     }
 
     // Seed DTOs matching Data/seed/*.json

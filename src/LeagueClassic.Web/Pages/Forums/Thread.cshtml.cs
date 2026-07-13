@@ -38,7 +38,7 @@ public class ThreadModel : PageModel
     {
         if (User.Identity?.IsAuthenticated != true) return Challenge();
 
-        var thread = await _db.Threads.Include(t => t.Board).FirstOrDefaultAsync(t => t.Id == id);
+        var thread = await _db.Threads.FirstOrDefaultAsync(t => t.Id == id);
         if (thread is null) return NotFound();
         if (thread.IsLocked) return RedirectToPage(new { id, slug = thread.Slug });
 
@@ -64,11 +64,6 @@ public class ThreadModel : PageModel
         // Denormalized counters.
         thread.ReplyCount += 1;
         thread.LastPostAt = now;
-        if (thread.Board is not null)
-        {
-            thread.Board.PostCount += 1;
-            thread.Board.LastPostAt = now;
-        }
         var user = await _db.Users.FindAsync(_users.GetUserId(User));
         if (user is not null) user.PostCount += 1;
 
@@ -79,7 +74,6 @@ public class ThreadModel : PageModel
     private async Task<bool> LoadAsync(int id)
     {
         var thread = await _db.Threads
-            .Include(t => t.Board)
             .AsNoTracking()
             .FirstOrDefaultAsync(t => t.Id == id);
         if (thread is null) return false;

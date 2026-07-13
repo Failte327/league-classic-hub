@@ -34,7 +34,6 @@ public class IndexModel : PageModel
             .ToListAsync();
 
         LatestThreads = await _db.Threads
-            .Include(t => t.Board)
             .Include(t => t.Author)
             .OrderByDescending(t => t.LastPostAt)
             .Take(6)

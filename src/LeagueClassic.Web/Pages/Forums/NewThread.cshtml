@@ -4,15 +4,11 @@
     ViewData["Title"] = "New Thread";
 }
 
-<nav class="crumbs">
-    <a asp-page="/Forums/Index">Forums</a> &raquo;
-    <a asp-page="/Forums/Board" asp-route-slug="@Model.Board.Slug">@Model.Board.Name</a> &raquo;
-    <span>New Thread</span>
-</nav>
+<nav class="crumbs"><a asp-page="/Forums/Index">Forums</a> &raquo; <span>New Thread</span></nav>
 
-<div class="page-head"><h1>New Thread in @Model.Board.Name</h1></div>
+<div class="page-head"><h1>New Thread</h1></div>
 
-<form method="post" asp-route-board="@Model.Board.Slug">
+<form method="post">
     <div asp-validation-summary="All" class="validation-summary"></div>
     <div class="field">
         <label asp-for="Title">Title</label>
@@ -29,7 +25,7 @@
         <textarea asp-for="Body" rows="12" placeholder="Say your piece…"></textarea>
     </section>
     <div class="form-actions">
-        <a class="btn-plain" asp-page="/Forums/Board" asp-route-slug="@Model.Board.Slug">Cancel</a>
+        <a class="btn-plain" asp-page="/Forums/Index">Cancel</a>
         <button type="submit" class="btn-primary">Post Thread</button>
     </div>
 </form>

@@ -1,47 +1,40 @@
 @page
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
 @model LeagueClassic.Web.Pages.Forums.IndexModel
 @{
     ViewData["Title"] = "Forums";
 }
 
-<h1>League Classic Hub Forums</h1>
-<p class="muted">Welcome to League Classic Hub! Discuss and strategize your path to victory on the Fields of Justice.</p>
+<div class="page-head">
+    <div>
+        <h1>League Classic Hub Forums</h1>
+        <p class="muted">Welcome, Summoner, to the Fields of Justice!</p>
+    </div>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <a class="btn-primary" asp-page="/Forums/NewThread">+ New Thread</a>
+    }
+    else
+    {
+        <a class="btn-primary" asp-area="Identity" asp-page="/Account/Login">Log in to post</a>
+    }
+</div>
 
-@foreach (var cat in Model.Categories)
+@if (Model.Pinned.Count == 0 && Model.Threads.Count == 0)
 {
-    <table class="forum-table">
-        <caption class="cat-header">@cat.Name</caption>
-        <thead>
-            <tr>
-                <th>Board</th>
-                <th class="stat">Threads</th>
-                <th class="stat">Posts</th>
-                <th class="stat">Last Post</th>
-            </tr>
-        </thead>
-        <tbody>
-        @foreach (var board in cat.Boards)
-        {
-            <tr>
-                <td>
-                    <div class="board-name">
-                        <a asp-page="/Forums/Board" asp-route-slug="@board.Slug">@board.Name</a>
-                    </div>
-                    @if (!string.IsNullOrEmpty(board.Description))
-                    {
-                        <div class="board-desc">@board.Description</div>
-                    }
-                </td>
-                <td class="stat">@board.ThreadCount</td>
-                <td class="stat">@board.PostCount</td>
-                <td class="stat">@(board.LastPostAt?.ToString("MMM d, yyyy") ?? "—")</td>
-            </tr>
-        }
-        </tbody>
-    </table>
+    <div class="empty">No threads yet. Start the conversation!</div>
 }
-
-@if (Model.Categories.Count == 0)
+else
 {
-    <div class="empty">No boards yet.</div>
+    <ul class="thread-list">
+        @foreach (var t in Model.Pinned)
+        {
+            <partial name="_ThreadRow" model="(t, true)" />
+        }
+        @foreach (var t in Model.Threads)
+        {
+            <partial name="_ThreadRow" model="(t, false)" />
+        }
+    </ul>
 }

@@ -2,49 +2,21 @@ namespace LeagueClassic.Web.Data;
 
 // ---- Forum ----------------------------------------------------------------
 
-// Top-level grouping shown as a header on the index (e.g. "General", "Strategy").
-public class Category
-{
-    public int Id { get; set; }
-    public required string Name { get; set; }
-    public required string Slug { get; set; }
-    public int SortOrder { get; set; }
-
-    public List<Board> Boards { get; set; } = new();
-}
-
-// A forum board within a category (e.g. "Champion Discussion", "Off Topic").
-public class Board
-{
-    public int Id { get; set; }
-    public int CategoryId { get; set; }
-    public Category? Category { get; set; }
-
-    public required string Name { get; set; }
-    public required string Slug { get; set; }
-    public string? Description { get; set; }
-    public int SortOrder { get; set; }
-
-    // Denormalized counters — updated on write so board lists never aggregate.
-    public int ThreadCount { get; set; }
-    public int PostCount { get; set; }
-    public DateTimeOffset? LastPostAt { get; set; }
-
-    public List<ForumThread> Threads { get; set; } = new();
-}
-
-// A thread of discussion. Named ForumThread to avoid clashing with System.Threading.Thread.
+// A single flat forum (Reddit-style): all threads live at the top level, with
+// pinned threads shown first. Named ForumThread to avoid clashing with
+// System.Threading.Thread.
 public class ForumThread
 {
     public int Id { get; set; }
-    public int BoardId { get; set; }
-    public Board? Board { get; set; }
 
     public string? AuthorId { get; set; }
     public ApplicationUser? Author { get; set; }
 
     public required string Title { get; set; }
     public required string Slug { get; set; }
+
+    // A short plain-text peek at the opening post, shown in the thread list.
+    public string? Excerpt { get; set; }
 
     public bool IsPinned { get; set; }
     public bool IsLocked { get; set; }
