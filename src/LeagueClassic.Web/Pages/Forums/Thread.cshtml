@@ -20,6 +20,11 @@
     </h1>
 </div>
 
+@if (TempData["Message"] is string flash)
+{
+    <div class="flash">@flash</div>
+}
+
 <div class="posts">
     @foreach (var p in Model.Posts)
     {
@@ -28,7 +33,13 @@
                 <span class="pa-name">@(p.Author?.UserName ?? "League Classic Staff")</span>
                 <span class="pa-meta">@p.CreatedAt.ToString("MMM d, yyyy · h:mm tt")</span>
             </div>
-            <div class="post-body">@Markdown.ToHtml(p.BodyMarkdown)</div>
+            <div class="post-body">
+                @Markdown.ToHtml(p.BodyMarkdown)
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a class="report-link" asp-page="/Report" asp-route-type="Post" asp-route-id="@p.Id">⚑ Report</a>
+                }
+            </div>
         </article>
     }
 </div>

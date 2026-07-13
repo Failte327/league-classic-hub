@@ -31,6 +31,7 @@ builder.Services
         options.SignIn.RequireConfirmedAccount = false;
         options.Password.RequiredLength = 8;
     })
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 // Reject blocked usernames during registration/profile updates.

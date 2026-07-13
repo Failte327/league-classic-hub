@@ -1,0 +1,76 @@
+@page
+@using LeagueClassic.Web.Data
+@model LeagueClassic.Web.Pages.Moderation.IndexModel
+@{
+    ViewData["Title"] = "Moderation";
+}
+
+<div class="page-head"><h1>Moderation Queue</h1></div>
+<p class="muted">Open reports, grouped by the content reported. Most-reported first.</p>
+
+@if (TempData["Message"] is string flash)
+{
+    <div class="flash">@flash</div>
+}
+
+@if (Model.Groups.Count == 0)
+{
+    <div class="empty">Nothing in the queue. All clear! 🛡️</div>
+}
+else
+{
+    <table class="forum-table">
+        <caption class="cat-header">Reports (@Model.Groups.Count)</caption>
+        <thead>
+            <tr><th>Reported content</th><th class="stat">Reports</th><th>Reasons</th><th class="stat">Actions</th></tr>
+        </thead>
+        <tbody>
+        @foreach (var g in Model.Groups)
+        {
+            <tr>
+                <td>
+                    <div class="board-name">
+                        @if (!g.Missing && g.Type == ReportTargetType.Guide)
+                        {
+                            <a asp-page="/Guides/Details" asp-route-slug="@g.Slug">@g.Title</a>
+                        }
+                        else if (!g.Missing && g.ThreadId is not null)
+                        {
+                            <a asp-page="/Forums/Thread" asp-route-id="@g.ThreadId" asp-route-slug="@g.Slug">@g.Title</a>
+                        }
+                        else
+                        {
+                            @g.Title
+                        }
+                    </div>
+                    @if (g.Excerpt is not null)
+                    {
+                        <div class="board-desc">@g.Excerpt</div>
+                    }
+                    <div class="board-desc">Reported by @g.Reporters</div>
+                </td>
+                <td class="stat"><b>@g.Count</b></td>
+                <td>@g.Reasons</td>
+                <td class="stat actions">
+                    <form method="post" asp-page-handler="Dismiss" asp-route-type="@g.Type" asp-route-id="@g.TargetId">
+                        <button type="submit" class="mini-btn">Dismiss</button>
+                    </form>
+                    @if (!g.Missing)
+                    {
+                        @if (g.Type == ReportTargetType.Post)
+                        {
+                            <form method="post" asp-page-handler="LockThread" asp-route-id="@g.TargetId">
+                                <button type="submit" class="mini-btn">Lock thread</button>
+                            </form>
+                        }
+                        <form method="post" asp-page-handler="DeleteContent" asp-route-type="@g.Type" asp-route-id="@g.TargetId"
+                              onsubmit="return confirm('Delete this content? This cannot be undone.');">
+                            <button type="submit" class="mini-btn danger">Delete</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

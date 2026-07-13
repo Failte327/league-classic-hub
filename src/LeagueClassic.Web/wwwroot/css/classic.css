@@ -352,6 +352,14 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 .mastery-trees.read-only .mastery-node { cursor: default; }
 .mastery-tally { font-size: 13px; color: var(--muted); font-weight: normal; }
 
+/* ============================ Reports / Moderation ============================ */
+.report-link { display: inline-block; margin-top: 8px; font-size: 11px; color: var(--muted); }
+.report-link:hover { color: var(--accent); }
+.report-form { max-width: 520px; }
+.report-form select { width: 100%; padding: 8px 10px; border: 1px solid var(--line); font: inherit; margin-bottom: 8px; }
+.nav-mod { color: #ffd98a !important; }
+.nav-mod:hover { background: var(--accent) !important; color: #fff !important; }
+
 .markdown-help { background: #fbfaf0; border: 1px solid #e3dfb8; padding: 8px 10px; font-size: 11px; margin-bottom: 8px; }
 .markdown-help code { background: #efedd8; padding: 1px 4px; }
 

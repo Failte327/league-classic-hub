@@ -22,6 +22,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Rune> Runes => Set<Rune>();
     public DbSet<Mastery> Masteries => Set<Mastery>();
     public DbSet<GuideRune> GuideRunes => Set<GuideRune>();
+    public DbSet<Report> Reports => Set<Report>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -156,6 +157,17 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         });
 
         builder.Entity<Guide>().Property(g => g.MasteryAllocations).HasMaxLength(400);
+
+        builder.Entity<Report>(e =>
+        {
+            e.HasIndex(r => new { r.Status, r.CreatedAt });
+            e.HasIndex(r => new { r.TargetType, r.TargetId });
+            e.Property(r => r.Details).HasMaxLength(1000);
+            e.HasOne(r => r.Reporter)
+                .WithMany()
+                .HasForeignKey(r => r.ReporterId)
+                .OnDelete(DeleteBehavior.SetNull);
+        });
 
         builder.Entity<Comment>(e =>
         {

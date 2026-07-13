@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeagueClassic.Web.Data;
@@ -23,6 +24,36 @@ public static class DbSeeder
 
         await SeedReferenceAsync(db, env.ContentRootPath);
         await SeedWelcomeThreadAsync(db);
+        await SeedModeratorsAsync(scope.ServiceProvider, env);
+    }
+
+    public const string ModeratorRole = "Moderator";
+
+    // Ensures the Moderator role exists, promotes any configured moderator
+    // emails, and (in Development only) makes the founder — the earliest user —
+    // a moderator so the tooling is testable out of the box.
+    private static async Task SeedModeratorsAsync(IServiceProvider sp, IWebHostEnvironment env)
+    {
+        var roles = sp.GetRequiredService<RoleManager<IdentityRole>>();
+        var users = sp.GetRequiredService<UserManager<ApplicationUser>>();
+        var config = sp.GetRequiredService<IConfiguration>();
+
+        if (!await roles.RoleExistsAsync(ModeratorRole))
+            await roles.CreateAsync(new IdentityRole(ModeratorRole));
+
+        foreach (var email in config.GetSection("Moderation:ModeratorEmails").Get<string[]>() ?? Array.Empty<string>())
+        {
+            var user = await users.FindByEmailAsync(email);
+            if (user is not null && !await users.IsInRoleAsync(user, ModeratorRole))
+                await users.AddToRoleAsync(user, ModeratorRole);
+        }
+
+        if (env.IsDevelopment() && !(await users.GetUsersInRoleAsync(ModeratorRole)).Any())
+        {
+            var founder = users.Users.OrderBy(u => u.CreatedAt).FirstOrDefault();
+            if (founder is not null)
+                await users.AddToRoleAsync(founder, ModeratorRole);
+        }
     }
 
     private static async Task SeedReferenceAsync(ApplicationDbContext db, string contentRoot)

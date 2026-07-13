@@ -1,9 +1,16 @@
 @page "{slug}"
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
 @model LeagueClassic.Web.Pages.Guides.DetailsModel
 @inject MarkdownRenderer Markdown
 @{
     ViewData["Title"] = Model.Guide.Title;
     var abilities = new[] { "Q", "W", "E", "R" };
+}
+
+@if (TempData["Message"] is string flash)
+{
+    <div class="flash">@flash</div>
 }
 
 <article class="guide-view">
@@ -38,6 +45,12 @@
                 </form>
             </div>
         }
+        else if (SignInManager.IsSignedIn(User))
+        {
+            <div class="owner-actions">
+                <a class="report-link" asp-page="/Report" asp-route-type="Guide" asp-route-id="@Model.Guide.Id">⚑ Report</a>
+            </div>
+        }
     </header>
 
     <div class="loadout">
@@ -51,7 +64,7 @@
                     {
                         if (s is not null)
                         {
-                            <span class="spell-badge"><img src="~/@s.IconPath" alt="@s.Name" /> @s.Name</span>
+                            <span class="spell-badge" data-name="@s.Name" data-desc="@s.Description"><img src="~/@s.IconPath" alt="@s.Name" /> @s.Name</span>
                         }
                     }
                 </div>
@@ -67,7 +80,7 @@
                     @{ var n = 1; }
                     @foreach (var bi in Model.Guide.BuildOrder)
                     {
-                        <span class="build-item" title="@bi.Item?.Name">
+                        <span class="build-item" data-name="@bi.Item?.Name" data-desc="@bi.Item?.Description">
                             <span class="ord">@(n++)</span>
                             <img src="~/@bi.Item?.IconPath" alt="@bi.Item?.Name" />
                         </span>
@@ -86,7 +99,7 @@
                     {
                         foreach (var gr in slot)
                         {
-                            <span class="rune-badge slot-@slot.Key" title="@gr.Rune?.Name">
+                            <span class="rune-badge slot-@slot.Key" data-name="@gr.Rune?.Name" data-desc="@gr.Rune?.Description">
                                 <span class="rb-count">@gr.Count&times;</span>
                                 <img src="~/@gr.Rune?.IconPath" alt="@gr.Rune?.Name" />
                                 <span>@gr.Rune?.Name?.Replace("Greater ", "")</span>
@@ -113,7 +126,7 @@
                             {
                                 var p = Model.MasteryPoints.GetValueOrDefault(m.DdragonId);
                                 <span class="mastery-node @(p > 0 ? "filled" : "dim") @(p == m.Ranks && p > 0 ? "maxed" : "")"
-                                      style="grid-column:@(m.Col + 1);grid-row:@m.Row" title="@m.Name">
+                                      style="grid-column:@(m.Col + 1);grid-row:@m.Row" data-name="@m.Name" data-desc="@m.Description">
                                     <img src="~/@m.IconPath" alt="@m.Name" />
                                     <span class="mn-pts">@p/@m.Ranks</span>
                                 </span>
@@ -195,3 +208,7 @@
 
     <p><a asp-page="/Guides/Index">&larr; All guides</a></p>
 </article>
+
+@section Scripts {
+    <script src="~/js/hover-panel.js" asp-append-version="true"></script>
+}

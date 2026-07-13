@@ -25,6 +25,10 @@
                 {
                     <a asp-page="/Guides/Mine">My Guides</a>
                 }
+                @if (User.IsInRole(DbSeeder.ModeratorRole))
+                {
+                    <a class="nav-mod" asp-page="/Moderation/Index">Moderation</a>
+                }
                 <a asp-page="/Rules">Rules</a>
             </nav>
         </header>

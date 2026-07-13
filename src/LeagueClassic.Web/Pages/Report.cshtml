@@ -1,0 +1,28 @@
+@page
+@using LeagueClassic.Web.Data
+@model LeagueClassic.Web.Pages.ReportModel
+@{
+    ViewData["Title"] = "Report Content";
+}
+
+<div class="page-head"><h1>Report Content</h1></div>
+<p class="muted">You're reporting this @Model.TargetLabel. Reports are private and reviewed by moderators.</p>
+
+<form method="post" class="report-form">
+    <input type="hidden" asp-for="Type" />
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="All" class="validation-summary"></div>
+
+    <div class="field">
+        <label asp-for="Reason">Reason</label>
+        <select asp-for="Reason" asp-items="Html.GetEnumSelectList<ReportReason>()"></select>
+    </div>
+    <div class="field">
+        <label asp-for="Details">Details <span class="muted">(optional)</span></label>
+        <textarea asp-for="Details" rows="4" placeholder="Anything the moderators should know…"></textarea>
+    </div>
+    <div class="form-actions">
+        <a class="btn-plain" href="javascript:history.back()">Cancel</a>
+        <button type="submit" class="btn-primary">Submit Report</button>
+    </div>
+</form>
