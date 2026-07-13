@@ -1,0 +1,52 @@
+@page
+@model LeagueClassic.Web.Pages.Guides.CreateModel
+@{
+    ViewData["Title"] = "Choose a Champion";
+}
+
+<div class="page-head">
+    <h1>Create a Guide &mdash; Choose a Champion</h1>
+</div>
+<p class="muted">
+    Pick the champion your guide is about. Greyed-out champions are confirmed for League Classic
+    but not yet playable.
+</p>
+
+<input type="text" id="champ-filter" class="filter-box" placeholder="Filter champions…"
+       autocomplete="off" aria-label="Filter champions" />
+
+<div class="champ-grid" id="champ-grid">
+    @foreach (var c in Model.Champions)
+    {
+        if (c.IsAvailable)
+        {
+            <a class="champ-tile" asp-page="/Guides/Compose" asp-route-champion="@c.Slug"
+               data-name="@c.Name.ToLowerInvariant()">
+                <img src="~/@c.IconPath" alt="@c.Name" loading="lazy" />
+                <span>@c.Name</span>
+            </a>
+        }
+        else
+        {
+            <span class="champ-tile disabled" title="Coming soon" data-name="@c.Name.ToLowerInvariant()">
+                <img src="~/@c.IconPath" alt="@c.Name" loading="lazy" />
+                <span>@c.Name</span>
+                <em class="soon">soon</em>
+            </span>
+        }
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Tiny client-side filter — classic and dependency-free.
+        const box = document.getElementById('champ-filter');
+        const tiles = [...document.querySelectorAll('#champ-grid .champ-tile')];
+        box.addEventListener('input', () => {
+            const q = box.value.trim().toLowerCase();
+            tiles.forEach(t => {
+                t.style.display = t.dataset.name.includes(q) ? '' : 'none';
+            });
+        });
+    </script>
+}

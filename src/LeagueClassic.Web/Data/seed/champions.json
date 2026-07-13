@@ -1,0 +1,410 @@
+[
+ {
+  "name": "Ahri",
+  "available": true,
+  "slug": "ahri",
+  "icon": "assets/champions/ahri.png"
+ },
+ {
+  "name": "Alistar",
+  "available": true,
+  "slug": "alistar",
+  "icon": "assets/champions/alistar.png"
+ },
+ {
+  "name": "Amumu",
+  "available": true,
+  "slug": "amumu",
+  "icon": "assets/champions/amumu.png"
+ },
+ {
+  "name": "Anivia",
+  "available": true,
+  "slug": "anivia",
+  "icon": "assets/champions/anivia.png"
+ },
+ {
+  "name": "Annie",
+  "available": true,
+  "slug": "annie",
+  "icon": "assets/champions/annie.png"
+ },
+ {
+  "name": "Ashe",
+  "available": true,
+  "slug": "ashe",
+  "icon": "assets/champions/ashe.png"
+ },
+ {
+  "name": "Blitzcrank",
+  "available": true,
+  "slug": "blitzcrank",
+  "icon": "assets/champions/blitzcrank.png"
+ },
+ {
+  "name": "Brand",
+  "available": true,
+  "slug": "brand",
+  "icon": "assets/champions/brand.png"
+ },
+ {
+  "name": "Cho'Gath",
+  "available": true,
+  "slug": "chogath",
+  "icon": "assets/champions/chogath.png"
+ },
+ {
+  "name": "Corki",
+  "available": true,
+  "slug": "corki",
+  "icon": "assets/champions/corki.png"
+ },
+ {
+  "name": "Dr. Mundo",
+  "available": true,
+  "slug": "dr-mundo",
+  "icon": "assets/champions/dr-mundo.png"
+ },
+ {
+  "name": "Evelynn",
+  "available": true,
+  "slug": "evelynn",
+  "icon": "assets/champions/evelynn.png"
+ },
+ {
+  "name": "Ezreal",
+  "available": true,
+  "slug": "ezreal",
+  "icon": "assets/champions/ezreal.png"
+ },
+ {
+  "name": "Fiddlesticks",
+  "available": true,
+  "slug": "fiddlesticks",
+  "icon": "assets/champions/fiddlesticks.png"
+ },
+ {
+  "name": "Gangplank",
+  "available": true,
+  "slug": "gangplank",
+  "icon": "assets/champions/gangplank.png"
+ },
+ {
+  "name": "Garen",
+  "available": true,
+  "slug": "garen",
+  "icon": "assets/champions/garen.png"
+ },
+ {
+  "name": "Gragas",
+  "available": true,
+  "slug": "gragas",
+  "icon": "assets/champions/gragas.png"
+ },
+ {
+  "name": "Heimerdinger",
+  "available": true,
+  "slug": "heimerdinger",
+  "icon": "assets/champions/heimerdinger.png"
+ },
+ {
+  "name": "Janna",
+  "available": true,
+  "slug": "janna",
+  "icon": "assets/champions/janna.png"
+ },
+ {
+  "name": "Jarvan IV",
+  "available": true,
+  "slug": "jarvan-iv",
+  "icon": "assets/champions/jarvan-iv.png"
+ },
+ {
+  "name": "Jax",
+  "available": true,
+  "slug": "jax",
+  "icon": "assets/champions/jax.png"
+ },
+ {
+  "name": "Karthus",
+  "available": true,
+  "slug": "karthus",
+  "icon": "assets/champions/karthus.png"
+ },
+ {
+  "name": "Kassadin",
+  "available": true,
+  "slug": "kassadin",
+  "icon": "assets/champions/kassadin.png"
+ },
+ {
+  "name": "Katarina",
+  "available": true,
+  "slug": "katarina",
+  "icon": "assets/champions/katarina.png"
+ },
+ {
+  "name": "Kayle",
+  "available": true,
+  "slug": "kayle",
+  "icon": "assets/champions/kayle.png"
+ },
+ {
+  "name": "Kog'Maw",
+  "available": true,
+  "slug": "kogmaw",
+  "icon": "assets/champions/kogmaw.png"
+ },
+ {
+  "name": "Lee Sin",
+  "available": true,
+  "slug": "lee-sin",
+  "icon": "assets/champions/lee-sin.png"
+ },
+ {
+  "name": "Leona",
+  "available": true,
+  "slug": "leona",
+  "icon": "assets/champions/leona.png"
+ },
+ {
+  "name": "Lulu",
+  "available": true,
+  "slug": "lulu",
+  "icon": "assets/champions/lulu.png"
+ },
+ {
+  "name": "Lux",
+  "available": true,
+  "slug": "lux",
+  "icon": "assets/champions/lux.png"
+ },
+ {
+  "name": "Malphite",
+  "available": true,
+  "slug": "malphite",
+  "icon": "assets/champions/malphite.png"
+ },
+ {
+  "name": "Malzahar",
+  "available": true,
+  "slug": "malzahar",
+  "icon": "assets/champions/malzahar.png"
+ },
+ {
+  "name": "Master Yi",
+  "available": true,
+  "slug": "master-yi",
+  "icon": "assets/champions/master-yi.png"
+ },
+ {
+  "name": "Miss Fortune",
+  "available": true,
+  "slug": "miss-fortune",
+  "icon": "assets/champions/miss-fortune.png"
+ },
+ {
+  "name": "Morgana",
+  "available": true,
+  "slug": "morgana",
+  "icon": "assets/champions/morgana.png"
+ },
+ {
+  "name": "Nasus",
+  "available": true,
+  "slug": "nasus",
+  "icon": "assets/champions/nasus.png"
+ },
+ {
+  "name": "Nidalee",
+  "available": true,
+  "slug": "nidalee",
+  "icon": "assets/champions/nidalee.png"
+ },
+ {
+  "name": "Nunu",
+  "available": true,
+  "slug": "nunu",
+  "icon": "assets/champions/nunu.png"
+ },
+ {
+  "name": "Olaf",
+  "available": true,
+  "slug": "olaf",
+  "icon": "assets/champions/olaf.png"
+ },
+ {
+  "name": "Pantheon",
+  "available": true,
+  "slug": "pantheon",
+  "icon": "assets/champions/pantheon.png"
+ },
+ {
+  "name": "Rammus",
+  "available": true,
+  "slug": "rammus",
+  "icon": "assets/champions/rammus.png"
+ },
+ {
+  "name": "Ryze",
+  "available": true,
+  "slug": "ryze",
+  "icon": "assets/champions/ryze.png"
+ },
+ {
+  "name": "Shaco",
+  "available": true,
+  "slug": "shaco",
+  "icon": "assets/champions/shaco.png"
+ },
+ {
+  "name": "Sion",
+  "available": true,
+  "slug": "sion",
+  "icon": "assets/champions/sion.png"
+ },
+ {
+  "name": "Singed",
+  "available": true,
+  "slug": "singed",
+  "icon": "assets/champions/singed.png"
+ },
+ {
+  "name": "Sivir",
+  "available": true,
+  "slug": "sivir",
+  "icon": "assets/champions/sivir.png"
+ },
+ {
+  "name": "Skarner",
+  "available": true,
+  "slug": "skarner",
+  "icon": "assets/champions/skarner.png"
+ },
+ {
+  "name": "Sona",
+  "available": true,
+  "slug": "sona",
+  "icon": "assets/champions/sona.png"
+ },
+ {
+  "name": "Soraka",
+  "available": true,
+  "slug": "soraka",
+  "icon": "assets/champions/soraka.png"
+ },
+ {
+  "name": "Taric",
+  "available": true,
+  "slug": "taric",
+  "icon": "assets/champions/taric.png"
+ },
+ {
+  "name": "Teemo",
+  "available": true,
+  "slug": "teemo",
+  "icon": "assets/champions/teemo.png"
+ },
+ {
+  "name": "Tristana",
+  "available": true,
+  "slug": "tristana",
+  "icon": "assets/champions/tristana.png"
+ },
+ {
+  "name": "Tryndamere",
+  "available": true,
+  "slug": "tryndamere",
+  "icon": "assets/champions/tryndamere.png"
+ },
+ {
+  "name": "Twisted Fate",
+  "available": true,
+  "slug": "twisted-fate",
+  "icon": "assets/champions/twisted-fate.png"
+ },
+ {
+  "name": "Twitch",
+  "available": true,
+  "slug": "twitch",
+  "icon": "assets/champions/twitch.png"
+ },
+ {
+  "name": "Vayne",
+  "available": true,
+  "slug": "vayne",
+  "icon": "assets/champions/vayne.png"
+ },
+ {
+  "name": "Veigar",
+  "available": true,
+  "slug": "veigar",
+  "icon": "assets/champions/veigar.png"
+ },
+ {
+  "name": "Warwick",
+  "available": true,
+  "slug": "warwick",
+  "icon": "assets/champions/warwick.png"
+ },
+ {
+  "name": "Wukong",
+  "available": true,
+  "slug": "wukong",
+  "icon": "assets/champions/wukong.png"
+ },
+ {
+  "name": "Zilean",
+  "available": true,
+  "slug": "zilean",
+  "icon": "assets/champions/zilean.png"
+ },
+ {
+  "name": "Akali",
+  "available": false,
+  "slug": "akali",
+  "icon": "assets/champions/akali.png"
+ },
+ {
+  "name": "Caitlyn",
+  "available": false,
+  "slug": "caitlyn",
+  "icon": "assets/champions/caitlyn.png"
+ },
+ {
+  "name": "Fiora",
+  "available": false,
+  "slug": "fiora",
+  "icon": "assets/champions/fiora.png"
+ },
+ {
+  "name": "Graves",
+  "available": false,
+  "slug": "graves",
+  "icon": "assets/champions/graves.png"
+ },
+ {
+  "name": "Irelia",
+  "available": false,
+  "slug": "irelia",
+  "icon": "assets/champions/irelia.png"
+ },
+ {
+  "name": "LeBlanc",
+  "available": false,
+  "slug": "leblanc",
+  "icon": "assets/champions/leblanc.png"
+ },
+ {
+  "name": "Mordekaiser",
+  "available": false,
+  "slug": "mordekaiser",
+  "icon": "assets/champions/mordekaiser.png"
+ },
+ {
+  "name": "Urgot",
+  "available": false,
+  "slug": "urgot",
+  "icon": "assets/champions/urgot.png"
+ }
+]

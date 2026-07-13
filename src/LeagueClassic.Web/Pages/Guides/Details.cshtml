@@ -1,0 +1,104 @@
+@page "{slug}"
+@model LeagueClassic.Web.Pages.Guides.DetailsModel
+@inject MarkdownRenderer Markdown
+@{
+    ViewData["Title"] = Model.Guide.Title;
+    var abilities = new[] { "Q", "W", "E", "R" };
+}
+
+<article class="guide-view">
+    <header class="guide-header">
+        @if (Model.Guide.Champion?.IconPath is not null)
+        {
+            <img src="~/@Model.Guide.Champion.IconPath" alt="@Model.Guide.Champion.Name" class="champ-icon-lg" />
+        }
+        <div>
+            <h1>@Model.Guide.Title</h1>
+            <div class="guide-meta">
+                @Model.Guide.Champion?.Name &middot;
+                by @(Model.Guide.Author?.UserName ?? "unknown") &middot;
+                @Model.Guide.UpdatedAt.ToString("MMM d, yyyy")
+                @if (Model.Guide.Status != GuideStatus.Published)
+                {
+                    <span class="badge-draft">@Model.Guide.Status</span>
+                }
+            </div>
+        </div>
+    </header>
+
+    <div class="loadout">
+        <!-- Summoner spells -->
+        @if (Model.Guide.SpellOne is not null || Model.Guide.SpellTwo is not null)
+        {
+            <div class="loadout-block">
+                <h3>Summoner Spells</h3>
+                <div class="spell-show">
+                    @foreach (var s in new[] { Model.Guide.SpellOne, Model.Guide.SpellTwo })
+                    {
+                        if (s is not null)
+                        {
+                            <span class="spell-badge"><img src="~/@s.IconPath" alt="@s.Name" /> @s.Name</span>
+                        }
+                    }
+                </div>
+            </div>
+        }
+
+        <!-- Build order -->
+        @if (Model.Guide.BuildOrder.Count > 0)
+        {
+            <div class="loadout-block">
+                <h3>Build Order</h3>
+                <div class="build-show">
+                    @{ var n = 1; }
+                    @foreach (var bi in Model.Guide.BuildOrder)
+                    {
+                        <span class="build-item" title="@bi.Item?.Name">
+                            <span class="ord">@(n++)</span>
+                            <img src="~/@bi.Item?.IconPath" alt="@bi.Item?.Name" />
+                        </span>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Skill order -->
+    @if (Model.SkillLevels.Count > 0)
+    {
+        <div class="loadout-block">
+            <h3>Ability Leveling</h3>
+            <table class="skill-table read-only">
+                <thead>
+                    <tr>
+                        <th></th>
+                        @for (var lvl = 1; lvl <= Model.SkillLevels.Count; lvl++)
+                        {
+                            <th>@lvl</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ab in abilities)
+                    {
+                        <tr>
+                            <th class="ab-label ab-@ab">@ab</th>
+                            @for (var i = 0; i < Model.SkillLevels.Count; i++)
+                            {
+                                var on = Model.SkillLevels[i] == ab;
+                                <td><span class="skill-cell @(on ? "on" : "")"></span></td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <!-- Body -->
+    <div class="guide-body">
+        @Markdown.ToHtml(Model.Guide.BodyMarkdown)
+    </div>
+
+    <p><a asp-page="/Guides/Index">&larr; All guides</a></p>
+</article>

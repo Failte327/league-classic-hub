@@ -2,17 +2,21 @@
    high-contrast, early-2010s community-site vibe. Hand-rolled, no framework. */
 
 :root {
-    --page: #e9eef4;
-    --panel: #ffffff;
-    --ink: #1b2733;
-    --muted: #6b7a8d;
-    --line: #c7d2de;
-    --brand: #2b5d8b;
-    --brand-dark: #1c3f60;
-    --accent: #c1462b;
-    --header: #23384d;
-    --catbar: #2b5d8b;
-    --row-alt: #f3f6fa;
+    /* Navy + gold, echoing the League Classic / Hextech wiki palette. */
+    --page: #0a1428;        /* deep navy page background */
+    --page-edge: #06101f;   /* darker navy for the outer gutter */
+    --panel: #f6f7f4;       /* light content panels for readability */
+    --ink: #10141c;
+    --muted: #5d6b7e;
+    --line: #c3ccd8;
+    --brand: #14568c;       /* link blue */
+    --brand-dark: #0a2647;  /* navy */
+    --gold: #c8aa6e;        /* Hextech gold */
+    --gold-dark: #a8863f;
+    --accent: #c8aa6e;      /* gold accent */
+    --header: #010a13;      /* near-black navy */
+    --catbar: #0a2647;      /* navy category bars */
+    --row-alt: #eef1f6;
 }
 
 * { box-sizing: border-box; }
@@ -20,28 +24,38 @@
 body {
     margin: 0;
     background: var(--page);
-    color: var(--ink);
+    /* Default text is light because most page-level content sits on navy. */
+    color: #c6d2e0;
     font: 13px/1.5 Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.site-wrap { max-width: 1000px; margin: 0 auto; padding: 12px; }
+.site-wrap {
+    max-width: 1000px; margin: 0 auto; padding: 12px;
+    background: var(--page);
+    box-shadow: 0 0 40px rgba(0,0,0,.35);
+}
+
+/* Light content panels keep dark, readable text. */
+.forum-table, .guide-view, .guide-form .panel, .champ-tile,
+.spell-opt, .empty, .markdown-help, .filter-box { color: var(--ink); }
+
+/* Page-level headings/intros sit on navy — keep them light. */
+h1, h2 { color: #e6ecf3; }
+.guide-view h1, .guide-view h2, .guide-form .panel h2 { color: var(--ink); }
 
 /* Header / masthead */
-.site-header { border: 1px solid var(--line); background: var(--panel); }
+.site-header { border: 1px solid var(--brand-dark); border-bottom: 2px solid var(--gold); background: var(--header); }
 .masthead {
     display: flex; align-items: center; gap: 14px;
     background: var(--header);
     padding: 12px 16px;
     color: #cdd9e6;
 }
-.logo {
-    font: bold 26px/1 "Trebuchet MS", Verdana, sans-serif;
-    color: #fff; letter-spacing: -.5px;
-}
-.logo span { color: #7fb2e0; }
+.logo { display: inline-flex; align-items: center; }
+.logo img { height: 46px; width: auto; display: block; }
 .logo:hover { text-decoration: none; }
 .tagline { color: #8fa6bd; font-style: italic; flex: 1; }
 
@@ -57,10 +71,10 @@ a:hover { text-decoration: underline; }
     padding: 0 8px;
 }
 .mainnav a {
-    color: #dbe7f2; padding: 8px 14px; font-weight: bold; font-size: 12px;
+    color: var(--gold); padding: 8px 14px; font-weight: bold; font-size: 12px;
     text-transform: uppercase; letter-spacing: .5px;
 }
-.mainnav a:hover { background: var(--brand); color: #fff; text-decoration: none; }
+.mainnav a:hover { background: var(--gold); color: var(--brand-dark); text-decoration: none; }
 
 /* Content */
 .content { margin-top: 12px; }
@@ -73,9 +87,10 @@ h2 { font-size: 16px; margin: 18px 0 8px; }
 .cat-header {
     text-align: left;
     background: var(--catbar);
-    color: #fff; font-weight: bold; font-size: 13px;
+    color: var(--gold); font-weight: bold; font-size: 13px;
     padding: 7px 10px;
-    border: 1px solid var(--brand-dark);
+    border: 1px solid #000;
+    border-left: 3px solid var(--gold);
 }
 .forum-table th {
     background: #d9e2ec; color: var(--brand-dark);
@@ -88,14 +103,16 @@ h2 { font-size: 16px; margin: 18px 0 8px; }
 .board-desc { color: var(--muted); font-size: 12px; margin-top: 2px; }
 .stat { color: var(--muted); white-space: nowrap; text-align: center; width: 90px; }
 
-.muted { color: var(--muted); }
+/* .muted appears mostly as page intros on navy — keep it a light steel-blue. */
+.muted { color: #93a6bd; }
 .empty { padding: 16px; color: var(--muted); background: var(--panel); border: 1px solid var(--line); }
 
 .site-footer {
     margin-top: 18px; padding: 12px; text-align: center;
-    color: var(--muted); font-size: 11px;
-    border-top: 1px solid var(--line);
+    color: #7f93ab; font-size: 11px;
+    border-top: 1px solid var(--brand-dark);
 }
+.site-footer a { color: var(--gold); }
 
 /* Basic form styling for the Identity pages */
 .form-narrow { max-width: 420px; }
@@ -107,3 +124,125 @@ button.btn, input[type=submit] {
     padding: 7px 16px; font-weight: bold; cursor: pointer;
 }
 button.btn:hover { background: var(--brand-dark); }
+
+/* ============================ Guides ============================ */
+
+.page-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.btn-primary {
+    background: var(--gold); color: var(--brand-dark); border: 1px solid var(--gold-dark);
+    padding: 8px 16px; font-weight: bold; cursor: pointer; text-decoration: none;
+    display: inline-block; font-size: 13px;
+}
+.btn-primary:hover { background: #d8bd88; color: var(--brand-dark); text-decoration: none; }
+.btn-plain {
+    background: #e2e9f1; color: var(--brand-dark); border: 1px solid var(--line);
+    padding: 8px 16px; font-weight: bold; cursor: pointer; text-decoration: none;
+    display: inline-block; font-size: 13px;
+}
+.btn-plain:hover { background: #d3ddea; text-decoration: none; }
+
+/* Champion picker */
+.filter-box { max-width: 320px; margin: 8px 0 14px; }
+.champ-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+.champ-tile {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    padding: 8px 4px; background: var(--panel); border: 1px solid var(--line);
+    text-align: center; font-size: 11px; color: var(--ink); position: relative;
+}
+.champ-tile:hover { border-color: var(--brand); box-shadow: 0 0 0 2px rgba(43,93,139,.25); text-decoration: none; }
+.champ-tile img { width: 56px; height: 56px; display: block; }
+.champ-tile.disabled { opacity: .45; cursor: default; }
+.champ-tile.disabled:hover { border-color: var(--line); box-shadow: none; }
+.champ-tile .soon {
+    position: absolute; top: 4px; right: 4px; background: #555; color: #fff;
+    font-size: 9px; padding: 1px 4px; font-style: normal; text-transform: uppercase;
+}
+
+.champ-icon-sm { width: 28px; height: 28px; vertical-align: middle; }
+.champ-icon-md { width: 40px; height: 40px; vertical-align: middle; }
+.champ-icon-lg { width: 72px; height: 72px; border: 2px solid var(--brand-dark); }
+.champ-cell { display: flex; align-items: center; gap: 8px; }
+
+/* Editor form */
+.guide-form .panel {
+    background: var(--panel); border: 1px solid var(--line); padding: 12px 14px; margin: 14px 0;
+}
+.guide-form .panel h2 { margin: 0 0 10px; font-size: 15px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.guide-form .panel h2 small { color: var(--muted); font-weight: normal; }
+.field { margin: 10px 0; }
+.field label { display: block; font-weight: bold; margin-bottom: 4px; }
+.compose-title { display: flex; align-items: center; gap: 10px; }
+.compose-title span { color: var(--accent); }
+.validation-summary { color: var(--accent); }
+.validation-summary ul { margin: 6px 0; }
+.hint { color: var(--muted); font-size: 11px; }
+.form-actions { display: flex; gap: 10px; justify-content: flex-end; margin: 16px 0; }
+
+/* Summoner spell palette */
+.spell-palette { display: flex; flex-wrap: wrap; gap: 6px; }
+.spell-opt {
+    display: flex; flex-direction: column; align-items: center; gap: 3px; width: 74px;
+    background: #f3f6fa; border: 1px solid var(--line); padding: 6px 4px; cursor: pointer; font-size: 10px;
+}
+.spell-opt img { width: 40px; height: 40px; }
+.spell-opt.selected { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(193,70,43,.35); background: #fff; }
+
+/* Skill grid */
+.skill-table { border-collapse: collapse; margin-top: 6px; }
+.skill-table th { background: #d9e2ec; color: var(--brand-dark); font-size: 10px; padding: 2px 5px; text-align: center; border: 1px solid var(--line); }
+.skill-table td { border: 1px solid var(--line); padding: 0; }
+.ab-label { width: 22px; }
+.ab-Q { color: #2b6cb0; } .ab-W { color: #2f855a; } .ab-E { color: #b7791f; } .ab-R { color: #c1462b; }
+.skill-cell {
+    width: 24px; height: 22px; display: block; background: #fff; border: 0; cursor: pointer; padding: 0;
+}
+.skill-cell:hover:not(.locked):not([disabled]) { background: #e6eef7; }
+.skill-cell.locked, .skill-cell[disabled] { background: repeating-linear-gradient(45deg,#eee,#eee 3px,#e3e3e3 3px,#e3e3e3 6px); cursor: default; }
+.skill-cell.on { background: var(--brand); }
+tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
+.skill-table.read-only .skill-cell { cursor: default; }
+
+/* Build order */
+.build-strip {
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 52px;
+    background: #f3f6fa; border: 1px dashed var(--line); padding: 8px; margin-bottom: 12px;
+}
+.build-empty { color: var(--muted); font-size: 12px; }
+.build-chip, .build-item { position: relative; display: inline-flex; }
+.build-chip { background: none; border: 1px solid var(--line); padding: 2px; cursor: pointer; }
+.build-chip img, .build-item img { width: 40px; height: 40px; display: block; }
+.build-chip .ord, .build-item .ord {
+    position: absolute; top: -6px; left: -6px; background: var(--brand-dark); color: #fff;
+    font-size: 9px; width: 15px; height: 15px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.build-chip .x { position: absolute; top: -6px; right: -6px; background: var(--accent); color: #fff; font-size: 10px; width: 15px; height: 15px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+.item-palette { max-height: 340px; overflow-y: auto; border-top: 1px solid var(--line); padding-top: 8px; }
+.item-group h3 { font-size: 11px; text-transform: uppercase; color: var(--muted); margin: 8px 0 4px; }
+.item-row { display: flex; flex-wrap: wrap; gap: 4px; }
+.item-opt { background: none; border: 1px solid var(--line); padding: 1px; cursor: pointer; }
+.item-opt:hover { border-color: var(--accent); }
+.item-opt img { width: 34px; height: 34px; display: block; }
+
+.markdown-help { background: #fbfaf0; border: 1px solid #e3dfb8; padding: 8px 10px; font-size: 11px; margin-bottom: 8px; }
+.markdown-help code { background: #efedd8; padding: 1px 4px; }
+
+/* Guide view */
+.guide-view { background: var(--panel); border: 1px solid var(--line); padding: 16px 20px; }
+.guide-header { display: flex; gap: 14px; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 12px; }
+.guide-header h1 { margin: 0; }
+.guide-meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
+.badge-draft { background: #999; color: #fff; padding: 1px 6px; font-size: 10px; text-transform: uppercase; }
+.loadout { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 12px; }
+.loadout-block { margin-bottom: 12px; }
+.loadout-block h3 { font-size: 12px; text-transform: uppercase; color: var(--brand-dark); margin: 0 0 6px; }
+.spell-show { display: flex; gap: 10px; }
+.spell-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; }
+.spell-badge img { width: 32px; height: 32px; }
+.build-show { display: flex; flex-wrap: wrap; gap: 8px; }
+.guide-body { line-height: 1.65; margin-top: 14px; }
+.guide-body h1, .guide-body h2, .guide-body h3 { border-bottom: 1px solid var(--line); padding-bottom: 3px; }
+.guide-body img { max-width: 100%; }
+.guide-body table { border-collapse: collapse; }
+.guide-body td, .guide-body th { border: 1px solid var(--line); padding: 4px 8px; }
+

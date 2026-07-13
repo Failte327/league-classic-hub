@@ -1,0 +1,102 @@
+@page
+@model LeagueClassic.Web.Pages.Guides.ComposeModel
+@{
+    ViewData["Title"] = $"New {Model.Champion.Name} Guide";
+}
+
+<div class="page-head">
+    <h1 class="compose-title">
+        @if (Model.Champion.IconPath is not null)
+        {
+            <img src="~/@Model.Champion.IconPath" alt="@Model.Champion.Name" class="champ-icon-md" />
+        }
+        New Guide: <span>@Model.Champion.Name</span>
+    </h1>
+    <a class="btn-plain" asp-page="/Guides/Create">&larr; Change champion</a>
+</div>
+
+<form method="post" class="guide-form" id="guide-form">
+    <input type="hidden" asp-for="Input.ChampionSlug" />
+    <input type="hidden" asp-for="Input.SpellOneId" id="spell-one" />
+    <input type="hidden" asp-for="Input.SpellTwoId" id="spell-two" />
+    <input type="hidden" asp-for="Input.SkillOrder" id="skill-order" />
+    <input type="hidden" asp-for="Input.BuildOrderCsv" id="build-order" />
+
+    <div asp-validation-summary="All" class="validation-summary"></div>
+
+    <div class="field">
+        <label asp-for="Input.Title">Guide Title</label>
+        <input asp-for="Input.Title" placeholder="e.g. AP @(Model.Champion.Name) Mid — Season 3 Domination" />
+    </div>
+
+    <!-- Summoner spells -->
+    <section class="panel">
+        <h2>Summoner Spells <small>(pick two)</small></h2>
+        <div class="spell-palette" id="spell-palette">
+            @foreach (var s in Model.Spells)
+            {
+                <button type="button" class="spell-opt" data-id="@s.Id" title="@s.Name">
+                    <img src="~/@s.IconPath" alt="@s.Name" loading="lazy" />
+                    <span>@s.Name</span>
+                </button>
+            }
+        </div>
+    </section>
+
+    <!-- Skill order -->
+    <section class="panel">
+        <h2>Ability Leveling <small>(click a cell to put the level's point into that ability)</small></h2>
+        <div class="skill-grid" id="skill-grid" data-champ-icon="@Model.Champion.IconPath"></div>
+        <p class="hint">R (ultimate) can only be leveled at 6, 11, and 16.</p>
+    </section>
+
+    <!-- Build order -->
+    <section class="panel">
+        <h2>Item Build Order</h2>
+        <div class="build-strip" id="build-strip">
+            <span class="build-empty">Click items below to add them to the build in order.</span>
+        </div>
+        <div class="item-palette">
+            @foreach (var group in Model.ItemsByCategory)
+            {
+                <div class="item-group">
+                    <h3>@group.Key</h3>
+                    <div class="item-row">
+                        @foreach (var item in group)
+                        {
+                            <button type="button" class="item-opt" data-id="@item.Id"
+                                    data-name="@item.Name" data-icon="@item.IconPath" title="@item.Name">
+                                <img src="~/@item.IconPath" alt="@item.Name" loading="lazy" />
+                            </button>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <!-- Body -->
+    <section class="panel">
+        <h2>Guide Details</h2>
+        <div class="markdown-help">
+            <strong>Formatting:</strong>
+            <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
+            <code>*italic*</code> &middot;
+            <code># Heading</code> &middot;
+            <code>- list item</code> &middot;
+            <code>[link](https://…)</code> &middot;
+            <code>`code`</code> &middot; blank line = new paragraph.
+        </div>
+        <textarea asp-for="Input.BodyMarkdown" rows="16"
+                  placeholder="Explain the playstyle, matchups, combos, power spikes…"></textarea>
+    </section>
+
+    <div class="form-actions">
+        <button type="submit" name="Input.Publish" value="false" class="btn-plain">Save as Draft</button>
+        <button type="submit" name="Input.Publish" value="true" class="btn-primary">Publish Guide</button>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="~/js/guide-editor.js" asp-append-version="true"></script>
+}

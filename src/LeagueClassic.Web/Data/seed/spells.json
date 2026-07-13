@@ -1,0 +1,77 @@
+[
+ {
+  "name": "Barrier",
+  "slug": "barrier",
+  "icon": "assets/spells/barrier.png"
+ },
+ {
+  "name": "Clairvoyance",
+  "slug": "clairvoyance",
+  "icon": "assets/spells/clairvoyance.png"
+ },
+ {
+  "name": "Clarity",
+  "slug": "clarity",
+  "icon": "assets/spells/clarity.png"
+ },
+ {
+  "name": "Cleanse",
+  "slug": "cleanse",
+  "icon": "assets/spells/cleanse.png"
+ },
+ {
+  "name": "Exhaust",
+  "slug": "exhaust",
+  "icon": "assets/spells/exhaust.png"
+ },
+ {
+  "name": "Flash",
+  "slug": "flash",
+  "icon": "assets/spells/flash.png"
+ },
+ {
+  "name": "Ghost",
+  "slug": "ghost",
+  "icon": "assets/spells/ghost.png"
+ },
+ {
+  "name": "Fortify",
+  "slug": "fortify",
+  "icon": "assets/spells/fortify.png"
+ },
+ {
+  "name": "Heal",
+  "slug": "heal",
+  "icon": "assets/spells/heal.png"
+ },
+ {
+  "name": "Ignite",
+  "slug": "ignite",
+  "icon": "assets/spells/ignite.png"
+ },
+ {
+  "name": "Rally",
+  "slug": "rally",
+  "icon": "assets/spells/rally.png"
+ },
+ {
+  "name": "Revive",
+  "slug": "revive",
+  "icon": "assets/spells/revive.png"
+ },
+ {
+  "name": "Smite",
+  "slug": "smite",
+  "icon": "assets/spells/smite.png"
+ },
+ {
+  "name": "Surge",
+  "slug": "surge",
+  "icon": "assets/spells/surge.png"
+ },
+ {
+  "name": "Teleport",
+  "slug": "teleport",
+  "icon": "assets/spells/teleport.png"
+ }
+]

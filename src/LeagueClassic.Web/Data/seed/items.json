@@ -1,0 +1,770 @@
+[
+ {
+  "name": "Berserker's Greaves",
+  "slug": "berserkers-greaves",
+  "category": "Boots",
+  "icon": "assets/items/berserkers-greaves.png"
+ },
+ {
+  "name": "Boots of Mobility",
+  "slug": "boots-of-mobility",
+  "category": "Boots",
+  "icon": "assets/items/boots-of-mobility.png"
+ },
+ {
+  "name": "Boots of Speed",
+  "slug": "boots-of-speed",
+  "category": "Boots",
+  "icon": "assets/items/boots-of-speed.png"
+ },
+ {
+  "name": "Boots of Swiftness",
+  "slug": "boots-of-swiftness",
+  "category": "Boots",
+  "icon": "assets/items/boots-of-swiftness.png"
+ },
+ {
+  "name": "Ionian Boots of Lucidity",
+  "slug": "ionian-boots-of-lucidity",
+  "category": "Boots",
+  "icon": "assets/items/ionian-boots-of-lucidity.png"
+ },
+ {
+  "name": "Mercury's Treads",
+  "slug": "mercurys-treads",
+  "category": "Boots",
+  "icon": "assets/items/mercurys-treads.png"
+ },
+ {
+  "name": "Ninja Tabi",
+  "slug": "ninja-tabi",
+  "category": "Boots",
+  "icon": "assets/items/ninja-tabi.png"
+ },
+ {
+  "name": "Sorcerer's Shoes",
+  "slug": "sorcerers-shoes",
+  "category": "Boots",
+  "icon": "assets/items/sorcerers-shoes.png"
+ },
+ {
+  "name": "Bloodthirster",
+  "slug": "bloodthirster",
+  "category": "Offense",
+  "icon": "assets/items/bloodthirster.png"
+ },
+ {
+  "name": "Infinity Edge",
+  "slug": "infinity-edge",
+  "category": "Offense",
+  "icon": "assets/items/infinity-edge.png"
+ },
+ {
+  "name": "The Black Cleaver",
+  "slug": "the-black-cleaver",
+  "category": "Offense",
+  "icon": "assets/items/the-black-cleaver.png"
+ },
+ {
+  "name": "Trinity Force",
+  "slug": "trinity-force",
+  "category": "Offense",
+  "icon": "assets/items/trinity-force.png"
+ },
+ {
+  "name": "Ravenous Hydra",
+  "slug": "ravenous-hydra",
+  "category": "Offense",
+  "icon": "assets/items/ravenous-hydra.png"
+ },
+ {
+  "name": "Blade of the Ruined King",
+  "slug": "blade-of-the-ruined-king",
+  "category": "Offense",
+  "icon": "assets/items/blade-of-the-ruined-king.png"
+ },
+ {
+  "name": "Guinsoo's Rageblade",
+  "slug": "guinsoos-rageblade",
+  "category": "Offense",
+  "icon": "assets/items/guinsoos-rageblade.png"
+ },
+ {
+  "name": "Last Whisper",
+  "slug": "last-whisper",
+  "category": "Offense",
+  "icon": "assets/items/last-whisper.png"
+ },
+ {
+  "name": "Youmuu's Ghostblade",
+  "slug": "youmuus-ghostblade",
+  "category": "Offense",
+  "icon": "assets/items/youmuus-ghostblade.png"
+ },
+ {
+  "name": "Rabadon's Deathcap",
+  "slug": "rabadons-deathcap",
+  "category": "Magic",
+  "icon": "assets/items/rabadons-deathcap.png"
+ },
+ {
+  "name": "Zhonya's Hourglass",
+  "slug": "zhonyas-hourglass",
+  "category": "Magic",
+  "icon": "assets/items/zhonyas-hourglass.png"
+ },
+ {
+  "name": "Void Staff",
+  "slug": "void-staff",
+  "category": "Magic",
+  "icon": "assets/items/void-staff.png"
+ },
+ {
+  "name": "Liandry's Torment",
+  "slug": "liandrys-torment",
+  "category": "Magic",
+  "icon": "assets/items/liandrys-torment.png"
+ },
+ {
+  "name": "Morellonomicon",
+  "slug": "morellonomicon",
+  "category": "Magic",
+  "icon": "assets/items/morellonomicon.png"
+ },
+ {
+  "name": "Rylai's Crystal Scepter",
+  "slug": "rylais-crystal-scepter",
+  "category": "Magic",
+  "icon": "assets/items/rylais-crystal-scepter.png"
+ },
+ {
+  "name": "Lich Bane",
+  "slug": "lich-bane",
+  "category": "Magic",
+  "icon": "assets/items/lich-bane.png"
+ },
+ {
+  "name": "Deathfire Grasp",
+  "slug": "deathfire-grasp",
+  "category": "Magic",
+  "icon": "assets/items/deathfire-grasp.png"
+ },
+ {
+  "name": "Sightstone",
+  "slug": "sightstone",
+  "category": "Support",
+  "icon": "assets/items/sightstone.png"
+ },
+ {
+  "name": "Ruby Sightstone",
+  "slug": "ruby-sightstone",
+  "category": "Support",
+  "icon": "assets/items/ruby-sightstone.png"
+ },
+ {
+  "name": "Locket of the Iron Solari",
+  "slug": "locket-of-the-iron-solari",
+  "category": "Support",
+  "icon": "assets/items/locket-of-the-iron-solari.png"
+ },
+ {
+  "name": "Aegis of the Legion",
+  "slug": "aegis-of-the-legion",
+  "category": "Support",
+  "icon": "assets/items/aegis-of-the-legion.png"
+ },
+ {
+  "name": "Runic Bulwark",
+  "slug": "runic-bulwark",
+  "category": "Support",
+  "icon": "assets/items/runic-bulwark.png"
+ },
+ {
+  "name": "Mikael's Crucible",
+  "slug": "mikaels-crucible",
+  "category": "Support",
+  "icon": "assets/items/mikaels-crucible.png"
+ },
+ {
+  "name": "Shurelya's Reverie",
+  "slug": "shurelyas-reverie",
+  "category": "Support",
+  "icon": "assets/items/shurelyas-reverie.png"
+ },
+ {
+  "name": "Ohmwrecker",
+  "slug": "ohmwrecker",
+  "category": "Support",
+  "icon": "assets/items/ohmwrecker.png"
+ },
+ {
+  "name": "Banner of Command",
+  "slug": "banner-of-command",
+  "category": "Support",
+  "icon": "assets/items/banner-of-command.png"
+ },
+ {
+  "name": "Kage's Lucky Pick",
+  "slug": "kages-lucky-pick",
+  "category": "Support",
+  "icon": "assets/items/kages-lucky-pick.png"
+ },
+ {
+  "name": "Philosopher's Stone",
+  "slug": "philosophers-stone",
+  "category": "Support",
+  "icon": "assets/items/philosophers-stone.png"
+ },
+ {
+  "name": "Emblem of Valor",
+  "slug": "emblem-of-valor",
+  "category": "Support",
+  "icon": "assets/items/emblem-of-valor.png"
+ },
+ {
+  "name": "Heart of Gold",
+  "slug": "heart-of-gold",
+  "category": "Support",
+  "icon": "assets/items/heart-of-gold.png"
+ },
+ {
+  "name": "Mejai's Soulstealer",
+  "slug": "mejais-soulstealer",
+  "category": "Support",
+  "icon": "assets/items/mejais-soulstealer.png"
+ },
+ {
+  "name": "Sword of the Occult",
+  "slug": "sword-of-the-occult",
+  "category": "Support",
+  "icon": "assets/items/sword-of-the-occult.png"
+ },
+ {
+  "name": "Leviathan",
+  "slug": "leviathan",
+  "category": "Support",
+  "icon": "assets/items/leviathan.png"
+ },
+ {
+  "name": "Avarice Blade",
+  "slug": "avarice-blade",
+  "category": "Support",
+  "icon": "assets/items/avarice-blade.png"
+ },
+ {
+  "name": "Warmog's Armor",
+  "slug": "warmogs-armor",
+  "category": "Defense",
+  "icon": "assets/items/warmogs-armor.png"
+ },
+ {
+  "name": "Frozen Heart",
+  "slug": "frozen-heart",
+  "category": "Defense",
+  "icon": "assets/items/frozen-heart.png"
+ },
+ {
+  "name": "Randuin's Omen",
+  "slug": "randuins-omen",
+  "category": "Defense",
+  "icon": "assets/items/randuins-omen.png"
+ },
+ {
+  "name": "Spirit Visage",
+  "slug": "spirit-visage",
+  "category": "Defense",
+  "icon": "assets/items/spirit-visage.png"
+ },
+ {
+  "name": "Maw of Malmortius",
+  "slug": "maw-of-malmortius",
+  "category": "Defense",
+  "icon": "assets/items/maw-of-malmortius.png"
+ },
+ {
+  "name": "Hexdrinker",
+  "slug": "hexdrinker",
+  "category": "Defense",
+  "icon": "assets/items/hexdrinker.png"
+ },
+ {
+  "name": "Banshee's Veil",
+  "slug": "banshees-veil",
+  "category": "Defense",
+  "icon": "assets/items/banshees-veil.png"
+ },
+ {
+  "name": "Abyssal Scepter",
+  "slug": "abyssal-scepter",
+  "category": "Defense",
+  "icon": "assets/items/abyssal-scepter.png"
+ },
+ {
+  "name": "Force of Nature",
+  "slug": "force-of-nature",
+  "category": "Defense",
+  "icon": "assets/items/force-of-nature.png"
+ },
+ {
+  "name": "Thornmail",
+  "slug": "thornmail",
+  "category": "Defense",
+  "icon": "assets/items/thornmail.png"
+ },
+ {
+  "name": "Sunfire Cape",
+  "slug": "sunfire-cape",
+  "category": "Defense",
+  "icon": "assets/items/sunfire-cape.png"
+ },
+ {
+  "name": "Warden's Mail",
+  "slug": "wardens-mail",
+  "category": "Defense",
+  "icon": "assets/items/wardens-mail.png"
+ },
+ {
+  "name": "Chalice of Harmony",
+  "slug": "chalice-of-harmony",
+  "category": "Defense",
+  "icon": "assets/items/chalice-of-harmony.png"
+ },
+ {
+  "name": "Feral Flare",
+  "slug": "feral-flare",
+  "category": "Jungle",
+  "icon": "assets/items/feral-flare.png"
+ },
+ {
+  "name": "Wriggle's Lantern",
+  "slug": "wriggles-lantern",
+  "category": "Jungle",
+  "icon": "assets/items/wriggles-lantern.png"
+ },
+ {
+  "name": "Hunter's Machete",
+  "slug": "hunters-machete",
+  "category": "Jungle",
+  "icon": "assets/items/hunters-machete.png"
+ },
+ {
+  "name": "Spirit Stone",
+  "slug": "spirit-stone",
+  "category": "Jungle",
+  "icon": "assets/items/spirit-stone.png"
+ },
+ {
+  "name": "Spirit of the Ancient Golem",
+  "slug": "spirit-of-the-ancient-golem",
+  "category": "Jungle",
+  "icon": "assets/items/spirit-of-the-ancient-golem.png"
+ },
+ {
+  "name": "Spirit of the Elder Lizard",
+  "slug": "spirit-of-the-elder-lizard",
+  "category": "Jungle",
+  "icon": "assets/items/spirit-of-the-elder-lizard.png"
+ },
+ {
+  "name": "Spirit of the Spectral Wraith",
+  "slug": "spirit-of-the-spectral-wraith",
+  "category": "Jungle",
+  "icon": "assets/items/spirit-of-the-spectral-wraith.png"
+ },
+ {
+  "name": "Madred's Bloodrazor",
+  "slug": "madreds-bloodrazor",
+  "category": "Jungle",
+  "icon": "assets/items/madreds-bloodrazor.png"
+ },
+ {
+  "name": "Madred's Razors",
+  "slug": "madreds-razors",
+  "category": "Jungle",
+  "icon": "assets/items/madreds-razors.png"
+ },
+ {
+  "name": "Statikk Shiv",
+  "slug": "statikk-shiv",
+  "category": "AttackSpeed",
+  "icon": "assets/items/statikk-shiv.png"
+ },
+ {
+  "name": "Runaan's Hurricane",
+  "slug": "runaans-hurricane",
+  "category": "AttackSpeed",
+  "icon": "assets/items/runaans-hurricane.png"
+ },
+ {
+  "name": "Phantom Dancer",
+  "slug": "phantom-dancer",
+  "category": "AttackSpeed",
+  "icon": "assets/items/phantom-dancer.png"
+ },
+ {
+  "name": "Sword of the Divine",
+  "slug": "sword-of-the-divine",
+  "category": "AttackSpeed",
+  "icon": "assets/items/sword-of-the-divine.png"
+ },
+ {
+  "name": "Ionic Spark",
+  "slug": "ionic-spark",
+  "category": "AttackSpeed",
+  "icon": "assets/items/ionic-spark.png"
+ },
+ {
+  "name": "Malady",
+  "slug": "malady",
+  "category": "AttackSpeed",
+  "icon": "assets/items/malady.png"
+ },
+ {
+  "name": "Zephyr",
+  "slug": "zephyr",
+  "category": "AttackSpeed",
+  "icon": "assets/items/zephyr.png"
+ },
+ {
+  "name": "Zz'Rot Portal",
+  "slug": "zzrot-portal",
+  "category": "AttackSpeed",
+  "icon": "assets/items/zzrot-portal.png"
+ },
+ {
+  "name": "Recurve Bow",
+  "slug": "recurve-bow",
+  "category": "AttackSpeed",
+  "icon": "assets/items/recurve-bow.png"
+ },
+ {
+  "name": "Zeal",
+  "slug": "zeal",
+  "category": "AttackSpeed",
+  "icon": "assets/items/zeal.png"
+ },
+ {
+  "name": "Tear of the Goddess",
+  "slug": "tear-of-the-goddess",
+  "category": "Mana",
+  "icon": "assets/items/tear-of-the-goddess.png"
+ },
+ {
+  "name": "Manamune",
+  "slug": "manamune",
+  "category": "Mana",
+  "icon": "assets/items/manamune.png"
+ },
+ {
+  "name": "Muramana",
+  "slug": "muramana",
+  "category": "Mana",
+  "icon": "assets/items/muramana.png"
+ },
+ {
+  "name": "Seraph's Embrace",
+  "slug": "seraphs-embrace",
+  "category": "Mana",
+  "icon": "assets/items/seraphs-embrace.png"
+ },
+ {
+  "name": "Archangel's Staff",
+  "slug": "archangels-staff",
+  "category": "Mana",
+  "icon": "assets/items/archangels-staff.png"
+ },
+ {
+  "name": "Rod of Ages",
+  "slug": "rod-of-ages",
+  "category": "Mana",
+  "icon": "assets/items/rod-of-ages.png"
+ },
+ {
+  "name": "Catalyst the Protector",
+  "slug": "catalyst-the-protector",
+  "category": "Mana",
+  "icon": "assets/items/catalyst-the-protector.png"
+ },
+ {
+  "name": "Stealth Ward",
+  "slug": "stealth-ward",
+  "category": "Vision",
+  "icon": "assets/items/stealth-ward.png"
+ },
+ {
+  "name": "Vision Ward",
+  "slug": "vision-ward",
+  "category": "Vision",
+  "icon": "assets/items/vision-ward.png"
+ },
+ {
+  "name": "Oracle's Elixir",
+  "slug": "oracles-elixir",
+  "category": "Vision",
+  "icon": "assets/items/oracles-elixir.png"
+ },
+ {
+  "name": "Health Potion",
+  "slug": "health-potion",
+  "category": "Consumable",
+  "icon": "assets/items/health-potion.png"
+ },
+ {
+  "name": "Mana Potion",
+  "slug": "mana-potion",
+  "category": "Consumable",
+  "icon": "assets/items/mana-potion.png"
+ },
+ {
+  "name": "Total Biscuit of Rejuvenation",
+  "slug": "total-biscuit-of-rejuvenation",
+  "category": "Consumable",
+  "icon": "assets/items/total-biscuit-of-rejuvenation.png"
+ },
+ {
+  "name": "Crystalline Flask",
+  "slug": "crystalline-flask",
+  "category": "Consumable",
+  "icon": "assets/items/crystalline-flask.png"
+ },
+ {
+  "name": "Elixir of Agility",
+  "slug": "elixir-of-agility",
+  "category": "Consumable",
+  "icon": "assets/items/elixir-of-agility.png"
+ },
+ {
+  "name": "Elixir of Brilliance",
+  "slug": "elixir-of-brilliance",
+  "category": "Consumable",
+  "icon": "assets/items/elixir-of-brilliance.png"
+ },
+ {
+  "name": "Elixir of Fortitude",
+  "slug": "elixir-of-fortitude",
+  "category": "Consumable",
+  "icon": "assets/items/elixir-of-fortitude.png"
+ },
+ {
+  "name": "Elixir of Sorcery",
+  "slug": "elixir-of-sorcery",
+  "category": "Consumable",
+  "icon": "assets/items/elixir-of-sorcery.png"
+ },
+ {
+  "name": "Long Sword",
+  "slug": "long-sword",
+  "category": "Component",
+  "icon": "assets/items/long-sword.png"
+ },
+ {
+  "name": "B.F. Sword",
+  "slug": "bf-sword",
+  "category": "Component",
+  "icon": "assets/items/bf-sword.png"
+ },
+ {
+  "name": "Pickaxe",
+  "slug": "pickaxe",
+  "category": "Component",
+  "icon": "assets/items/pickaxe.png"
+ },
+ {
+  "name": "Blasting Wand",
+  "slug": "blasting-wand",
+  "category": "Component",
+  "icon": "assets/items/blasting-wand.png"
+ },
+ {
+  "name": "Needlessly Large Rod",
+  "slug": "needlessly-large-rod",
+  "category": "Component",
+  "icon": "assets/items/needlessly-large-rod.png"
+ },
+ {
+  "name": "Amplifying Tome",
+  "slug": "amplifying-tome",
+  "category": "Component",
+  "icon": "assets/items/amplifying-tome.png"
+ },
+ {
+  "name": "Fiendish Codex",
+  "slug": "fiendish-codex",
+  "category": "Component",
+  "icon": "assets/items/fiendish-codex.png"
+ },
+ {
+  "name": "Sheen",
+  "slug": "sheen",
+  "category": "Component",
+  "icon": "assets/items/sheen.png"
+ },
+ {
+  "name": "Phage",
+  "slug": "phage",
+  "category": "Component",
+  "icon": "assets/items/phage.png"
+ },
+ {
+  "name": "Kindlegem",
+  "slug": "kindlegem",
+  "category": "Component",
+  "icon": "assets/items/kindlegem.png"
+ },
+ {
+  "name": "Giant's Belt",
+  "slug": "giants-belt",
+  "category": "Component",
+  "icon": "assets/items/giants-belt.png"
+ },
+ {
+  "name": "Glacial Shroud",
+  "slug": "glacial-shroud",
+  "category": "Component",
+  "icon": "assets/items/glacial-shroud.png"
+ },
+ {
+  "name": "Negatron Cloak",
+  "slug": "negatron-cloak",
+  "category": "Component",
+  "icon": "assets/items/negatron-cloak.png"
+ },
+ {
+  "name": "Null-Magic Mantle",
+  "slug": "null-magic-mantle",
+  "category": "Component",
+  "icon": "assets/items/null-magic-mantle.png"
+ },
+ {
+  "name": "Cloth Armor",
+  "slug": "cloth-armor",
+  "category": "Component",
+  "icon": "assets/items/cloth-armor.png"
+ },
+ {
+  "name": "Dagger",
+  "slug": "dagger",
+  "category": "Component",
+  "icon": "assets/items/dagger.png"
+ },
+ {
+  "name": "Brawler's Gloves",
+  "slug": "brawlers-gloves",
+  "category": "Component",
+  "icon": "assets/items/brawlers-gloves.png"
+ },
+ {
+  "name": "Cloak of Agility",
+  "slug": "cloak-of-agility",
+  "category": "Component",
+  "icon": "assets/items/cloak-of-agility.png"
+ },
+ {
+  "name": "Faerie Charm",
+  "slug": "faerie-charm",
+  "category": "Component",
+  "icon": "assets/items/faerie-charm.png"
+ },
+ {
+  "name": "Sapphire Crystal",
+  "slug": "sapphire-crystal",
+  "category": "Component",
+  "icon": "assets/items/sapphire-crystal.png"
+ },
+ {
+  "name": "Ruby Crystal",
+  "slug": "ruby-crystal",
+  "category": "Component",
+  "icon": "assets/items/ruby-crystal.png"
+ },
+ {
+  "name": "Rejuvenation Bead",
+  "slug": "rejuvenation-bead",
+  "category": "Component",
+  "icon": "assets/items/rejuvenation-bead.png"
+ },
+ {
+  "name": "Bilgewater Cutlass",
+  "slug": "bilgewater-cutlass",
+  "category": "Component",
+  "icon": "assets/items/bilgewater-cutlass.png"
+ },
+ {
+  "name": "Hextech Revolver",
+  "slug": "hextech-revolver",
+  "category": "Component",
+  "icon": "assets/items/hextech-revolver.png"
+ },
+ {
+  "name": "Hextech Gunblade",
+  "slug": "hextech-gunblade",
+  "category": "Component",
+  "icon": "assets/items/hextech-gunblade.png"
+ },
+ {
+  "name": "Quicksilver Sash",
+  "slug": "quicksilver-sash",
+  "category": "Component",
+  "icon": "assets/items/quicksilver-sash.png"
+ },
+ {
+  "name": "Mercurial Scimitar",
+  "slug": "mercurial-scimitar",
+  "category": "Component",
+  "icon": "assets/items/mercurial-scimitar.png"
+ },
+ {
+  "name": "Tiamat",
+  "slug": "tiamat",
+  "category": "Other",
+  "icon": "assets/items/tiamat.png"
+ },
+ {
+  "name": "Innervating Locket",
+  "slug": "innervating-locket",
+  "category": "Other",
+  "icon": "assets/items/innervating-locket.png"
+ },
+ {
+  "name": "Eleisa's Miracle",
+  "slug": "eleisas-miracle",
+  "category": "Other",
+  "icon": "assets/items/eleisas-miracle.png"
+ },
+ {
+  "name": "Twin Shadows",
+  "slug": "twin-shadows",
+  "category": "Other",
+  "icon": "assets/items/twin-shadows.png"
+ },
+ {
+  "name": "Will of the Ancients",
+  "slug": "will-of-the-ancients",
+  "category": "Other",
+  "icon": "assets/items/will-of-the-ancients.png"
+ },
+ {
+  "name": "Mana Manipulator",
+  "slug": "mana-manipulator",
+  "category": "Other",
+  "icon": "assets/items/mana-manipulator.png"
+ },
+ {
+  "name": "Haunting Guise",
+  "slug": "haunting-guise",
+  "category": "Other",
+  "icon": "assets/items/haunting-guise.png"
+ },
+ {
+  "name": "Shard of True Ice",
+  "slug": "shard-of-true-ice",
+  "category": "Other",
+  "icon": "assets/items/shard-of-true-ice.png"
+ },
+ {
+  "name": "Soul Shroud",
+  "slug": "soul-shroud",
+  "category": "Other",
+  "icon": "assets/items/soul-shroud.png"
+ }
+]

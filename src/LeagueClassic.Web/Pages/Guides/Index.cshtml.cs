@@ -16,6 +16,8 @@ public class IndexModel : PageModel
     {
         Guides = await _db.Guides
             .Where(g => g.Status == GuideStatus.Published)
+            .Include(g => g.Champion)
+            .Include(g => g.Author)
             .OrderByDescending(g => g.UpdatedAt)
             .AsNoTracking()
             .ToListAsync();

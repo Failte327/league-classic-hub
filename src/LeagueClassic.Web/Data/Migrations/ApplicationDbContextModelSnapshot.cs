@@ -167,6 +167,38 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("LeagueClassic.Web.Data.Champion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("IconPath")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("character varying(60)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("character varying(60)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("Champions");
+                });
+
             modelBuilder.Entity("LeagueClassic.Web.Data.Comment", b =>
                 {
                     b.Property<int>("Id")
@@ -264,15 +296,25 @@ namespace LeagueClassic.Web.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("ChampionId")
+                        .HasColumnType("integer");
+
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("HeroTag")
-                        .HasColumnType("text");
+                    b.Property<string>("SkillOrder")
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
 
                     b.Property<string>("Slug")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int?>("SpellOneId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("SpellTwoId")
+                        .HasColumnType("integer");
 
                     b.Property<int>("Status")
                         .HasColumnType("integer");
@@ -292,14 +334,80 @@ namespace LeagueClassic.Web.Data.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.HasIndex("HeroTag");
+                    b.HasIndex("ChampionId");
 
                     b.HasIndex("Slug")
                         .IsUnique();
 
+                    b.HasIndex("SpellOneId");
+
+                    b.HasIndex("SpellTwoId");
+
                     b.HasIndex("Status", "UpdatedAt");
 
                     b.ToTable("Guides");
+                });
+
+            modelBuilder.Entity("LeagueClassic.Web.Data.GuideItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("GuideId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Sort")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("GuideId", "Sort");
+
+                    b.ToTable("GuideItems");
+                });
+
+            modelBuilder.Entity("LeagueClassic.Web.Data.Item", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)");
+
+                    b.Property<string>("IconPath")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Category");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("Items");
                 });
 
             modelBuilder.Entity("LeagueClassic.Web.Data.Post", b =>
@@ -333,6 +441,35 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.HasIndex("ThreadId", "CreatedAt");
 
                     b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("LeagueClassic.Web.Data.SummonerSpell", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("IconPath")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("SummonerSpells");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -521,7 +658,48 @@ namespace LeagueClassic.Web.Data.Migrations
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.SetNull);
 
+                    b.HasOne("LeagueClassic.Web.Data.Champion", "Champion")
+                        .WithMany()
+                        .HasForeignKey("ChampionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("LeagueClassic.Web.Data.SummonerSpell", "SpellOne")
+                        .WithMany()
+                        .HasForeignKey("SpellOneId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("LeagueClassic.Web.Data.SummonerSpell", "SpellTwo")
+                        .WithMany()
+                        .HasForeignKey("SpellTwoId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("Author");
+
+                    b.Navigation("Champion");
+
+                    b.Navigation("SpellOne");
+
+                    b.Navigation("SpellTwo");
+                });
+
+            modelBuilder.Entity("LeagueClassic.Web.Data.GuideItem", b =>
+                {
+                    b.HasOne("LeagueClassic.Web.Data.Guide", "Guide")
+                        .WithMany("BuildOrder")
+                        .HasForeignKey("GuideId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LeagueClassic.Web.Data.Item", "Item")
+                        .WithMany()
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Guide");
+
+                    b.Navigation("Item");
                 });
 
             modelBuilder.Entity("LeagueClassic.Web.Data.Post", b =>
@@ -610,6 +788,8 @@ namespace LeagueClassic.Web.Data.Migrations
 
             modelBuilder.Entity("LeagueClassic.Web.Data.Guide", b =>
                 {
+                    b.Navigation("BuildOrder");
+
                     b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618

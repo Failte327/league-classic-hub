@@ -90,8 +90,22 @@ public class Guide
     public required string Title { get; set; }
     public required string Slug { get; set; }
 
-    // Which champion/hero the guide is about — a plain tag for launch.
-    public string? HeroTag { get; set; }
+    // The champion this guide is about.
+    public int ChampionId { get; set; }
+    public Champion? Champion { get; set; }
+
+    // The two summoner spells (nullable while drafting).
+    public int? SpellOneId { get; set; }
+    public SummonerSpell? SpellOne { get; set; }
+    public int? SpellTwoId { get; set; }
+    public SummonerSpell? SpellTwo { get; set; }
+
+    // Per-level skill order as a compact comma-separated list of ability slots,
+    // one entry per character level, e.g. "Q,W,E,Q,Q,R,Q,...". Slots: Q/W/E/R.
+    public string? SkillOrder { get; set; }
+
+    // Ordered item build (see GuideItem.Sort).
+    public List<GuideItem> BuildOrder { get; set; } = new();
 
     public required string BodyMarkdown { get; set; }
     public GuideStatus Status { get; set; } = GuideStatus.Draft;
