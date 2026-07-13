@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LeagueClassic.Web/LeagueClassic.Web.csproj" />
+  </Folder>
+</Solution>

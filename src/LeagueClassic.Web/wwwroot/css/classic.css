@@ -1,0 +1,109 @@
+/* League Classic — deliberately "classic" forum styling: dense, table-driven,
+   high-contrast, early-2010s community-site vibe. Hand-rolled, no framework. */
+
+:root {
+    --page: #e9eef4;
+    --panel: #ffffff;
+    --ink: #1b2733;
+    --muted: #6b7a8d;
+    --line: #c7d2de;
+    --brand: #2b5d8b;
+    --brand-dark: #1c3f60;
+    --accent: #c1462b;
+    --header: #23384d;
+    --catbar: #2b5d8b;
+    --row-alt: #f3f6fa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 13px/1.5 Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-wrap { max-width: 1000px; margin: 0 auto; padding: 12px; }
+
+/* Header / masthead */
+.site-header { border: 1px solid var(--line); background: var(--panel); }
+.masthead {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--header);
+    padding: 12px 16px;
+    color: #cdd9e6;
+}
+.logo {
+    font: bold 26px/1 "Trebuchet MS", Verdana, sans-serif;
+    color: #fff; letter-spacing: -.5px;
+}
+.logo span { color: #7fb2e0; }
+.logo:hover { text-decoration: none; }
+.tagline { color: #8fa6bd; font-style: italic; flex: 1; }
+
+.user-nav { list-style: none; display: flex; gap: 12px; margin: 0; padding: 0; }
+.user-nav a { color: #cfe0f0; }
+.linklike { background: none; border: 0; color: #cfe0f0; cursor: pointer; font: inherit; padding: 0; }
+.linklike:hover { text-decoration: underline; }
+.logout-form { display: inline; }
+
+.mainnav {
+    display: flex; gap: 2px;
+    background: var(--brand-dark);
+    padding: 0 8px;
+}
+.mainnav a {
+    color: #dbe7f2; padding: 8px 14px; font-weight: bold; font-size: 12px;
+    text-transform: uppercase; letter-spacing: .5px;
+}
+.mainnav a:hover { background: var(--brand); color: #fff; text-decoration: none; }
+
+/* Content */
+.content { margin-top: 12px; }
+h1 { font-size: 20px; margin: 0 0 10px; }
+h2 { font-size: 16px; margin: 18px 0 8px; }
+
+/* Forum-style tables */
+.forum-table { width: 100%; border-collapse: collapse; border: 1px solid var(--line); background: var(--panel); margin-bottom: 16px; }
+.forum-table caption,
+.cat-header {
+    text-align: left;
+    background: var(--catbar);
+    color: #fff; font-weight: bold; font-size: 13px;
+    padding: 7px 10px;
+    border: 1px solid var(--brand-dark);
+}
+.forum-table th {
+    background: #d9e2ec; color: var(--brand-dark);
+    text-align: left; padding: 6px 10px; font-size: 11px; text-transform: uppercase;
+    border-bottom: 1px solid var(--line);
+}
+.forum-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.forum-table tr:nth-child(even) td { background: var(--row-alt); }
+.board-name { font-size: 14px; font-weight: bold; }
+.board-desc { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.stat { color: var(--muted); white-space: nowrap; text-align: center; width: 90px; }
+
+.muted { color: var(--muted); }
+.empty { padding: 16px; color: var(--muted); background: var(--panel); border: 1px solid var(--line); }
+
+.site-footer {
+    margin-top: 18px; padding: 12px; text-align: center;
+    color: var(--muted); font-size: 11px;
+    border-top: 1px solid var(--line);
+}
+
+/* Basic form styling for the Identity pages */
+.form-narrow { max-width: 420px; }
+input[type=text], input[type=email], input[type=password], textarea {
+    width: 100%; padding: 6px 8px; border: 1px solid var(--line); font: inherit; margin-bottom: 8px;
+}
+button.btn, input[type=submit] {
+    background: var(--brand); color: #fff; border: 1px solid var(--brand-dark);
+    padding: 7px 16px; font-weight: bold; cursor: pointer;
+}
+button.btn:hover { background: var(--brand-dark); }

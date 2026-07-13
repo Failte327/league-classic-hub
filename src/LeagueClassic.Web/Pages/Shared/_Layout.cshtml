@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - League Classic</title>
+    <link rel="stylesheet" href="~/css/classic.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="site-wrap">
+        <header class="site-header">
+            <div class="masthead">
+                <a class="logo" asp-page="/Index">League<span>Classic</span></a>
+                <span class="tagline">builds &middot; guides &middot; strategy &middot; the community</span>
+                <partial name="_LoginPartial" />
+            </div>
+            <nav class="mainnav">
+                <a asp-page="/Index">Forums</a>
+                <a asp-page="/Guides/Index">Guides</a>
+                <a asp-page="/Privacy">Rules</a>
+            </nav>
+        </header>
+
+        <main class="content">
+            @RenderBody()
+        </main>
+
+        <footer class="site-footer">
+            &copy; 2026 League Classic Community &middot; a fan site &middot;
+            <a asp-page="/Privacy">Rules &amp; Privacy</a>
+        </footer>
+    </div>
+
+    <script src="~/lib/htmx/htmx.min.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

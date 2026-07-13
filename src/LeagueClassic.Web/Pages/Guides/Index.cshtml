@@ -1,0 +1,35 @@
+@page
+@model LeagueClassic.Web.Pages.Guides.IndexModel
+@{
+    ViewData["Title"] = "Guides";
+}
+
+<h1>Guides &amp; Builds</h1>
+<p class="muted">Community-written champion guides, builds, and strategy write-ups.</p>
+
+@if (Model.Guides.Count == 0)
+{
+    <div class="empty">
+        No published guides yet. The guide editor is next on the build list — for launch,
+        guides are markdown pages authored by signed-in users.
+    </div>
+}
+else
+{
+    <table class="forum-table">
+        <caption class="cat-header">Latest Guides</caption>
+        <thead>
+            <tr><th>Title</th><th class="stat">Champion</th><th class="stat">Updated</th></tr>
+        </thead>
+        <tbody>
+        @foreach (var g in Model.Guides)
+        {
+            <tr>
+                <td class="board-name">@g.Title</td>
+                <td class="stat">@(g.HeroTag ?? "—")</td>
+                <td class="stat">@g.UpdatedAt.ToString("MMM d, yyyy")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

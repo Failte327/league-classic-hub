@@ -1,0 +1,30 @@
+# .NET build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+
+# Rider / VS
+.idea/
+.vs/
+.vscode/
+
+# ASP.NET
+*.pfx
+appsettings.*.local.json
+
+# Env / secrets
+.env
+*.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Claude Code project dir
+.claude/
