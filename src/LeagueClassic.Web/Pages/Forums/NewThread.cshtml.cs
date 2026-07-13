@@ -1,0 +1,79 @@
+using System.Text.RegularExpressions;
+using LeagueClassic.Web.Data;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+
+namespace LeagueClassic.Web.Pages.Forums;
+
+[Authorize]
+public class NewThreadModel : PageModel
+{
+    private readonly ApplicationDbContext _db;
+    private readonly UserManager<ApplicationUser> _users;
+
+    public NewThreadModel(ApplicationDbContext db, UserManager<ApplicationUser> users)
+    {
+        _db = db;
+        _users = users;
+    }
+
+    public Board Board { get; private set; } = default!;
+
+    [BindProperty] public string Title { get; set; } = "";
+    [BindProperty] public string Body { get; set; } = "";
+
+    public async Task<IActionResult> OnGetAsync(string board)
+    {
+        var b = await _db.Boards.AsNoTracking().FirstOrDefaultAsync(x => x.Slug == board);
+        if (b is null) return RedirectToPage("/Forums/Index");
+        Board = b;
+        return Page();
+    }
+
+    public async Task<IActionResult> OnPostAsync(string board)
+    {
+        var b = await _db.Boards.FirstOrDefaultAsync(x => x.Slug == board);
+        if (b is null) return RedirectToPage("/Forums/Index");
+        Board = b;
+
+        if (string.IsNullOrWhiteSpace(Title))
+            ModelState.AddModelError(nameof(Title), "Give your thread a title.");
+        if (string.IsNullOrWhiteSpace(Body))
+            ModelState.AddModelError(nameof(Body), "Write the opening post.");
+        if (!ModelState.IsValid) return Page();
+
+        var now = DateTimeOffset.UtcNow;
+        var uid = _users.GetUserId(User);
+        var thread = new ForumThread
+        {
+            BoardId = b.Id,
+            AuthorId = uid,
+            Title = Title.Trim(),
+            Slug = Slugify(Title),
+            CreatedAt = now,
+            LastPostAt = now,
+        };
+        thread.Posts.Add(new Post { AuthorId = uid, BodyMarkdown = Body.Trim(), CreatedAt = now });
+
+        b.ThreadCount += 1;
+        b.PostCount += 1;
+        b.LastPostAt = now;
+        var user = await _db.Users.FindAsync(uid);
+        if (user is not null) user.PostCount += 1;
+
+        _db.Threads.Add(thread);
+        await _db.SaveChangesAsync();
+
+        return RedirectToPage("/Forums/Thread", new { id = thread.Id, slug = thread.Slug });
+    }
+
+    private static string Slugify(string s)
+    {
+        var slug = Regex.Replace(s.ToLowerInvariant(), @"[^a-z0-9]+", "-").Trim('-');
+        if (slug.Length > 80) slug = slug[..80].Trim('-');
+        return slug.Length == 0 ? "thread" : slug;
+    }
+}

@@ -91,3 +91,7 @@ classic-styled forum home + guides list, working auth pages, output caching, Doc
 guide create/edit editor, Postgres full-text search, moderation basics (report/delete/ban),
 Cloudflare Turnstile on signup, and the classic visual polish pass. See the build sequence in
 the project plan.
+
+# Run commands
+docker compose up -d db                       # Postgres on :5433
+dotnet run --project src/LeagueClassic.Web     # migrates + seeds on first boot

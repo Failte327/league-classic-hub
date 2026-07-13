@@ -18,13 +18,14 @@
                 <partial name="_LoginPartial" />
             </div>
             <nav class="mainnav">
-                <a asp-page="/Index">Forums</a>
+                <a asp-page="/Index">Home</a>
+                <a asp-page="/Forums/Index">Forums</a>
                 <a asp-page="/Guides/Index">Guides</a>
                 @if (SignInManager.IsSignedIn(User))
                 {
                     <a asp-page="/Guides/Mine">My Guides</a>
                 }
-                <a asp-page="/Privacy">Rules</a>
+                <a asp-page="/Rules">Rules</a>
             </nav>
         </header>
 
@@ -33,10 +34,10 @@
         </main>
 
         <footer class="site-footer">
-            <p>&copy; 2026 League Classic Community &middot; a fan site &middot;
-            <a asp-page="/Privacy">Rules &amp; Privacy</a></p>
+            <p>&copy; 2026 LeagueClassicGuides.net &middot; a fan site &middot;
+            <a asp-page="/Rules">Rules</a> &middot; <a asp-page="/Privacy">Privacy</a></p>
             <p class="disclaimer">
-                League Classic Community isn&rsquo;t endorsed by Riot Games and doesn&rsquo;t reflect the
+                LeagueClassicGuides.net is not endorsed by Riot Games and does not reflect the
                 views or opinions of Riot Games or anyone officially involved in producing or managing
                 Riot Games properties. Riot Games and all associated properties are trademarks or
                 registered trademarks of Riot Games, Inc. League of Legends&copy; Riot Games, Inc.

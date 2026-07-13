@@ -1,0 +1,62 @@
+@page "{id:int}/{slug?}"
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject MarkdownRenderer Markdown
+@model LeagueClassic.Web.Pages.Forums.ThreadModel
+@{
+    ViewData["Title"] = Model.Thread.Title;
+}
+
+<nav class="crumbs">
+    <a asp-page="/Forums/Index">Forums</a> &raquo;
+    <a asp-page="/Forums/Board" asp-route-slug="@Model.Thread.Board?.Slug">@Model.Thread.Board?.Name</a> &raquo;
+    <span>@Model.Thread.Title</span>
+</nav>
+
+<div class="page-head">
+    <h1>
+        @if (Model.Thread.IsPinned) { <span class="pin">📌</span> }
+        @if (Model.Thread.IsLocked) { <span class="lock">🔒</span> }
+        @Model.Thread.Title
+    </h1>
+</div>
+
+<div class="posts">
+    @foreach (var p in Model.Posts)
+    {
+        <article class="post">
+            <div class="post-author">
+                <span class="pa-name">@(p.Author?.UserName ?? "League Classic Staff")</span>
+                <span class="pa-meta">@p.CreatedAt.ToString("MMM d, yyyy · h:mm tt")</span>
+            </div>
+            <div class="post-body">@Markdown.ToHtml(p.BodyMarkdown)</div>
+        </article>
+    }
+</div>
+
+@if (Model.Thread.IsLocked)
+{
+    <div class="empty">🔒 This thread is locked.</div>
+}
+else if (SignInManager.IsSignedIn(User))
+{
+    <section class="panel reply-box">
+        <h2>Post a Reply</h2>
+        <form method="post">
+            <div asp-validation-summary="All" class="validation-summary"></div>
+            <div class="markdown-help">
+                <strong>Formatting:</strong>
+                <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
+                <code>*italic*</code> &middot; <code>[link](https://…)</code> &middot; blank line = new paragraph.
+            </div>
+            <textarea asp-for="ReplyBody" rows="6" placeholder="Share your thoughts…"></textarea>
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Post Reply</button>
+            </div>
+        </form>
+    </section>
+}
+else
+{
+    <div class="empty"><a asp-area="Identity" asp-page="/Account/Login">Log in</a> to join the discussion.</div>
+}

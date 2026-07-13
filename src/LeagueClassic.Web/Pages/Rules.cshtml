@@ -1,0 +1,10 @@
+@page
+@model LeagueClassic.Web.Pages.RulesModel
+@inject MarkdownRenderer Markdown
+@{
+    ViewData["Title"] = "Rules";
+}
+
+<article class="content-page guide-body">
+    @Markdown.ToHtml(Model.Markdown)
+</article>

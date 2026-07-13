@@ -1,45 +1,73 @@
 @page
 @model IndexModel
 @{
-    ViewData["Title"] = "Forums";
+    ViewData["Title"] = "Home";
 }
 
-<h1>League Classic Community Forums</h1>
-<p class="muted">Welcome, summoner. Pull up a chair and talk builds, strategy, and your best plays.</p>
+<section class="hero">
+    <h1>Welcome, Summoners!</h1>
+    <p class="hero-lede">
+        Welcome to LeagueClassicGuides.net, a sanctuary for weary Summoners looking for a break
+        from the Fields of Justice, or wide-eyed newcomers looking to gaze upon the sacred texts,
+        the ancient builds of old. A place where League Classic enthusiasts can get together and
+        discuss the game we all love, which has returned at long last! Good luck and have fun!
+    </p>
+    <div class="hero-cta">
+        <a class="btn-primary" asp-page="/Guides/Index">Browse Guides</a>
+        <a class="btn-plain" asp-page="/Forums/Index">Visit the Forums</a>
+    </div>
+</section>
 
-@foreach (var cat in Model.Categories)
-{
-    <table class="forum-table">
-        <caption class="cat-header">@cat.Name</caption>
-        <thead>
-            <tr>
-                <th>Board</th>
-                <th class="stat">Threads</th>
-                <th class="stat">Posts</th>
-                <th class="stat">Last Post</th>
-            </tr>
-        </thead>
-        <tbody>
-        @foreach (var board in cat.Boards)
+<div class="home-grid">
+    <section class="home-col">
+        <div class="section-head">
+            <h2>Latest Guides</h2>
+            <a class="see-all" asp-page="/Guides/Index">See all &raquo;</a>
+        </div>
+        @if (Model.LatestGuides.Count == 0)
         {
-            <tr>
-                <td>
-                    <div class="board-name">@board.Name</div>
-                    @if (!string.IsNullOrEmpty(board.Description))
-                    {
-                        <div class="board-desc">@board.Description</div>
-                    }
-                </td>
-                <td class="stat">@board.ThreadCount</td>
-                <td class="stat">@board.PostCount</td>
-                <td class="stat">@(board.LastPostAt?.ToString("MMM d, yyyy") ?? "—")</td>
-            </tr>
+            <div class="empty">No guides published yet — be the first to write one!</div>
         }
-        </tbody>
-    </table>
-}
+        else
+        {
+            <div class="guide-cards">
+                @foreach (var g in Model.LatestGuides)
+                {
+                    <a class="guide-card" asp-page="/Guides/Details" asp-route-slug="@g.Slug">
+                        @if (g.Champion?.IconPath is not null)
+                        {
+                            <img src="~/@g.Champion.IconPath" alt="@g.Champion.Name" />
+                        }
+                        <span class="gc-body">
+                            <span class="gc-title">@g.Title</span>
+                            <span class="gc-meta">@g.Champion?.Name &middot; by @(g.Author?.UserName ?? "unknown")</span>
+                        </span>
+                    </a>
+                }
+            </div>
+        }
+    </section>
 
-@if (Model.Categories.Count == 0)
-{
-    <div class="empty">No boards yet. (Seeding runs on first start against an empty database.)</div>
-}
+    <section class="home-col home-side">
+        <div class="section-head">
+            <h2>Latest Discussion</h2>
+            <a class="see-all" asp-page="/Forums/Index">Forums &raquo;</a>
+        </div>
+        @if (Model.LatestThreads.Count == 0)
+        {
+            <div class="empty">The forums are quiet… for now.</div>
+        }
+        else
+        {
+            <ul class="thread-feed">
+                @foreach (var t in Model.LatestThreads)
+                {
+                    <li>
+                        <a asp-page="/Forums/Thread" asp-route-id="@t.Id" asp-route-slug="@t.Slug">@t.Title</a>
+                        <span class="tf-meta">in @t.Board?.Name &middot; @t.LastPostAt.ToString("MMM d")</span>
+                    </li>
+                }
+            </ul>
+        }
+    </section>
+</div>

@@ -1,0 +1,47 @@
+@page
+@model LeagueClassic.Web.Pages.Forums.IndexModel
+@{
+    ViewData["Title"] = "Forums";
+}
+
+<h1>LeagueClassicGuides.net Forums</h1>
+<p class="muted">Welcome, Summoner, to the Fields of Justice!</p>
+
+@foreach (var cat in Model.Categories)
+{
+    <table class="forum-table">
+        <caption class="cat-header">@cat.Name</caption>
+        <thead>
+            <tr>
+                <th>Board</th>
+                <th class="stat">Threads</th>
+                <th class="stat">Posts</th>
+                <th class="stat">Last Post</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var board in cat.Boards)
+        {
+            <tr>
+                <td>
+                    <div class="board-name">
+                        <a asp-page="/Forums/Board" asp-route-slug="@board.Slug">@board.Name</a>
+                    </div>
+                    @if (!string.IsNullOrEmpty(board.Description))
+                    {
+                        <div class="board-desc">@board.Description</div>
+                    }
+                </td>
+                <td class="stat">@board.ThreadCount</td>
+                <td class="stat">@board.PostCount</td>
+                <td class="stat">@(board.LastPostAt?.ToString("MMM d, yyyy") ?? "—")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@if (Model.Categories.Count == 0)
+{
+    <div class="empty">No boards yet.</div>
+}

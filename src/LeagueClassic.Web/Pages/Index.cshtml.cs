@@ -10,13 +10,25 @@ public class IndexModel : PageModel
 
     public IndexModel(ApplicationDbContext db) => _db = db;
 
-    public List<Category> Categories { get; private set; } = new();
+    public List<Guide> LatestGuides { get; private set; } = new();
+    public List<ForumThread> LatestThreads { get; private set; } = new();
 
     public async Task OnGetAsync()
     {
-        Categories = await _db.Categories
-            .OrderBy(c => c.SortOrder)
-            .Include(c => c.Boards.OrderBy(b => b.SortOrder))
+        LatestGuides = await _db.Guides
+            .Where(g => g.Status == GuideStatus.Published)
+            .Include(g => g.Champion)
+            .Include(g => g.Author)
+            .OrderByDescending(g => g.UpdatedAt)
+            .Take(8)
+            .AsNoTracking()
+            .ToListAsync();
+
+        LatestThreads = await _db.Threads
+            .Include(t => t.Board)
+            .Include(t => t.Author)
+            .OrderByDescending(t => t.LastPostAt)
+            .Take(6)
             .AsNoTracking()
             .ToListAsync();
     }

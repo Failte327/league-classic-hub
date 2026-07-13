@@ -1,0 +1,35 @@
+@page
+@model LeagueClassic.Web.Pages.Forums.NewThreadModel
+@{
+    ViewData["Title"] = "New Thread";
+}
+
+<nav class="crumbs">
+    <a asp-page="/Forums/Index">Forums</a> &raquo;
+    <a asp-page="/Forums/Board" asp-route-slug="@Model.Board.Slug">@Model.Board.Name</a> &raquo;
+    <span>New Thread</span>
+</nav>
+
+<div class="page-head"><h1>New Thread in @Model.Board.Name</h1></div>
+
+<form method="post" asp-route-board="@Model.Board.Slug">
+    <div asp-validation-summary="All" class="validation-summary"></div>
+    <div class="field">
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" placeholder="What do you want to talk about?" />
+    </div>
+    <section class="panel">
+        <h2>Opening Post</h2>
+        <div class="markdown-help">
+            <strong>Formatting:</strong>
+            <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
+            <code>*italic*</code> &middot; <code># Heading</code> &middot;
+            <code>- list</code> &middot; <code>[link](https://…)</code> &middot; blank line = new paragraph.
+        </div>
+        <textarea asp-for="Body" rows="12" placeholder="Say your piece…"></textarea>
+    </section>
+    <div class="form-actions">
+        <a class="btn-plain" asp-page="/Forums/Board" asp-route-slug="@Model.Board.Slug">Cancel</a>
+        <button type="submit" class="btn-primary">Post Thread</button>
+    </div>
+</form>

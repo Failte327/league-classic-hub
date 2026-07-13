@@ -92,21 +92,68 @@ public static class DbSeeder
         return JsonSerializer.Deserialize<List<T>>(stream, JsonOpts) ?? new List<T>();
     }
 
+    private const string WelcomePost =
+        "Welcome, Summoners! I am so glad to have all of you here, in a haven where all builds, " +
+        "all champions, and all playstyles are welcome. A place where Teemo Mains and AP Sion " +
+        "nostalgists can share a drink and a story. A place where AP Master Yis can Meditate under " +
+        "tower for hours. A place where we can rejoice in the return of our beloved Fields of Justice. " +
+        "I only ask that you keep the discourse respectful and safe for those of all ages.\n\n" +
+        "Thank you, and once again, welcome!";
+
     private static async Task SeedBoardsAsync(ApplicationDbContext db)
     {
-        if (await db.Categories.AnyAsync())
-            return;
+        // General starter boards — one-time (skipped once any category exists).
+        if (!await db.Categories.AnyAsync())
+        {
+            var general = new Category { Name = "The Rift", Slug = "the-rift", SortOrder = 1 };
+            var strategy = new Category { Name = "Strategy & Guides", Slug = "strategy", SortOrder = 2 };
 
-        var general = new Category { Name = "The Rift", Slug = "the-rift", SortOrder = 1 };
-        var strategy = new Category { Name = "Strategy & Guides", Slug = "strategy", SortOrder = 2 };
+            general.Boards.Add(new Board { Name = "Announcements", Slug = "announcements", Description = "Site news and League Classic updates.", SortOrder = 1 });
+            general.Boards.Add(new Board { Name = "General Discussion", Slug = "general", Description = "Everything League Classic — plays, patches, hot takes.", SortOrder = 2 });
+            strategy.Boards.Add(new Board { Name = "Champion Discussion", Slug = "champions", Description = "Deep dives on individual champions.", SortOrder = 1 });
+            strategy.Boards.Add(new Board { Name = "Build & Guide Workshop", Slug = "guide-workshop", Description = "Share and critique builds and written guides.", SortOrder = 2 });
 
-        general.Boards.Add(new Board { Name = "Announcements", Slug = "announcements", Description = "Site news and League Classic updates.", SortOrder = 1 });
-        general.Boards.Add(new Board { Name = "General Discussion", Slug = "general", Description = "Everything League Classic — plays, patches, hot takes.", SortOrder = 2 });
-        strategy.Boards.Add(new Board { Name = "Champion Discussion", Slug = "champions", Description = "Deep dives on individual champions.", SortOrder = 1 });
-        strategy.Boards.Add(new Board { Name = "Build & Guide Workshop", Slug = "guide-workshop", Description = "Share and critique builds and written guides.", SortOrder = 2 });
+            db.Categories.AddRange(general, strategy);
+            await db.SaveChangesAsync();
+        }
 
-        db.Categories.AddRange(general, strategy);
-        await db.SaveChangesAsync();
+        // Welcome board + pinned welcome thread — idempotent (added even to an
+        // existing database), so the default landing board is always present.
+        if (!await db.Boards.AnyAsync(b => b.Slug == "welcome"))
+        {
+            var welcomeCat = await db.Categories.FirstOrDefaultAsync(c => c.Slug == "welcome");
+            if (welcomeCat is null)
+            {
+                welcomeCat = new Category { Name = "Welcome", Slug = "welcome", SortOrder = 0 };
+                db.Categories.Add(welcomeCat);
+                await db.SaveChangesAsync();
+            }
+
+            var now = DateTimeOffset.UtcNow;
+            var board = new Board
+            {
+                CategoryId = welcomeCat.Id,
+                Name = "Welcome & Rules",
+                Slug = "welcome",
+                Description = "New here? Start with a warm welcome and the community guidelines.",
+                SortOrder = 1,
+                ThreadCount = 1,
+                PostCount = 1,
+                LastPostAt = now,
+            };
+            var thread = new ForumThread
+            {
+                Title = "Welcome to LeagueClassicGuides.net!",
+                Slug = "welcome-to-leagueclassicguides-net",
+                IsPinned = true,
+                CreatedAt = now,
+                LastPostAt = now,
+            };
+            thread.Posts.Add(new Post { BodyMarkdown = WelcomePost, CreatedAt = now }); // null author = staff
+            board.Threads.Add(thread);
+            db.Boards.Add(board);
+            await db.SaveChangesAsync();
+        }
     }
 
     // Seed DTOs matching Data/seed/*.json
