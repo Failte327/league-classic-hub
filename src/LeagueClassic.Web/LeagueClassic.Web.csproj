@@ -21,8 +21,9 @@
   <ItemGroup>
     <!-- Reference-data seed files, read at startup by DbSeeder. -->
     <Content Update="Data/seed/*.json" CopyToOutputDirectory="PreserveNewest" />
-    <!-- Static markdown content (rules, etc.), read at request time. -->
+    <!-- Static content (rules markdown, moderation blocklist), read at runtime. -->
     <Content Include="Data/content/*.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Data/content/*.txt" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

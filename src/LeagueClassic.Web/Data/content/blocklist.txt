@@ -1,0 +1,22 @@
+# Content blocklist — one term per line. Lines starting with '#' are comments.
+# Matched case-insensitively, on word boundaries, after leetspeak normalization
+# (e.g. "n1gg3r" -> "nigger"). Keep this to UNAMBIGUOUS hate slurs to avoid
+# false positives; mild profanity is intentionally NOT listed here (tune to taste).
+#
+# This is a STARTER list. Curate/expand it for your community — no blocklist is
+# ever complete, and human moderation remains the real backstop.
+nigger
+nigga
+faggot
+fag
+retard
+retarded
+tranny
+kike
+spic
+chink
+coon
+wetback
+gook
+dyke
+paki

@@ -1,20 +1,25 @@
 using LeagueClassic.Web.Data;
+using LeagueClassic.Web.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeagueClassic.Web.Pages.Forums;
 
+[EnableRateLimiting("post")]
 public class ThreadModel : PageModel
 {
     private readonly ApplicationDbContext _db;
     private readonly UserManager<ApplicationUser> _users;
+    private readonly ContentModerationService _moderation;
 
-    public ThreadModel(ApplicationDbContext db, UserManager<ApplicationUser> users)
+    public ThreadModel(ApplicationDbContext db, UserManager<ApplicationUser> users, ContentModerationService moderation)
     {
         _db = db;
         _users = users;
+        _moderation = moderation;
     }
 
     public ForumThread Thread { get; private set; } = default!;
@@ -38,8 +43,11 @@ public class ThreadModel : PageModel
         if (thread.IsLocked) return RedirectToPage(new { id, slug = thread.Slug });
 
         if (string.IsNullOrWhiteSpace(ReplyBody))
-        {
             ModelState.AddModelError(nameof(ReplyBody), "Write a reply first.");
+        if (_moderation.Validate(ReplyBody, "Reply", 20_000) is { } re)
+            ModelState.AddModelError(nameof(ReplyBody), re);
+        if (!ModelState.IsValid)
+        {
             await LoadAsync(id);
             return Page();
         }

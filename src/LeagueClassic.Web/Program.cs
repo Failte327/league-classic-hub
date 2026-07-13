@@ -1,5 +1,7 @@
+using System.Threading.RateLimiting;
 using LeagueClassic.Web.Data;
 using LeagueClassic.Web.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
@@ -31,6 +33,9 @@ builder.Services
     })
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
+// Reject blocked usernames during registration/profile updates.
+builder.Services.AddScoped<IUserValidator<ApplicationUser>, UsernameModerationValidator>();
+
 builder.Services.AddRazorPages();
 
 // --- Output caching: the biggest lever for surviving a traffic spike. ---
@@ -41,7 +46,25 @@ builder.Services.AddOutputCache(options =>
 });
 
 builder.Services.AddSingleton<MarkdownRenderer>();
+builder.Services.AddSingleton<ContentModerationService>();
 builder.Services.AddScoped<GuideEditorService>();
+
+// Rate limiting to blunt spam-flooding of the posting endpoints.
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+    options.AddPolicy("post", context =>
+    {
+        var key = context.User.Identity?.IsAuthenticated == true
+            ? context.User.Identity!.Name!
+            : context.Connection.RemoteIpAddress?.ToString() ?? "anon";
+        return RateLimitPartition.GetFixedWindowLimiter(key, _ => new FixedWindowRateLimiterOptions
+        {
+            PermitLimit = 10,
+            Window = TimeSpan.FromSeconds(30),
+        });
+    });
+});
 
 var app = builder.Build();
 
@@ -56,6 +79,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseRateLimiter();
 app.UseOutputCache();
 
 app.MapStaticAssets();

@@ -4,21 +4,26 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace LeagueClassic.Web.Pages.Guides;
 
 [Authorize]
+[EnableRateLimiting("post")]
 public class ComposeModel : PageModel
 {
     private readonly ApplicationDbContext _db;
     private readonly UserManager<ApplicationUser> _users;
     private readonly GuideEditorService _editor;
+    private readonly ContentModerationService _moderation;
 
-    public ComposeModel(ApplicationDbContext db, UserManager<ApplicationUser> users, GuideEditorService editor)
+    public ComposeModel(ApplicationDbContext db, UserManager<ApplicationUser> users,
+        GuideEditorService editor, ContentModerationService moderation)
     {
         _db = db;
         _users = users;
         _editor = editor;
+        _moderation = moderation;
     }
 
     public GuideEditorVm Vm { get; private set; } = default!;
@@ -74,5 +79,9 @@ public class ComposeModel : PageModel
             ModelState.AddModelError("Input.Title", "Give your guide a title.");
         if (string.IsNullOrWhiteSpace(Input.BodyMarkdown))
             ModelState.AddModelError("Input.BodyMarkdown", "Write something in the guide body.");
+        if (_moderation.Validate(Input.Title, "Title", 200) is { } te)
+            ModelState.AddModelError("Input.Title", te);
+        if (_moderation.Validate(Input.BodyMarkdown, "Guide body", 100_000) is { } be)
+            ModelState.AddModelError("Input.BodyMarkdown", be);
     }
 }

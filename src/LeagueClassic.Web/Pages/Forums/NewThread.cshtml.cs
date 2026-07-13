@@ -1,23 +1,28 @@
 using System.Text.RegularExpressions;
 using LeagueClassic.Web.Data;
+using LeagueClassic.Web.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeagueClassic.Web.Pages.Forums;
 
 [Authorize]
+[EnableRateLimiting("post")]
 public class NewThreadModel : PageModel
 {
     private readonly ApplicationDbContext _db;
     private readonly UserManager<ApplicationUser> _users;
+    private readonly ContentModerationService _moderation;
 
-    public NewThreadModel(ApplicationDbContext db, UserManager<ApplicationUser> users)
+    public NewThreadModel(ApplicationDbContext db, UserManager<ApplicationUser> users, ContentModerationService moderation)
     {
         _db = db;
         _users = users;
+        _moderation = moderation;
     }
 
     public Board Board { get; private set; } = default!;
@@ -43,6 +48,10 @@ public class NewThreadModel : PageModel
             ModelState.AddModelError(nameof(Title), "Give your thread a title.");
         if (string.IsNullOrWhiteSpace(Body))
             ModelState.AddModelError(nameof(Body), "Write the opening post.");
+        if (_moderation.Validate(Title, "Title", 200) is { } te)
+            ModelState.AddModelError(nameof(Title), te);
+        if (_moderation.Validate(Body, "Post", 20_000) is { } be)
+            ModelState.AddModelError(nameof(Body), be);
         if (!ModelState.IsValid) return Page();
 
         var now = DateTimeOffset.UtcNow;
