@@ -30,7 +30,7 @@
     {
         <article class="post">
             <div class="post-author">
-                <span class="pa-name">@(p.Author?.UserName ?? "League Classic Staff")</span>
+                <span class="pa-name">@p.Author.Display("Staff")</span>
                 <span class="pa-meta">@p.CreatedAt.ToString("MMM d, yyyy · h:mm tt")</span>
             </div>
             <div class="post-body">

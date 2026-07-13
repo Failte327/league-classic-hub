@@ -12,8 +12,8 @@
     <h1>Welcome, Summoners!</h1>
     <p class="hero-lede">
         Welcome to League Classic Hub, a sanctuary for weary Summoners after a long day
-        on the Fields of Justice, or wide-eyed newcomers looking to gaze upon the sacred texts,
-        the ancient builds of old. A place where League Classic enjoyers old and new can
+        on the Fields of Justice, and a well of knowledge for wide-eyed newcomers looking to gaze 
+        discover the ancient builds of old. A place where League Classic enjoyers old and new can
         discuss the game we all love, which has returned at long last! Good luck and have fun!
     </p>
     <div class="hero-cta">
@@ -44,7 +44,7 @@
                         }
                         <span class="gc-body">
                             <span class="gc-title">@g.Title</span>
-                            <span class="gc-meta">@g.Champion?.Name &middot; by @(g.Author?.UserName ?? "unknown")</span>
+                            <span class="gc-meta">@g.Champion?.Name &middot; by @g.Author.Display("unknown")</span>
                         </span>
                     </a>
                 }
@@ -68,7 +68,7 @@
                 {
                     <li>
                         <a asp-page="/Forums/Thread" asp-route-id="@t.Id" asp-route-slug="@t.Slug">@t.Title</a>
-                        <span class="tf-meta">@(t.Author?.UserName ?? "staff") &middot; @t.LastPostAt.ToString("MMM d")</span>
+                        <span class="tf-meta">@t.Author.Display("staff") &middot; @t.LastPostAt.ToString("MMM d")</span>
                     </li>
                 }
             </ul>

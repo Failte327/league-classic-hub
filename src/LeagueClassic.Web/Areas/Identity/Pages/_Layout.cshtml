@@ -1,0 +1,11 @@
+@{
+    // Route all Identity UI pages (login, register, manage/account settings)
+    // through our site layout so they pick up classic.css and the site chrome.
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+@RenderBody()
+
+@section Scripts {
+    @await RenderSectionAsync("Scripts", required: false)
+}

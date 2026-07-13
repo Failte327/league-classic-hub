@@ -24,7 +24,31 @@ public static class DbSeeder
 
         await SeedReferenceAsync(db, env.ContentRootPath);
         await SeedWelcomeThreadAsync(db);
+        await BackfillDisplayNamesAsync(db);
         await SeedModeratorsAsync(scope.ServiceProvider, env);
+    }
+
+    // Gives pre-existing accounts a DisplayName (derived from the email local
+    // part, de-duplicated) so nobody shows as the generic fallback.
+    private static async Task BackfillDisplayNamesAsync(ApplicationDbContext db)
+    {
+        var users = await db.Users.Where(u => u.DisplayName == null).ToListAsync();
+        if (users.Count == 0) return;
+
+        var taken = (await db.Users.Where(u => u.DisplayName != null).Select(u => u.DisplayName!).ToListAsync())
+            .Select(n => n.ToLowerInvariant()).ToHashSet();
+        foreach (var u in users)
+        {
+            var baseName = Regex.Replace((u.Email ?? "summoner").Split('@')[0], @"[^A-Za-z0-9_.\-]", "");
+            if (baseName.Length < 3) baseName = "summoner";
+            if (baseName.Length > 20) baseName = baseName[..20];
+            var name = baseName;
+            var n = 2;
+            while (taken.Contains(name.ToLowerInvariant())) name = $"{baseName}{n++}";
+            u.DisplayName = name;
+            taken.Add(name.ToLowerInvariant());
+        }
+        await db.SaveChangesAsync();
     }
 
     public const string ModeratorRole = "Moderator";

@@ -74,7 +74,7 @@ public class ReportModel : PageModel
     {
         ReportTargetType.Guide => await _db.Guides.Where(g => g.Id == id).Select(g => "guide: " + g.Title).FirstOrDefaultAsync(),
         ReportTargetType.Post => await _db.Posts.Where(p => p.Id == id)
-            .Select(p => "post by " + (p.Author!.UserName ?? "staff")).FirstOrDefaultAsync(),
+            .Select(p => "post by " + (p.Author!.DisplayName ?? "a summoner")).FirstOrDefaultAsync(),
         _ => null,
     };
 

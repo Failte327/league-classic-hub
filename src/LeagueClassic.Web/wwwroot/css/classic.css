@@ -491,7 +491,7 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 /* ============================ Content pages ============================ */
 .content-page {
     background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold);
-    padding: 24px 32px; max-width: 860px; color: var(--ink);
+    padding: 24px 32px; max-width: 860px; margin: 0 auto; color: var(--ink);
 }
 .content-page h1 { color: var(--brand-dark); }
 .content-page h2 { color: var(--brand-dark); margin-top: 24px; }
@@ -544,4 +544,22 @@ main .col-lg-4 h3, main .col-lg-4 h4 { color: #e6ecf3; font-size: 15px; }
 .w-100 { width: 100%; }
 .text-danger { color: var(--accent); font-size: 12px; }
 main form[method=post] a, main .row a { color: var(--brand); }
+
+/* Our own auth/profile cards (register, account) */
+.auth-card {
+    max-width: 460px; margin: 0 auto; background: var(--panel);
+    border: 1px solid var(--line); border-top: 3px solid var(--gold);
+    padding: 22px 26px; color: var(--ink);
+}
+.auth-card .field label { color: var(--ink); font-weight: bold; display: block; margin-bottom: 4px; }
+.auth-card input[disabled] { background: #eef1f6; color: var(--muted); }
+.field-hint { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+
+/* Identity Manage pages' side nav, now rendered inside our layout. */
+.nav-pills, .list-group { list-style: none; padding: 0; margin: 0 0 16px; }
+.nav-pills .nav-link, .list-group-item {
+    display: block; padding: 7px 12px; color: var(--gold);
+    border-bottom: 1px solid var(--brand-dark);
+}
+.nav-pills .nav-link.active { background: var(--brand-dark); }
 

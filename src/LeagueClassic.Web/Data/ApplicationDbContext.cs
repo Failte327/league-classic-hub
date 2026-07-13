@@ -28,6 +28,12 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         base.OnModelCreating(builder); // Identity tables
 
+        builder.Entity<ApplicationUser>(e =>
+        {
+            e.Property(u => u.DisplayName).HasMaxLength(30);
+            e.HasIndex(u => u.DisplayName).IsUnique();  // nulls allowed (pre-backfill)
+        });
+
         builder.Entity<ForumThread>(e =>
         {
             // Pinned-first, then most-recent activity is the main list query.

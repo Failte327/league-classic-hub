@@ -27,7 +27,7 @@
             <h1>@Model.Guide.Title</h1>
             <div class="guide-meta">
                 @Model.Guide.Champion?.Name &middot;
-                by @(Model.Guide.Author?.UserName ?? "unknown") &middot;
+                by @Model.Guide.Author.Display("unknown") &middot;
                 @Model.Guide.UpdatedAt.ToString("MMM d, yyyy")
                 @if (Model.Guide.Status != GuideStatus.Published)
                 {

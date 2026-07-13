@@ -8,6 +8,11 @@ public class ApplicationUser : IdentityUser
 {
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
 
+    // Public "calling card" shown across the site. Distinct from Email (which
+    // stays the login) and from IdentityUser.UserName (kept = Email so email
+    // login keeps working). We never display Email publicly.
+    public string? DisplayName { get; set; }
+
     // Denormalized so profile/post displays never COUNT() across the posts table.
     public int PostCount { get; set; }
 }

@@ -1,0 +1,31 @@
+@page
+@model LeagueClassic.Web.Pages.Account.ProfileModel
+@{
+    ViewData["Title"] = "Account";
+}
+
+<div class="page-head"><h1>Your Account</h1></div>
+
+@if (TempData["Message"] is string flash)
+{
+    <div class="flash">@flash</div>
+}
+
+<div class="auth-card">
+    <form method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="field">
+            <label>Email <span class="muted">(private — never shown on the site)</span></label>
+            <input class="form-control" value="@Model.Email" disabled />
+        </div>
+        <div class="field">
+            <label asp-for="DisplayName"></label>
+            <input asp-for="DisplayName" class="form-control" autocomplete="off" />
+            <span class="field-hint">Your public calling card across League Classic Hub.</span>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Save</button>
+        </div>
+    </form>
+    <p class="muted"><a asp-area="Identity" asp-page="/Account/Manage/ChangePassword">Change password</a></p>
+</div>

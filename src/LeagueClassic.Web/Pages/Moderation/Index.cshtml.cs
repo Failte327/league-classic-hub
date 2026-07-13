@@ -60,7 +60,7 @@ public class IndexModel : PageModel
             .Select(g =>
             {
                 var reasons = string.Join(", ", g.Select(r => r.Reason).Distinct());
-                var reporters = string.Join(", ", g.Select(r => r.Reporter?.UserName ?? "?").Distinct());
+                var reporters = string.Join(", ", g.Select(r => r.Reporter.Display("?")).Distinct());
                 if (g.Key.TargetType == ReportTargetType.Post)
                 {
                     posts.TryGetValue(g.Key.TargetId, out var p);
@@ -69,7 +69,7 @@ public class IndexModel : PageModel
                         Type = ReportTargetType.Post, TargetId = g.Key.TargetId, Count = g.Count(),
                         Reasons = reasons, Reporters = reporters, LatestAt = g.Max(r => r.CreatedAt),
                         Missing = p is null,
-                        Title = p is null ? "(deleted post)" : $"Post by {p.Author?.UserName ?? "staff"} in “{p.Thread?.Title}”",
+                        Title = p is null ? "(deleted post)" : $"Post by {p.Author.Display("staff")} in “{p.Thread?.Title}”",
                         Excerpt = p is null ? null : DbSeeder.Excerpt(p.BodyMarkdown, 200),
                         ThreadId = p?.ThreadId, Slug = p?.Thread?.Slug,
                     };

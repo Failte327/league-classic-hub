@@ -15,7 +15,7 @@
         }
     </div>
     <div class="tr-meta">
-        <span class="tr-author">@(t.Author?.UserName ?? "staff")</span>
+        <span class="tr-author">@t.Author.Display("staff")</span>
         <span>@t.ReplyCount @(t.ReplyCount == 1 ? "reply" : "replies")</span>
         <span>@t.LastPostAt.ToString("MMM d, yyyy")</span>
     </div>
