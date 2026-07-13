@@ -274,6 +274,84 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 .md-preview { padding: 12px 14px; color: var(--ink); overflow-y: auto; min-height: 220px; }
 .md-preview:empty::before { content: "Start typing to see a preview…"; color: var(--muted); font-style: italic; }
 
+/* ============================ Runes ============================ */
+.rune-summary {
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 46px;
+    background: #f3f6fa; border: 1px dashed var(--line); padding: 8px; margin-bottom: 12px;
+}
+.rune-chip {
+    display: inline-flex; align-items: center; gap: 4px; background: var(--panel);
+    border: 1px solid var(--line); border-left: 4px solid var(--line); padding: 3px 6px 3px 4px; font-size: 12px;
+}
+.rune-chip img { width: 26px; height: 26px; }
+.rune-chip .rc-name { color: var(--ink); }
+.rc-step, .rc-x {
+    border: 1px solid var(--line); background: #e2e9f1; color: var(--brand-dark);
+    width: 18px; height: 18px; line-height: 1; cursor: pointer; font-weight: bold; padding: 0;
+}
+.rc-x { background: #f6e5e1; color: #a5341c; margin-left: 2px; }
+.rc-count { min-width: 14px; text-align: center; font-weight: bold; }
+.rune-palette { max-height: 230px; overflow-y: auto; border-top: 1px solid var(--line); padding-top: 8px; }
+.rune-group h3 { font-size: 11px; text-transform: uppercase; color: var(--muted); margin: 8px 0 4px; }
+.rune-row { display: flex; flex-wrap: wrap; gap: 4px; }
+.rune-opt {
+    display: inline-flex; flex-direction: column; align-items: center; gap: 2px; width: 78px;
+    padding: 4px 3px; background: var(--panel); border: 1px solid var(--line); cursor: pointer;
+    text-align: center; font-size: 10px; color: var(--ink);
+}
+.rune-opt:hover { border-color: var(--brand); box-shadow: 0 0 0 2px rgba(43,93,139,.2); }
+.rune-opt img { width: 30px; height: 30px; }
+
+/* slot color accents (classic rune colors) */
+.slot-mark { border-left-color: #c0392b !important; }
+.slot-seal { border-left-color: #c9a227 !important; }
+.slot-glyph { border-left-color: #2b6cb0 !important; }
+.slot-quintessence { border-left-color: #8e44ad !important; }
+
+/* rune display on guide view */
+.rune-show { display: flex; flex-wrap: wrap; gap: 8px; }
+.rune-badge {
+    display: inline-flex; align-items: center; gap: 5px; font-size: 12px;
+    background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--line); padding: 3px 8px 3px 5px;
+}
+.rune-badge img { width: 26px; height: 26px; }
+.rb-count { font-weight: bold; color: var(--brand-dark); }
+
+/* ============================ Masteries ============================ */
+.mastery-summary { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 12px; font-size: 13px; }
+.mastery-summary b { font-size: 15px; }
+.ms-off b { color: #c0392b; } .ms-def b { color: #2f855a; } .ms-uti b { color: #2b6cb0; }
+.ms-rem { color: var(--muted); }
+
+.mastery-trees { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 780px) { .mastery-trees { grid-template-columns: 1fr; } }
+.mastery-tree { background: var(--panel); border: 1px solid var(--line); }
+.mt-head { padding: 6px 10px; font-weight: bold; color: #fff; display: flex; justify-content: space-between; }
+.mt-head b { color: #fff; }
+.mt-head-offense { background: #a5341c; }
+.mt-head-defense { background: #2f6a4a; }
+.mt-head-utility { background: #2b5d8b; }
+.mt-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 52px; gap: 4px; padding: 8px;
+}
+.mastery-node {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    background: #e9eef4; border: 2px solid var(--line); padding: 0; cursor: pointer;
+}
+.mastery-node img { width: 38px; height: 38px; filter: grayscale(70%) brightness(.85); }
+.mastery-node.filled img, .mastery-node:hover img { filter: none; }
+.mastery-node.filled { border-color: var(--gold); background: #fff8e8; }
+.mastery-node.maxed { border-color: #c9a227; box-shadow: 0 0 0 1px #c9a227 inset; }
+.mastery-node.locked { opacity: .5; cursor: not-allowed; }
+.mastery-node.dim img { filter: grayscale(85%) brightness(.8); opacity: .55; }
+.mn-pts {
+    position: absolute; bottom: -2px; right: -2px; background: var(--brand-dark); color: #fff;
+    font-size: 9px; font-weight: bold; padding: 0 3px; line-height: 1.4;
+}
+.mastery-node.filled .mn-pts { background: var(--gold-dark); }
+.mastery-trees.read-only .mastery-node { cursor: default; }
+.mastery-tally { font-size: 13px; color: var(--muted); font-weight: normal; }
+
 .markdown-help { background: #fbfaf0; border: 1px solid #e3dfb8; padding: 8px 10px; font-size: 11px; margin-bottom: 8px; }
 .markdown-help code { background: #efedd8; padding: 1px 4px; }
 

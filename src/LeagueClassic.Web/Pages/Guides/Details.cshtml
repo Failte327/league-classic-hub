@@ -75,7 +75,55 @@
                 </div>
             </div>
         }
+
+        <!-- Runes -->
+        @if (Model.RunesBySlot.Count > 0)
+        {
+            <div class="loadout-block">
+                <h3>Runes</h3>
+                <div class="rune-show">
+                    @foreach (var slot in Model.RunesBySlot)
+                    {
+                        foreach (var gr in slot)
+                        {
+                            <span class="rune-badge slot-@slot.Key" title="@gr.Rune?.Name">
+                                <span class="rb-count">@gr.Count&times;</span>
+                                <img src="~/@gr.Rune?.IconPath" alt="@gr.Rune?.Name" />
+                                <span>@gr.Rune?.Name?.Replace("Greater ", "")</span>
+                            </span>
+                        }
+                    }
+                </div>
+            </div>
+        }
     </div>
+
+    <!-- Masteries -->
+    @if (Model.HasMasteries)
+    {
+        <div class="loadout-block">
+            <h3>Masteries <span class="mastery-tally">@Model.TreeTotal("Offense") / @Model.TreeTotal("Defense") / @Model.TreeTotal("Utility")</span></h3>
+            <div class="mastery-trees read-only">
+                @foreach (var tree in new[] { "Offense", "Defense", "Utility" })
+                {
+                    <div class="mastery-tree">
+                        <div class="mt-head mt-head-@tree.ToLower()">@tree <b>@Model.TreeTotal(tree)</b></div>
+                        <div class="mt-grid">
+                            @foreach (var m in Model.Masteries.Where(x => x.Tree == tree))
+                            {
+                                var p = Model.MasteryPoints.GetValueOrDefault(m.DdragonId);
+                                <span class="mastery-node @(p > 0 ? "filled" : "dim") @(p == m.Ranks && p > 0 ? "maxed" : "")"
+                                      style="grid-column:@(m.Col + 1);grid-row:@m.Row" title="@m.Name">
+                                    <img src="~/@m.IconPath" alt="@m.Name" />
+                                    <span class="mn-pts">@p/@m.Ranks</span>
+                                </span>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
 
     <!-- Abilities overview -->
     @if (Model.AbilityBySlot.Count > 0)

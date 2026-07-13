@@ -205,23 +205,144 @@
         hoverPanel.style.display = 'block';
         positionHover(e);
     }
-    [document.querySelector('.item-palette'), document.getElementById('spell-palette')].forEach(c => {
+    const HOVER_SEL = '.item-opt, .spell-opt, .rune-opt, .mastery-node';
+    [document.querySelector('.item-palette'), document.getElementById('spell-palette'),
+     document.getElementById('rune-palette'), document.querySelector('.mastery-trees')].forEach(c => {
         if (!c) return;
         c.addEventListener('mouseover', e => {
-            const el = e.target.closest('.item-opt, .spell-opt');
+            const el = e.target.closest(HOVER_SEL);
             if (el) showHover(el, e);
         });
         c.addEventListener('mousemove', e => {
             if (hoverPanel.style.display === 'block') positionHover(e);
         });
         c.addEventListener('mouseout', e => {
-            if (e.target.closest('.item-opt, .spell-opt')) hoverPanel.style.display = 'none';
+            if (e.target.closest(HOVER_SEL)) hoverPanel.style.display = 'none';
         });
     });
+
+    // ---- Runes (simplified list with counts) ----
+    const runeSummary = document.getElementById('rune-summary');
+    const runeInput = document.getElementById('runes-csv');
+    const runePalette = document.getElementById('rune-palette');
+    const SLOT_ORDER = ['mark', 'seal', 'glyph', 'quintessence'];
+    const SLOT_DEFAULT = { mark: 9, seal: 9, glyph: 9, quintessence: 3 };
+    let runes = []; // [{id, count, name, icon, slot}]
+
+    function renderRunes() {
+        runeSummary.innerHTML = '';
+        if (runes.length === 0) {
+            runeSummary.innerHTML = '<span class="build-empty">No runes yet — pick from the slots below.</span>';
+        } else {
+            runes.slice().sort((a, b) => SLOT_ORDER.indexOf(a.slot) - SLOT_ORDER.indexOf(b.slot)).forEach(r => {
+                const chip = document.createElement('span');
+                chip.className = 'rune-chip slot-' + r.slot;
+                chip.innerHTML =
+                    '<button type="button" class="rc-step" data-id="' + r.id + '" data-d="-1">−</button>' +
+                    '<span class="rc-count">' + r.count + '</span>' +
+                    '<button type="button" class="rc-step" data-id="' + r.id + '" data-d="1">+</button>' +
+                    '<img src="/' + r.icon + '" alt="">' +
+                    '<span class="rc-name">' + esc(r.name.replace('Greater ', '')) + '</span>' +
+                    '<button type="button" class="rc-x" data-id="' + r.id + '">×</button>';
+                runeSummary.appendChild(chip);
+            });
+        }
+        runeInput.value = runes.map(r => r.id + ':' + r.count).join(',');
+    }
+    runePalette.addEventListener('click', e => {
+        const btn = e.target.closest('.rune-opt');
+        if (!btn) return;
+        const id = Number(btn.dataset.id);
+        if (runes.some(r => r.id === id)) return;
+        runes.push({ id, count: SLOT_DEFAULT[btn.dataset.slot] || 1, name: btn.dataset.name, icon: btn.dataset.icon, slot: btn.dataset.slot });
+        renderRunes();
+    });
+    runeSummary.addEventListener('click', e => {
+        const step = e.target.closest('.rc-step'), x = e.target.closest('.rc-x');
+        if (step) {
+            const r = runes.find(r => r.id === Number(step.dataset.id));
+            if (r) { r.count = Math.max(1, Math.min(9, r.count + Number(step.dataset.d))); renderRunes(); }
+        } else if (x) {
+            runes = runes.filter(r => r.id !== Number(x.dataset.id));
+            renderRunes();
+        }
+    });
+
+    // ---- Masteries (interactive tree, 30 points) ----
+    const masteryInput = document.getElementById('mastery-alloc');
+    const nodes = [...document.querySelectorAll('.mastery-node')].map(el => ({
+        el, id: Number(el.dataset.id), tree: el.dataset.tree, row: Number(el.dataset.row),
+        ranks: Number(el.dataset.ranks), prereq: el.dataset.prereq ? Number(el.dataset.prereq) : null,
+    }));
+    const nodeById = Object.fromEntries(nodes.map(n => [n.id, n]));
+    const pts = {}; // id -> points
+
+    const treeTotal = t => nodes.filter(n => n.tree === t).reduce((s, n) => s + (pts[n.id] || 0), 0);
+    const ptsAbove = (t, row) => nodes.filter(n => n.tree === t && n.row < row).reduce((s, n) => s + (pts[n.id] || 0), 0);
+    const totalPts = () => Object.values(pts).reduce((s, p) => s + p, 0);
+
+    function canAdd(n) {
+        return (pts[n.id] || 0) < n.ranks && totalPts() < 30 &&
+            ptsAbove(n.tree, n.row) >= 4 * (n.row - 1) &&
+            (n.prereq == null || (pts[n.prereq] || 0) >= nodeById[n.prereq].ranks);
+    }
+    function repair() {
+        let changed = true;
+        while (changed) {
+            changed = false;
+            for (const n of nodes) {
+                if ((pts[n.id] || 0) > 0) {
+                    const okTier = ptsAbove(n.tree, n.row) >= 4 * (n.row - 1);
+                    const okPre = n.prereq == null || (pts[n.prereq] || 0) >= nodeById[n.prereq].ranks;
+                    if (!okTier || !okPre) { pts[n.id] = 0; changed = true; }
+                }
+            }
+        }
+    }
+    function renderMasteries() {
+        nodes.forEach(n => {
+            const p = pts[n.id] || 0;
+            n.el.querySelector('.mn-pts').textContent = p + '/' + n.ranks;
+            n.el.classList.toggle('filled', p > 0);
+            n.el.classList.toggle('maxed', p === n.ranks && p > 0);
+            n.el.classList.toggle('locked', p === 0 && !canAdd(n));
+        });
+        ['Offense', 'Defense', 'Utility'].forEach(t => document.getElementById('mt-' + t).textContent = treeTotal(t));
+        document.getElementById('mt-remaining').textContent = 30 - totalPts();
+        masteryInput.value = nodes.filter(n => (pts[n.id] || 0) > 0).map(n => n.id + ':' + pts[n.id]).join(',');
+    }
+    document.querySelector('.mastery-trees').addEventListener('click', e => {
+        const el = e.target.closest('.mastery-node'); if (!el) return;
+        const n = nodeById[Number(el.dataset.id)];
+        if (canAdd(n)) { pts[n.id] = (pts[n.id] || 0) + 1; renderMasteries(); }
+    });
+    document.querySelector('.mastery-trees').addEventListener('contextmenu', e => {
+        const el = e.target.closest('.mastery-node'); if (!el) return;
+        e.preventDefault();
+        const n = nodeById[Number(el.dataset.id)];
+        if ((pts[n.id] || 0) > 0) { pts[n.id]--; repair(); renderMasteries(); }
+    });
+
+    // pre-populate runes + masteries from an existing guide
+    try {
+        const init = JSON.parse(document.getElementById('initial-state').textContent);
+        if (init) {
+            if (Array.isArray(init.runes))
+                runes = init.runes.map(r => ({ id: Number(r.id), count: Number(r.count), name: r.name, icon: r.icon, slot: r.slot }));
+            if (typeof init.masteries === 'string' && init.masteries) {
+                init.masteries.split(',').forEach(pair => {
+                    const [id, p] = pair.split(':').map(Number);
+                    if (nodeById[id]) pts[id] = p;
+                });
+            }
+        }
+    } catch (e) { /* create mode */ }
 
     // init
     buildGrid();
     renderSpells();
     renderGrid();
     renderBuild();
+    renderRunes();
+    renderMasteries();
 })();

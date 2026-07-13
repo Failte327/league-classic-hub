@@ -24,12 +24,18 @@ public class GuideEditorService
     {
         var items = await _db.Items.OrderBy(i => i.Category).ThenBy(i => i.Name).AsNoTracking().ToListAsync();
         var spells = await _db.SummonerSpells.OrderBy(s => s.Name).AsNoTracking().ToListAsync();
+        var runes = await _db.Runes.AsNoTracking().ToListAsync();
+        var masteries = await _db.Masteries.OrderBy(m => m.Row).ThenBy(m => m.Col).AsNoTracking().ToListAsync();
+        var slotOrder = new[] { "mark", "seal", "glyph", "quintessence" };
         return new GuideEditorVm
         {
             Champion = champion,
             ItemsByCategory = items.GroupBy(i => i.Category).ToList(),
             Spells = spells,
             AbilityBySlot = champion.Abilities.ToDictionary(a => a.Slot),
+            RunesBySlot = runes.GroupBy(r => r.Slot)
+                .OrderBy(g => Array.IndexOf(slotOrder, g.Key)).ToList(),
+            Masteries = masteries,
             Input = input,
             IsEdit = isEdit,
             Heading = heading,
@@ -57,6 +63,46 @@ public class GuideEditorService
         foreach (var id in ParseCsvInts(input.BuildOrderCsv))
             if (itemIds.Contains(id))
                 guide.BuildOrder.Add(new GuideItem { ItemId = id, Sort = sort++ });
+
+        // Runes: "runeId:count,..." — keep valid rune ids, clamp count to 1..9.
+        var runeIds = (await _db.Runes.Select(r => r.Id).ToListAsync()).ToHashSet();
+        guide.Runes.Clear();
+        foreach (var (id, count) in ParseCsvPairs(input.RunesCsv))
+            if (runeIds.Contains(id))
+                guide.Runes.Add(new GuideRune { RuneId = id, Count = Math.Clamp(count, 1, 9) });
+
+        guide.MasteryAllocations = await NormalizeMasteriesAsync(input.MasteryAllocations);
+    }
+
+    // Validates "ddragonId:points,..." against real masteries: caps each at its
+    // rank and the total at 30. Client enforces tier/prereq rules; this is a
+    // server-side sanity clamp.
+    private async Task<string?> NormalizeMasteriesAsync(string? raw)
+    {
+        if (string.IsNullOrWhiteSpace(raw)) return null;
+        var ranks = await _db.Masteries.ToDictionaryAsync(m => m.DdragonId, m => m.Ranks);
+        var kept = new List<string>();
+        var total = 0;
+        foreach (var (id, pts) in ParseCsvPairs(raw))
+        {
+            if (!ranks.TryGetValue(id, out var max) || pts <= 0) continue;
+            var p = Math.Min(pts, max);
+            if (total + p > 30) p = 30 - total;
+            if (p <= 0) break;
+            total += p;
+            kept.Add($"{id}:{p}");
+        }
+        return kept.Count == 0 ? null : string.Join(',', kept);
+    }
+
+    private static IEnumerable<(int id, int val)> ParseCsvPairs(string? csv)
+    {
+        foreach (var part in (csv ?? "").Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+        {
+            var bits = part.Split(':', 2);
+            if (bits.Length == 2 && int.TryParse(bits[0], out var id) && int.TryParse(bits[1], out var val))
+                yield return (id, val);
+        }
     }
 
     // Serializes an existing guide's selections for the JS widgets to pre-populate.
@@ -68,6 +114,9 @@ public class GuideEditorService
             build = guide.BuildOrder
                 .OrderBy(b => b.Sort)
                 .Select(b => new { id = b.ItemId, name = b.Item?.Name, icon = b.Item?.IconPath }),
+            runes = guide.Runes
+                .Select(r => new { id = r.RuneId, count = r.Count, name = r.Rune?.Name, icon = r.Rune?.IconPath, slot = r.Rune?.Slot }),
+            masteries = guide.MasteryAllocations ?? "",
         });
 
     public async Task<string> UniqueSlugAsync(string champSlug, string title, int? excludeGuideId = null)

@@ -82,6 +82,30 @@ public static class DbSeeder
             }
         }
 
+        if (!await db.Runes.AnyAsync())
+        {
+            foreach (var r in Load<RuneSeed>(seedDir, "runes.json"))
+            {
+                db.Runes.Add(new Rune
+                {
+                    Name = r.Name, Slug = r.Slug, Slot = r.Slot,
+                    IconPath = r.Icon, Description = r.Desc,
+                });
+            }
+        }
+
+        if (!await db.Masteries.AnyAsync())
+        {
+            foreach (var m in Load<MasterySeed>(seedDir, "masteries.json"))
+            {
+                db.Masteries.Add(new Mastery
+                {
+                    DdragonId = m.Id, Name = m.Name, Tree = m.Tree, Row = m.Row, Col = m.Col,
+                    Ranks = m.Ranks, PrereqDdragonId = m.Prereq, IconPath = m.Icon, Description = m.Desc,
+                });
+            }
+        }
+
         await db.SaveChangesAsync();
 
         await BackfillDescriptionsAsync(db, seedDir);
@@ -182,4 +206,6 @@ public static class DbSeeder
     private sealed record ItemSeed(string Name, string Slug, string Category, string? Icon, string? Desc);
     private sealed record SpellSeed(string Name, string Slug, string? Icon, string? Desc);
     private sealed record AbilitySeed(string Champ, string Slot, string Name, string? Icon);
+    private sealed record RuneSeed(string Name, string Slug, string Slot, string? Icon, string? Desc);
+    private sealed record MasterySeed(int Id, string Name, string Tree, int Row, int Col, int Ranks, int? Prereq, string? Icon, string? Desc);
 }

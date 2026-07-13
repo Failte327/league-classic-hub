@@ -14,6 +14,12 @@ public class GuideInput
     // Ordered item ids, e.g. "12,4,4,88".
     public string? BuildOrderCsv { get; set; }
 
+    // Rune choices as "runeId:count,...", e.g. "12:9,40:9,55:9,3:3".
+    public string? RunesCsv { get; set; }
+
+    // Mastery points as "ddragonId:points,...", e.g. "4112:4,4113:4".
+    public string? MasteryAllocations { get; set; }
+
     public string BodyMarkdown { get; set; } = "";
     public bool Publish { get; set; }
 }

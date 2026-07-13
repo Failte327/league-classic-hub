@@ -333,6 +333,10 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("MasteryAllocations")
+                        .HasMaxLength(400)
+                        .HasColumnType("character varying(400)");
+
                     b.Property<string>("SkillOrder")
                         .HasMaxLength(80)
                         .HasColumnType("character varying(80)");
@@ -405,6 +409,32 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.ToTable("GuideItems");
                 });
 
+            modelBuilder.Entity("LeagueClassic.Web.Data.GuideRune", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("GuideId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("RuneId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GuideId");
+
+                    b.HasIndex("RuneId");
+
+                    b.ToTable("GuideRunes");
+                });
+
             modelBuilder.Entity("LeagueClassic.Web.Data.Item", b =>
                 {
                     b.Property<int>("Id")
@@ -444,6 +474,55 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.ToTable("Items");
                 });
 
+            modelBuilder.Entity("LeagueClassic.Web.Data.Mastery", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Col")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("DdragonId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("IconPath")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.Property<int?>("PrereqDdragonId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Ranks")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Row")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Tree")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DdragonId")
+                        .IsUnique();
+
+                    b.HasIndex("Tree", "Row", "Col");
+
+                    b.ToTable("Masteries");
+                });
+
             modelBuilder.Entity("LeagueClassic.Web.Data.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -475,6 +554,45 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.HasIndex("ThreadId", "CreatedAt");
 
                     b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("LeagueClassic.Web.Data.Rune", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("IconPath")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Slot")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Slot");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("Runes");
                 });
 
             modelBuilder.Entity("LeagueClassic.Web.Data.SummonerSpell", b =>
@@ -750,6 +868,25 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.Navigation("Item");
                 });
 
+            modelBuilder.Entity("LeagueClassic.Web.Data.GuideRune", b =>
+                {
+                    b.HasOne("LeagueClassic.Web.Data.Guide", "Guide")
+                        .WithMany("Runes")
+                        .HasForeignKey("GuideId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LeagueClassic.Web.Data.Rune", "Rune")
+                        .WithMany()
+                        .HasForeignKey("RuneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Guide");
+
+                    b.Navigation("Rune");
+                });
+
             modelBuilder.Entity("LeagueClassic.Web.Data.Post", b =>
                 {
                     b.HasOne("LeagueClassic.Web.Data.ApplicationUser", "Author")
@@ -844,6 +981,8 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.Navigation("BuildOrder");
 
                     b.Navigation("Comments");
+
+                    b.Navigation("Runes");
                 });
 #pragma warning restore 612, 618
         }

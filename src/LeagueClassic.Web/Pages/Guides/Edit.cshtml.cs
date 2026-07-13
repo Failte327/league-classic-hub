@@ -91,7 +91,8 @@ public class EditModel : PageModel
     {
         IQueryable<Guide> q = _db.Guides
             .Include(g => g.Champion).ThenInclude(c => c!.Abilities)
-            .Include(g => g.BuildOrder).ThenInclude(b => b.Item);
+            .Include(g => g.BuildOrder).ThenInclude(b => b.Item)
+            .Include(g => g.Runes).ThenInclude(r => r.Rune);
         if (!tracking) q = q.AsNoTracking();
         return await q.FirstOrDefaultAsync(g => g.Id == id);
     }

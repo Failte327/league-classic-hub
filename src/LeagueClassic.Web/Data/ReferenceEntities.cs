@@ -46,6 +46,46 @@ public class SummonerSpell
     public string? Description { get; set; }
 }
 
+// A classic rune (Greater tier), sourced from DDragon 5.1.1.
+public class Rune
+{
+    public int Id { get; set; }
+    public required string Name { get; set; }
+    public required string Slug { get; set; }
+    public required string Slot { get; set; }   // mark / seal / glyph / quintessence
+    public string? IconPath { get; set; }
+    public string? Description { get; set; }
+}
+
+// A classic mastery node in the Offense/Defense/Utility trees (DDragon 5.1.1).
+// DdragonId is the game's mastery id (used in guide allocations + prereqs).
+public class Mastery
+{
+    public int Id { get; set; }
+    public int DdragonId { get; set; }
+    public required string Name { get; set; }
+    public required string Tree { get; set; }    // Offense / Defense / Utility
+    public int Row { get; set; }                 // 1-6
+    public int Col { get; set; }                 // 0-3
+    public int Ranks { get; set; }               // max points
+    public int? PrereqDdragonId { get; set; }    // mastery that must be maxed first
+    public string? IconPath { get; set; }
+    public string? Description { get; set; }
+}
+
+// A rune choice on a guide, with a count (e.g. 9x Greater Mark of Attack Damage).
+public class GuideRune
+{
+    public int Id { get; set; }
+    public int GuideId { get; set; }
+    public Guide? Guide { get; set; }
+
+    public int RuneId { get; set; }
+    public Rune? Rune { get; set; }
+
+    public int Count { get; set; }
+}
+
 // Ordered build-order entry linking a Guide to an Item.
 public class GuideItem
 {

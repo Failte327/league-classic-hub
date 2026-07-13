@@ -21,6 +21,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Item> Items => Set<Item>();
     public DbSet<SummonerSpell> SummonerSpells => Set<SummonerSpell>();
     public DbSet<GuideItem> GuideItems => Set<GuideItem>();
+    public DbSet<Rune> Runes => Set<Rune>();
+    public DbSet<Mastery> Masteries => Set<Mastery>();
+    public DbSet<GuideRune> GuideRunes => Set<GuideRune>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -144,6 +147,38 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 .HasForeignKey(gi => gi.ItemId)
                 .OnDelete(DeleteBehavior.Cascade);
         });
+
+        builder.Entity<Rune>(e =>
+        {
+            e.HasIndex(r => r.Slug).IsUnique();
+            e.HasIndex(r => r.Slot);
+            e.Property(r => r.Name).HasMaxLength(100);
+            e.Property(r => r.Slug).HasMaxLength(100);
+            e.Property(r => r.Slot).HasMaxLength(20);
+        });
+
+        builder.Entity<Mastery>(e =>
+        {
+            e.HasIndex(m => m.DdragonId).IsUnique();
+            e.HasIndex(m => new { m.Tree, m.Row, m.Col });
+            e.Property(m => m.Name).HasMaxLength(80);
+            e.Property(m => m.Tree).HasMaxLength(20);
+        });
+
+        builder.Entity<GuideRune>(e =>
+        {
+            e.HasIndex(gr => gr.GuideId);
+            e.HasOne(gr => gr.Guide)
+                .WithMany(g => g.Runes)
+                .HasForeignKey(gr => gr.GuideId)
+                .OnDelete(DeleteBehavior.Cascade);
+            e.HasOne(gr => gr.Rune)
+                .WithMany()
+                .HasForeignKey(gr => gr.RuneId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        builder.Entity<Guide>().Property(g => g.MasteryAllocations).HasMaxLength(400);
 
         builder.Entity<Comment>(e =>
         {

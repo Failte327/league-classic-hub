@@ -10,6 +10,8 @@ public class GuideEditorVm
     public required List<IGrouping<string, Item>> ItemsByCategory { get; init; }
     public required List<SummonerSpell> Spells { get; init; }
     public required Dictionary<string, ChampionAbility> AbilityBySlot { get; init; }
+    public required List<IGrouping<string, Rune>> RunesBySlot { get; init; }
+    public required List<Mastery> Masteries { get; init; }
     public required GuideInput Input { get; init; }
 
     public bool IsEdit { get; init; }

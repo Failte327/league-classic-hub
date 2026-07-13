@@ -107,6 +107,12 @@ public class Guide
     // Ordered item build (see GuideItem.Sort).
     public List<GuideItem> BuildOrder { get; set; } = new();
 
+    // Rune choices with counts.
+    public List<GuideRune> Runes { get; set; } = new();
+
+    // Mastery point allocation as "ddragonId:points,..." e.g. "4112:4,4113:4".
+    public string? MasteryAllocations { get; set; }
+
     public required string BodyMarkdown { get; set; }
     public GuideStatus Status { get; set; } = GuideStatus.Draft;
 

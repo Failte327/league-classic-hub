@@ -6,6 +6,8 @@
     <input type="hidden" asp-for="Input.SpellTwoId" id="spell-two" />
     <input type="hidden" asp-for="Input.SkillOrder" id="skill-order" />
     <input type="hidden" asp-for="Input.BuildOrderCsv" id="build-order" />
+    <input type="hidden" asp-for="Input.RunesCsv" id="runes-csv" />
+    <input type="hidden" asp-for="Input.MasteryAllocations" id="mastery-alloc" />
 
     <div asp-validation-summary="All" class="validation-summary"></div>
 
@@ -25,6 +27,64 @@
                     <img src="~/@s.IconPath" alt="@s.Name" loading="lazy" />
                     <span>@s.Name</span>
                 </button>
+            }
+        </div>
+    </section>
+
+    <!-- Runes -->
+    <section class="panel">
+        <h2>Runes <small>(click a rune to add it; adjust the count on the chip)</small></h2>
+        <div class="rune-summary" id="rune-summary">
+            <span class="build-empty">No runes yet — pick from the slots below.</span>
+        </div>
+        <div class="rune-palette" id="rune-palette">
+            @foreach (var group in Model.RunesBySlot)
+            {
+                <div class="rune-group">
+                    <h3>@group.Key</h3>
+                    <div class="rune-row">
+                        @foreach (var r in group)
+                        {
+                            <button type="button" class="rune-opt" data-id="@r.Id" data-slot="@r.Slot"
+                                    data-name="@r.Name" data-icon="@r.IconPath" data-desc="@r.Description">
+                                <img src="~/@r.IconPath" alt="@r.Name" loading="lazy" />
+                                <span>@r.Name.Replace("Greater ", "")</span>
+                            </button>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <!-- Masteries -->
+    <section class="panel">
+        <h2>Masteries <small>(30 points — click to add, right-click to remove)</small></h2>
+        <div class="mastery-summary">
+            <span class="ms-off">Offense <b id="mt-Offense">0</b></span>
+            <span class="ms-def">Defense <b id="mt-Defense">0</b></span>
+            <span class="ms-uti">Utility <b id="mt-Utility">0</b></span>
+            <span class="ms-rem"><b id="mt-remaining">30</b> points left</span>
+        </div>
+        <div class="mastery-trees">
+            @foreach (var tree in new[] { "Offense", "Defense", "Utility" })
+            {
+                <div class="mastery-tree">
+                    <div class="mt-head mt-head-@tree.ToLower()">@tree</div>
+                    <div class="mt-grid" data-tree="@tree">
+                        @foreach (var m in Model.Masteries.Where(x => x.Tree == tree))
+                        {
+                            <button type="button" class="mastery-node"
+                                    style="grid-column:@(m.Col + 1);grid-row:@m.Row"
+                                    data-id="@m.DdragonId" data-tree="@m.Tree" data-row="@m.Row"
+                                    data-ranks="@m.Ranks" data-prereq="@(m.PrereqDdragonId?.ToString() ?? "")"
+                                    data-name="@m.Name" data-desc="@m.Description">
+                                <img src="~/@m.IconPath" alt="@m.Name" loading="lazy" />
+                                <span class="mn-pts">0/@m.Ranks</span>
+                            </button>
+                        }
+                    </div>
+                </div>
             }
         </div>
     </section>
