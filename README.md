@@ -1,8 +1,7 @@
-# League Classic Community
+# League Classic Hub
 
 A classic-style guides, forum, and resource site for **League Classic** (launching July 29, 2026).
-Old-school MOBAFire / postcount.net energy — server-rendered, dense, fast, and built to scale
-if the community takes off.
+Old-school MOBAFire style.
 
 ## Stack
 
@@ -106,16 +105,8 @@ src/LeagueClassic.Web/
   wwwroot/lib/htmx/
 ```
 
-## What's built vs. next
-
-**Done (scaffold):** project + stack, DB schema (forum + guides + Identity), seeded boards,
-classic-styled forum home + guides list, working auth pages, output caching, Dockerized Postgres.
-
-**Next (toward the July 29 MVP):** thread/post viewing + posting (htmx replies), board pages,
-guide create/edit editor, Postgres full-text search, moderation basics (report/delete/ban),
-Cloudflare Turnstile on signup, and the classic visual polish pass. See the build sequence in
-the project plan.
-
 # Run commands
+```
 docker compose up -d db                       # Postgres on :5433
-dotnet run --project src/LeagueClassic.Web     # migrates + seeds on first boot
+dotnet run --project src/LeagueClassic.Web    # migrates + seeds on first boot
+```
