@@ -15,13 +15,13 @@
     <form method="post">
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="field">
-            <label>Email <span class="muted">(private — never shown on the site)</span></label>
+            <label>Email</label>
             <input class="form-control" value="@Model.Email" disabled />
         </div>
         <div class="field">
             <label asp-for="DisplayName"></label>
             <input asp-for="DisplayName" class="form-control" autocomplete="off" />
-            <span class="field-hint">Your public calling card across League Classic Archive.</span>
+            <span class="field-hint">Your public nickname across League Classic Archive.</span>
         </div>
         <div class="form-actions">
             <button type="submit" class="btn-primary">Save</button>
