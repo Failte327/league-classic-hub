@@ -9,13 +9,25 @@
 
     function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
 
+    // CSS zoom on <html> makes the browser read clientX/Y, offsetWidth, etc. in
+    // already-zoomed ("visual") pixels, but interpret any px value WE write back
+    // (style.left = ...) as pre-zoom ("logical") pixels that then get zoomed a
+    // second time on render. Dividing by the zoom factor before writing cancels
+    // that out. Harmless no-op when zoom is unsupported/1.
+    function zoomFactor() {
+        return parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
+    }
+
     function position(e) {
         const pad = 14, w = panel.offsetWidth, h = panel.offsetHeight;
         let x = e.clientX + pad, y = e.clientY + pad;
         if (x + w > window.innerWidth) x = e.clientX - w - pad;
         if (y + h > window.innerHeight) y = Math.max(4, window.innerHeight - h - pad);
-        panel.style.left = x + 'px';
-        panel.style.top = y + 'px';
+        // panel is position:absolute (see classic.css), so it's relative to the
+        // document, not the viewport — add scroll offsets to the viewport-relative x/y.
+        const z = zoomFactor();
+        panel.style.left = ((x + window.scrollX) / z) + 'px';
+        panel.style.top = ((y + window.scrollY) / z) + 'px';
     }
     function show(el, e) {
         const name = el.dataset.name || el.getAttribute('title');

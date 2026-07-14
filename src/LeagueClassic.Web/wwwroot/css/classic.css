@@ -264,7 +264,11 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 
 /* Hover description panel (items + spells) */
 .hover-desc {
-    position: fixed; z-index: 1000; max-width: 300px; pointer-events: none;
+    /* absolute, not fixed: CSS zoom on the root breaks fixed-position elements'
+       containing block, so a fixed tooltip ends up far from the cursor. Absolute
+       (offset by scrollX/Y in JS) stays in the same zoomed coordinate space as
+       the clientX/Y math that positions it. */
+    position: absolute; z-index: 1000; max-width: 300px; pointer-events: none;
     background: #0a1a2e; color: #e6ecf3; border: 1px solid var(--gold);
     padding: 9px 11px; font-size: 12px; line-height: 1.5; box-shadow: 0 6px 18px rgba(0,0,0,.55);
 }
