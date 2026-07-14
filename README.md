@@ -82,5 +82,7 @@ src/LeagueClassic.Web/
 ```
 
 # Run commands
-`docker compose up -d db`                       # Postgres on :5433
-`dotnet run --project src/LeagueClassic.Web`    # migrates + seeds on first boot
+```
+docker compose up -d db                       # Postgres on :5433
+dotnet run --project src/LeagueClassic.Web    # migrates + seeds on first boot
+```
