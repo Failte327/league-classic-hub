@@ -42,6 +42,30 @@ dotnet run --project src/LeagueClassic.Web
 
 Register an account at `/Identity/Account/Register` (email confirmation is off in Development).
 
+## Troubleshooting a new machine
+
+If `docker compose up -d db` or `dotnet run` fail right after setting up on a fresh machine, it's
+almost always one of these three gaps, not a code problem:
+
+- **`permission denied ... docker.sock`** — your user isn't in the `docker` group yet:
+  ```bash
+  sudo usermod -aG docker $USER
+  newgrp docker   # or just log out and back in
+  ```
+- **`docker: unknown command: docker compose`** — only the base `docker.io` package is
+  installed; the Compose v2 plugin isn't:
+  ```bash
+  sudo apt-get update && sudo apt-get install -y docker-compose-v2
+  ```
+- **`dotnet: command not found`** even though `DOTNET_ROOT`/`PATH` are set per above — the SDK
+  itself was never installed at `~/.dotnet`:
+  ```bash
+  curl -sSL https://dot.net/v1/dotnet-install.sh -o /tmp/dotnet-install.sh
+  bash /tmp/dotnet-install.sh --channel 10.0
+  ```
+  This installs to `~/.dotnet` by default, matching the PATH setup above. Verify with
+  `dotnet --version`.
+
 ## Build
 
 ```bash

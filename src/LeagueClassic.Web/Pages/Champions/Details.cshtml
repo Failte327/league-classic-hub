@@ -32,7 +32,7 @@
                 {
                     if (Model.AbilityBySlot.TryGetValue(slot, out var ab))
                     {
-                        <span class="ability-chip" title="@ab.Name">
+                        <span class="ability-chip" data-name="@ab.Name" data-desc="@ab.Description">
                             <span class="slot-key slot-@slot">@slot</span>
                             @if (ab.IconPath is not null)
                             {
@@ -66,3 +66,7 @@
 
     <p><a asp-page="/Champions/Index">&larr; All champions</a></p>
 </article>
+
+@section Scripts {
+    <script src="~/js/hover-panel.js" asp-append-version="true"></script>
+}

@@ -32,6 +32,7 @@ public class ChampionAbility
     public required string Slot { get; set; }
     public required string Name { get; set; }
     public string? IconPath { get; set; }
+    public string? Description { get; set; }
 }
 
 public class Item

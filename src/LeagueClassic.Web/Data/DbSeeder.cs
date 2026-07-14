@@ -109,7 +109,7 @@ public static class DbSeeder
                 {
                     db.ChampionAbilities.Add(new ChampionAbility
                     {
-                        ChampionId = champId, Slot = a.Slot, Name = a.Name, IconPath = a.Icon,
+                        ChampionId = champId, Slot = a.Slot, Name = a.Name, IconPath = a.Icon, Description = a.Desc,
                     });
                 }
             }
@@ -166,6 +166,7 @@ public static class DbSeeder
 
         await BackfillDescriptionsAsync(db, seedDir);
         await BackfillChampionLoreAsync(db, seedDir);
+        await BackfillAbilityNamesAsync(db, seedDir);
     }
 
     // Fills Description onto item/spell rows that were seeded before the column
@@ -200,6 +201,39 @@ public static class DbSeeder
                 champ.Lore = c.Lore;
                 champ.Blurb = c.Blurb;
                 champ.Title = c.Title;
+                changed = true;
+            }
+        }
+
+        if (changed) await db.SaveChangesAsync();
+    }
+
+    // Re-syncs ability Name against abilities.json by (champion slug, slot), for
+    // rows seeded before a name correction (e.g. reverting a post-classic-era
+    // rework's ability names back to their Season 1-3 originals). IconPath is
+    // not touched here since the underlying PNG at the existing path is what
+    // gets swapped when an icon is corrected. Also backfills Description onto
+    // rows seeded before that column existed (only where currently null).
+    private static async Task BackfillAbilityNamesAsync(ApplicationDbContext db, string seedDir)
+    {
+        var seedByKey = Load<AbilitySeed>(seedDir, "abilities.json")
+            .ToDictionary(a => (a.Champ, a.Slot), a => a);
+        var slugByChampId = await db.Champions.ToDictionaryAsync(c => c.Id, c => c.Slug);
+
+        var changed = false;
+        foreach (var ability in await db.ChampionAbilities.ToListAsync())
+        {
+            if (!slugByChampId.TryGetValue(ability.ChampionId, out var slug)) continue;
+            if (!seedByKey.TryGetValue((slug, ability.Slot), out var seed)) continue;
+
+            if (ability.Name != seed.Name)
+            {
+                ability.Name = seed.Name;
+                changed = true;
+            }
+            if (ability.Description == null && seed.Desc != null)
+            {
+                ability.Description = seed.Desc;
                 changed = true;
             }
         }
@@ -258,7 +292,7 @@ public static class DbSeeder
     private sealed record ChampionSeed(string Name, string Slug, string? Icon, bool Available, string? Title, string? Blurb, string? Lore);
     private sealed record ItemSeed(string Name, string Slug, string Category, string? Icon, string? Desc);
     private sealed record SpellSeed(string Name, string Slug, string? Icon, string? Desc);
-    private sealed record AbilitySeed(string Champ, string Slot, string Name, string? Icon);
+    private sealed record AbilitySeed(string Champ, string Slot, string Name, string? Icon, string? Desc);
     private sealed record RuneSeed(string Name, string Slug, string Slot, string? Icon, string? Desc);
     private sealed record MasterySeed(int Id, string Name, string Tree, int Row, int Col, int Ranks, int? Prereq, string? Icon, string? Desc);
 }
