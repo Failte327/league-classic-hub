@@ -45,7 +45,7 @@
   "name": "Fortify",
   "slug": "fortify",
   "icon": "assets/spells/fortify.png",
-  "desc": null
+  "desc": "Grants invulnerability to all allied turrets and causes them to attack 100% faster for 7 seconds."
  },
  {
   "name": "Heal",
@@ -63,7 +63,7 @@
   "name": "Rally",
   "slug": "rally",
   "icon": "assets/spells/rally.png",
-  "desc": null
+  "desc": "Summons a beacon with 225-650 (based on level) Health for 15 seconds which increases allied Attack Damage by 10-35 (based on level)."
  },
  {
   "name": "Revive",
@@ -81,7 +81,7 @@
   "name": "Surge",
   "slug": "surge",
   "icon": "assets/spells/surge.png",
-  "desc": null
+  "desc": "Empowers your champion for 12 seconds, granting 10-78 (based on level) Ability Power and 35% bonus attack speed."
  },
  {
   "name": "Teleport",
