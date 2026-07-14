@@ -188,7 +188,7 @@ button.btn:hover { background: var(--brand-dark); }
 .field { margin: 10px 0; }
 .field label { display: block; font-weight: bold; margin-bottom: 4px; }
 .compose-title { display: flex; align-items: center; gap: 10px; }
-.compose-title span { color: var(--accent); }
+.compose-title span { color: var(--gold); }
 .validation-summary { color: var(--accent); }
 .validation-summary ul { margin: 6px 0; }
 .hint { color: var(--muted); font-size: 11px; }
