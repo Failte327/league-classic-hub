@@ -19,7 +19,7 @@ public class DetailsModel : PageModel
         var champion = await _db.Champions
             .Include(c => c.Abilities)
             .AsNoTracking()
-            .FirstOrDefaultAsync(c => c.Slug == slug && c.IsAvailable);
+            .FirstOrDefaultAsync(c => c.Slug == slug && c.IsAvailable && c.Slug != "any");
 
         if (champion is null) return NotFound();
 

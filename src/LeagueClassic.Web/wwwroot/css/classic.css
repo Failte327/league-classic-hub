@@ -2,13 +2,15 @@
    high-contrast, early-2010s community-site vibe. Hand-rolled, no framework. */
 
 :root {
-    /* Navy + gold, echoing the League Classic / Hextech wiki palette. */
-    --page: #0a1428;        /* deep navy page background */
-    --page-edge: #06101f;   /* darker navy for the outer gutter */
-    --panel: #f6f7f4;       /* light content panels for readability */
-    --ink: #10141c;
-    --muted: #5d6b7e;
-    --line: #c3ccd8;
+    /* Navy + gold + parchment: the Hextech chrome stays, but content panels
+       lean warm — the yellowed-page, hand-painted-portrait feel of the old
+       leagueoflegends.com UI, not the cool clinical gray we had before. */
+    --page: #101a2d;        /* deep navy page background, slightly softened */
+    --page-edge: #0a1420;   /* darker navy for the outer gutter */
+    --panel: #f4ecd6;       /* warm parchment content panels */
+    --ink: #2a2115;
+    --muted: #7a6a4c;
+    --line: #ddcfa4;
     --brand: #14568c;       /* link blue */
     --brand-dark: #0a2647;  /* navy */
     --gold: #c8aa6e;        /* Hextech gold */
@@ -16,7 +18,7 @@
     --accent: #c8aa6e;      /* gold accent */
     --header: #010a13;      /* near-black navy */
     --catbar: #0a2647;      /* navy category bars */
-    --row-alt: #eef1f6;
+    --row-alt: #ece0bd;     /* alternating-row parchment, a shade deeper than panel */
 }
 
 * { box-sizing: border-box; }
@@ -560,7 +562,7 @@ main .col-lg-4 h3, main .col-lg-4 h4 { color: #e6ecf3; font-size: 15px; }
 }
 .form-control {
     width: 100%; padding: 9px 11px; border: 1px solid var(--line); font: inherit;
-    background: #fff; color: var(--ink);
+    background: #fffbef; color: var(--ink);
 }
 .form-control:focus { outline: 2px solid rgba(43,93,139,.4); border-color: var(--brand); }
 
@@ -588,7 +590,7 @@ main form[method=post] a, main .row a { color: var(--brand); }
     padding: 22px 26px; color: var(--ink);
 }
 .auth-card .field label { color: var(--ink); font-weight: bold; display: block; margin-bottom: 4px; }
-.auth-card input[disabled] { background: #eef1f6; color: var(--muted); }
+.auth-card input[disabled] { background: var(--row-alt); color: var(--muted); }
 .field-hint { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
 
 /* Identity Manage pages' side nav, now rendered inside our layout. */

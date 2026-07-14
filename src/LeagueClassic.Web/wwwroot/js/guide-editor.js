@@ -111,14 +111,18 @@
         skillInput.value = slots.join(',');
     }
 
-    grid.addEventListener('click', e => {
-        const cell = e.target.closest('.skill-cell');
-        if (!cell || cell.disabled) return;
-        const lvl = Number(cell.dataset.level);
-        const ab = cell.dataset.ability;
-        levelState[lvl] = (levelState[lvl] === ab) ? undefined : ab;
-        renderGrid();
-    });
+    // Not every guide has ability leveling (e.g. the champion-agnostic "Any" guide) —
+    // the section, and with it #skill-grid, is omitted from the page entirely then.
+    if (grid) {
+        grid.addEventListener('click', e => {
+            const cell = e.target.closest('.skill-cell');
+            if (!cell || cell.disabled) return;
+            const lvl = Number(cell.dataset.level);
+            const ab = cell.dataset.ability;
+            levelState[lvl] = (levelState[lvl] === ab) ? undefined : ab;
+            renderGrid();
+        });
+    }
 
     // ---- Item build order ----
     const strip = document.getElementById('build-strip');
@@ -339,9 +343,8 @@
     } catch (e) { /* create mode */ }
 
     // init
-    buildGrid();
+    if (grid) { buildGrid(); renderGrid(); }
     renderSpells();
-    renderGrid();
     renderBuild();
     renderRunes();
     renderMasteries();

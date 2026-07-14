@@ -15,7 +15,7 @@ public class IndexModel : PageModel
     public async Task OnGetAsync()
     {
         Champions = await _db.Champions
-            .Where(c => c.IsAvailable)
+            .Where(c => c.IsAvailable && c.Slug != "any")
             .OrderBy(c => c.Name)
             .AsNoTracking()
             .ToListAsync();

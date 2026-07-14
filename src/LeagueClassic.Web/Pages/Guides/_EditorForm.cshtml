@@ -8,6 +8,7 @@
     <input type="hidden" asp-for="Input.BuildOrderCsv" id="build-order" />
     <input type="hidden" asp-for="Input.RunesCsv" id="runes-csv" />
     <input type="hidden" asp-for="Input.MasteryAllocations" id="mastery-alloc" />
+    <script type="application/json" id="initial-state">@Html.Raw(Model.InitialStateJson)</script>
 
     <div asp-validation-summary="All" class="validation-summary"></div>
 
@@ -89,39 +90,41 @@
         </div>
     </section>
 
-    <!-- Ability leveling -->
-    <section class="panel">
-        <h2>Ability Leveling <small>(click a cell to put the level's point into that ability)</small></h2>
+    <!-- Ability leveling — not applicable to the champion-agnostic "Any" guide -->
+    @if (Model.Champion.Slug != "any")
+    {
+        <section class="panel">
+            <h2>Ability Leveling <small>(click a cell to put the level's point into that ability)</small></h2>
 
-        <div class="ability-bar">
-            @foreach (var slot in new[] { "P", "Q", "W", "E", "R" })
-            {
-                if (Model.AbilityBySlot.TryGetValue(slot, out var ab))
+            <div class="ability-bar">
+                @foreach (var slot in new[] { "P", "Q", "W", "E", "R" })
                 {
-                    <span class="ability-chip" title="@ab.Name">
-                        <span class="slot-key slot-@slot">@slot</span>
-                        @if (ab.IconPath is not null)
-                        {
-                            <img src="~/@ab.IconPath" alt="@ab.Name" />
-                        }
-                        <span class="ability-name">@ab.Name</span>
-                    </span>
+                    if (Model.AbilityBySlot.TryGetValue(slot, out var ab))
+                    {
+                        <span class="ability-chip" title="@ab.Name">
+                            <span class="slot-key slot-@slot">@slot</span>
+                            @if (ab.IconPath is not null)
+                            {
+                                <img src="~/@ab.IconPath" alt="@ab.Name" />
+                            }
+                            <span class="ability-name">@ab.Name</span>
+                        </span>
+                    }
                 }
-            }
-        </div>
+            </div>
 
-        @{
-            var gridAbilities = new[] { "Q", "W", "E", "R" }.ToDictionary(
-                s => s,
-                s => Model.AbilityBySlot.TryGetValue(s, out var a)
-                    ? new { name = a.Name, icon = a.IconPath }
-                    : new { name = s, icon = (string?)null });
-        }
-        <script type="application/json" id="champ-abilities">@Html.Raw(System.Text.Json.JsonSerializer.Serialize(gridAbilities))</script>
-        <script type="application/json" id="initial-state">@Html.Raw(Model.InitialStateJson)</script>
-        <div class="skill-grid" id="skill-grid"></div>
-        <p class="hint">R (ultimate) can only be leveled at 6, 11, and 16.</p>
-    </section>
+            @{
+                var gridAbilities = new[] { "Q", "W", "E", "R" }.ToDictionary(
+                    s => s,
+                    s => Model.AbilityBySlot.TryGetValue(s, out var a)
+                        ? new { name = a.Name, icon = a.IconPath }
+                        : new { name = s, icon = (string?)null });
+            }
+            <script type="application/json" id="champ-abilities">@Html.Raw(System.Text.Json.JsonSerializer.Serialize(gridAbilities))</script>
+            <div class="skill-grid" id="skill-grid"></div>
+            <p class="hint">R (ultimate) can only be leveled at 6, 11, and 16.</p>
+        </section>
+    }
 
     <!-- Build order -->
     <section class="panel">
@@ -153,13 +156,21 @@
     <section class="panel">
         <h2>Guide Details</h2>
         <div class="markdown-help">
-            <strong>Formatting:</strong>
-            <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
-            <code>*italic*</code> &middot;
-            <code># Heading</code> &middot;
-            <code>- list item</code> &middot;
-            <code>[link](https://…)</code> &middot;
-            <code>`code`</code> &middot; blank line = new paragraph.
+            <div>
+                <strong>Formatting:</strong>
+                <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
+                <code>*italic*</code> or <code>&lt;u&gt;underline&lt;/u&gt;</code> &middot;
+                <code>- list item</code> &middot;
+                <code>[link](https://…)</code> &middot;
+                <code>`code`</code> &middot; blank line = new paragraph.
+            </div>
+            <div>
+                <strong>Sections:</strong>
+                <code>## Section Title</code> for a heading &middot;
+                <code>&gt; callout text</code> for a highlighted note &middot;
+                <code>---</code> for a divider &middot;
+                <code>| Col A | Col B |</code> / <code>|---|---|</code> for a table.
+            </div>
         </div>
         <div class="editor-split">
             <textarea asp-for="Input.BodyMarkdown" rows="18"

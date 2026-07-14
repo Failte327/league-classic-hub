@@ -610,5 +610,11 @@
   "lore": "There are warriors who become great for their strength, cunning, or skill with arms. Others simply refuse to die. Urgot, once a great soldier of Noxus, may constitute a case in support of the latter. Prone to diving headlong into enemy battle lines, Urgot sowed chaos throughout the enemy ranks, often sustaining grievous injuries in the process. When his body was unable to weather further abuse, the crippled Urgot was delegated the position of High Executioner of Noxus. By this time, his hands had been ruined and he could barely walk. Scythe-like grafts affixed to his maimed limbs served to carry out his bloody work.\n\nUrgot finally met his end at what should have been his finest hour. Because of his military background, he often accompanied detachments into foreign territory to carry out judgment. After ambushing an enemy force, Jarvan IV, Crown Prince of Demacia, fell into the clutches of Urgot's division. Too far from Noxus to risk transporting their prize for ransom, Urgot prepared to dispose of their captive. At the final moment, however, the Dauntless Vanguard, led by Garen, the Might of Demacia, intervened, and Urgot was cut in two by the zealous warrior as he scrambled to free his Prince. In recognition of his service, the executioner's remains were remanded to the Bleak Academy for reanimation. A lifetime of abuse, however, had left his body in a catastrophic state; proving problematic to the necromancers' craft. Professor Stanwick Pididly, the prevailing scholar of Zaun, offered a solution. Within Pididly's laboratories, a nightmarish new body was forged for Urgot. Now as much machine as man, Urgot arrived at the League of Legends in search of the man who ended his life; necromantic energies coursing through his metal veins.\n\n> We can rebuild him. We have the techmaturgy. \u2014 Professor Stanwick Pididly",
   "blurb": "There are warriors who become great for their strength, cunning, or skill with arms. Others simply refuse to die. Urgot, once a great soldier of Noxus, may constitute a case in support of the latter. Prone to diving headlong into enemy battle lines, ...",
   "title": "the Headsman's Pride"
+ },
+ {
+  "name": "Any",
+  "available": true,
+  "slug": "any",
+  "icon": "assets/champions/any.png"
  }
 ]

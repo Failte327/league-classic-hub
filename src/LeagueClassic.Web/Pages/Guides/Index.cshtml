@@ -6,16 +6,19 @@
     ViewData["Title"] = "Guides";
 }
 
-<div class="page-head">
-    <h1>Guides &amp; Builds</h1>
-    @if (SignInManager.IsSignedIn(User))
-    {
-        <a class="btn-primary" asp-page="/Guides/Create">+ Create Guide</a>
-    }
-    else
-    {
-        <a class="btn-primary" asp-area="Identity" asp-page="/Account/Login">Log in to create a guide</a>
-    }
+<div class="forum-banner">
+    <div class="forum-bg" style="background-image:url('/assets/forum-bg/@(Model.BannerBg)')"></div>
+    <div class="page-head">
+        <h1>Guides &amp; Builds</h1>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <a class="btn-primary" asp-page="/Guides/Create">+ Create Guide</a>
+        }
+        else
+        {
+            <a class="btn-primary" asp-area="Identity" asp-page="/Account/Login">Log in to create a guide</a>
+        }
+    </div>
 </div>
 <p class="muted">Community-written guides and builds.</p>
 
