@@ -2103,240 +2103,280 @@
   "champ": "akali",
   "slot": "P",
   "name": "Twin Disciplines",
-  "icon": "assets/abilities/akali/passive.png"
+  "icon": "assets/abilities/akali/passive.png",
+  "desc": "Discipline of Force: Akali's basic attacks deal an additional 6% bonus Magic Damage, increasing by 1% for every 6 Ability Power.<br><br>Discipline of Might: Akali gains 6% Spell Vamp, increasing by 1% for every 6 Bonus Attack Damage."
  },
  {
   "champ": "akali",
   "slot": "Q",
   "name": "Mark of the Assassin",
-  "icon": "assets/abilities/akali/q.png"
+  "icon": "assets/abilities/akali/q.png",
+  "desc": "Akali spins her kama at a target enemy to deal Magic Damage and mark the target for 6 seconds. Akali's melee attacks against a marked target will trigger and consume the mark to cause additional damage and restore Energy."
  },
  {
   "champ": "akali",
   "slot": "W",
   "name": "Twilight Shroud",
-  "icon": "assets/abilities/akali/w.png"
+  "icon": "assets/abilities/akali/w.png",
+  "desc": "Akali throws down a cover of smoke. While inside the area, Akali becomes invisible and gains a short burst of Movement Speed. Attacking or using abilities will briefly reveal her. Enemies inside the smoke have their Movement Speed reduced."
  },
  {
   "champ": "akali",
   "slot": "E",
   "name": "Crescent Slash",
-  "icon": "assets/abilities/akali/e.png"
+  "icon": "assets/abilities/akali/e.png",
+  "desc": "Akali flourishes her kamas, dealing damage based on her Attack Damage and Ability Power."
  },
  {
   "champ": "akali",
   "slot": "R",
   "name": "Shadow Dance",
-  "icon": "assets/abilities/akali/r.png"
+  "icon": "assets/abilities/akali/r.png",
+  "desc": "Akali moves through shadows to quickly strike her target, dealing damage and consuming an Essence of Shadow charge. Akali recharges Essence of Shadow charges both periodically and upon kills and assists, max 3 stacks."
  },
  {
   "champ": "caitlyn",
   "slot": "P",
   "name": "Headshot",
-  "icon": "assets/abilities/caitlyn/passive.png"
+  "icon": "assets/abilities/caitlyn/passive.png",
+  "desc": "Every few basic attacks, Caitlyn will fire a headshot dealing 150% damage to a champion or 250% damage to a minion."
  },
  {
   "champ": "caitlyn",
   "slot": "Q",
   "name": "Piltover Peacemaker",
-  "icon": "assets/abilities/caitlyn/q.png"
+  "icon": "assets/abilities/caitlyn/q.png",
+  "desc": "Caitlyn revs up her rifle for 1 second to unleash a penetrating shot that deals physical damage (deals less damage to subsequent targets)."
  },
  {
   "champ": "caitlyn",
   "slot": "W",
   "name": "Yordle Snap Trap",
-  "icon": "assets/abilities/caitlyn/w.png"
+  "icon": "assets/abilities/caitlyn/w.png",
+  "desc": "Caitlyn sets a trap to find sneaky yordles. When sprung, the trap immobilizes the champion, reveals them for a short duration, and deals magic damage over 1.5 seconds."
  },
  {
   "champ": "caitlyn",
   "slot": "E",
   "name": "90 Caliber Net",
-  "icon": "assets/abilities/caitlyn/e.png"
+  "icon": "assets/abilities/caitlyn/e.png",
+  "desc": "Caitlyn fires a heavy net to slow her target. The recoil knocks Caitlyn back."
  },
  {
   "champ": "caitlyn",
   "slot": "R",
   "name": "Ace in the Hole",
-  "icon": "assets/abilities/caitlyn/r.png"
+  "icon": "assets/abilities/caitlyn/r.png",
+  "desc": "Caitlyn takes time to line up the perfect shot, dealing massive damage to a single target at a huge range. Enemy champions can intercept the bullet for their ally."
  },
  {
   "champ": "fiora",
   "slot": "P",
   "name": "Duelist",
-  "icon": "assets/abilities/fiora/passive.png"
+  "icon": "assets/abilities/fiora/passive.png",
+  "desc": "Fiora regenerates Health over 6 seconds each time she deals damage. Striking champions will cause this effect to stack up to 4 times."
  },
  {
   "champ": "fiora",
   "slot": "Q",
   "name": "Lunge",
-  "icon": "assets/abilities/fiora/q.png"
+  "icon": "assets/abilities/fiora/q.png",
+  "desc": "Fiora dashes forward to strike her target, dealing physical damage. Fiora can perform the dash a second time within a couple seconds at no Mana cost."
  },
  {
   "champ": "fiora",
   "slot": "W",
   "name": "Riposte",
-  "icon": "assets/abilities/fiora/w.png"
+  "icon": "assets/abilities/fiora/w.png",
+  "desc": "Fiora's Attack Damage is increased. When activated, Fiora parries the next basic attack and reflects magic damage back to the attacker. Works against champions, large monsters and large minions."
  },
  {
   "champ": "fiora",
   "slot": "E",
   "name": "Burst of Speed",
-  "icon": "assets/abilities/fiora/e.png"
+  "icon": "assets/abilities/fiora/e.png",
+  "desc": "Fiora temporarily gains additional Attack Speed. Each basic attack or Lunge she lands during this time increases her Movement Speed. Killing a champion refreshes the cooldown on Burst of Speed."
  },
  {
   "champ": "fiora",
   "slot": "R",
   "name": "Blade Waltz",
-  "icon": "assets/abilities/fiora/r.png"
+  "icon": "assets/abilities/fiora/r.png",
+  "desc": "Fiora dashes around the battlefield to deal physical damage to enemy champions. Successive strikes against the same target deal less damage."
  },
  {
   "champ": "graves",
   "slot": "P",
   "name": "True Grit",
-  "icon": "assets/abilities/graves/passive.png"
+  "icon": "assets/abilities/graves/passive.png",
+  "desc": "Graves gains increasing Armor and Magic Resistance the longer he remains in combat. "
  },
  {
   "champ": "graves",
   "slot": "Q",
   "name": "Buckshot",
-  "icon": "assets/abilities/graves/q.png"
+  "icon": "assets/abilities/graves/q.png",
+  "desc": "Graves fires three bullets in a cone, damaging all enemies in their paths."
  },
  {
   "champ": "graves",
   "slot": "W",
   "name": "Smoke Screen",
-  "icon": "assets/abilities/graves/w.png"
+  "icon": "assets/abilities/graves/w.png",
+  "desc": "Graves fires a smoke canister at the target area creating a cloud of smoke. Enemies inside the smoke cloud have reduced sight range and Movement Speed. "
  },
  {
   "champ": "graves",
   "slot": "E",
   "name": "Quickdraw",
-  "icon": "assets/abilities/graves/e.png"
+  "icon": "assets/abilities/graves/e.png",
+  "desc": "Graves dashes forward gaining an Attack Speed boost for several seconds. Hitting enemies with basic attacks lowers the cooldown of this skill. "
  },
  {
   "champ": "graves",
   "slot": "R",
   "name": "Collateral Damage",
-  "icon": "assets/abilities/graves/r.png"
+  "icon": "assets/abilities/graves/r.png",
+  "desc": "Graves fires an explosive shell dealing heavy damage to the first champion it hits. After hitting a champion or reaching the end of its range, the shell explodes dealing damage in a cone. "
  },
  {
   "champ": "irelia",
   "slot": "P",
   "name": "Ionian Fervor",
-  "icon": "assets/abilities/irelia/passive.png"
+  "icon": "assets/abilities/irelia/passive.png",
+  "desc": "Reduces the duration of all disables for each nearby enemy champion.<br><br>1 Champion: 10%<br>2 Champions: 25%<br>3 Champions: 40%"
  },
  {
   "champ": "irelia",
   "slot": "Q",
   "name": "Bladesurge",
-  "icon": "assets/abilities/irelia/q.png"
+  "icon": "assets/abilities/irelia/q.png",
+  "desc": "Irelia dashes forward to strike her target. If it kills the target, Bladesurge's cooldown refreshes and refunds 35 Mana."
  },
  {
   "champ": "irelia",
   "slot": "W",
   "name": "Hiten Style",
-  "icon": "assets/abilities/irelia/w.png"
+  "icon": "assets/abilities/irelia/w.png",
+  "desc": "Irelia is skilled in the art of Hiten, passively giving her physical attacks Health restoration. Activating Hiten Style doubles her Health restoration and gives her basic attacks true damage."
  },
  {
   "champ": "irelia",
   "slot": "E",
   "name": "Equilibrium Strike",
-  "icon": "assets/abilities/irelia/e.png"
+  "icon": "assets/abilities/irelia/e.png",
+  "desc": "Irelia's attack balances the scales, dealing damage and slowing the target. However, if the target has a higher Health % than Irelia, then the blow stuns the target instead of slowing."
  },
  {
   "champ": "irelia",
   "slot": "R",
   "name": "Transcendent Blades",
-  "icon": "assets/abilities/irelia/r.png"
+  "icon": "assets/abilities/irelia/r.png",
+  "desc": "Irelia summons 4 spirit blades that she can fling to deal physical damage and siphon life from enemies they pass through."
  },
  {
   "champ": "leblanc",
   "slot": "P",
   "name": "Mirror Image",
-  "icon": "assets/abilities/leblanc/passive.png"
+  "icon": "assets/abilities/leblanc/passive.png",
+  "desc": "When LeBlanc drops below 40% Health, she becomes invisible for 1 second and creates a Mirror Image that deals no damage and lasts for up to 8 seconds.<br><br>Mirror Image has a 1 minute cooldown.<br><br><span class=\"color99FF99\">Mirror Image can be controlled by holding the Alt key and using the right mouse button.</span>"
  },
  {
   "champ": "leblanc",
   "slot": "Q",
   "name": "Sigil of Malice",
-  "icon": "assets/abilities/leblanc/q.png"
+  "icon": "assets/abilities/leblanc/q.png",
+  "desc": "LeBlanc projects an orb towards her target, dealing magic damage and marking the target for 3.5 seconds. If the target takes damage from one of LeBlanc's abilities, the sigil will trigger, dealing damage."
  },
  {
   "champ": "leblanc",
   "slot": "W",
   "name": "Distortion",
-  "icon": "assets/abilities/leblanc/w.png"
+  "icon": "assets/abilities/leblanc/w.png",
+  "desc": "LeBlanc rapidly dashes to a target location, dealing magic damage to nearby units. In the following 4 seconds, she can activate Distortion again to return to her starting location."
  },
  {
   "champ": "leblanc",
   "slot": "E",
   "name": "Ethereal Chains",
-  "icon": "assets/abilities/leblanc/e.png"
+  "icon": "assets/abilities/leblanc/e.png",
+  "desc": "LeBlanc flings illusionary chains towards a target location. If it hits an enemy unit, it will deal initial magic damage and slow their Movement Speed by 25%. If the target remains shackled for 2 seconds, the target takes additional magic damage and is unable to move."
  },
  {
   "champ": "leblanc",
   "slot": "R",
   "name": "Mimic",
-  "icon": "assets/abilities/leblanc/r.png"
+  "icon": "assets/abilities/leblanc/r.png",
+  "desc": "LeBlanc can cast a mimicked version of the previous spell she cast."
  },
  {
   "champ": "mordekaiser",
   "slot": "P",
   "name": "Iron Man",
-  "icon": "assets/abilities/mordekaiser/passive.png"
+  "icon": "assets/abilities/mordekaiser/passive.png",
+  "desc": "A percent of the damage dealt from abilities is converted into a temporary shield, absorbing incoming damage."
  },
  {
   "champ": "mordekaiser",
   "slot": "Q",
   "name": "Mace of Spades",
-  "icon": "assets/abilities/mordekaiser/q.png"
+  "icon": "assets/abilities/mordekaiser/q.png",
+  "desc": "On next hit, Mordekaiser swings his mace with such force that it echoes out, striking up to 3 additional nearby targets, dealing damage plus bonus damage. If the target is alone, the attack deals extra damage."
  },
  {
   "champ": "mordekaiser",
   "slot": "W",
   "name": "Creeping Death",
-  "icon": "assets/abilities/mordekaiser/w.png"
+  "icon": "assets/abilities/mordekaiser/w.png",
+  "desc": "Unleashes a protective cloud of metal shards to surround an ally, increasing their Armor and Magic Resistance and dealing damage per second to enemies in the cloud."
  },
  {
   "champ": "mordekaiser",
   "slot": "E",
   "name": "Siphon of Destruction",
-  "icon": "assets/abilities/mordekaiser/e.png"
+  "icon": "assets/abilities/mordekaiser/e.png",
+  "desc": "Mordekaiser deals damage to enemies in a cone in front of him. For each unit hit, Mordekaiser's shield absorbs energy."
  },
  {
   "champ": "mordekaiser",
   "slot": "R",
   "name": "Children of the Grave",
-  "icon": "assets/abilities/mordekaiser/r.png"
+  "icon": "assets/abilities/mordekaiser/r.png",
+  "desc": "Mordekaiser curses an enemy, stealing a percent of their life initially and each second. If the target dies while the spell is active, their soul is enslaved and will follow Mordekaiser as a ghost for 30 seconds."
  },
  {
   "champ": "urgot",
   "slot": "P",
   "name": "Zaun-Touched Bolt Augmenter",
-  "icon": "assets/abilities/urgot/passive.png"
+  "icon": "assets/abilities/urgot/passive.png",
+  "desc": "Urgot's basic attacks and Acid Hunters reduce his targets' damage by 15% for 2.5 seconds."
  },
  {
   "champ": "urgot",
   "slot": "Q",
   "name": "Acid Hunter",
-  "icon": "assets/abilities/urgot/q.png"
+  "icon": "assets/abilities/urgot/q.png",
+  "desc": "Urgot fires an Acid Hunter missile that collides with the first enemy it hits, slowing the target if he has his Terror Capacitor up. Acid Hunter missile-locks on enemies affected by Noxian Corrosive Charge."
  },
  {
   "champ": "urgot",
   "slot": "W",
   "name": "Terror Capacitor",
-  "icon": "assets/abilities/urgot/w.png"
+  "icon": "assets/abilities/urgot/w.png",
+  "desc": "Urgot charges up his capacitor to gain a shield. While the shield is active, Urgot gains slowing attacks."
  },
  {
   "champ": "urgot",
   "slot": "E",
   "name": "Noxian Corrosive Charge",
-  "icon": "assets/abilities/urgot/e.png"
+  "icon": "assets/abilities/urgot/e.png",
+  "desc": "Urgot launches a corrosive charge that damages enemies in an area and reduces their Armor."
  },
  {
   "champ": "urgot",
   "slot": "R",
   "name": "Hyper-Kinetic Position Reverser",
-  "icon": "assets/abilities/urgot/r.png"
+  "icon": "assets/abilities/urgot/r.png",
+  "desc": "Urgot charges up his Hyper-Kinetic Position Reverser, swapping positions with the target. His target is suppressed for the duration of the channel. He gains increased Armor and Magic Resist after the swap."
  }
 ]
