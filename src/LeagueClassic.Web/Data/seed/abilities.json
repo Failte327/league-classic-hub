@@ -543,7 +543,7 @@
   "slot": "W",
   "name": "Courage",
   "icon": "assets/abilities/garen/w.png",
-  "desc": "Garen passively increases his Armor and Magic Resist. He may also activate this ability to grant himself a shield that reduces incoming damage and crowd control durations for a short time."
+  "desc": "Garen passively increases his Armor and Magic Resist. He may also activate this ability to grant himself a shield that reduces incoming damage for a short time."
  },
  {
   "champ": "garen",
@@ -564,28 +564,28 @@
   "slot": "P",
   "name": "Happy Hour",
   "icon": "assets/abilities/gragas/passive.png",
-  "desc": "On ability use, Gragas takes a drink restoring 4% of his max Health. This effect can only happen every 8 seconds."
+  "desc": "On ability use, Gragas takes a drink restoring 2% of his max health over 4 seconds."
  },
  {
   "champ": "gragas",
   "slot": "Q",
   "name": "Barrel Roll",
   "icon": "assets/abilities/gragas/q.png",
-  "desc": "Gragas rolls his cask to a location, which can be activated to explode or will explode on its own after 4 seconds. Enemies struck by the blast have their Movement Speed slowed."
+  "desc": "Gragas rolls his cask to a location, which can be activated to explode or will explode on its own after 5 seconds. Enemies struck by the blast have their Attack Speed lowered."
  },
  {
   "champ": "gragas",
   "slot": "W",
   "name": "Drunken Rage",
   "icon": "assets/abilities/gragas/w.png",
-  "desc": "Gragas guzzles down brew from his cask for 1 second. After finishing, he becomes drunkenly empowered, dealing more damage on his next basic attack and reducing damage received."
+  "desc": "Gragas guzzles down brew from his cask for 1 second, restoring his Mana. After finishing, he becomes drunkenly empowered, increasing his damage dealt and reducing damage received."
  },
  {
   "champ": "gragas",
   "slot": "E",
   "name": "Body Slam",
   "icon": "assets/abilities/gragas/e.png",
-  "desc": "Gragas charges to a location and collides with the first enemy unit he comes across, dealing damage to all nearby enemy units and stunning them."
+  "desc": "Gragas charges to a location and collides with the first enemy unit he comes across, dealing damage to all nearby enemy units and slowing their movement."
  },
  {
   "champ": "gragas",
@@ -606,7 +606,7 @@
   "slot": "Q",
   "name": "H-28G Evolution Turret",
   "icon": "assets/abilities/heimerdinger/q.png",
-  "desc": "Heimerdinger lays down a rapid-fire cannon turret equipped with a secondary pass-through beam attack (turrets deal half damage to towers)."
+  "desc": "Heimerdinger lays down a machine gun turret. Turrets gain abilities as this skill is increased. (Turrets deal half damage to towers)."
  },
  {
   "champ": "heimerdinger",
@@ -618,16 +618,16 @@
  {
   "champ": "heimerdinger",
   "slot": "E",
-  "name": "CH-2 Electron Storm Grenade",
+  "name": "CH-1 Concussion Grenade",
   "icon": "assets/abilities/heimerdinger/e.png",
-  "desc": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units, as well as stunning anyone directly hit and slowing surrounding units."
+  "desc": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units as well as stunning anyone directly hit and blinding surrounding units."
  },
  {
   "champ": "heimerdinger",
   "slot": "R",
   "name": "UPGRADE!!!",
   "icon": "assets/abilities/heimerdinger/r.png",
-  "desc": "Heimerdinger invents an upgrade, causing his next spell to have increased effects."
+  "desc": "Passive / Active: Passively increases Cooldown Reduction. Activate to heal all active Evolution Turrets and cause them to fire frost shots, which reduce Movement Speed, for a short time."
  },
  {
   "champ": "janna",
@@ -1682,16 +1682,16 @@
  {
   "champ": "soraka",
   "slot": "P",
-  "name": "Salvation",
+  "name": "Consecration",
   "icon": "assets/abilities/soraka/passive.png",
-  "desc": "Soraka runs faster towards nearby low health allies."
+  "desc": "Increases surrounding allies' Magic Resist by 16."
  },
  {
   "champ": "soraka",
   "slot": "Q",
   "name": "Starcall",
   "icon": "assets/abilities/soraka/q.png",
-  "desc": "A star falls from the sky at the target location dealing magic damage and slowing enemies in the center of effect."
+  "desc": "A shower of stars falls from the sky, striking all nearby enemies for magic damage and reducing their Magic Resist for a short duration."
  },
  {
   "champ": "soraka",
@@ -1906,23 +1906,23 @@
  {
   "champ": "twitch",
   "slot": "W",
-  "name": "Venom Cask",
+  "name": "Debilitating Poison",
   "icon": "assets/abilities/twitch/w.png",
-  "desc": "Twitch hurls a cask of venom that explodes in an area, slowing targets and applying deadly venom to the target."
+  "desc": "Upon activation, slows nearby enemy champions by 30%, increased by 6% per Deadly Venom stack applied to them. Adding more Deadly Venom stacks after the slow is applied will further reduce their movement speed."
  },
  {
   "champ": "twitch",
   "slot": "E",
   "name": "Expunge",
   "icon": "assets/abilities/twitch/e.png",
-  "desc": "Twitch wreaks further havoc on poisoned enemies with a blast of his vile diseases."
+  "desc": "All nearby enemies secrete Twitch's toxic venoms from their bodies, dealing damage for each stack."
  },
  {
   "champ": "twitch",
   "slot": "R",
   "name": "Spray and Pray",
   "icon": "assets/abilities/twitch/r.png",
-  "desc": "Twitch unleashes the full power of his crossbow, shooting bolts over a great distance that pierce all enemies caught in their path."
+  "desc": "Twitch closes his eyes and fires his crossbow, rapidly spraying powerful piercing bolts ahead of him."
  },
  {
   "champ": "vayne",
@@ -2104,7 +2104,7 @@
   "slot": "P",
   "name": "Twin Disciplines",
   "icon": "assets/abilities/akali/passive.png",
-  "desc": "Discipline of Force: Akali's basic attacks deal an additional 6% bonus Magic Damage, increasing by 1% for every 6 Ability Power.<br><br>Discipline of Might: Akali gains 6% Spell Vamp, increasing by 1% for every 6 Bonus Attack Damage."
+  "desc": "Discipline of Force: Akali's basic attacks deal an additional 6% bonus Magic Damage, increasing by 1% for every 6 Ability Power.\n\nDiscipline of Might: Akali gains 6% Spell Vamp, increasing by 1% for every 6 Bonus Attack Damage."
  },
  {
   "champ": "akali",
@@ -2244,7 +2244,7 @@
   "slot": "P",
   "name": "Ionian Fervor",
   "icon": "assets/abilities/irelia/passive.png",
-  "desc": "Reduces the duration of all disables for each nearby enemy champion.<br><br>1 Champion: 10%<br>2 Champions: 25%<br>3 Champions: 40%"
+  "desc": "Reduces the duration of all disables for each nearby enemy champion.\n\n1 Champion: 10%\n2 Champions: 25%\n3 Champions: 40%"
  },
  {
   "champ": "irelia",
@@ -2279,7 +2279,7 @@
   "slot": "P",
   "name": "Mirror Image",
   "icon": "assets/abilities/leblanc/passive.png",
-  "desc": "When LeBlanc drops below 40% Health, she becomes invisible for 1 second and creates a Mirror Image that deals no damage and lasts for up to 8 seconds.<br><br>Mirror Image has a 1 minute cooldown.<br><br><span class=\"color99FF99\">Mirror Image can be controlled by holding the Alt key and using the right mouse button.</span>"
+  "desc": "When LeBlanc drops below 40% Health, she becomes invisible for 1 second and creates a Mirror Image that deals no damage and lasts for up to 8 seconds.\n\nMirror Image has a 1 minute cooldown.\n\nMirror Image can be controlled by holding the Alt key and using the right mouse button."
  },
  {
   "champ": "leblanc",
