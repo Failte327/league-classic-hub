@@ -1,0 +1,34 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="page-head"><h1>Log in</h1></div>
+
+<div class="auth-card">
+    <form method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="field">
+            <label asp-for="Input.Email"></label>
+            <input asp-for="Input.Email" class="form-control" autocomplete="username" placeholder="you@example.com" />
+        </div>
+        <div class="field">
+            <label asp-for="Input.Password"></label>
+            <input asp-for="Input.Password" class="form-control" type="password" autocomplete="current-password" />
+        </div>
+        <div class="form-check">
+            <label>
+                <input class="form-check-input" asp-for="Input.RememberMe" />
+                @Html.DisplayNameFor(m => m.Input.RememberMe)
+            </label>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Log in</button>
+        </div>
+        <p class="muted">
+            <a asp-page="./ForgotPassword">Forgot your password?</a><br />
+            New here? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register</a>.
+        </p>
+    </form>
+</div>
