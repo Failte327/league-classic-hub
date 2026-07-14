@@ -17,7 +17,7 @@ public class CreateModel : PageModel
     public async Task OnGetAsync()
     {
         Champions = await _db.Champions
-            .OrderBy(c => c.Slug == "any" ? 0 : 1)
+            .OrderBy(c => c.Slug == "generic" ? 0 : 1)
             .ThenBy(c => c.Name)
             .AsNoTracking()
             .ToListAsync();

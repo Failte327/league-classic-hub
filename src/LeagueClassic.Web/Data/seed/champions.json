@@ -612,9 +612,9 @@
   "title": "the Headsman's Pride"
  },
  {
-  "name": "Any",
+  "name": "Generic",
   "available": true,
-  "slug": "any",
-  "icon": "assets/champions/any.png"
+  "slug": "generic",
+  "icon": "assets/champions/generic.png"
  }
 ]

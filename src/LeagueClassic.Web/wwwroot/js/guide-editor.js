@@ -111,7 +111,7 @@
         skillInput.value = slots.join(',');
     }
 
-    // Not every guide has ability leveling (e.g. the champion-agnostic "Any" guide) —
+    // Not every guide has ability leveling (e.g. the champion-agnostic "Generic" guide) —
     // the section, and with it #skill-grid, is omitted from the page entirely then.
     if (grid) {
         grid.addEventListener('click', e => {

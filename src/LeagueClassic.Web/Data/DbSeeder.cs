@@ -165,13 +165,30 @@ public static class DbSeeder
         await db.SaveChangesAsync();
 
         await BackfillDescriptionsAsync(db, seedDir);
+        await RenameLegacyGenericChampionAsync(db);
         await BackfillNewChampionsAsync(db, seedDir);
         await BackfillChampionLoreAsync(db, seedDir);
         await BackfillAbilityNamesAsync(db, seedDir);
     }
 
+    // One-time rename: the champion-agnostic pseudo-champion went through a couple of
+    // names ("Any"/slug "any", then "General"/slug "general") before settling on
+    // "Generic"/slug "generic". Renaming the existing row in place (rather than
+    // delete+reinsert) keeps any guides already created under it correctly attached
+    // via ChampionId, regardless of which of the earlier names an install still has.
+    private static async Task RenameLegacyGenericChampionAsync(ApplicationDbContext db)
+    {
+        var legacy = await db.Champions.FirstOrDefaultAsync(c => c.Slug == "any" || c.Slug == "general");
+        if (legacy is null) return;
+
+        legacy.Name = "Generic";
+        legacy.Slug = "generic";
+        legacy.IconPath = "assets/champions/generic.png";
+        await db.SaveChangesAsync();
+    }
+
     // Inserts any champions.json entries added after the initial seed (e.g. the
-    // "Any" pseudo-champion for champion-agnostic guides) into an already-seeded
+    // "Generic" pseudo-champion for champion-agnostic guides) into an already-seeded
     // database. The champions table only bulk-seeds once, when empty, so a new
     // entry needs an explicit add-if-missing pass like this to reach existing installs.
     private static async Task BackfillNewChampionsAsync(ApplicationDbContext db, string seedDir)
