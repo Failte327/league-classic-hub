@@ -189,7 +189,7 @@ button.btn:hover { background: var(--brand-dark); }
 .field label { display: block; font-weight: bold; margin-bottom: 4px; }
 .compose-title { display: flex; align-items: center; gap: 10px; }
 .compose-title span { color: var(--gold); }
-.validation-summary { color: var(--accent); }
+.validation-summary { color: #a5341c; }
 .validation-summary ul { margin: 6px 0; }
 .hint { color: var(--muted); font-size: 11px; }
 .form-actions { display: flex; gap: 10px; justify-content: flex-end; margin: 16px 0; }
@@ -367,7 +367,7 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 
 /* ============================ Reports / Moderation ============================ */
 .report-link { display: inline-block; margin-top: 8px; font-size: 11px; color: var(--muted); }
-.report-link:hover { color: var(--accent); }
+.report-link:hover { color: var(--gold); }
 .report-form { max-width: 520px; }
 .report-form select { width: 100%; padding: 8px 10px; border: 1px solid var(--line); font: inherit; margin-bottom: 8px; }
 .nav-mod { color: var(--gold) !important; }
@@ -596,7 +596,7 @@ main .col-lg-4 h3, main .col-lg-4 h4 { color: #e6ecf3; font-size: 15px; }
 }
 .btn.btn-primary:hover, .w-100.btn:hover, a.btn:hover { background: #d8bd88; text-decoration: none; }
 .w-100 { width: 100%; }
-.text-danger { color: var(--accent); font-size: 12px; }
+.text-danger { color: #a5341c; font-size: 12px; }
 main form[method=post] a, main .row a { color: var(--brand); }
 
 /* Our own auth/profile cards (register, account) */
