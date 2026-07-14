@@ -20,6 +20,7 @@
 }
 
 * { box-sizing: border-box; }
+button, input, select, textarea { font: inherit; }
 
 body {
     margin: 0;
@@ -456,6 +457,17 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 .tf-meta { color: var(--muted); font-size: 11px; }
 
 /* ============================ Forum threads ============================ */
+
+/* Rotating classic backdrop (old map, old golems, old Nexus crystals) behind the
+   forum header — kept dim and desaturated so it reads as texture, not a hero image. */
+.forum-banner { position: relative; overflow: hidden; margin-bottom: 18px; border-bottom: 2px solid var(--gold); }
+.forum-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .5; filter: saturate(.75); }
+.forum-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(8,16,30,.55) 0%, rgba(8,16,30,.93) 100%);
+}
+.forum-banner .page-head { position: relative; z-index: 1; padding: 20px 4px; }
+
 .crumbs { color: #9fb2c8; font-size: 13px; margin-bottom: 12px; }
 .crumbs a { color: var(--gold); }
 .pin, .lock { margin-right: 4px; }
