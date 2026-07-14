@@ -11,6 +11,13 @@ public class Champion
     public string? IconPath { get; set; }      // e.g. "assets/champions/ahri.png"
     public bool IsAvailable { get; set; }       // false = confirmed-but-not-yet-playable
 
+    // Classic lore, frozen at DDragon 5.1.1 — the last patch before Riot's ongoing
+    // lore rewrites, so this is genuinely the old backstory rather than current canon.
+    public string? Title { get; set; }          // e.g. "the Nine-Tailed Fox"
+    public string? Blurb { get; set; }          // short teaser paragraph
+    public string? Lore { get; set; }           // full backstory; paragraphs separated by "\n\n",
+                                                 // a leading "> " paragraph is the closing flavor quote
+
     public List<ChampionAbility> Abilities { get; set; } = new();
 }
 

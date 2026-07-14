@@ -1,0 +1,23 @@
+@page
+@model LeagueClassic.Web.Pages.Reference.SummonerSpellsModel
+@{
+    ViewData["Title"] = "Summoner Spells";
+}
+
+<partial name="_Tabs" model="@("SummonerSpells")" />
+
+<p class="muted">Back when Ignite still tickled and Clairvoyance was a spell slot, not a trinket.</p>
+
+<div class="spell-palette">
+    @foreach (var s in Model.Spells)
+    {
+        <div class="spell-opt" data-name="@s.Name" data-desc="@s.Description">
+            <img src="~/@s.IconPath" alt="@s.Name" loading="lazy" />
+            <span>@s.Name</span>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script src="~/js/hover-panel.js" asp-append-version="true"></script>
+}

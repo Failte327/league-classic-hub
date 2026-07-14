@@ -395,6 +395,30 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 .guide-body table { border-collapse: collapse; }
 .guide-body td, .guide-body th { border: 1px solid var(--line); padding: 4px 8px; }
 
+/* ============================ Champion Codex ============================ */
+.champ-title { color: var(--gold); font-size: 13px; font-style: italic; margin-top: 2px; }
+.champ-blurb { color: var(--ink); font-size: 15px; line-height: 1.7; border-left: 3px solid var(--gold); padding: 2px 0 2px 14px; margin: 4px 0 16px; }
+.lore-block { line-height: 1.75; margin-top: 6px; }
+.lore-block h3 { font-size: 12px; text-transform: uppercase; color: var(--brand-dark); margin: 0 0 8px; }
+.lore-block p { margin: 0 0 12px; }
+.lore-quote {
+    font-style: italic; color: var(--brand-dark); border-left: 3px solid var(--line);
+    padding-left: 12px; margin: 16px 0 !important;
+}
+
+/* ============================ Reference (Items/Runes/Masteries/Spells) ============================ */
+.ref-tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--gold); margin-bottom: 16px; }
+.ref-tabs a {
+    padding: 7px 14px; font-size: 13px; font-weight: bold; color: #9fb2c8;
+    background: #0e2038; border: 1px solid var(--line); border-bottom: none;
+}
+.ref-tabs a:hover { color: #fff; text-decoration: none; }
+.ref-tabs a.active { color: var(--brand-dark); background: var(--panel); }
+
+.item-group { margin-bottom: 18px; }
+.mastery-node.ref img { filter: none; }
+.mastery-node.ref { cursor: default; }
+
 /* My Guides + owner actions */
 .flash { background: #eaf6ec; border: 1px solid #b7ddbc; color: #216e2b; padding: 8px 12px; margin-bottom: 12px; }
 .actions { white-space: nowrap; }

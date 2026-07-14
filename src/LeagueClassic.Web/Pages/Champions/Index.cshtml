@@ -1,0 +1,40 @@
+@page
+@model LeagueClassic.Web.Pages.Champions.IndexModel
+@{
+    ViewData["Title"] = "Champions";
+}
+
+<div class="page-head">
+    <h1>Champion Codex</h1>
+</div>
+<p class="muted">
+    The Fields of Justice, as they were — classic champions with their old splash art and their
+    original backstory, before the retcons.
+</p>
+
+<input type="text" id="champ-filter" class="filter-box" placeholder="Filter champions…"
+       autocomplete="off" aria-label="Filter champions" />
+
+<div class="champ-grid" id="champ-grid">
+    @foreach (var c in Model.Champions)
+    {
+        <a class="champ-tile" asp-page="/Champions/Details" asp-route-slug="@c.Slug"
+           data-name="@c.Name.ToLowerInvariant()">
+            <img src="~/@c.IconPath" alt="@c.Name" loading="lazy" />
+            <span>@c.Name</span>
+        </a>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        const box = document.getElementById('champ-filter');
+        const tiles = [...document.querySelectorAll('#champ-grid .champ-tile')];
+        box.addEventListener('input', () => {
+            const q = box.value.trim().toLowerCase();
+            tiles.forEach(t => {
+                t.style.display = t.dataset.name.includes(q) ? '' : 'none';
+            });
+        });
+    </script>
+}

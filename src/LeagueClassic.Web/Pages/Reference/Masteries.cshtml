@@ -1,0 +1,31 @@
+@page
+@model LeagueClassic.Web.Pages.Reference.MasteriesModel
+@{
+    ViewData["Title"] = "Masteries";
+}
+
+<partial name="_Tabs" model="@("Masteries")" />
+
+<p class="muted">The full Offense, Defense, and Utility trees — hover a node for what it does at each rank.</p>
+
+<div class="mastery-trees read-only ref">
+    @foreach (var tree in new[] { "Offense", "Defense", "Utility" })
+    {
+        <div class="mastery-tree">
+            <div class="mt-head mt-head-@tree.ToLower()">@tree</div>
+            <div class="mt-grid">
+                @foreach (var m in Model.Masteries.Where(x => x.Tree == tree))
+                {
+                    <span class="mastery-node ref" style="grid-column:@(m.Col + 1);grid-row:@m.Row"
+                          data-name="@m.Name" data-desc="@m.Description">
+                        <img src="~/@m.IconPath" alt="@m.Name" loading="lazy" />
+                    </span>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script src="~/js/hover-panel.js" asp-append-version="true"></script>
+}

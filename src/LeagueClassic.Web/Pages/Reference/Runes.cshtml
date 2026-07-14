@@ -1,0 +1,29 @@
+@page
+@model LeagueClassic.Web.Pages.Reference.RunesModel
+@{
+    ViewData["Title"] = "Runes";
+}
+
+<partial name="_Tabs" model="@("Runes")" />
+
+<p class="muted">The classic rune page, mark through quintessence — hover for the per-rank values.</p>
+
+@foreach (var group in Model.BySlot)
+{
+    <div class="item-group">
+        <h3>@System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(group.Key)</h3>
+        <div class="item-row">
+            @foreach (var r in group)
+            {
+                <div class="item-opt" data-name="@r.Name" data-desc="@r.Description">
+                    <img src="~/@r.IconPath" alt="@r.Name" loading="lazy" />
+                    <span class="item-opt-name">@r.Name.Replace("Greater ", "")</span>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script src="~/js/hover-panel.js" asp-append-version="true"></script>
+}

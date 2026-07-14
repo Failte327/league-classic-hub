@@ -1,0 +1,68 @@
+@page "{slug}"
+@model LeagueClassic.Web.Pages.Champions.DetailsModel
+@{
+    ViewData["Title"] = Model.Champion.Name;
+    var abilities = new[] { "P", "Q", "W", "E", "R" };
+}
+
+<article class="guide-view champ-view">
+    <header class="guide-header champ-banner">
+        <div class="guide-bg" style="background-image:url('/assets/splash/@(Model.Champion.Slug).jpg')"></div>
+        <img src="~/@Model.Champion.IconPath" alt="@Model.Champion.Name" class="champ-icon-lg" />
+        <div>
+            <h1>@Model.Champion.Name</h1>
+            @if (Model.Champion.Title is not null)
+            {
+                <div class="champ-title">@Model.Champion.Title</div>
+            }
+        </div>
+    </header>
+
+    @if (Model.Champion.Blurb is not null)
+    {
+        <p class="champ-blurb">@Model.Champion.Blurb</p>
+    }
+
+    @if (Model.AbilityBySlot.Count > 0)
+    {
+        <div class="loadout-block">
+            <h3>Abilities</h3>
+            <div class="ability-bar">
+                @foreach (var slot in abilities)
+                {
+                    if (Model.AbilityBySlot.TryGetValue(slot, out var ab))
+                    {
+                        <span class="ability-chip" title="@ab.Name">
+                            <span class="slot-key slot-@slot">@slot</span>
+                            @if (ab.IconPath is not null)
+                            {
+                                <img src="~/@ab.IconPath" alt="@ab.Name" />
+                            }
+                            <span class="ability-name">@ab.Name</span>
+                        </span>
+                    }
+                }
+            </div>
+        </div>
+    }
+
+    @if (Model.Champion.Lore is not null)
+    {
+        <div class="lore-block">
+            <h3>Backstory</h3>
+            @foreach (var para in Model.Champion.Lore.Split("\n\n", StringSplitOptions.RemoveEmptyEntries))
+            {
+                if (para.StartsWith("> "))
+                {
+                    <p class="lore-quote">@para[2..]</p>
+                }
+                else
+                {
+                    <p>@para</p>
+                }
+            }
+        </div>
+    }
+
+    <p><a asp-page="/Champions/Index">&larr; All champions</a></p>
+</article>

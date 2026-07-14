@@ -91,7 +91,7 @@ public static class DbSeeder
                 db.Champions.Add(new Champion
                 {
                     Name = c.Name, Slug = c.Slug, IconPath = c.Icon,
-                    IsAvailable = c.Available,
+                    IsAvailable = c.Available, Title = c.Title, Blurb = c.Blurb, Lore = c.Lore,
                 });
             }
         }
@@ -165,6 +165,7 @@ public static class DbSeeder
         await db.SaveChangesAsync();
 
         await BackfillDescriptionsAsync(db, seedDir);
+        await BackfillChampionLoreAsync(db, seedDir);
     }
 
     // Fills Description onto item/spell rows that were seeded before the column
@@ -181,6 +182,27 @@ public static class DbSeeder
             if (itemDesc.TryGetValue(item.Slug, out var d)) { item.Description = d; changed = true; }
         foreach (var spell in await db.SummonerSpells.Where(s => s.Description == null).ToListAsync())
             if (spellDesc.TryGetValue(spell.Slug, out var d)) { spell.Description = d; changed = true; }
+
+        if (changed) await db.SaveChangesAsync();
+    }
+
+    // Fills Blurb/Lore onto champion rows that were seeded before those columns
+    // existed. Non-destructive: only touches rows where Lore is null.
+    private static async Task BackfillChampionLoreAsync(ApplicationDbContext db, string seedDir)
+    {
+        var bySlug = Load<ChampionSeed>(seedDir, "champions.json").ToDictionary(c => c.Slug, c => c);
+
+        var changed = false;
+        foreach (var champ in await db.Champions.Where(c => c.Lore == null).ToListAsync())
+        {
+            if (bySlug.TryGetValue(champ.Slug, out var c) && c.Lore != null)
+            {
+                champ.Lore = c.Lore;
+                champ.Blurb = c.Blurb;
+                champ.Title = c.Title;
+                changed = true;
+            }
+        }
 
         if (changed) await db.SaveChangesAsync();
     }
@@ -233,7 +255,7 @@ public static class DbSeeder
     }
 
     // Seed DTOs matching Data/seed/*.json
-    private sealed record ChampionSeed(string Name, string Slug, string? Icon, bool Available);
+    private sealed record ChampionSeed(string Name, string Slug, string? Icon, bool Available, string? Title, string? Blurb, string? Lore);
     private sealed record ItemSeed(string Name, string Slug, string Category, string? Icon, string? Desc);
     private sealed record SpellSeed(string Name, string Slug, string? Icon, string? Desc);
     private sealed record AbilitySeed(string Champ, string Slot, string Name, string? Icon);
