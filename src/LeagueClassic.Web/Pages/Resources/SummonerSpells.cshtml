@@ -1,12 +1,12 @@
 @page
-@model LeagueClassic.Web.Pages.Reference.SummonerSpellsModel
+@model LeagueClassic.Web.Pages.Resources.SummonerSpellsModel
 @{
     ViewData["Title"] = "Summoner Spells";
 }
 
 <partial name="_Tabs" model="@("SummonerSpells")" />
 
-<p class="muted">League Classic Summoner Spells.</p>
+<p class="muted">League Classic Summoner Spells</p>
 
 <div class="spell-palette">
     @foreach (var s in Model.Spells)

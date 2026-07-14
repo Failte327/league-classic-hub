@@ -2,7 +2,7 @@ using LeagueClassic.Web.Data;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace LeagueClassic.Web.Pages.Reference;
+namespace LeagueClassic.Web.Pages.Resources;
 
 public class ItemsModel : PageModel
 {

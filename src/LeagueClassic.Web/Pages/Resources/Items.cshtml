@@ -1,12 +1,12 @@
 @page
-@model LeagueClassic.Web.Pages.Reference.ItemsModel
+@model LeagueClassic.Web.Pages.Resources.ItemsModel
 @{
     ViewData["Title"] = "Items";
 }
 
 <partial name="_Tabs" model="@("Items")" />
 
-<p class="muted">The League Classic Item List.</p>
+<p class="muted">The League Classic Items</p>
 
 @foreach (var group in Model.ByCategory)
 {

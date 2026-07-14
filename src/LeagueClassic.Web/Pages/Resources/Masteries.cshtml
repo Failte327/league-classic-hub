@@ -1,12 +1,12 @@
 @page
-@model LeagueClassic.Web.Pages.Reference.MasteriesModel
+@model LeagueClassic.Web.Pages.Resources.MasteriesModel
 @{
     ViewData["Title"] = "Masteries";
 }
 
 <partial name="_Tabs" model="@("Masteries")" />
 
-<p class="muted">League Classic Masteries.</p>
+<p class="muted">League Classic Masteries</p>
 
 <div class="mastery-trees read-only ref">
     @foreach (var tree in new[] { "Offense", "Defense", "Utility" })

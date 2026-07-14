@@ -1,6 +1,12 @@
 /* League Classic — deliberately "classic" forum styling: dense, table-driven,
    high-contrast, early-2010s community-site vibe. Hand-rolled, no framework. */
 
+/* Site-wide scale, applied like a browser zoom so every px value (fonts,
+   icons, gaps, borders) grows together in proportion rather than drifting
+   out of sync the way one-off size bumps do. Adjust this single number to
+   retune the whole site. */
+html { zoom: 1.3; }
+
 :root {
     /* Navy + gold + parchment: the Hextech chrome stays, but content panels
        lean warm — the yellowed-page, hand-painted-portrait feel of the old

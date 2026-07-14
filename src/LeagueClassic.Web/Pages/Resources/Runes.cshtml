@@ -1,12 +1,12 @@
 @page
-@model LeagueClassic.Web.Pages.Reference.RunesModel
+@model LeagueClassic.Web.Pages.Resources.RunesModel
 @{
     ViewData["Title"] = "Runes";
 }
 
 <partial name="_Tabs" model="@("Runes")" />
 
-<p class="muted">League Classic Runes.</p>
+<p class="muted">League Classic Runes</p>
 
 @foreach (var group in Model.BySlot)
 {
