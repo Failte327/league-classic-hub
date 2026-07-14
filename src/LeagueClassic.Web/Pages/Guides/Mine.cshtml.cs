@@ -20,9 +20,12 @@ public class MineModel : PageModel
     }
 
     public List<Guide> Guides { get; private set; } = new();
+    public string BannerBg { get; private set; } = ClassicBanner.RandomFile();
 
     public async Task OnGetAsync()
     {
+        BannerBg = ClassicBanner.RandomFile();
+
         var uid = _users.GetUserId(User);
         Guides = await _db.Guides
             .Where(g => g.AuthorId == uid)

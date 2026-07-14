@@ -424,7 +424,10 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 /* My Guides + owner actions */
 .flash { background: #eaf6ec; border: 1px solid #b7ddbc; color: #216e2b; padding: 8px 12px; margin-bottom: 12px; }
 .actions { white-space: nowrap; }
-.actions form, .owner-actions form { display: inline; }
+/* display:contents (not inline) — a <form> wrapping just a button otherwise
+   generates its own oversized inline box in table cells / flex rows, taller
+   than the button itself and overflowing into whatever sits above it. */
+.actions form, .owner-actions form { display: contents; }
 .owner-actions { margin-left: auto; display: flex; gap: 6px; align-items: flex-start; }
 .mini-btn {
     display: inline-block; font-size: 11px; font-weight: bold; padding: 3px 9px; cursor: pointer;
@@ -486,13 +489,16 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 
 /* Rotating classic backdrop (old map, old golems, old Nexus crystals) behind the
    forum header — kept dim and desaturated so it reads as texture, not a hero image. */
-.forum-banner { position: relative; overflow: hidden; margin-bottom: 18px; border-bottom: 2px solid var(--gold); }
+.forum-banner {
+    position: relative; overflow: hidden; margin-bottom: 18px;
+    border-bottom: 2px solid var(--gold); min-height: 139px; display: flex; align-items: center;
+}
 .forum-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .5; filter: saturate(.75); }
 .forum-bg::after {
     content: ""; position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(8,16,30,.55) 0%, rgba(8,16,30,.93) 100%);
 }
-.forum-banner .page-head { position: relative; z-index: 1; padding: 20px 4px; }
+.forum-banner .page-head { position: relative; z-index: 1; padding: 20px 4px; width: 100%; }
 
 .crumbs { color: #9fb2c8; font-size: 13px; margin-bottom: 12px; }
 .crumbs a { color: var(--gold); }
