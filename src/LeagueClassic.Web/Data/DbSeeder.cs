@@ -290,7 +290,7 @@ public static class DbSeeder
     }
 
     private const string WelcomePost =
-        "Welcome, Summoners! I am so glad to have all of you here -- League Classic Hub is a haven where all builds, " +
+        "Welcome, Summoners! I am so glad to have all of you here -- League Classic Archive is a haven where all builds, " +
         "all champions, and all playstyles are welcome. A place where Teemo Mains and AP Sion " +
         "nostalgists can share a drink and a story. A place where AP Master Yis can Meditate under " +
         "tower for hours. A place where we can rejoice in the return of our beloved Fields of Justice. " +
@@ -299,15 +299,28 @@ public static class DbSeeder
 
     private static async Task SeedWelcomeThreadAsync(ApplicationDbContext db)
     {
-        // Pinned welcome thread — idempotent, so the flat forum always has it.
+        // Pinned welcome thread — idempotent, so the flat forum always has it. The
+        // slug is kept stable across the Hub->Archive rename (it's a permalink);
+        // only the displayed title/body get updated, via the backfill below.
         const string slug = "welcome-to-league-classic-hub";
-        if (await db.Threads.AnyAsync(t => t.Slug == slug))
+        var existing = await db.Threads.Include(t => t.Posts).FirstOrDefaultAsync(t => t.Slug == slug);
+        if (existing is not null)
+        {
+            if (existing.Title == "Welcome to League Classic Hub!")
+            {
+                existing.Title = "Welcome to League Classic Archive!";
+                existing.Excerpt = Excerpt(WelcomePost);
+                var firstPost = existing.Posts.OrderBy(p => p.CreatedAt).FirstOrDefault();
+                if (firstPost is not null) firstPost.BodyMarkdown = WelcomePost;
+                await db.SaveChangesAsync();
+            }
             return;
+        }
 
         var now = DateTimeOffset.UtcNow;
         var thread = new ForumThread
         {
-            Title = "Welcome to League Classic Hub!",
+            Title = "Welcome to League Classic Archive!",
             Slug = slug,
             Excerpt = Excerpt(WelcomePost),
             IsPinned = true,

@@ -1,4 +1,4 @@
-# League Classic Hub
+# League Classic Archive
 
 A classic-style guides, forum, and resource site for **League Classic** (launching July 29, 2026).
 Old-school MOBAFire style.
