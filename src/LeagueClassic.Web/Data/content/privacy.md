@@ -14,9 +14,11 @@ League Classic Archive ("we," "us") runs this site at leagueclassicarchive.net. 
 
 **Technical data.** Like any web service, our hosting infrastructure processes IP addresses to serve pages and to rate-limit posting (this is how we blunt spam floods) — this isn't stored in our database, though it may appear transiently in standard server logs.
 
+**Visit counts.** We record a basic hit counter for pages on the site: a timestamp and the page path, so we can see how much traffic the site gets. We don't store your IP address, browser/device info, or any cookie or identifier alongside it — there's nothing in that record that ties a visit back to you or lets us tell one visitor from another. It isn't shared with any third party or ad network.
+
 ## What we don't do
 
-- We don't run ads, trackers, or analytics on this site today. If that changes, we'll update this policy first and add the consent controls that go with it (particularly for visitors in the EU/UK).
+- We don't run ads or third-party trackers on this site, and we don't share any data with ad networks or analytics vendors.
 - We don't sell or rent your information to anyone, ever.
 - We don't email you anything except account-related messages (like password resets). No newsletters, no marketing.
 

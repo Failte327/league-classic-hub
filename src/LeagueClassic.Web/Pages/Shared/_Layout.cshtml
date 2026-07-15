@@ -30,6 +30,7 @@
                 @if (User.IsInRole(DbSeeder.ModeratorRole))
                 {
                     <a class="nav-mod" asp-page="/Moderation/Index">Moderation</a>
+                    <a class="nav-mod" asp-page="/Stats/Index">Stats</a>
                 }
                 <a asp-page="/Rules">Rules</a>
             </nav>

@@ -1,0 +1,59 @@
+@page
+@model LeagueClassic.Web.Pages.Stats.IndexModel
+@{
+    ViewData["Title"] = "Site Stats";
+    var maxDay = Model.Last14Days.Count == 0 ? 1 : Math.Max(1, Model.Last14Days.Max(d => d.Count));
+}
+
+<div class="page-head"><h1>Site Stats</h1></div>
+<p class="muted">Page views recorded by the built-in visit counter &mdash; no cookies, no IP addresses, just a timestamp and a path per request.</p>
+
+<div class="stats-grid">
+    <div class="stat-tile">
+        <div class="stat-tile-value">@Model.TotalViews.ToString("N0")</div>
+        <div class="stat-tile-label">All-time views</div>
+    </div>
+    <div class="stat-tile">
+        <div class="stat-tile-value">@Model.TodayViews.ToString("N0")</div>
+        <div class="stat-tile-label">Today</div>
+    </div>
+    <div class="stat-tile">
+        <div class="stat-tile-value">@Model.Last7DaysViews.ToString("N0")</div>
+        <div class="stat-tile-label">Last 7 days</div>
+    </div>
+</div>
+
+<div class="cat-header">Last 14 days</div>
+<div class="stats-chart">
+    @foreach (var day in Model.Last14Days)
+    {
+        var pct = day.Count == 0 ? 0 : Math.Max(4, (int)Math.Round(day.Count * 100.0 / maxDay));
+        <div class="stats-bar-col" title="@day.Date.ToString("MMM d"): @day.Count view@(day.Count == 1 ? "" : "s")">
+            <div class="stats-bar" style="height:@(pct)%"></div>
+            <div class="stats-bar-label">@day.Date.ToString("M/d")</div>
+        </div>
+    }
+</div>
+
+@if (Model.TopPages.Count == 0)
+{
+    <div class="empty">No views recorded in the last 7 days.</div>
+}
+else
+{
+    <table class="forum-table">
+        <caption class="cat-header">Top pages (last 7 days)</caption>
+        <thead>
+            <tr><th>Path</th><th class="stat">Views</th></tr>
+        </thead>
+        <tbody>
+        @foreach (var p in Model.TopPages)
+        {
+            <tr>
+                <td><code>@p.Path</code></td>
+                <td class="stat"><b>@p.Count.ToString("N0")</b></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

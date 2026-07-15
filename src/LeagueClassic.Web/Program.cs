@@ -3,6 +3,7 @@ using LeagueClassic.Web.Data;
 using Microsoft.AspNetCore.DataProtection;
 using LeagueClassic.Web.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
@@ -70,6 +71,7 @@ builder.Services.AddSingleton<MarkdownRenderer>();
 builder.Services.AddSingleton<ContentModerationService>();
 builder.Services.AddScoped<GuideEditorService>();
 builder.Services.AddScoped<VotingService>();
+builder.Services.AddScoped<VisitRecorder>();
 
 // Rate limiting to blunt spam-flooding of the posting endpoints.
 builder.Services.AddRateLimiter(options =>
@@ -102,6 +104,23 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseRateLimiter();
+
+// Super-lightweight visitor counter: one row per real page GET. Placed
+// before UseOutputCache so cached hits still get counted, and gated on
+// PageActionDescriptor so it only fires for actual Razor Pages (not static
+// assets, the guide-preview endpoint, 404s, etc).
+app.Use(async (context, next) =>
+{
+    if (HttpMethods.IsGet(context.Request.Method)
+        && context.GetEndpoint()?.Metadata.GetMetadata<PageActionDescriptor>() is not null)
+    {
+        var recorder = context.RequestServices.GetRequiredService<VisitRecorder>();
+        await recorder.RecordAsync(context.Request.Path.Value ?? "/");
+    }
+
+    await next();
+});
+
 app.UseOutputCache();
 
 app.MapStaticAssets();

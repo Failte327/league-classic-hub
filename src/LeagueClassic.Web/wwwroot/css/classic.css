@@ -640,6 +640,25 @@ main form[method=post] a, main .row a { color: var(--brand); }
    breakpoint fixes below. */
 body { overflow-x: hidden; }
 
+/* ============================ Site Stats ============================ */
+
+.stats-grid { display: flex; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+.stat-tile {
+    flex: 1 1 160px; background: var(--panel); border: 1px solid var(--line);
+    border-top: 3px solid var(--gold); padding: 14px 16px; color: var(--ink);
+}
+.stat-tile-value { font: bold 28px/1 "Trebuchet MS", Verdana, sans-serif; color: var(--brand-dark); }
+.stat-tile-label { color: var(--muted); font-size: 12px; text-transform: uppercase; margin-top: 4px; }
+
+.stats-chart {
+    display: flex; align-items: flex-end; gap: 4px; height: 140px;
+    background: var(--panel); border: 1px solid var(--line); padding: 12px 12px 8px;
+    margin-bottom: 18px;
+}
+.stats-bar-col { flex: 1 1 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+.stats-bar { width: 100%; max-width: 26px; background: var(--brand); min-height: 2px; }
+.stats-bar-label { color: var(--muted); font-size: 10px; margin-top: 4px; white-space: nowrap; }
+
 @media (max-width: 640px) {
     /* The site-wide zoom (see top of file) is great on desktop but eats
        mobile's already-scarce width on every single element; dial it back
@@ -664,5 +683,9 @@ body { overflow-x: hidden; }
        instead of blowing out the whole page. */
     .skill-table { display: block; overflow-x: auto; }
     .skill-table thead, .skill-table tbody { display: table; width: 100%; }
+
+    /* 14 bar-chart columns are too cramped at phone widths for the day
+       labels; drop them and let the tooltip (title attr) carry the date. */
+    .stats-bar-label { display: none; }
 }
 

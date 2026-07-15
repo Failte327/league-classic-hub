@@ -24,6 +24,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<GuideRune> GuideRunes => Set<GuideRune>();
     public DbSet<Report> Reports => Set<Report>();
     public DbSet<Vote> Votes => Set<Vote>();
+    public DbSet<PageView> PageViews => Set<PageView>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -197,6 +198,12 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 .WithMany()
                 .HasForeignKey(v => v.VoterId)
                 .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        builder.Entity<PageView>(e =>
+        {
+            e.HasIndex(v => v.OccurredAt);
+            e.Property(v => v.Path).HasMaxLength(300);
         });
     }
 }
