@@ -634,3 +634,35 @@ main form[method=post] a, main .row a { color: var(--brand); }
 }
 .nav-pills .nav-link.active { background: var(--brand-dark); }
 
+/* ============================ Mobile ============================ */
+/* Nothing should ever force the whole page to scroll sideways — a hard
+   backstop even if some component's intrinsic width slips past the
+   breakpoint fixes below. */
+body { overflow-x: hidden; }
+
+@media (max-width: 640px) {
+    /* The site-wide zoom (see top of file) is great on desktop but eats
+       mobile's already-scarce width on every single element; dial it back
+       so nothing needs 30% more room than the screen actually has. */
+    html { zoom: 1; }
+
+    /* 7-8 links in one non-wrapping flex row is the single biggest overflow
+       source on every page at phone widths — let it wrap instead. */
+    .mainnav { flex-wrap: wrap; }
+    .mainnav a { padding: 8px 10px; }
+
+    /* Listing tables: drop the secondary columns (Author/Updated/Status/
+       Reports-count — anything marked .stat that isn't the row's action
+       buttons) so Champion + title/content fit comfortably without needing
+       to scroll. .stat.actions (Edit/Delete/Dismiss buttons) stays, since
+       those are the whole point of e.g. the My Guides / Moderation pages. */
+    .forum-table .stat:not(.actions) { display: none; }
+    .forum-table { overflow-x: auto; }
+
+    /* The per-level skill-order grid has no non-essential columns to drop
+       (every column is a real game level) — let it scroll independently
+       instead of blowing out the whole page. */
+    .skill-table { display: block; overflow-x: auto; }
+    .skill-table thead, .skill-table tbody { display: table; width: 100%; }
+}
+
