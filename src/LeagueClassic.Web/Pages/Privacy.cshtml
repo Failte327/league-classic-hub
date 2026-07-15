@@ -1,8 +1,10 @@
-﻿@page
-@model PrivacyModel
+@page
+@model LeagueClassic.Web.Pages.PrivacyModel
+@inject MarkdownRenderer Markdown
 @{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<article class="content-page guide-body">
+    @Markdown.ToHtml(Model.Markdown)
+</article>
