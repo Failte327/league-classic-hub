@@ -14,16 +14,19 @@ public class ThreadModel : PageModel
     private readonly ApplicationDbContext _db;
     private readonly UserManager<ApplicationUser> _users;
     private readonly ContentModerationService _moderation;
+    private readonly VotingService _voting;
 
-    public ThreadModel(ApplicationDbContext db, UserManager<ApplicationUser> users, ContentModerationService moderation)
+    public ThreadModel(ApplicationDbContext db, UserManager<ApplicationUser> users, ContentModerationService moderation, VotingService voting)
     {
         _db = db;
         _users = users;
         _moderation = moderation;
+        _voting = voting;
     }
 
     public ForumThread Thread { get; private set; } = default!;
     public List<Post> Posts { get; private set; } = new();
+    public Dictionary<int, short> MyVotes { get; private set; } = new();
 
     [BindProperty]
     public string ReplyBody { get; set; } = "";
@@ -71,6 +74,22 @@ public class ThreadModel : PageModel
         return RedirectToPage(new { id, slug = thread.Slug });
     }
 
+    public async Task<IActionResult> OnPostUpvoteAsync(int id, int postId) => await VoteAsync(id, postId, 1);
+    public async Task<IActionResult> OnPostDownvoteAsync(int id, int postId) => await VoteAsync(id, postId, -1);
+
+    private async Task<IActionResult> VoteAsync(int id, int postId, short value)
+    {
+        if (User.Identity?.IsAuthenticated != true) return Challenge();
+
+        var thread = await _db.Threads.AsNoTracking().FirstOrDefaultAsync(t => t.Id == id);
+        if (thread is null) return NotFound();
+        var post = await _db.Posts.FirstOrDefaultAsync(p => p.Id == postId && p.ThreadId == id);
+        if (post is null) return NotFound();
+
+        await _voting.CastAsync(VoteTargetType.Post, post.Id, _users.GetUserId(User)!, value);
+        return RedirectToPage(new { id, slug = thread.Slug });
+    }
+
     private async Task<bool> LoadAsync(int id)
     {
         var thread = await _db.Threads
@@ -85,6 +104,8 @@ public class ThreadModel : PageModel
             .OrderBy(p => p.CreatedAt)
             .AsNoTracking()
             .ToListAsync();
+
+        MyVotes = await _voting.MyVotesAsync(VoteTargetType.Post, Posts.Select(p => p.Id), _users.GetUserId(User));
         return true;
     }
 }

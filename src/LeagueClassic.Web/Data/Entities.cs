@@ -44,6 +44,9 @@ public class Post
 
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
     public DateTimeOffset? EditedAt { get; set; }
+
+    // Denormalized net vote tally (upvotes minus downvotes).
+    public int Score { get; set; }
 }
 
 // ---- Guides ---------------------------------------------------------------
@@ -89,6 +92,9 @@ public class Guide
     public GuideStatus Status { get; set; } = GuideStatus.Draft;
 
     public int ViewCount { get; set; }
+
+    // Denormalized net vote tally (upvotes minus downvotes).
+    public int Score { get; set; }
 
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
     public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;

@@ -35,6 +35,21 @@
                 }
             </div>
         </div>
+        <div class="vote-widget">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <form method="post" asp-page-handler="Upvote" asp-route-slug="@Model.Guide.Slug">
+                    <button type="submit" class="vote-btn @(Model.MyVote == 1 ? "voted-up" : "")" title="Upvote">▲</button>
+                </form>
+            }
+            <span class="vote-score">@Model.Guide.Score</span>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <form method="post" asp-page-handler="Downvote" asp-route-slug="@Model.Guide.Slug">
+                    <button type="submit" class="vote-btn @(Model.MyVote == -1 ? "voted-down" : "")" title="Downvote">▼</button>
+                </form>
+            }
+        </div>
         @if (Model.CanEdit)
         {
             <div class="owner-actions">
@@ -205,6 +220,52 @@
     <div class="guide-body">
         @Markdown.ToHtml(Model.Guide.BodyMarkdown)
     </div>
+
+    <!-- Comments -->
+    <section class="panel comments-box">
+        <h2>Comments (@Model.Comments.Count)</h2>
+        @if (Model.Comments.Count == 0)
+        {
+            <div class="empty">No comments yet.</div>
+        }
+        else
+        {
+            <div class="posts">
+                @foreach (var c in Model.Comments)
+                {
+                    <article class="post">
+                        <div class="post-author">
+                            <span class="pa-name">@c.Author.Display("Summoner")</span>
+                            <span class="pa-meta">@c.CreatedAt.ToString("MMM d, yyyy · h:mm tt")</span>
+                        </div>
+                        <div class="post-body">
+                            @Markdown.ToHtml(c.BodyMarkdown)
+                        </div>
+                    </article>
+                }
+            </div>
+        }
+
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <form method="post" asp-page-handler="Comment" asp-route-slug="@Model.Guide.Slug" class="reply-box">
+                <div asp-validation-summary="All" class="validation-summary"></div>
+                <div class="markdown-help">
+                    <strong>Formatting:</strong>
+                    <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
+                    <code>*italic*</code> &middot; <code>[link](https://…)</code> &middot; blank line = new paragraph.
+                </div>
+                <textarea asp-for="CommentBody" rows="4" placeholder="Add a comment…"></textarea>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Post Comment</button>
+                </div>
+            </form>
+        }
+        else
+        {
+            <div class="empty"><a asp-area="Identity" asp-page="/Account/Login">Log in</a> to leave a comment.</div>
+        }
+    </section>
 
     <p><a asp-page="/Guides/Index">&larr; All guides</a></p>
 </article>

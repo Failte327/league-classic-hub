@@ -61,6 +61,7 @@ builder.Services.AddOutputCache(options =>
 builder.Services.AddSingleton<MarkdownRenderer>();
 builder.Services.AddSingleton<ContentModerationService>();
 builder.Services.AddScoped<GuideEditorService>();
+builder.Services.AddScoped<VotingService>();
 
 // Rate limiting to blunt spam-flooding of the posting endpoints.
 builder.Services.AddRateLimiter(options =>

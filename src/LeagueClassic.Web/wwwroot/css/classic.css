@@ -393,6 +393,10 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 .guide-header h1 { margin: 0; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
 .guide-header .champ-icon-lg { border-color: var(--gold); box-shadow: 0 2px 8px rgba(0,0,0,.5); }
 .guide-meta { color: #cdd9e6; font-size: 12px; margin-top: 4px; }
+.guide-header .vote-widget {
+    background: rgba(8,16,30,.55); border: 1px solid var(--gold); padding: 4px 8px;
+}
+.guide-header .vote-score { color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
 .badge-draft { background: #999; color: #fff; padding: 1px 6px; font-size: 10px; text-transform: uppercase; }
 .loadout { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 12px; }
 .loadout-block { margin-bottom: 12px; }
@@ -541,6 +545,19 @@ tr .ab-Q + td .skill-cell.on, .ab-Q ~ td .skill-cell.on { }
 .post-body { padding: 14px 16px; color: var(--ink); line-height: 1.65; }
 .post-body p:first-child { margin-top: 0; }
 .reply-box textarea { width: 100%; }
+.comments-box { margin-top: 22px; border-top: 3px solid var(--gold); padding-top: 14px; }
+
+.vote-widget { display: flex; align-items: center; gap: 4px; }
+.post-author .vote-widget { margin-top: 8px; }
+.vote-widget form { display: contents; }
+.vote-btn {
+    width: 22px; height: 20px; padding: 0; line-height: 1; font-size: 11px;
+    background: #e2e9f1; color: var(--brand-dark); border: 1px solid var(--line); cursor: pointer;
+}
+.vote-btn:hover { background: #d3ddea; }
+.vote-btn.voted-up { background: var(--brand); color: #fff; border-color: var(--brand-dark); }
+.vote-btn.voted-down { background: var(--accent); color: #fff; border-color: var(--gold-dark); }
+.vote-score { min-width: 22px; text-align: center; font-weight: bold; color: var(--brand-dark); font-size: 13px; }
 
 /* ============================ Content pages ============================ */
 .content-page {

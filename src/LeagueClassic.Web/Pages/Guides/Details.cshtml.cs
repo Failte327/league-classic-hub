@@ -1,24 +1,36 @@
 using LeagueClassic.Web.Data;
+using LeagueClassic.Web.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeagueClassic.Web.Pages.Guides;
 
+[EnableRateLimiting("post")]
 public class DetailsModel : PageModel
 {
     private readonly ApplicationDbContext _db;
     private readonly UserManager<ApplicationUser> _users;
+    private readonly ContentModerationService _moderation;
+    private readonly VotingService _voting;
 
-    public DetailsModel(ApplicationDbContext db, UserManager<ApplicationUser> users)
+    public DetailsModel(ApplicationDbContext db, UserManager<ApplicationUser> users, ContentModerationService moderation, VotingService voting)
     {
         _db = db;
         _users = users;
+        _moderation = moderation;
+        _voting = voting;
     }
 
     public Guide Guide { get; private set; } = default!;
     public bool CanEdit { get; private set; }
+    public List<Comment> Comments { get; private set; } = new();
+    public short MyVote { get; private set; }
+
+    [BindProperty]
+    public string CommentBody { get; set; } = "";
 
     // Parsed per-level skill order, e.g. ["Q","W","E",...] (may be empty).
     public IReadOnlyList<string> SkillLevels { get; private set; } = Array.Empty<string>();
@@ -39,6 +51,54 @@ public class DetailsModel : PageModel
 
     public async Task<IActionResult> OnGetAsync(string slug)
     {
+        if (!await LoadAsync(slug)) return NotFound();
+        return Page();
+    }
+
+    public async Task<IActionResult> OnPostCommentAsync(string slug)
+    {
+        if (User.Identity?.IsAuthenticated != true) return Challenge();
+
+        var guide = await _db.Guides.FirstOrDefaultAsync(g => g.Slug == slug);
+        if (guide is null) return NotFound();
+
+        if (string.IsNullOrWhiteSpace(CommentBody))
+            ModelState.AddModelError(nameof(CommentBody), "Write a comment first.");
+        if (_moderation.Validate(CommentBody, "Comment", 5_000) is { } ce)
+            ModelState.AddModelError(nameof(CommentBody), ce);
+        if (!ModelState.IsValid)
+        {
+            if (!await LoadAsync(slug)) return NotFound();
+            return Page();
+        }
+
+        _db.Comments.Add(new Comment
+        {
+            GuideId = guide.Id,
+            AuthorId = _users.GetUserId(User),
+            BodyMarkdown = CommentBody.Trim(),
+        });
+        await _db.SaveChangesAsync();
+
+        return RedirectToPage(new { slug });
+    }
+
+    public async Task<IActionResult> OnPostUpvoteAsync(string slug) => await VoteAsync(slug, 1);
+    public async Task<IActionResult> OnPostDownvoteAsync(string slug) => await VoteAsync(slug, -1);
+
+    private async Task<IActionResult> VoteAsync(string slug, short value)
+    {
+        if (User.Identity?.IsAuthenticated != true) return Challenge();
+
+        var guide = await _db.Guides.FirstOrDefaultAsync(g => g.Slug == slug);
+        if (guide is null) return NotFound();
+
+        await _voting.CastAsync(VoteTargetType.Guide, guide.Id, _users.GetUserId(User)!, value);
+        return RedirectToPage(new { slug });
+    }
+
+    private async Task<bool> LoadAsync(string slug)
+    {
         var guide = await _db.Guides
             .Include(g => g.Champion).ThenInclude(c => c!.Abilities)
             .Include(g => g.Author)
@@ -50,7 +110,7 @@ public class DetailsModel : PageModel
             .FirstOrDefaultAsync(g => g.Slug == slug);
 
         if (guide is null)
-            return NotFound();
+            return false;
 
         Guide = guide;
         SkillLevels = string.IsNullOrEmpty(guide.SkillOrder)
@@ -70,7 +130,17 @@ public class DetailsModel : PageModel
         if (MasteryPoints.Count > 0)
             Masteries = await _db.Masteries.OrderBy(m => m.Row).ThenBy(m => m.Col).AsNoTracking().ToListAsync();
 
-        return Page();
+        Comments = await _db.Comments
+            .Where(c => c.GuideId == guide.Id)
+            .Include(c => c.Author)
+            .OrderBy(c => c.CreatedAt)
+            .AsNoTracking()
+            .ToListAsync();
+
+        var myVotes = await _voting.MyVotesAsync(VoteTargetType.Guide, new[] { guide.Id }, _users.GetUserId(User));
+        MyVote = myVotes.GetValueOrDefault(guide.Id);
+
+        return true;
     }
 
     private static Dictionary<int, int> ParseMasteries(string? raw)

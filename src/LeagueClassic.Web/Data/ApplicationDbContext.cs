@@ -23,6 +23,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Mastery> Masteries => Set<Mastery>();
     public DbSet<GuideRune> GuideRunes => Set<GuideRune>();
     public DbSet<Report> Reports => Set<Report>();
+    public DbSet<Vote> Votes => Set<Vote>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -186,6 +187,16 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 .WithMany()
                 .HasForeignKey(c => c.AuthorId)
                 .OnDelete(DeleteBehavior.SetNull);
+        });
+
+        builder.Entity<Vote>(e =>
+        {
+            // One vote per user per target; also the lookup path VotingService uses.
+            e.HasIndex(v => new { v.TargetType, v.TargetId, v.VoterId }).IsUnique();
+            e.HasOne(v => v.Voter)
+                .WithMany()
+                .HasForeignKey(v => v.VoterId)
+                .OnDelete(DeleteBehavior.Cascade);
         });
     }
 }

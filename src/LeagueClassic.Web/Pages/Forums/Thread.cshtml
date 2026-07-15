@@ -32,6 +32,21 @@
             <div class="post-author">
                 <span class="pa-name">@p.Author.Display("Staff")</span>
                 <span class="pa-meta">@p.CreatedAt.ToString("MMM d, yyyy · h:mm tt")</span>
+                <div class="vote-widget">
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <form method="post" asp-page-handler="Upvote" asp-route-id="@Model.Thread.Id" asp-route-postId="@p.Id">
+                            <button type="submit" class="vote-btn @(Model.MyVotes.GetValueOrDefault(p.Id) == 1 ? "voted-up" : "")" title="Upvote">▲</button>
+                        </form>
+                    }
+                    <span class="vote-score">@p.Score</span>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <form method="post" asp-page-handler="Downvote" asp-route-id="@Model.Thread.Id" asp-route-postId="@p.Id">
+                            <button type="submit" class="vote-btn @(Model.MyVotes.GetValueOrDefault(p.Id) == -1 ? "voted-down" : "")" title="Downvote">▼</button>
+                        </form>
+                    }
+                </div>
             </div>
             <div class="post-body">
                 @Markdown.ToHtml(p.BodyMarkdown)
