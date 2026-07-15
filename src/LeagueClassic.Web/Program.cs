@@ -1,5 +1,6 @@
 using System.Threading.RateLimiting;
 using LeagueClassic.Web.Data;
+using Microsoft.AspNetCore.DataProtection;
 using LeagueClassic.Web.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +39,17 @@ builder.Services
 builder.Services.AddScoped<IUserValidator<ApplicationUser>, UsernameModerationValidator>();
 
 builder.Services.AddRazorPages();
+
+// Persist Data Protection keys to disk (mounted to a volume in production) so
+// login sessions and antiforgery tokens survive container restarts/redeploys
+// instead of silently invalidating on every deploy.
+var keysDir = builder.Configuration["DataProtectionKeysPath"];
+if (!string.IsNullOrEmpty(keysDir))
+{
+    builder.Services.AddDataProtection()
+        .PersistKeysToFileSystem(new DirectoryInfo(keysDir))
+        .SetApplicationName("LeagueClassic");
+}
 
 // --- Output caching: the biggest lever for surviving a traffic spike. ---
 // Anonymous readers get cached rendered HTML so the origin barely gets touched.

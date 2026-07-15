@@ -1,0 +1,73 @@
+# Production stack: Caddy terminates TLS (automatic Let's Encrypt) and
+# reverse-proxies to the app; Postgres and the app itself are only reachable
+# on the internal Docker network, not published to the host.
+#
+# Container/volume names are prefixed "prod-", and the project name below is
+# pinned, so this can never collide with docker-compose.yml (dev) if both
+# happen to be run on the same box/checkout. Without a pinned project name,
+# `docker compose -f docker-compose.prod.yml down` matches containers by
+# project+service label, NOT by container_name — since both files default to
+# the same directory-derived project name and both declare a "db" service,
+# `down` on this file would reach into and remove the dev "db" container too
+# (confirmed the hard way while writing this).
+#
+# On the server:
+#   cp .env.production.example .env   # fill in real values
+#   docker compose -f docker-compose.prod.yml up -d --build
+name: leagueclassic-prod
+services:
+  db:
+    image: postgres:18
+    container_name: leagueclassic-prod-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: leagueclassic
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: leagueclassic
+    volumes:
+      - leagueclassic-prod-pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U leagueclassic"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: .
+      dockerfile: src/LeagueClassic.Web/Dockerfile
+    container_name: leagueclassic-prod-web
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: Host=db;Port=5432;Database=leagueclassic;Username=leagueclassic;Password=${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      # Persisted so login sessions/antiforgery tokens survive redeploys — see Program.cs.
+      DataProtectionKeysPath: /keys
+    volumes:
+      - leagueclassic-prod-dpkeys:/keys
+
+  caddy:
+    image: caddy:2
+    container_name: leagueclassic-prod-caddy
+    restart: unless-stopped
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env}
+      ACME_EMAIL: ${ACME_EMAIL:?set ACME_EMAIL in .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - leagueclassic-prod-caddy-data:/data
+      - leagueclassic-prod-caddy-config:/config
+
+volumes:
+  leagueclassic-prod-pgdata:
+  leagueclassic-prod-dpkeys:
+  leagueclassic-prod-caddy-data:
+  leagueclassic-prod-caddy-config:
