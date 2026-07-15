@@ -69,6 +69,11 @@ public class RegisterModel : PageModel
             UserName = Input.Email,   // email stays the login
             Email = Input.Email,
             DisplayName = name,
+            // No confirm-email flow exists on this site (RequireConfirmedAccount is
+            // false and there's no ConfirmEmail page) — the built-in ForgotPassword
+            // page silently skips sending unless IsEmailConfirmedAsync is true, so
+            // leaving this false would make password resets never actually fire.
+            EmailConfirmed = true,
         };
         var result = await _userManager.CreateAsync(user, Input.Password);
         if (!result.Succeeded)

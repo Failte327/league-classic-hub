@@ -46,6 +46,10 @@ services:
       ConnectionStrings__DefaultConnection: Host=db;Port=5432;Database=leagueclassic;Username=leagueclassic;Password=${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
       # Persisted so login sessions/antiforgery tokens survive redeploys — see Program.cs.
       DataProtectionKeysPath: /keys
+      # SES SMTP creds — optional; unset means password-reset emails just get
+      # logged instead of sent (see NullEmailSender in Program.cs).
+      Email__SmtpUsername: ${SES_SMTP_USERNAME:-}
+      Email__SmtpPassword: ${SES_SMTP_PASSWORD:-}
     volumes:
       - leagueclassic-prod-dpkeys:/keys
 

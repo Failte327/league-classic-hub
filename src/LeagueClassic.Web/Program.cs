@@ -38,6 +38,14 @@ builder.Services
 // Reject blocked usernames during registration/profile updates.
 builder.Services.AddScoped<IUserValidator<ApplicationUser>, UsernameModerationValidator>();
 
+// Password-reset/confirmation emails, sent via SES SMTP in production. Falls
+// back to a logging no-op locally so `dotnet run` doesn't need real SES
+// credentials — see SesEmailSender.cs.
+if (!string.IsNullOrEmpty(builder.Configuration["Email:SmtpUsername"]))
+    builder.Services.AddTransient<Microsoft.AspNetCore.Identity.UI.Services.IEmailSender, SesEmailSender>();
+else
+    builder.Services.AddTransient<Microsoft.AspNetCore.Identity.UI.Services.IEmailSender, NullEmailSender>();
+
 builder.Services.AddRazorPages();
 
 // Persist Data Protection keys to disk (mounted to a volume in production) so

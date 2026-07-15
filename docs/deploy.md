@@ -80,7 +80,37 @@ The app applies pending EF migrations automatically on startup
 the `leagueclassic-dpkeys` volume, so this restart does **not** log everyone
 out or break in-flight forms.
 
-## 7. Backups
+## 7. Set up email (Amazon SES)
+
+Without this, password-reset emails just get logged instead of sent (see
+`NullEmailSender` in `Program.cs`) — harmless, but nobody who forgets their
+password can actually recover their account.
+
+1. SES console → **Verified identities** → **Create identity** → Domain →
+   `leagueclassicarchive.net`. Use the guided flow that offers to add the
+   DKIM/SPF records directly to your Route 53 hosted zone — it's one click
+   instead of copy-pasting DNS records by hand.
+2. Wait for verification to go green (usually minutes, DNS-dependent).
+3. SES console → **SMTP settings** → **Create SMTP credentials**. This
+   generates a *separate* SMTP username/password — not your AWS access
+   key/secret. Save both.
+4. SES console → request **production access** (Account dashboard → "Request
+   production access" if still in sandbox). Sandbox mode only lets you send
+   to addresses you've individually verified, so real users' password resets
+   won't go out until this is approved (usually within a day).
+5. On the server, add the SMTP credentials to `.env`:
+   ```
+   SES_SMTP_USERNAME=<from step 3>
+   SES_SMTP_PASSWORD=<from step 3>
+   ```
+6. Redeploy: `docker compose -f docker-compose.prod.yml up -d --build`.
+
+Note the SES SMTP *endpoint* (set in `appsettings.json`'s `Email:Host`,
+currently `email-smtp.eu-central-1.amazonaws.com`) must match the **region**
+you created the SMTP credentials in — if you recreate credentials in a
+different region later, update `Email:Host` accordingly before redeploying.
+
+## 8. Backups
 
 Two independent options, either is fine to start:
 
@@ -89,7 +119,7 @@ Two independent options, either is fine to start:
 - **`pg_dump` cron job**: `docker exec leagueclassic-db pg_dump -U leagueclassic leagueclassic | gzip > backup-$(date +%F).sql.gz`,
   shipped somewhere off-box (e.g. an S3 bucket) — more granular, DB-only.
 
-## 8. Optional later: Cloudflare in front
+## 9. Optional later: Cloudflare in front
 
 The README's caching plan assumes Cloudflare sits in front for launch (edge
 caching on top of the app's own 30s output cache, plus free DDoS/WAF). This
