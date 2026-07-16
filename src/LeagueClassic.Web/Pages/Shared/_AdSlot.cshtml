@@ -1,0 +1,15 @@
+@* Reusable AdSense display unit. Model is the data-ad-slot id for this
+   placement — TODO: replace with the real slot id once it's created in the
+   AdSense dashboard (Ads > By ad unit > Display ads), then the placeholder
+   text below can be deleted. *@
+@model string
+<div class="ad-slot">
+    <span class="ad-slot-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9565092722653347"
+         data-ad-slot="@Model"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>

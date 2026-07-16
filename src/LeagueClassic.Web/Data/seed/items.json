@@ -56,6 +56,13 @@
   "desc": "+15 Magic Penetration\n\nUNIQUE Passive - Enhanced Movement: +45 Movement Speed\n\n(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)\n\n(Unique Passives with the same name don't stack.)"
  },
  {
+  "name": "Doran's Blade",
+  "slug": "dorans-blade",
+  "category": "Offense",
+  "icon": "assets/items/dorans-blade.png",
+  "desc": "+70 Health\n+7 Attack Damage\n+3% Life Steal"
+ },
+ {
   "name": "Bloodthirster",
   "slug": "bloodthirster",
   "category": "Offense",
@@ -117,6 +124,13 @@
   "category": "Offense",
   "icon": "assets/items/youmuus-ghostblade.png",
   "desc": "+30 Attack Damage\n+15% Critical Strike Chance\n+10% Cooldown Reduction\n\nUNIQUE Passive: +20 Armor Penetration\nUNIQUE Active: Grants +20% Movement Speed and +40% Attack Speed for 6 seconds (45 second cooldown).\n\n(Armor Penetration: Physical damage is increased by ignoring an amount of the target's Armor equal to Armor Penetration.)"
+ },
+ {
+  "name": "Doran's Ring",
+  "slug": "dorans-ring",
+  "category": "Magic",
+  "icon": "assets/items/dorans-ring.png",
+  "desc": "+15 Ability Power\n+60 Health\n\nPassive: +3 Mana Regeneration per 5 seconds.\nPassive: Restores 4 Mana upon killing a unit."
  },
  {
   "name": "Rabadon's Deathcap",
@@ -292,6 +306,20 @@
   "category": "Support",
   "icon": "assets/items/avarice-blade.png",
   "desc": "+10% Critical Strike Chance\n\nUNIQUE Passive - Avarice: +3 Gold per 10 seconds\nUNIQUE Passive - Greed: Grants 2 Gold upon killing a unit.\n\nMay be bought with another Gold Income item"
+ },
+ {
+  "name": "Doran's Shield",
+  "slug": "dorans-shield",
+  "category": "Defense",
+  "icon": "assets/items/dorans-shield.png",
+  "desc": "+80 Health\n\nPassive: Restores 6 Health every 5 seconds.\nUNIQUE Passive: Blocks 8 damage from single target attacks and spells from champions."
+ },
+ {
+  "name": "Frozen Mallet",
+  "slug": "frozen-mallet",
+  "category": "Defense",
+  "icon": "assets/items/frozen-mallet.png",
+  "desc": "+700 Health\n+30 Attack Damage\n\nUNIQUE Passive - Icy: Basic attacks slow the target's Movement Speed for 1.5 seconds on hit (40% slow for melee attacks, 30% slow for ranged attacks)."
  },
  {
   "name": "Warmog's Armor",

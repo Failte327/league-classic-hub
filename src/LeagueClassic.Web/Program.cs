@@ -73,12 +73,22 @@ builder.Services.AddScoped<GuideEditorService>();
 builder.Services.AddScoped<VotingService>();
 builder.Services.AddScoped<VisitRecorder>();
 
-// Rate limiting to blunt spam-flooding of the posting endpoints.
+// Rate limiting to blunt spam-flooding of the posting endpoints. The "post"
+// policy is applied at the PageModel level (Razor Pages doesn't honor
+// [EnableRateLimiting] on individual handler methods), which would otherwise
+// also throttle plain page views (OnGet) sharing that page with a POST
+// handler — e.g. reloading a guide/thread a few times while checking on it
+// would trip the limiter and render a blank 429. Only counting POST/PUT/etc.
+// requests toward the limit keeps GETs unrestricted while still limiting the
+// actual write actions (comments, votes, replies).
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
     options.AddPolicy("post", context =>
     {
+        if (HttpMethods.IsGet(context.Request.Method) || HttpMethods.IsHead(context.Request.Method))
+            return RateLimitPartition.GetNoLimiter("unlimited");
+
         var key = context.User.Identity?.IsAuthenticated == true
             ? context.User.Identity!.Name!
             : context.Connection.RemoteIpAddress?.ToString() ?? "anon";

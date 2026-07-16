@@ -167,8 +167,31 @@ public static class DbSeeder
         await BackfillDescriptionsAsync(db, seedDir);
         await RenameLegacyGenericChampionAsync(db);
         await BackfillNewChampionsAsync(db, seedDir);
+        await BackfillNewItemsAsync(db, seedDir);
         await BackfillChampionLoreAsync(db, seedDir);
         await BackfillAbilityNamesAsync(db, seedDir);
+    }
+
+    // Inserts any items.json entries added after the initial seed (e.g. Doran's
+    // items, Frozen Mallet) into an already-seeded database. The items table only
+    // bulk-seeds once, when empty, so a new entry needs an explicit add-if-missing
+    // pass like this to reach existing installs.
+    private static async Task BackfillNewItemsAsync(ApplicationDbContext db, string seedDir)
+    {
+        var existingSlugs = (await db.Items.Select(i => i.Slug).ToListAsync()).ToHashSet();
+        var missing = Load<ItemSeed>(seedDir, "items.json")
+            .Where(i => !existingSlugs.Contains(i.Slug)).ToList();
+        if (missing.Count == 0) return;
+
+        foreach (var i in missing)
+        {
+            db.Items.Add(new Item
+            {
+                Name = i.Name, Slug = i.Slug, Category = i.Category, IconPath = i.Icon,
+                Description = i.Desc,
+            });
+        }
+        await db.SaveChangesAsync();
     }
 
     // One-time rename: the champion-agnostic pseudo-champion went through a couple of

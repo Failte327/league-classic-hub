@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - League Classic Archive</title>
     <link rel="stylesheet" href="~/css/classic.css" asp-append-version="true" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9565092722653347"
+            crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="site-wrap">
@@ -36,9 +38,13 @@
             </nav>
         </header>
 
+        <partial name="_AdSlot" model="@("TODO_TOP_SLOT_ID")" />
+
         <main class="content">
             @RenderBody()
         </main>
+
+        <partial name="_AdSlot" model="@("TODO_FOOTER_SLOT_ID")" />
 
         <footer class="site-footer">
             <p>&copy; 2026 League Classic Archive &middot; a fan site &middot;
