@@ -5,7 +5,7 @@
    icons, gaps, borders) grows together in proportion rather than drifting
    out of sync the way one-off size bumps do. Adjust this single number to
    retune the whole site. */
-html { zoom: 1.15; }
+html { zoom: 1.1; }
 
 :root {
     /* Navy + gold + parchment: the Hextech chrome stays, but content panels
