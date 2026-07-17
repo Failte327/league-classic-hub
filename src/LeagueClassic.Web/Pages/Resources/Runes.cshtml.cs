@@ -15,7 +15,7 @@ public class RunesModel : PageModel
 
     public async Task OnGetAsync()
     {
-        var runes = await _db.Runes.OrderBy(r => r.Name).AsNoTracking().ToListAsync();
+        var runes = await _db.Runes.Where(r => r.IsAvailable).OrderBy(r => r.Name).AsNoTracking().ToListAsync();
         BySlot = runes.GroupBy(r => r.Slot)
             .OrderBy(g => Array.IndexOf(SlotOrder, g.Key))
             .ToList();

@@ -1,2382 +1,2102 @@
 [
  {
-  "champ": "ahri",
-  "slot": "P",
-  "name": "Essence Theft",
-  "icon": "assets/abilities/ahri/passive.png",
-  "desc": "Gains a charge of Essence Theft whenever a spell hits an enemy (max: 3 charges per spell). Upon reaching 9 charges, Ahri's next spell heals her whenever it hits an enemy."
- },
- {
-  "champ": "ahri",
-  "slot": "Q",
-  "name": "Orb of Deception",
-  "icon": "assets/abilities/ahri/q.png",
-  "desc": "Ahri sends out and pulls back her orb, dealing magic damage on the way out and true damage on the way back."
- },
- {
-  "champ": "ahri",
-  "slot": "W",
-  "name": "Fox-Fire",
-  "icon": "assets/abilities/ahri/w.png",
-  "desc": "Ahri releases three fox-fires, that lock onto and attack nearby enemies."
- },
- {
-  "champ": "ahri",
-  "slot": "E",
-  "name": "Charm",
-  "icon": "assets/abilities/ahri/e.png",
-  "desc": "Ahri blows a kiss that damages and charms an enemy it encounters, causing them to walk harmlessly towards her. Ahri deals additional damage to recently charmed enemies."
- },
- {
-  "champ": "ahri",
-  "slot": "R",
-  "name": "Spirit Rush",
-  "icon": "assets/abilities/ahri/r.png",
-  "desc": "Ahri dashes forward and fires essence bolts, damaging 3 nearby enemies (prioritizes Champions). Spirit Rush can be cast up to three times before going on cooldown."
- },
- {
-  "champ": "alistar",
-  "slot": "P",
-  "name": "Trample",
-  "icon": "assets/abilities/alistar/passive.png",
-  "desc": "Each time Alistar casts a spell, he tramples nearby units and turrets for a few seconds, dealing damage to units he walks over."
- },
- {
-  "champ": "alistar",
-  "slot": "Q",
-  "name": "Pulverize",
-  "icon": "assets/abilities/alistar/q.png",
-  "desc": "Alistar smashes the ground, dealing damage to all nearby enemies and tossing them into the air for 1.5 seconds. On landing, enemies are stunned."
- },
- {
-  "champ": "alistar",
-  "slot": "W",
-  "name": "Headbutt",
-  "icon": "assets/abilities/alistar/w.png",
-  "desc": "Alistar rams a target with his head, dealing damage and knocking the target back."
- },
- {
-  "champ": "alistar",
-  "slot": "E",
-  "name": "Triumphant Roar",
-  "icon": "assets/abilities/alistar/e.png",
-  "desc": "Alistar lets out a commanding war cry, restoring Health to himself and nearby friendly units for half the amount. Can be cast more often if nearby enemies are dying."
- },
- {
-  "champ": "alistar",
-  "slot": "R",
-  "name": "Unbreakable Will",
-  "icon": "assets/abilities/alistar/r.png",
-  "desc": "Alistar lets out a wild roar, gaining bonus damage, removing all crowd control effects on himself, and reducing incoming physical and magical damage for the duration."
- },
- {
-  "champ": "amumu",
-  "slot": "P",
-  "name": "Cursed Touch",
-  "icon": "assets/abilities/amumu/passive.png",
-  "desc": "Amumu's attacks reduce the target's Magic Resistance for a short duration."
- },
- {
-  "champ": "amumu",
-  "slot": "Q",
-  "name": "Bandage Toss",
-  "icon": "assets/abilities/amumu/q.png",
-  "desc": "Amumu tosses a sticky bandage at a target, stunning and damaging the target while he pulls himself to them."
- },
- {
-  "champ": "amumu",
-  "slot": "W",
-  "name": "Despair",
-  "icon": "assets/abilities/amumu/w.png",
-  "desc": "Overcome by anguish, nearby enemies lose a percentage of their maximum Health each second."
- },
- {
-  "champ": "amumu",
-  "slot": "E",
-  "name": "Tantrum",
-  "icon": "assets/abilities/amumu/e.png",
-  "desc": "Permanently reduces the physical damage Amumu would take. Amumu can unleash his rage, dealing damage to surrounding enemies. Each time Amumu is hit, the cooldown on Tantrum is reduced by 0.5 seconds."
- },
- {
-  "champ": "amumu",
-  "slot": "R",
-  "name": "Curse of the Sad Mummy",
-  "icon": "assets/abilities/amumu/r.png",
-  "desc": "Amumu entangles surrounding enemy units in bandages, damaging them and rendering them unable to attack or move."
- },
- {
-  "champ": "anivia",
-  "slot": "P",
-  "name": "Rebirth",
-  "icon": "assets/abilities/anivia/passive.png",
-  "desc": "Upon dying, Anivia will revert into an egg. If the egg can survive for six seconds, she is gloriously reborn."
- },
- {
-  "champ": "anivia",
-  "slot": "Q",
-  "name": "Flash Frost",
-  "icon": "assets/abilities/anivia/q.png",
-  "desc": "Anivia brings her wings together and summons a sphere of ice that flies towards her opponents, chilling and damaging anyone in its path. When the sphere explodes it does moderate damage in a radius, stunning anyone in the area."
- },
- {
-  "champ": "anivia",
-  "slot": "W",
-  "name": "Crystallize",
-  "icon": "assets/abilities/anivia/w.png",
-  "desc": "Anivia condenses the moisture in the air into an impassable wall of ice to block all movement. The wall only lasts a short duration before it melts."
- },
- {
-  "champ": "anivia",
-  "slot": "E",
-  "name": "Frostbite",
-  "icon": "assets/abilities/anivia/e.png",
-  "desc": "With a flap of her wings, Anivia blasts a freezing gust of wind at her target, dealing a medium amount of damage. If the target has been slowed by Flash Frost or Glacial Storm, the damage they take is doubled."
- },
- {
-  "champ": "anivia",
-  "slot": "R",
-  "name": "Glacial Storm",
-  "icon": "assets/abilities/anivia/r.png",
-  "desc": "Anivia summons a driving rain of ice and hail to damage her enemies and slow their advance."
- },
- {
-  "champ": "annie",
-  "slot": "P",
-  "name": "Pyromania",
-  "icon": "assets/abilities/annie/passive.png",
-  "desc": "After casting 4 spells, Annie's next offensive spell will stun the target for a short duration."
- },
- {
-  "champ": "annie",
-  "slot": "Q",
-  "name": "Disintegrate",
-  "icon": "assets/abilities/annie/q.png",
-  "desc": "Annie hurls a Mana infused fireball, dealing damage and refunding the Mana cost if it destroys the target."
- },
- {
-  "champ": "annie",
-  "slot": "W",
-  "name": "Incinerate",
-  "icon": "assets/abilities/annie/w.png",
-  "desc": "Annie casts a blazing cone of fire, dealing damage to all enemies in the area."
- },
- {
-  "champ": "annie",
-  "slot": "E",
-  "name": "Molten Shield",
-  "icon": "assets/abilities/annie/e.png",
-  "desc": "Increases Annie's Armor and Magic Resist and damages enemies who hit Annie with basic attacks."
- },
- {
-  "champ": "annie",
-  "slot": "R",
-  "name": "Summon: Tibbers",
-  "icon": "assets/abilities/annie/r.png",
-  "desc": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him."
- },
- {
-  "champ": "ashe",
-  "slot": "P",
-  "name": "Focus",
-  "icon": "assets/abilities/ashe/passive.png",
-  "desc": "While out of combat, Ashe gains stacks of Focus. When Ashe has 100 stacks of Focus her next basic attack will critically strike."
- },
- {
-  "champ": "ashe",
-  "slot": "Q",
-  "name": "Frost Shot",
-  "icon": "assets/abilities/ashe/q.png",
-  "desc": "While active, each of Ashe's basic attacks slow her targets. This drains Mana with each attack."
- },
- {
-  "champ": "ashe",
-  "slot": "W",
-  "name": "Volley",
-  "icon": "assets/abilities/ashe/w.png",
-  "desc": "Ashe fires 7 arrows in a cone for increased damage. Volley also applies Ashe's current level of Frost Shot."
- },
- {
-  "champ": "ashe",
-  "slot": "E",
-  "name": "Hawkshot",
-  "icon": "assets/abilities/ashe/e.png",
-  "desc": "Ashe gains bonus Gold when killing enemy units or structures. Ashe can activate to send her Hawk Spirit on a scouting mission."
- },
- {
-  "champ": "ashe",
-  "slot": "R",
-  "name": "Enchanted Crystal Arrow",
-  "icon": "assets/abilities/ashe/r.png",
-  "desc": "Ashe fires a missile of ice in a straight line. If the arrow collides with an enemy Champion, it deals damage and stuns the Champion for up to 3.5 seconds, based on how far the arrow has traveled. In addition, surrounding enemy units take damage and are slowed."
- },
- {
-  "champ": "blitzcrank",
-  "slot": "P",
-  "name": "Mana Barrier",
-  "icon": "assets/abilities/blitzcrank/passive.png",
-  "desc": "When Blitzcrank's life is brought below 20% health, he activates Mana Barrier. This creates a mana shield equal to 50% of his mana for 10 seconds. Mana Barrier can only occur once every 90 seconds."
- },
- {
-  "champ": "blitzcrank",
-  "slot": "Q",
-  "name": "Rocket Grab",
-  "icon": "assets/abilities/blitzcrank/q.png",
-  "desc": "Blitzcrank fires his right hand to grab an opponent on its path, dealing damage and dragging it back to him."
- },
- {
-  "champ": "blitzcrank",
-  "slot": "W",
-  "name": "Overdrive",
-  "icon": "assets/abilities/blitzcrank/w.png",
-  "desc": "Blitzcrank super charges himself to get dramatically increased Movement and Attack Speed."
- },
- {
-  "champ": "blitzcrank",
-  "slot": "E",
-  "name": "Power Fist",
-  "icon": "assets/abilities/blitzcrank/e.png",
-  "desc": "Blitzcrank charges up his fist to make his next attack deal double damage and pop his target up in the air."
- },
- {
-  "champ": "blitzcrank",
-  "slot": "R",
-  "name": "Static Field",
-  "icon": "assets/abilities/blitzcrank/r.png",
-  "desc": "Passively causes lightning bolts to damage a nearby enemy. Additionally, Blitzcrank can activate this ability to damage nearby enemies and silence them for 0.5 seconds, but doing so removes the passive lightning until Static Field becomes available again."
- },
- {
-  "champ": "brand",
-  "slot": "P",
-  "name": "Blaze",
-  "icon": "assets/abilities/brand/passive.png",
-  "desc": "Brand's spells light his targets ablaze, dealing 8% of their maximum Health in magic damage over 4 seconds."
- },
- {
-  "champ": "brand",
-  "slot": "Q",
-  "name": "Sear",
-  "icon": "assets/abilities/brand/q.png",
-  "desc": "Brand launches a ball of fire forward that deals magic damage. If the target is ablaze, Sear will stun the target for 2 seconds."
- },
- {
-  "champ": "brand",
-  "slot": "W",
-  "name": "Pillar of Flame",
-  "icon": "assets/abilities/brand/w.png",
-  "desc": "After a short delay, Brand creates a pillar of flame at a target area, dealing magic damage to enemy units within the area. Units that are ablaze take an additional 25% damage."
- },
- {
-  "champ": "brand",
-  "slot": "E",
-  "name": "Conflagration",
-  "icon": "assets/abilities/brand/e.png",
-  "desc": "Brand conjures a powerful blast at his target, dealing magic damage to them. If the target is ablaze, Conflagration spreads to nearby enemies."
- },
- {
-  "champ": "brand",
-  "slot": "R",
-  "name": "Pyroclasm",
-  "icon": "assets/abilities/brand/r.png",
-  "desc": "Brand unleashes a devastating torrent of fire, dealing magic damage each time it bounces. If a target is ablaze, Pyroclasm will priotize champions for the next bounce."
- },
- {
-  "champ": "chogath",
-  "slot": "P",
-  "name": "Carnivore",
-  "icon": "assets/abilities/chogath/passive.png",
-  "desc": "Whenever Cho'Gath kills a unit, he recovers Health and Mana. The values restored increase with Cho'Gath's level."
- },
- {
-  "champ": "chogath",
-  "slot": "Q",
-  "name": "Rupture",
-  "icon": "assets/abilities/chogath/q.png",
-  "desc": "Ruptures the ground at target location, popping enemy units into the air, dealing damage and slowing them."
- },
- {
-  "champ": "chogath",
-  "slot": "W",
-  "name": "Feral Scream",
-  "icon": "assets/abilities/chogath/w.png",
-  "desc": "Cho'Gath unleashes a terrible scream at enemies in a cone, dealing magic damage and Silencing enemies for a few seconds."
- },
- {
-  "champ": "chogath",
-  "slot": "E",
-  "name": "Vorpal Spikes",
-  "icon": "assets/abilities/chogath/e.png",
-  "desc": "Cho'Gath's attacks passively release deadly spikes, dealing damage to all enemy units in front of him."
- },
- {
-  "champ": "chogath",
-  "slot": "R",
-  "name": "Feast",
-  "icon": "assets/abilities/chogath/r.png",
-  "desc": "Devours an enemy unit, dealing a high amount of true damage. If the target is killed, Cho'Gath grows, gaining maximum Health (maximum 6 stacks). Cho'Gath loses half of his stacks upon death. Half the cooldown and mana cost are refunded if a minion or monster is killed."
- },
- {
-  "champ": "corki",
-  "slot": "P",
-  "name": "Hextech Shrapnel Shells",
-  "icon": "assets/abilities/corki/passive.png",
-  "desc": "Corki's basic attacks deal bonus true damage to minions, monsters, and champions."
- },
- {
-  "champ": "corki",
-  "slot": "Q",
-  "name": "Phosphorus Bomb",
-  "icon": "assets/abilities/corki/q.png",
-  "desc": "Corki fires a flash bomb at a target location, dealing magic damage to enemies in the area. This attack additionally reveals units in the area for a duration."
- },
- {
-  "champ": "corki",
-  "slot": "W",
-  "name": "Valkyrie",
-  "icon": "assets/abilities/corki/w.png",
-  "desc": "Corki surges to target location, dropping bombs that create a trail of destruction for opponents who remain in the fire."
- },
- {
-  "champ": "corki",
-  "slot": "E",
-  "name": "Gatling Gun",
-  "icon": "assets/abilities/corki/e.png",
-  "desc": "Corki's gatling gun rapidly fires in a cone in front of him, dealing damage and reducing enemy Armor."
- },
- {
-  "champ": "corki",
-  "slot": "R",
-  "name": "Missile Barrage",
-  "icon": "assets/abilities/corki/r.png",
-  "desc": "Corki fires a missile toward his target location that explodes on impact, dealing damage to enemies in an area. Corki stores missiles over time, up to a maximum. Every 3rd missile fired will be a Big One, dealing extra damage."
- },
- {
-  "champ": "dr-mundo",
-  "slot": "P",
-  "name": "Adrenaline Rush",
-  "icon": "assets/abilities/dr-mundo/passive.png",
-  "desc": "Dr. Mundo regenerates 0.3% of his maximum Health each second."
- },
- {
-  "champ": "dr-mundo",
-  "slot": "Q",
-  "name": "Infected Cleaver",
-  "icon": "assets/abilities/dr-mundo/q.png",
-  "desc": "Dr. Mundo hurls his cleaver, dealing damage equal to a portion of his target's current Health and slowing them for a short time. Dr. Mundo delights in the suffering of others, so he is returned half of the Health cost when he successfully lands a cleaver."
- },
- {
-  "champ": "dr-mundo",
-  "slot": "W",
-  "name": "Burning Agony",
-  "icon": "assets/abilities/dr-mundo/w.png",
-  "desc": "Dr. Mundo drains his Health to reduce the duration of disables and deal continual damage to nearby enemies."
- },
- {
-  "champ": "dr-mundo",
-  "slot": "E",
-  "name": "Masochism",
-  "icon": "assets/abilities/dr-mundo/e.png",
-  "desc": "Masochism increases Dr. Mundo's Attack Damage by a flat amount for 5 seconds. In addition, Dr. Mundo also gains an additional amount of Attack Damage for each percentage of Health he is missing."
- },
- {
-  "champ": "dr-mundo",
-  "slot": "R",
-  "name": "Sadism",
-  "icon": "assets/abilities/dr-mundo/r.png",
-  "desc": "Dr. Mundo sacrifices a portion of his Health for increased Movement Speed and drastically increased Health Regeneration."
- },
- {
-  "champ": "evelynn",
-  "slot": "P",
-  "name": "Shadow Walk",
-  "icon": "assets/abilities/evelynn/passive.png",
-  "desc": "When out of combat, Evelynn enters stealth only being able to be seen by nearby enemy champions or true sight. While stealthed, she rapidly regenerates Mana."
- },
- {
-  "champ": "evelynn",
-  "slot": "Q",
-  "name": "Hate Spike",
-  "icon": "assets/abilities/evelynn/q.png",
-  "desc": "Evelynn fires a line of spikes through an enemy, dealing damage to all enemies in its path."
- },
- {
-  "champ": "evelynn",
-  "slot": "W",
-  "name": "Dark Frenzy",
-  "icon": "assets/abilities/evelynn/w.png",
-  "desc": "Evelynn passively increases her Movement Speed when hitting enemy champions with her spells. Upon activation, Evelynn breaks free from slows affecting her and gains a massive Movement Speed boost for a short duration."
- },
- {
-  "champ": "evelynn",
-  "slot": "E",
-  "name": "Ravage",
-  "icon": "assets/abilities/evelynn/e.png",
-  "desc": "Evelynn slashes her target twice, dealing damage with each hit. She then gains increased Attack Speed for a short duration."
- },
- {
-  "champ": "evelynn",
-  "slot": "R",
-  "name": "Agony's Embrace",
-  "icon": "assets/abilities/evelynn/r.png",
-  "desc": "Evelynn summons spikes from the ground to deal damage and slow enemies in the area. She then gains a shield based on how many enemy champions were hit."
- },
- {
   "champ": "ezreal",
   "slot": "P",
   "name": "Rising Spell Force",
-  "icon": "assets/abilities/ezreal/passive.png",
-  "desc": "Hitting a target with any of Ezreal's abilities increases his Attack Speed by 10% for 6 seconds (effect stacks up to 5 times)."
+  "desc": "Ezreal gains increasing Attack Speed each time he successfully hits a spell, stacking up to 5 times.",
+  "icon": "assets/abilities/ezreal/passive.png"
  },
  {
   "champ": "ezreal",
   "slot": "Q",
   "name": "Mystic Shot",
-  "icon": "assets/abilities/ezreal/q.png",
-  "desc": "Ezreal fires a damaging bolt of energy which reduces all of his cooldowns by 1 second if it strikes an enemy unit."
+  "desc": "Ezreal fires a damaging bolt of energy which reduces all of his cooldowns slightly if it strikes an enemy unit.",
+  "icon": "assets/abilities/ezreal/q.png"
  },
  {
   "champ": "ezreal",
   "slot": "W",
   "name": "Essence Flux",
-  "icon": "assets/abilities/ezreal/w.png",
-  "desc": "Ezreal fires a fluctuating wave of energy, dealing magic damage to enemy champions, while increasing the Attack Speed of allied champions."
+  "desc": "Ezreal fires a fluctuating wave of energy, decreasing the Attack Speed and dealing magic damage to enemy champions, while healing and increasing the Attack Speed of allied champions.",
+  "icon": "assets/abilities/ezreal/w.png"
  },
  {
   "champ": "ezreal",
   "slot": "E",
   "name": "Arcane Shift",
-  "icon": "assets/abilities/ezreal/e.png",
-  "desc": "Ezreal teleports to a target nearby location and fires a homing bolt which strikes the nearest enemy unit."
+  "desc": "Ezreal teleports to a target nearby location and fires a homing bolt which strikes the nearest enemy unit.",
+  "icon": "assets/abilities/ezreal/e.png"
  },
  {
   "champ": "ezreal",
   "slot": "R",
   "name": "Trueshot Barrage",
-  "icon": "assets/abilities/ezreal/r.png",
-  "desc": "Ezreal channels for 1 second to fire a powerful barrage of energy missiles which do massive damage to each unit they pass through (deals 10% less damage to each unit it passes through)."
- },
- {
-  "champ": "fiddlesticks",
-  "slot": "P",
-  "name": "Dread",
-  "icon": "assets/abilities/fiddlesticks/passive.png",
-  "desc": "Fiddlesticks' spells reduce the Magic Resistance of his targets."
- },
- {
-  "champ": "fiddlesticks",
-  "slot": "Q",
-  "name": "Terrify",
-  "icon": "assets/abilities/fiddlesticks/q.png",
-  "desc": "Strikes a target unit with fear, causing it to flee in terror for a duration."
- },
- {
-  "champ": "fiddlesticks",
-  "slot": "W",
-  "name": "Drain",
-  "icon": "assets/abilities/fiddlesticks/w.png",
-  "desc": "Fiddlesticks saps the life force of an enemy, dealing damage to a target over time and healing himself."
- },
- {
-  "champ": "fiddlesticks",
-  "slot": "E",
-  "name": "Dark Wind",
-  "icon": "assets/abilities/fiddlesticks/e.png",
-  "desc": "A wisp of wind strikes an enemy unit and then bounces to nearby enemy units, dealing damage and silencing the victims."
- },
- {
-  "champ": "fiddlesticks",
-  "slot": "R",
-  "name": "Crowstorm",
-  "icon": "assets/abilities/fiddlesticks/r.png",
-  "desc": "A murder of crows flock wildly around Fiddlesticks, dealing damage each second to all enemy units in the area."
- },
- {
-  "champ": "gangplank",
-  "slot": "P",
-  "name": "Grog-Soaked Blade",
-  "icon": "assets/abilities/gangplank/passive.png",
-  "desc": "Gangplank's basic attacks and Parrrley apply a poison that deals magic damage each second and slows Movement Speed. Lasts 3 seconds and stacks up to 3 times."
- },
- {
-  "champ": "gangplank",
-  "slot": "Q",
-  "name": "Parrrley",
-  "icon": "assets/abilities/gangplank/q.png",
-  "desc": "Gangplank takes aim and shoots an enemy unit with his pistol. If Parrrley deals a killing blow, he gains extra gold and half the Mana cost is refunded."
- },
- {
-  "champ": "gangplank",
-  "slot": "W",
-  "name": "Remove Scurvy",
-  "icon": "assets/abilities/gangplank/w.png",
-  "desc": "Consumes a large quantity of citrus fruit which clears any crowd control effects on him and heals him."
- },
- {
-  "champ": "gangplank",
-  "slot": "E",
-  "name": "Raise Morale",
-  "icon": "assets/abilities/gangplank/e.png",
-  "desc": "Gangplank fires a shot into the air, increasing nearby allied champions' Attack Damage and Movement Speed."
- },
- {
-  "champ": "gangplank",
-  "slot": "R",
-  "name": "Cannon Barrage",
-  "icon": "assets/abilities/gangplank/r.png",
-  "desc": "Gangplank signals his ship to fire upon an area, slowing enemies and dealing damage within the area."
- },
- {
-  "champ": "garen",
-  "slot": "P",
-  "name": "Perseverance",
-  "icon": "assets/abilities/garen/passive.png",
-  "desc": "If Garen has not been struck by damage or enemy abilities for the last 10 seconds, Garen regenerates 0.4% of his maximum Health each second. Minion damage does not stop Perseverance."
- },
- {
-  "champ": "garen",
-  "slot": "Q",
-  "name": "Decisive Strike",
-  "icon": "assets/abilities/garen/q.png",
-  "desc": "Garen gains a burst of Movement Speed, breaking free of all slows affecting him and his next attack strikes a vital area of his foe, dealing bonus damage and silencing them."
- },
- {
-  "champ": "garen",
-  "slot": "W",
-  "name": "Courage",
-  "icon": "assets/abilities/garen/w.png",
-  "desc": "Garen passively increases his Armor and Magic Resist. He may also activate this ability to grant himself a shield that reduces incoming damage for a short time."
- },
- {
-  "champ": "garen",
-  "slot": "E",
-  "name": "Judgment",
-  "icon": "assets/abilities/garen/e.png",
-  "desc": "Garen performs a dance of death with his sword, dealing damage around him for the duration."
- },
- {
-  "champ": "garen",
-  "slot": "R",
-  "name": "Demacian Justice",
-  "icon": "assets/abilities/garen/r.png",
-  "desc": "Garen calls upon the might of Demacia to deal a finishing blow to an enemy champion that deals damage based upon how much Health his target has missing."
- },
- {
-  "champ": "gragas",
-  "slot": "P",
-  "name": "Happy Hour",
-  "icon": "assets/abilities/gragas/passive.png",
-  "desc": "On ability use, Gragas takes a drink restoring 2% of his max health over 4 seconds."
- },
- {
-  "champ": "gragas",
-  "slot": "Q",
-  "name": "Barrel Roll",
-  "icon": "assets/abilities/gragas/q.png",
-  "desc": "Gragas rolls his cask to a location, which can be activated to explode or will explode on its own after 5 seconds. Enemies struck by the blast have their Attack Speed lowered."
- },
- {
-  "champ": "gragas",
-  "slot": "W",
-  "name": "Drunken Rage",
-  "icon": "assets/abilities/gragas/w.png",
-  "desc": "Gragas guzzles down brew from his cask for 1 second, restoring his Mana. After finishing, he becomes drunkenly empowered, increasing his damage dealt and reducing damage received."
- },
- {
-  "champ": "gragas",
-  "slot": "E",
-  "name": "Body Slam",
-  "icon": "assets/abilities/gragas/e.png",
-  "desc": "Gragas charges to a location and collides with the first enemy unit he comes across, dealing damage to all nearby enemy units and slowing their movement."
- },
- {
-  "champ": "gragas",
-  "slot": "R",
-  "name": "Explosive Cask",
-  "icon": "assets/abilities/gragas/r.png",
-  "desc": "Gragas hurls his cask to a location, dealing damage and knocking back enemies caught in the blast radius."
- },
- {
-  "champ": "heimerdinger",
-  "slot": "P",
-  "name": "Techmaturgical Repair Bots",
-  "icon": "assets/abilities/heimerdinger/passive.png",
-  "desc": "Heimerdinger gives nearby allied H-28G Turrets and Champions increased Health Regeneration."
- },
- {
-  "champ": "heimerdinger",
-  "slot": "Q",
-  "name": "H-28G Evolution Turret",
-  "icon": "assets/abilities/heimerdinger/q.png",
-  "desc": "Heimerdinger lays down a machine gun turret. Turrets gain abilities as this skill is increased. (Turrets deal half damage to towers)."
- },
- {
-  "champ": "heimerdinger",
-  "slot": "W",
-  "name": "Hextech Micro-Rockets",
-  "icon": "assets/abilities/heimerdinger/w.png",
-  "desc": "Heimerdinger fires long-range rockets that converge on his cursor."
- },
- {
-  "champ": "heimerdinger",
-  "slot": "E",
-  "name": "CH-1 Concussion Grenade",
-  "icon": "assets/abilities/heimerdinger/e.png",
-  "desc": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units as well as stunning anyone directly hit and blinding surrounding units."
- },
- {
-  "champ": "heimerdinger",
-  "slot": "R",
-  "name": "UPGRADE!!!",
-  "icon": "assets/abilities/heimerdinger/r.png",
-  "desc": "Passive / Active: Passively increases Cooldown Reduction. Activate to heal all active Evolution Turrets and cause them to fire frost shots, which reduce Movement Speed, for a short time."
- },
- {
-  "champ": "janna",
-  "slot": "P",
-  "name": "Tailwind",
-  "icon": "assets/abilities/janna/passive.png",
-  "desc": "Increases the Movement Speed of all allied champions by 5%."
- },
- {
-  "champ": "janna",
-  "slot": "Q",
-  "name": "Howling Gale",
-  "icon": "assets/abilities/janna/q.png",
-  "desc": "By creating a localized change in pressure and temperature, Janna is able to create a small storm that grows in size with time. She can activate the spell again to release the storm. On release this storm will fly towards the direction it was cast in, dealing damage and knocking away any enemies in its path."
- },
- {
-  "champ": "janna",
-  "slot": "W",
-  "name": "Zephyr",
-  "icon": "assets/abilities/janna/w.png",
-  "desc": "Janna summons an air elemental that passively increases her Movement Speed and enables her to pass through units. She may also activate this ability to deal damage and slow an enemy's Movement Speed. The passive is lost while this ability is on cooldown."
- },
- {
-  "champ": "janna",
-  "slot": "E",
-  "name": "Eye Of The Storm",
-  "icon": "assets/abilities/janna/e.png",
-  "desc": "Janna conjures a defensive gale that shields an ally champion or turret from incoming damage and increases their Attack Damage."
- },
- {
-  "champ": "janna",
-  "slot": "R",
-  "name": "Monsoon",
-  "icon": "assets/abilities/janna/r.png",
-  "desc": "Janna surrounds herself in a magical storm, throwing enemies back. After the storm has settled, soothing winds heal nearby allies while the ability is active."
- },
- {
-  "champ": "jarvan-iv",
-  "slot": "P",
-  "name": "Martial Cadence",
-  "icon": "assets/abilities/jarvan-iv/passive.png",
-  "desc": "Jarvan IV's initial basic attack on a target deals bonus physical damage. This effect cannot occur again on the same target for a short duration."
- },
- {
-  "champ": "jarvan-iv",
-  "slot": "Q",
-  "name": "Dragon Strike",
-  "icon": "assets/abilities/jarvan-iv/q.png",
-  "desc": "Jarvan IV extends his lance, dealing physical damage and lowering the Armor of all enemies in its path. Additionally, this will pull Jarvan to his Demacian Standard, knocking up enemies in his path."
- },
- {
-  "champ": "jarvan-iv",
-  "slot": "W",
-  "name": "Golden Aegis",
-  "icon": "assets/abilities/jarvan-iv/w.png",
-  "desc": "Jarvan IV calls upon the ancient kings of Demacia to shield him from harm and slow surrounding enemies."
- },
- {
-  "champ": "jarvan-iv",
-  "slot": "E",
-  "name": "Demacian Standard",
-  "icon": "assets/abilities/jarvan-iv/e.png",
-  "desc": "Jarvan IV carries the pride of Demacia, passively granting him bonus Attack Speed and Armor. Activating Demacian Standard allows Jarvan IV to place a Demacian flag that deals magic damage on impact and grants Attack Speed to nearby allied champions."
- },
- {
-  "champ": "jarvan-iv",
-  "slot": "R",
-  "name": "Cataclysm",
-  "icon": "assets/abilities/jarvan-iv/r.png",
-  "desc": "Jarvan IV heroically leaps into battle at a target with such force that he terraforms the surrounding area to create an arena around them."
- },
- {
-  "champ": "jax",
-  "slot": "P",
-  "name": "Relentless Assault",
-  "icon": "assets/abilities/jax/passive.png",
-  "desc": "Jax's consecutive basic attacks continuously increase his Attack Speed."
- },
- {
-  "champ": "jax",
-  "slot": "Q",
-  "name": "Leap Strike",
-  "icon": "assets/abilities/jax/q.png",
-  "desc": "Jax leaps toward a unit. If they are an enemy, he strikes them with his weapon."
- },
- {
-  "champ": "jax",
-  "slot": "W",
-  "name": "Empower",
-  "icon": "assets/abilities/jax/w.png",
-  "desc": "Jax charges his weapon with energy, causing his next attack to deal additional damage."
- },
- {
-  "champ": "jax",
-  "slot": "E",
-  "name": "Counter Strike",
-  "icon": "assets/abilities/jax/e.png",
-  "desc": "Jax's combat prowess allows him to dodge all incoming attacks for a short duration and then quickly counterattack, stunning all surrounding enemies."
- },
- {
-  "champ": "jax",
-  "slot": "R",
-  "name": "Grandmaster's Might",
-  "icon": "assets/abilities/jax/r.png",
-  "desc": "Every third consecutive attack deals additional Magic Damage. Additionally, Jax can activate this ability to strengthen his resolve, increasing his Armor and Magic Resist for a short duration."
- },
- {
-  "champ": "karthus",
-  "slot": "P",
-  "name": "Death Defied",
-  "icon": "assets/abilities/karthus/passive.png",
-  "desc": "Upon dying, Karthus enters a spirit form that allows him to continue casting spells while dead for 7 seconds."
- },
- {
-  "champ": "karthus",
-  "slot": "Q",
-  "name": "Lay Waste",
-  "icon": "assets/abilities/karthus/q.png",
-  "desc": "Karthus unleashes a delayed blast at a location, dealing damage to nearby enemies."
- },
- {
-  "champ": "karthus",
-  "slot": "W",
-  "name": "Wall of Pain",
-  "icon": "assets/abilities/karthus/w.png",
-  "desc": "Karthus creates a passable screen of leeching energy. Any enemy units that walk through the screen have their Movement Speed and Magic Resist reduced for a period."
- },
- {
-  "champ": "karthus",
-  "slot": "E",
-  "name": "Defile",
-  "icon": "assets/abilities/karthus/e.png",
-  "desc": "Karthus passively steals energy from his victims, gaining Mana on each kill. Alternatively, Karthus can surround himself in the souls of his prey, dealing damage to nearby enemies, but quickly draining his own Mana."
- },
- {
-  "champ": "karthus",
-  "slot": "R",
-  "name": "Requiem",
-  "icon": "assets/abilities/karthus/r.png",
-  "desc": "After channeling for 3 seconds, Karthus deals damage to all enemy champions."
- },
- {
-  "champ": "kassadin",
-  "slot": "P",
-  "name": "Void Stone",
-  "icon": "assets/abilities/kassadin/passive.png",
-  "desc": "Kassadin takes 15% reduced magic damage and ignores unit collision."
- },
- {
-  "champ": "kassadin",
-  "slot": "Q",
-  "name": "Null Sphere",
-  "icon": "assets/abilities/kassadin/q.png",
-  "desc": "Kassadin fires an orb of void energy at a target, dealing damage and interrupting channels. The excess energy forms around himself, granting a temporary shield that absorbs magic damage."
- },
- {
-  "champ": "kassadin",
-  "slot": "W",
-  "name": "Nether Blade",
-  "icon": "assets/abilities/kassadin/w.png",
-  "desc": "Passive: Kassadin's basic attacks deal bonus magic damage. Active: Kassadin's next basic attack deals significant bonus magic damage and restores Mana."
- },
- {
-  "champ": "kassadin",
-  "slot": "E",
-  "name": "Force Pulse",
-  "icon": "assets/abilities/kassadin/e.png",
-  "desc": "Kassadin draws energy from spells cast in his vicinity. Upon charging up, Kassadin can use Force Pulse to damage and slow enemies in a cone in front of him."
- },
- {
-  "champ": "kassadin",
-  "slot": "R",
-  "name": "Riftwalk",
-  "icon": "assets/abilities/kassadin/r.png",
-  "desc": "Kassadin teleports to a nearby location dealing damage to nearby enemy units. Multiple Riftwalks in a short period of time cost additional Mana but also deal additional damage."
- },
- {
-  "champ": "katarina",
-  "slot": "P",
-  "name": "Voracity",
-  "icon": "assets/abilities/katarina/passive.png",
-  "desc": "Champion kills or assists reduce Katarina's cooldowns by 15 seconds."
- },
- {
-  "champ": "katarina",
-  "slot": "Q",
-  "name": "Bouncing Blades",
-  "icon": "assets/abilities/katarina/q.png",
-  "desc": "Katarina throws a dagger that bounces from enemy to enemy, dealing magic damage and marking them. Her next spell or basic attack against a marked target will consume the mark and deal additional magic damage."
- },
- {
-  "champ": "katarina",
-  "slot": "W",
-  "name": "Sinister Steel",
-  "icon": "assets/abilities/katarina/w.png",
-  "desc": "Katarina whirls her daggers around her, dealing magic damage to all enemies in the area. If she hits an enemy Champion, Katarina gains a burst of speed for a short duration."
- },
- {
-  "champ": "katarina",
-  "slot": "E",
-  "name": "Shunpo",
-  "icon": "assets/abilities/katarina/e.png",
-  "desc": "Katarina instantly teleports to her target's location and takes reduced damage from enemies for a few seconds. If the target is an enemy, she deals damage."
- },
- {
-  "champ": "katarina",
-  "slot": "R",
-  "name": "Death Lotus",
-  "icon": "assets/abilities/katarina/r.png",
-  "desc": "Katarina becomes a flurry of blades, throwing daggers with unrivaled speed at up to three nearby Champions. Daggers deal magic damage and reduce incoming healing on targets hit."
- },
- {
-  "champ": "kayle",
-  "slot": "P",
-  "name": "Holy Fervor",
-  "icon": "assets/abilities/kayle/passive.png",
-  "desc": "When Kayle attacks a champion, the target loses 3% Armor and Magic Resistance for 5 seconds. This effect stacks up to 5 times."
- },
- {
-  "champ": "kayle",
-  "slot": "Q",
-  "name": "Reckoning",
-  "icon": "assets/abilities/kayle/q.png",
-  "desc": "Blasts an enemy unit with angelic force, dealing damage, slowing Movement Speed, and applying Holy Fervor."
- },
- {
-  "champ": "kayle",
-  "slot": "W",
-  "name": "Divine Blessing",
-  "icon": "assets/abilities/kayle/w.png",
-  "desc": "Blesses a target friendly champion, granting them increased Movement Speed and healing them."
- },
- {
-  "champ": "kayle",
-  "slot": "E",
-  "name": "Righteous Fury",
-  "icon": "assets/abilities/kayle/e.png",
-  "desc": "Ignites Kayle's sword with a holy flame, granting Kayle a ranged splash attack and bonus magic damage."
- },
- {
-  "champ": "kayle",
-  "slot": "R",
-  "name": "Intervention",
-  "icon": "assets/abilities/kayle/r.png",
-  "desc": "Shields Kayle or an ally for a short time, causing them to be immune to damage."
- },
- {
-  "champ": "kogmaw",
-  "slot": "P",
-  "name": "Icathian Surprise",
-  "icon": "assets/abilities/kogmaw/passive.png",
-  "desc": "Upon dying, Kog'Maw starts a chain reaction in his body which causes him to move faster and detonate after 4 seconds; dealing 100 + (25 x lvl) true damage to surrounding enemies."
- },
- {
-  "champ": "kogmaw",
-  "slot": "Q",
-  "name": "Caustic Spittle",
-  "icon": "assets/abilities/kogmaw/q.png",
-  "desc": "Passive: Increases Kog'Maw's Attack Speed. Active: Kog'Maw launches a corrosive projectile which deals Magic Damage and corrodes the target's Armor and Magic Resist for 4 seconds."
- },
- {
-  "champ": "kogmaw",
-  "slot": "W",
-  "name": "Bio-Arcane Barrage",
-  "icon": "assets/abilities/kogmaw/w.png",
-  "desc": "Kog'Maw's attacks gain range and deal a percent of the target's maximum Health as Magic Damage."
- },
- {
-  "champ": "kogmaw",
-  "slot": "E",
-  "name": "Void Ooze",
-  "icon": "assets/abilities/kogmaw/e.png",
-  "desc": "Kog'Maw launches a peculiar ooze which damages all enemies it passes through and leaves a trail which slows enemies who stand on it."
- },
- {
-  "champ": "kogmaw",
-  "slot": "R",
-  "name": "Living Artillery",
-  "icon": "assets/abilities/kogmaw/r.png",
-  "desc": "Kog'Maw fires a living artillery shell at a great distance dealing damage and revealing non-stealthed targets. Additionally, multiple Living Artilleries in a short period of time cause them to cost additional Mana."
- },
- {
-  "champ": "lee-sin",
-  "slot": "P",
-  "name": "Flurry",
-  "icon": "assets/abilities/lee-sin/passive.png",
-  "desc": "After Lee Sin uses an ability, his next 2 basic attacks gain 40% Attack Speed and return 15 Energy each."
- },
- {
-  "champ": "lee-sin",
-  "slot": "Q",
-  "name": "Sonic Wave / Resonating Strike",
-  "icon": "assets/abilities/lee-sin/q.png",
-  "desc": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds.Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing physical damage plus 8% of their missing Health."
- },
- {
-  "champ": "lee-sin",
-  "slot": "W",
-  "name": "Safeguard / Iron Will",
-  "icon": "assets/abilities/lee-sin/w.png",
-  "desc": "Safeguard: Lee Sin rushes towards a target ally, shielding himself from damage. If the ally is a champion, they are also shielded. After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds.Iron Will: Lee Sin's intense training allows him to thrive in battle. For 5 seconds, Lee Sin gains Life Steal and Spell Vamp."
- },
- {
-  "champ": "lee-sin",
-  "slot": "E",
-  "name": "Tempest / Cripple",
-  "icon": "assets/abilities/lee-sin/e.png",
-  "desc": "Tempest: Lee Sin smashes the ground, sending out a shockwave that deals magic damage and reveals enemy units hit. If Tempest hits an enemy, Lee Sin can cast cripple for the next 3 seconds.Cripple: Lee Sin cripples nearby enemies revealed by Tempest, reducing their Movement Speed for 4 seconds. Movement Speed recovers gradually over the duration."
- },
- {
-  "champ": "lee-sin",
-  "slot": "R",
-  "name": "Dragon's Rage",
-  "icon": "assets/abilities/lee-sin/r.png",
-  "desc": "Lee Sin performs a powerful roundhouse kick launching his target back, dealing physical damage to the target and any enemies they collide with. Enemies the target collides with are knocked into the air for a short duration. This technique was taught to him by Jesse Perring, although Lee Sin does not kick players off the map."
- },
- {
-  "champ": "leona",
-  "slot": "P",
-  "name": "Sunlight",
-  "icon": "assets/abilities/leona/passive.png",
-  "desc": "Damaging spells afflict enemies with Sunlight for 3.5 seconds. When allied Champions deal damage to those targets, they consume the Sunlight debuff to deal additional magic damage."
- },
- {
-  "champ": "leona",
-  "slot": "Q",
-  "name": "Shield of Daybreak",
-  "icon": "assets/abilities/leona/q.png",
-  "desc": "Leona uses her shield to perform her next basic attack, dealing bonus magic damage and stunning the target."
- },
- {
-  "champ": "leona",
-  "slot": "W",
-  "name": "Eclipse",
-  "icon": "assets/abilities/leona/w.png",
-  "desc": "Leona raises her shield to gain Armor and Magic Resistance. When the duration first ends, if there are nearby enemies, she will deal magic damage to them and prolong the duration of the effect."
- },
- {
-  "champ": "leona",
-  "slot": "E",
-  "name": "Zenith Blade",
-  "icon": "assets/abilities/leona/e.png",
-  "desc": "Leona projects a solar image of her sword, dealing magic damage to all enemies in a line. When the image fades, the last enemy champion struck will be briefly immobilized and Leona will dash to them."
- },
- {
-  "champ": "leona",
-  "slot": "R",
-  "name": "Solar Flare",
-  "icon": "assets/abilities/leona/r.png",
-  "desc": "Leona calls down a beam of solar energy, dealing damage to enemies in an area. Enemies in the center of the area are stunned, while enemies on the outside are slowed."
- },
- {
-  "champ": "lulu",
-  "slot": "P",
-  "name": "Pix, Faerie Companion",
-  "icon": "assets/abilities/lulu/passive.png",
-  "desc": "Pix is a wild Faerie that accompanies Lulu. Pix will fire a barrage of magical energy at targets that Lulu attacks."
- },
- {
-  "champ": "lulu",
-  "slot": "Q",
-  "name": "Glitterlance",
-  "icon": "assets/abilities/lulu/q.png",
-  "desc": "Pix and Lulu each fire a bolt of magical energy that heavily slows all enemies it hits. An enemy can only be damaged by one bolt."
- },
- {
-  "champ": "lulu",
-  "slot": "W",
-  "name": "Whimsy",
-  "icon": "assets/abilities/lulu/w.png",
-  "desc": "If cast on an ally, grants them Movement Speed for a short time. If cast on an enemy, turns them into an adorable critter that can't attack or cast spells."
- },
- {
-  "champ": "lulu",
-  "slot": "E",
-  "name": "Help, Pix!",
-  "icon": "assets/abilities/lulu/e.png",
-  "desc": "If cast on an ally, commands Pix to jump to an ally and shield them. He then follows them and aids their attacks. If cast on an enemy, commands Pix to jump to an enemy and damage them. He then follows them and grants you vision of that enemy."
- },
- {
-  "champ": "lulu",
-  "slot": "R",
-  "name": "Wild Growth",
-  "icon": "assets/abilities/lulu/r.png",
-  "desc": "Lulu enlarges an ally, knocking nearby enemies into the air and granting the ally a large amount of bonus Health. For the next few seconds, that ally gains an aura that slows nearby enemies."
- },
- {
-  "champ": "lux",
-  "slot": "P",
-  "name": "Illumination",
-  "icon": "assets/abilities/lux/passive.png",
-  "desc": "Lux's damaging spells charge the target with energy for 6 seconds. Lux's next attack ignites the energy, dealing bonus magic damage (depending on Lux's level) to the target."
- },
- {
-  "champ": "lux",
-  "slot": "Q",
-  "name": "Light Binding",
-  "icon": "assets/abilities/lux/q.png",
-  "desc": "Lux releases a sphere of light that binds and deals damage to up to two enemy units."
- },
- {
-  "champ": "lux",
-  "slot": "W",
-  "name": "Prismatic Barrier",
-  "icon": "assets/abilities/lux/w.png",
-  "desc": "Lux throws her wand and bends the light around any friendly target it touches, protecting them from enemy damage."
- },
- {
-  "champ": "lux",
-  "slot": "E",
-  "name": "Lucent Singularity",
-  "icon": "assets/abilities/lux/e.png",
-  "desc": "Fires an anomaly of twisted light to an area, which slows nearby enemies. Lux can detonate it to damage enemies in the area of effect."
- },
- {
-  "champ": "lux",
-  "slot": "R",
-  "name": "Final Spark",
-  "icon": "assets/abilities/lux/r.png",
-  "desc": "After gathering energy, Lux fires a beam of light that deals damage to all targets in the area. In addition, triggers Lux's passive ability and refreshes the Illumination debuff duration."
- },
- {
-  "champ": "malphite",
-  "slot": "P",
-  "name": "Granite Shield",
-  "icon": "assets/abilities/malphite/passive.png",
-  "desc": "Malphite is shielded by a layer of rock which absorbs damage up to 10% of his maximum Health. If Malphite has not been hit for 10 seconds, this effect recharges."
- },
- {
-  "champ": "malphite",
-  "slot": "Q",
-  "name": "Seismic Shard",
-  "icon": "assets/abilities/malphite/q.png",
-  "desc": "Using his primal elemental magic, Malphite sends a shard of the earth through the ground at his foe, dealing damage upon impact and stealing Movement Speed for 4 seconds."
- },
- {
-  "champ": "malphite",
-  "slot": "W",
-  "name": "Brutal Strikes",
-  "icon": "assets/abilities/malphite/w.png",
-  "desc": "Malphite starts to hit with such force that his attacks deal damage to all units in front of him. Activating Brutal Strikes greatly increases his Armor and Attack Damage for a short amount of time."
- },
- {
-  "champ": "malphite",
-  "slot": "E",
-  "name": "Ground Slam",
-  "icon": "assets/abilities/malphite/e.png",
-  "desc": "Malphite slams the ground, sending out a shockwave that deals magic damage based on his Armor as damage and reduces the Attack Speed of enemies for a short duration."
- },
- {
-  "champ": "malphite",
-  "slot": "R",
-  "name": "Unstoppable Force",
-  "icon": "assets/abilities/malphite/r.png",
-  "desc": "Malphite ferociously charges to a location, damaging enemies and knocking them into the air."
- },
- {
-  "champ": "malzahar",
-  "slot": "P",
-  "name": "Summon Voidling",
-  "icon": "assets/abilities/malzahar/passive.png",
-  "desc": "After casting 4 spells, Malzahar summons an uncontrollable Voidling to engage enemy units for 21 seconds. Voidlings have 200 + 50 x lvl Health and 20 + 5 x lvl Attack Damage.Voidlings Grow after 7 seconds (+50% Attack Damage/Armor), and Frenzy after 14 seconds (+100% Attack Speed)."
- },
- {
-  "champ": "malzahar",
-  "slot": "Q",
-  "name": "Call of the Void",
-  "icon": "assets/abilities/malzahar/q.png",
-  "desc": "Malzahar opens up two portals to the Void. After a short delay, they fire projectiles that deal Magic Damage and silence enemy champions."
- },
- {
-  "champ": "malzahar",
-  "slot": "W",
-  "name": "Null Zone",
-  "icon": "assets/abilities/malzahar/w.png",
-  "desc": "Malzahar creates a zone of negative energy which damages enemies that stand in it."
- },
- {
-  "champ": "malzahar",
-  "slot": "E",
-  "name": "Malefic Visions",
-  "icon": "assets/abilities/malzahar/e.png",
-  "desc": "Malzahar infects his target's mind with cruel visions of their demise, dealing damage each second. If the target dies while afflicted by the visions, they pass on to a nearby enemy unit and Malzahar gains Mana. Malzahar's Voidlings are attracted to affected units."
- },
- {
-  "champ": "malzahar",
-  "slot": "R",
-  "name": "Nether Grasp",
-  "icon": "assets/abilities/malzahar/r.png",
-  "desc": "Malzahar channels the essence of the Void to suppress an enemy champion and deal damage each second."
- },
- {
-  "champ": "master-yi",
-  "slot": "P",
-  "name": "Double Strike",
-  "icon": "assets/abilities/master-yi/passive.png",
-  "desc": "Every few strikes, Master Yi strikes twice."
- },
- {
-  "champ": "master-yi",
-  "slot": "Q",
-  "name": "Alpha Strike",
-  "icon": "assets/abilities/master-yi/q.png",
-  "desc": "Master Yi teleports across the battlefield with blinding speed, dealing physical damage to multiple units in his path, while simultaneously becoming untargetable. Alpha Strike can critically strike and deals bonus physical damage to minions and monsters. Basic attacks reduce Alpha Strike's cooldown."
- },
- {
-  "champ": "master-yi",
-  "slot": "W",
-  "name": "Meditate",
-  "icon": "assets/abilities/master-yi/w.png",
-  "desc": "Master Yi rejuvenates his body by focus of mind, restoring Health and taking reduced damage for a short time."
- },
- {
-  "champ": "master-yi",
-  "slot": "E",
-  "name": "Wuju Style",
-  "icon": "assets/abilities/master-yi/e.png",
-  "desc": "Master Yi becomes skilled in the art of Wuju, passively increasing his Attack Damage. Activating Wuju Style grants bonus true damage on basic attacks, but the passive bonus is then lost while on cooldown."
- },
- {
-  "champ": "master-yi",
-  "slot": "R",
-  "name": "Highlander",
-  "icon": "assets/abilities/master-yi/r.png",
-  "desc": "Master Yi moves with unparalleled agility, temporarily increasing his Movement and Attack Speeds as well as making him immune to all slowing effects. While active, Champion kills or assists extends Highlander's duration. Passively reduces cooldown for his other abilities on a kill or assist."
- },
- {
-  "champ": "miss-fortune",
-  "slot": "P",
-  "name": "Strut",
-  "icon": "assets/abilities/miss-fortune/passive.png",
-  "desc": "After 5 seconds of not being attacked, Miss Fortune gains an additional 25 Movement Speed. This bonus increases by 8 each second up to a maximum bonus of 70."
- },
- {
-  "champ": "miss-fortune",
-  "slot": "Q",
-  "name": "Double Up",
-  "icon": "assets/abilities/miss-fortune/q.png",
-  "desc": "Miss Fortune fires a bullet at an enemy, damaging them and a target behind them."
- },
- {
-  "champ": "miss-fortune",
-  "slot": "W",
-  "name": "Impure Shots",
-  "icon": "assets/abilities/miss-fortune/w.png",
-  "desc": "Miss Fortune passively increases damage dealt to a target with each strike. This ability can be activated to increase Miss Fortune's Attack Speed and cause her attacks to lower healing received by the target."
- },
- {
-  "champ": "miss-fortune",
-  "slot": "E",
-  "name": "Make It Rain",
-  "icon": "assets/abilities/miss-fortune/e.png",
-  "desc": "Miss Fortune unleashes a flurry of bullets at a location, dealing waves of damage to opponents and slowing them."
- },
- {
-  "champ": "miss-fortune",
-  "slot": "R",
-  "name": "Bullet Time",
-  "icon": "assets/abilities/miss-fortune/r.png",
-  "desc": "Miss Fortune channels a flurry of bullets into a cone in front of her, dealing large amounts of damage to enemies."
- },
- {
-  "champ": "morgana",
-  "slot": "P",
-  "name": "Soul Siphon",
-  "icon": "assets/abilities/morgana/passive.png",
-  "desc": "Morgana has Spell Vamp, healing herself whenever she deals damage with her spells."
- },
- {
-  "champ": "morgana",
-  "slot": "Q",
-  "name": "Dark Binding",
-  "icon": "assets/abilities/morgana/q.png",
-  "desc": "Morgana releases a sphere of dark magic. Upon contact with an enemy unit, the sphere will deal magic damage and force the unit to the ground for a period of time."
- },
- {
-  "champ": "morgana",
-  "slot": "W",
-  "name": "Tormented Soil",
-  "icon": "assets/abilities/morgana/w.png",
-  "desc": "Infects an area with desecrated soil, causing enemy units who stand on the location to take continual damage."
- },
- {
-  "champ": "morgana",
-  "slot": "E",
-  "name": "Black Shield",
-  "icon": "assets/abilities/morgana/e.png",
-  "desc": "Places a protective barrier around an allied champion, absorbing magical damage and disables until penetrated or the shield dissipates."
- },
- {
-  "champ": "morgana",
-  "slot": "R",
-  "name": "Soul Shackles",
-  "icon": "assets/abilities/morgana/r.png",
-  "desc": "Latches chains of energy onto nearby enemy champions, dealing initial damage to them and slowing their Movement Speed, and then echoing the pain a few seconds later and stunning them if they remain close to Morgana."
- },
- {
-  "champ": "nasus",
-  "slot": "P",
-  "name": "Soul Eater",
-  "icon": "assets/abilities/nasus/passive.png",
-  "desc": "Nasus drains his foe's spiritual energy, giving him bonus Life Steal."
- },
- {
-  "champ": "nasus",
-  "slot": "Q",
-  "name": "Siphoning Strike",
-  "icon": "assets/abilities/nasus/q.png",
-  "desc": "Nasus strikes his foe, dealing damage and increasing the power of his future Siphoning Strikes if he slays his target."
- },
- {
-  "champ": "nasus",
-  "slot": "W",
-  "name": "Wither",
-  "icon": "assets/abilities/nasus/w.png",
-  "desc": "Nasus ages an enemy champion, decelerating their Movement and Attack Speeds over time."
- },
- {
-  "champ": "nasus",
-  "slot": "E",
-  "name": "Spirit Fire",
-  "icon": "assets/abilities/nasus/e.png",
-  "desc": "Nasus unleashes a spirit flame at a location, dealing damage and reducing the Armor of enemies who stand on it."
- },
- {
-  "champ": "nasus",
-  "slot": "R",
-  "name": "Fury of the Sands",
-  "icon": "assets/abilities/nasus/r.png",
-  "desc": "Nasus unleashes a mighty sandstorm that batters nearby enemies. While the storm rages, he gains increased Health, Attack Range, and drains nearby enemies' max Health converting into bonus damage for the duration."
- },
- {
-  "champ": "nidalee",
-  "slot": "P",
-  "name": "Prowl",
-  "icon": "assets/abilities/nidalee/passive.png",
-  "desc": "Moving through brush increases Nidalee's Movement Speed by 10% for 2 seconds, increased to 30% toward visible enemy champions within 5500 range.Hitting champions with Javelin Toss and Bushwhack triggers a Hunt, revealing them for 4 seconds. During this time, Nidalee gains 10% Movement Speed (increased to 30% toward the Hunted target) and her first Takedown and Pounce are enhanced against them."
- },
- {
-  "champ": "nidalee",
-  "slot": "Q",
-  "name": "Javelin Toss / Takedown",
-  "icon": "assets/abilities/nidalee/q.png",
-  "desc": "In human form, Nidalee throws a spiked javelin at her target that gains damage as it flies.  As a cougar, her next attack will attempt to fatally wound her target, dealing more damage the less life they have."
- },
- {
-  "champ": "nidalee",
-  "slot": "W",
-  "name": "Bushwhack / Pounce",
-  "icon": "assets/abilities/nidalee/w.png",
-  "desc": "In human form, Nidalee lays a trap for unwary opponents that, when sprung, damages and reveals its target. As a cougar, she jumps in a direction, dealing damage in an area where she lands."
- },
- {
-  "champ": "nidalee",
-  "slot": "E",
-  "name": "Primal Surge / Swipe",
-  "icon": "assets/abilities/nidalee/e.png",
-  "desc": "In human form, Nidalee channels the spirit of the cougar to heal her allies and imbue them with Attack Speed for a short duration. As a cougar, she claws in a direction, dealing damage to enemies in front of her."
- },
- {
-  "champ": "nidalee",
-  "slot": "R",
-  "name": "Aspect Of The Cougar",
-  "icon": "assets/abilities/nidalee/r.png",
-  "desc": "Nidalee transforms into a cougar, gaining new abilities."
- },
- {
-  "champ": "nunu",
-  "slot": "P",
-  "name": "Visionary",
-  "icon": "assets/abilities/nunu/passive.png",
-  "desc": "Nunu can cast a spell for free after 5 attacks."
- },
- {
-  "champ": "nunu",
-  "slot": "Q",
-  "name": "Consume",
-  "icon": "assets/abilities/nunu/q.png",
-  "desc": "Nunu commands the yeti to take a bite out of a target minion or monster, dealing heavy damage to it and healing himself."
- },
- {
-  "champ": "nunu",
-  "slot": "W",
-  "name": "Blood Boil",
-  "icon": "assets/abilities/nunu/w.png",
-  "desc": "Nunu invigorates himself and an allied unit by heating their blood, increasing their Movement and Attack Speeds."
- },
- {
-  "champ": "nunu",
-  "slot": "E",
-  "name": "Ice Blast",
-  "icon": "assets/abilities/nunu/e.png",
-  "desc": "Nunu launches a ball of ice at an enemy unit, dealing damage and temporarily slowing their Movement and Attack Speeds."
- },
- {
-  "champ": "nunu",
-  "slot": "R",
-  "name": "Absolute Zero",
-  "icon": "assets/abilities/nunu/r.png",
-  "desc": "Nunu begins to sap the area of heat, slowing all nearby enemies. When the spell ends, he deals massive damage to all enemies caught in the area."
- },
- {
-  "champ": "olaf",
-  "slot": "P",
-  "name": "Berserker Rage",
-  "icon": "assets/abilities/olaf/passive.png",
-  "desc": "For each 1% of Health missing, Olaf's Attack Speed is increased by 1%."
- },
- {
-  "champ": "olaf",
-  "slot": "Q",
-  "name": "Undertow",
-  "icon": "assets/abilities/olaf/q.png",
-  "desc": "Olaf throws an axe into the ground at a target location, dealing damage to units it passes through and slowing their Movement Speed. If Olaf picks up the axe, the ability's cooldown is reduced by 4.5 seconds."
- },
- {
-  "champ": "olaf",
-  "slot": "W",
-  "name": "Vicious Strikes",
-  "icon": "assets/abilities/olaf/w.png",
-  "desc": "Olaf's Attack Speed is increased, he gains Life Steal and has increased healing from all sources based on how much Health he is missing."
- },
- {
-  "champ": "olaf",
-  "slot": "E",
-  "name": "Reckless Swing",
-  "icon": "assets/abilities/olaf/e.png",
-  "desc": "Olaf attacks with such force that it deals true damage to his target and himself, refunding the Health cost if he destroys the target."
- },
- {
-  "champ": "olaf",
-  "slot": "R",
-  "name": "Ragnarok",
-  "icon": "assets/abilities/olaf/r.png",
-  "desc": "Olaf temporarily becomes immune to disables."
- },
- {
-  "champ": "pantheon",
-  "slot": "P",
-  "name": "Aegis Protection",
-  "icon": "assets/abilities/pantheon/passive.png",
-  "desc": "After attacking or casting spells 4 times, Pantheon will block the next incoming basic attack or turret attack."
- },
- {
-  "champ": "pantheon",
-  "slot": "Q",
-  "name": "Spear Shot",
-  "icon": "assets/abilities/pantheon/q.png",
-  "desc": "Pantheon hurls his spear at an opponent, dealing damage."
- },
- {
-  "champ": "pantheon",
-  "slot": "W",
-  "name": "Aegis of Zeonia",
-  "icon": "assets/abilities/pantheon/w.png",
-  "desc": "Pantheon leaps at an enemy and bashes the enemy with his shield, stunning them. After finishing the attack, Pantheon readies himself to block the next attack."
- },
- {
-  "champ": "pantheon",
-  "slot": "E",
-  "name": "Heartseeker Strike",
-  "icon": "assets/abilities/pantheon/e.png",
-  "desc": "Pantheon focuses and unleashes 3 swift strikes to the area in front of him, dealing double damage to champions. Pantheon also becomes more aware of his enemy's vital spots, allowing him to always crit enemies below 15% Health."
- },
- {
-  "champ": "pantheon",
-  "slot": "R",
-  "name": "Grand Skyfall",
-  "icon": "assets/abilities/pantheon/r.png",
-  "desc": "Pantheon composes himself then leaps into the air to a target, striking all enemy units in an area. Enemies closer to the impact point take more damage."
- },
- {
-  "champ": "rammus",
-  "slot": "P",
-  "name": "Spiked Shell",
-  "icon": "assets/abilities/rammus/passive.png",
-  "desc": "Rammus gains additional damage as his shell becomes reinforced, converting 25% of his Armor into Attack Damage."
- },
- {
-  "champ": "rammus",
-  "slot": "Q",
-  "name": "Powerball",
-  "icon": "assets/abilities/rammus/q.png",
-  "desc": "Rammus accelerates in a ball towards his enemies, dealing damage and slowing targets affected by the impact."
- },
- {
-  "champ": "rammus",
-  "slot": "W",
-  "name": "Defensive Ball Curl",
-  "icon": "assets/abilities/rammus/w.png",
-  "desc": "Rammus goes into a defensive formation, vastly increasing his Armor and Magic Resist, while returning damage to attacks."
- },
- {
-  "champ": "rammus",
-  "slot": "E",
-  "name": "Puncturing Taunt",
-  "icon": "assets/abilities/rammus/e.png",
-  "desc": "Rammus taunts an enemy champion or monster into a reckless assault against Rammus' hard shell, reducing Armor temporarily."
- },
- {
-  "champ": "rammus",
-  "slot": "R",
-  "name": "Tremors",
-  "icon": "assets/abilities/rammus/r.png",
-  "desc": "Rammus creates waves of destruction pulsing through the ground, causing damage to units and structures near him."
- },
- {
-  "champ": "ryze",
-  "slot": "P",
-  "name": "Arcane Mastery",
-  "icon": "assets/abilities/ryze/passive.png",
-  "desc": "When Ryze casts a spell, all other spells have their cooldown reduced by 1 second."
- },
- {
-  "champ": "ryze",
-  "slot": "Q",
-  "name": "Overload",
-  "icon": "assets/abilities/ryze/q.png",
-  "desc": "Ryze throws a charge of pure energy at an enemy for heavy damage and additional damage based upon Ryze's maximum Mana. Ryze also gains passive cooldown reduction."
- },
- {
-  "champ": "ryze",
-  "slot": "W",
-  "name": "Rune Prison",
-  "icon": "assets/abilities/ryze/w.png",
-  "desc": "Ryze traps target enemy unit in a cage of runes, damaging them and preventing them from moving. Also gains bonus damage based on Ryze's maximum Mana."
- },
- {
-  "champ": "ryze",
-  "slot": "E",
-  "name": "Spell Flux",
-  "icon": "assets/abilities/ryze/e.png",
-  "desc": "Ryze releases an orb of pure magical power that deals damage and bounces from the initial target up to 5 times. Also gains bonus damage based on Ryze's maximum Mana. Targets hit have their Magic Resistance reduced."
- },
- {
-  "champ": "ryze",
-  "slot": "R",
-  "name": "Desperate Power",
-  "icon": "assets/abilities/ryze/r.png",
-  "desc": "Ryze channels immense arcane power, he gains Spell Vamp and all of his spells deal area of effect damage."
- },
- {
-  "champ": "shaco",
-  "slot": "P",
-  "name": "Backstab",
-  "icon": "assets/abilities/shaco/passive.png",
-  "desc": "Shaco deals 20% bonus damage when striking a unit from behind."
- },
- {
-  "champ": "shaco",
-  "slot": "Q",
-  "name": "Deceive",
-  "icon": "assets/abilities/shaco/q.png",
-  "desc": "Shaco becomes invisible and teleports to target location. His next attack is guaranteed to critically strike."
- },
- {
-  "champ": "shaco",
-  "slot": "W",
-  "name": "Jack In The Box",
-  "icon": "assets/abilities/shaco/w.png",
-  "desc": "Shaco creates an invisible, animated Jack-in-the-Box, which will fear, and then attack, nearby enemies."
- },
- {
-  "champ": "shaco",
-  "slot": "E",
-  "name": "Two-Shiv Poison",
-  "icon": "assets/abilities/shaco/e.png",
-  "desc": "Shaco's Shivs passively poison targets on hit, slowing them and applying a miss chance to minions and monsters. He can throw his Shivs to deal damage and poison the target."
- },
- {
-  "champ": "shaco",
-  "slot": "R",
-  "name": "Hallucinate",
-  "icon": "assets/abilities/shaco/r.png",
-  "desc": "Shaco creates an illusion of himself near him, which can attack nearby enemies. (Deals half damage to turrets.)  Upon death, it explodes, dealing damage to nearby enemies."
- },
- {
-  "champ": "sion",
-  "slot": "P",
-  "name": "Feel No Pain",
-  "icon": "assets/abilities/sion/passive.png",
-  "desc": "Sion has a chance to take reduced damage from basic attacks."
- },
- {
-  "champ": "sion",
-  "slot": "Q",
-  "name": "Cryptic Gaze",
-  "icon": "assets/abilities/sion/q.png",
-  "desc": "Sion blasts a terrifying gaze at the target enemy, dealing magic damage and stunning them."
- },
- {
-  "champ": "sion",
-  "slot": "W",
-  "name": "Death's Caress",
-  "icon": "assets/abilities/sion/w.png",
-  "desc": "Sion grants himself a shield for a few seconds. Death's Caress can be recast while the shield holds, and does so automatically at the end of its duration, consuming the shield to deal magic damage to nearby enemies."
- },
- {
-  "champ": "sion",
-  "slot": "E",
-  "name": "Enrage",
-  "icon": "assets/abilities/sion/e.png",
-  "desc": "Toggle: Sion gains bonus attack damage. While active, he gains bonus health whenever he kills an enemy, doubled against large enemies and takedowns on champions."
- },
- {
-  "champ": "sion",
-  "slot": "R",
-  "name": "Cannibalism",
-  "icon": "assets/abilities/sion/r.png",
-  "desc": "Sion empowers himself, gaining bonus attack speed and life steal, and causing his basic attacks to heal nearby allies for a percentage of the damage dealt."
+  "desc": "Ezreal channels for 1 second to fire a powerful barrage of energy missiles which do massive damage to each unit they pass through (deals 10% less damage to each unit it passes through).",
+  "icon": "assets/abilities/ezreal/r.png"
  },
  {
   "champ": "singed",
   "slot": "P",
   "name": "Empowered Bulwark",
-  "icon": "assets/abilities/singed/passive.png",
-  "desc": "Increases Singed's Health by 25 for every 100 Mana he has."
+  "desc": "Increases Singed's <scaleHealth>Health</scaleHealth> by 25 for every 100 Mana he has.",
+  "icon": "assets/abilities/singed/passive.png"
  },
  {
   "champ": "singed",
   "slot": "Q",
   "name": "Poison Trail",
-  "icon": "assets/abilities/singed/q.png",
-  "desc": "Leaves a trail of poison behind Singed, dealing damage to enemies caught in the path."
+  "desc": "Leaves a trail of poison behind Singed, dealing damage to enemies caught in the path.",
+  "icon": "assets/abilities/singed/q.png"
  },
  {
   "champ": "singed",
   "slot": "W",
   "name": "Mega Adhesive",
-  "icon": "assets/abilities/singed/w.png",
-  "desc": "Throws a vial of mega adhesive on the ground, slowing enemies who walk on it."
+  "desc": "Throws a vial of mega adhesive on the ground, slowing enemies who walk on it.",
+  "icon": "assets/abilities/singed/w.png"
  },
  {
   "champ": "singed",
   "slot": "E",
   "name": "Fling",
-  "icon": "assets/abilities/singed/e.png",
-  "desc": "Damages target enemy unit and flings them into the air behind Singed. If the target Singed flings lands in his Mega Adhesive, they are also rooted."
+  "desc": "Damages target enemy unit and flings them into the air behind Singed.",
+  "icon": "assets/abilities/singed/e.png"
  },
  {
   "champ": "singed",
   "slot": "R",
   "name": "Insanity Potion",
-  "icon": "assets/abilities/singed/r.png",
-  "desc": "Singed drinks a potent brew of chemicals, granting him increased combat stats."
+  "desc": "Singed drinks a potent brew of chemicals, granting him increased combat stats.",
+  "icon": "assets/abilities/singed/r.png"
  },
  {
-  "champ": "sivir",
+  "champ": "garen",
   "slot": "P",
-  "name": "Fleet of Foot",
-  "icon": "assets/abilities/sivir/passive.png",
-  "desc": "Sivir gains a short burst of Movement Speed when she attacks an enemy champion."
+  "name": "Perseverance",
+  "desc": "If Garen has not recently been struck by damage or enemy abilities, he regenerates a percentage of his total health each second.",
+  "icon": "assets/abilities/garen/passive.png"
  },
  {
-  "champ": "sivir",
+  "champ": "garen",
   "slot": "Q",
-  "name": "Boomerang Blade",
-  "icon": "assets/abilities/sivir/q.png",
-  "desc": "Sivir hurls her crossblade like a boomerang, dealing damage each way."
+  "name": "Decisive Strike",
+  "desc": "Garen gains a burst of Move Speed, breaking free of all slows affecting him. His next attack strikes a vital area of his foe, dealing bonus damage and silencing them.",
+  "icon": "assets/abilities/garen/q.png"
  },
  {
-  "champ": "sivir",
+  "champ": "garen",
   "slot": "W",
-  "name": "Ricochet",
-  "icon": "assets/abilities/sivir/w.png",
-  "desc": "Sivir's next few basic attacks will bounce to nearby targets, dealing reduced damage to secondary targets."
+  "name": "Courage",
+  "desc": "Garen performs a dance of death with his sword, dealing damage around him for the duration.",
+  "icon": "assets/abilities/garen/w.png"
  },
  {
-  "champ": "sivir",
+  "champ": "garen",
   "slot": "E",
-  "name": "Spell Shield",
-  "icon": "assets/abilities/sivir/e.png",
-  "desc": "Creates a magical barrier that blocks a single enemy ability cast on Sivir. She receives Mana back if a spell is blocked."
+  "name": "Judgment",
+  "desc": "Garen rapidly spins his sword around his body, dealing physical damage to nearby enemies.",
+  "icon": "assets/abilities/garen/e.png"
  },
  {
-  "champ": "sivir",
+  "champ": "garen",
   "slot": "R",
-  "name": "On The Hunt",
-  "icon": "assets/abilities/sivir/r.png",
-  "desc": "Sivir leads her allies in battle, granting them a surge Movement Speed for a period of time. Additionally passively grants Sivir bonus Attack Speed while Ricochet is active."
- },
- {
-  "champ": "skarner",
-  "slot": "P",
-  "name": "Crystallizing Sting",
-  "icon": "assets/abilities/skarner/passive.png",
-  "desc": "Skarner's damaging spells apply Crystal Venom to enemies for 5 seconds that stacks up to 3 times. If an enemy has 3 stacks of Crystal Venom, Skarner's next attack will deal additional magic damage and stun the target. Skarner cannot apply Crystal Venom to this target for 6 seconds after he stuns them."
- },
- {
-  "champ": "skarner",
-  "slot": "Q",
-  "name": "Crystal Slash",
-  "icon": "assets/abilities/skarner/q.png",
-  "desc": "Skarner lashes out with his claws, dealing physical damage to all nearby enemies and charging himself with Crystal Energy for several seconds if a unit is struck. If he casts Crystal Slash again while powered by Crystal Energy, he deals bonus magic damage. Whenever he hits a target with Crystal Slash he gains a stacking buff that increases his Attack Speed for a few seconds. Basic attack reduce this ability's cooldown."
- },
- {
-  "champ": "skarner",
-  "slot": "W",
-  "name": "Crystalline Exoskeleton",
-  "icon": "assets/abilities/skarner/w.png",
-  "desc": "Skarner gains a shield, and while the shield persists his Movement Speed is increased."
- },
- {
-  "champ": "skarner",
-  "slot": "E",
-  "name": "Fracture",
-  "icon": "assets/abilities/skarner/e.png",
-  "desc": "Skarner summons a blast of crystalline energy which deals damage to enemies struck and slows them."
- },
- {
-  "champ": "skarner",
-  "slot": "R",
-  "name": "Impale",
-  "icon": "assets/abilities/skarner/r.png",
-  "desc": "Skarner suppresses an enemy champion and deals magic damage to it. During this time, Skarner can move freely and will drag his helpless victim around with him. When the effect ends, Skarner's target will be dealt additional damage."
- },
- {
-  "champ": "sona",
-  "slot": "P",
-  "name": "Power Chord",
-  "icon": "assets/abilities/sona/passive.png",
-  "desc": "After casting 3 spells, Sona's next attack deals bonus magic damage in addition to a bonus effect depending on what song Sona last activated."
- },
- {
-  "champ": "sona",
-  "slot": "Q",
-  "name": "Hymn of Valor",
-  "icon": "assets/abilities/sona/q.png",
-  "desc": "Sona plays the Hymn of Valor, sends out bolts of sound, dealing magic damage to two nearby enemies, prioritizing champions and monsters. Sona gains a temporary aura that grants allies tagged by the zone bonus damage on their next attack against enemies and extends the duration of her aura for each ally she aids."
- },
- {
-  "champ": "sona",
-  "slot": "W",
-  "name": "Aria of Perseverance",
-  "icon": "assets/abilities/sona/w.png",
-  "desc": "Sona plays the Aria of Perseverance, sending out protective melodies, healing Sona and a nearby wounded ally. Sona gains a temporary aura that grants allies tagged by the zone a temporary shield and extends the duration of her aura for each ally she aids."
- },
- {
-  "champ": "sona",
-  "slot": "E",
-  "name": "Song of Celerity",
-  "icon": "assets/abilities/sona/e.png",
-  "desc": "Sona plays the Song of Celerity, granting herself bonus Movement Speed that decays over time. Sona gains a temporary aura that grants nearby allied champions bonus Movement Speed and extends the duration of her aura for each ally she aids."
- },
- {
-  "champ": "sona",
-  "slot": "R",
-  "name": "Crescendo",
-  "icon": "assets/abilities/sona/r.png",
-  "desc": "Sona plays her ultimate chord, stunning enemy champions and forcing them to dance and dealing magic damage to them. Each rank increases the power of all aura effects."
- },
- {
-  "champ": "soraka",
-  "slot": "P",
-  "name": "Consecration",
-  "icon": "assets/abilities/soraka/passive.png",
-  "desc": "Increases surrounding allies' Magic Resist by 16."
- },
- {
-  "champ": "soraka",
-  "slot": "Q",
-  "name": "Starcall",
-  "icon": "assets/abilities/soraka/q.png",
-  "desc": "A shower of stars falls from the sky, striking all nearby enemies for magic damage and reducing their Magic Resist for a short duration."
- },
- {
-  "champ": "soraka",
-  "slot": "W",
-  "name": "Astral Blessing",
-  "icon": "assets/abilities/soraka/w.png",
-  "desc": "Soraka blesses a friendly unit, restoring health and granting them bonus armor for a couple seconds."
- },
- {
-  "champ": "soraka",
-  "slot": "E",
-  "name": "Infuse",
-  "icon": "assets/abilities/soraka/e.png",
-  "desc": "Cast on an ally, Soraka drains some of her own mana to restore mana to them. Cast on an enemy, Soraka silences the target and deals magic damage to them."
- },
- {
-  "champ": "soraka",
-  "slot": "R",
-  "name": "Wish",
-  "icon": "assets/abilities/soraka/r.png",
-  "desc": "Soraka fills her allies with hope, instantly restoring health to herself and all friendly champions."
- },
- {
-  "champ": "taric",
-  "slot": "P",
-  "name": "Gemcraft",
-  "icon": "assets/abilities/taric/passive.png",
-  "desc": "After casting a spell, Taric's next basic attack deals bonus magic damage based on his Armor and reduces his cooldowns."
- },
- {
-  "champ": "taric",
-  "slot": "Q",
-  "name": "Imbue",
-  "icon": "assets/abilities/taric/q.png",
-  "desc": "Taric brings forth earthen energy to heal an ally and himself. This heal is more potent when Taric heals only himself."
- },
- {
-  "champ": "taric",
-  "slot": "W",
-  "name": "Shatter",
-  "icon": "assets/abilities/taric/w.png",
-  "desc": "Taric is protected by a hardening aura, increasing the Armor of himself and nearby allied champions. He may choose to splinter the enchanted rocks surrounding him to deal damage and decrease the Armor of nearby enemies at the cost of some Armor for a short time."
- },
- {
-  "champ": "taric",
-  "slot": "E",
-  "name": "Dazzle",
-  "icon": "assets/abilities/taric/e.png",
-  "desc": "Taric emits a brilliant ball of prismatic light from his gemmed shield, stunning his target and damaging them based on how close he is to them."
- },
- {
-  "champ": "taric",
-  "slot": "R",
-  "name": "Radiance",
-  "icon": "assets/abilities/taric/r.png",
-  "desc": "Taric slams his hammer into the ground to deal damage to nearby enemies. For a time after, Taric's gems radiate energy, empowering Taric and his allies with bonus Attack Damage and Ability Power."
+  "name": "Demacian Justice",
+  "desc": "Garen calls upon the might of Demacia to attempt to execute an enemy champion.",
+  "icon": "assets/abilities/garen/r.png"
  },
  {
   "champ": "teemo",
   "slot": "P",
   "name": "Camouflage",
-  "icon": "assets/abilities/teemo/passive.png",
-  "desc": "If Teemo stands still and takes no actions for a short duration, he becomes stealthed indefinitely. After leaving stealth, Teemo gains the Element of Surprise, increasing his Attack Speed by 40% for 3 seconds."
+  "desc": "If Teemo stands still and takes no actions for a short duration, he becomes Invisible indefinitely. If he's in brush, Teemo can enter and maintain his Invisibility while moving. After leaving Invisibility, Teemo gains the Element of Surprise, increasing his Attack Speed for a few seconds.",
+  "icon": "assets/abilities/teemo/passive.png"
  },
  {
   "champ": "teemo",
   "slot": "Q",
   "name": "Blinding Dart",
-  "icon": "assets/abilities/teemo/q.png",
-  "desc": "Obscures an enemy's vision with a powerful venom, dealing damage to the target unit and blinding it for the duration."
+  "desc": "Obscures an enemy's vision with a powerful venom, dealing damage to the target unit and blinding it for the duration.",
+  "icon": "assets/abilities/teemo/q.png"
  },
  {
   "champ": "teemo",
   "slot": "W",
   "name": "Move Quick",
-  "icon": "assets/abilities/teemo/w.png",
-  "desc": "Teemo scampers around, passively increasing his Movement Speed until he is struck by an enemy champion or turret. Teemo can sprint to gain bonus Movement Speed that isn't stopped by being struck for a short time."
+  "desc": "Teemo scampers around, passively increasing his movement speed until he is struck by an enemy champion or turret.  Teemo can sprint to gain bonus movement speed that isn't stopped by being struck for a short time.",
+  "icon": "assets/abilities/teemo/w.png"
  },
  {
   "champ": "teemo",
   "slot": "E",
   "name": "Toxic Shot",
-  "icon": "assets/abilities/teemo/e.png",
-  "desc": "Each of Teemo's attacks will poison the target, dealing damage on impact and each second after for 4 seconds."
+  "desc": "Each of Teemo's attacks will poison the target, dealing damage on impact and each second after for 4 seconds.",
+  "icon": "assets/abilities/teemo/e.png"
  },
  {
   "champ": "teemo",
   "slot": "R",
   "name": "Noxious Trap",
-  "icon": "assets/abilities/teemo/r.png",
-  "desc": "Teemo places an explosive poisonous trap using one of the mushrooms stored in his pack. If an enemy steps on the trap, it will release a poisonous cloud, slowing enemies and damaging them over time."
+  "desc": "Teemo places an explosive poisonous trap using one of the mushrooms stored in his pack.  If an enemy steps on the trap it will release a poisonous cloud, slowing enemies and damaging them over time.",
+  "icon": "assets/abilities/teemo/r.png"
  },
  {
-  "champ": "tristana",
+  "champ": "anivia",
   "slot": "P",
-  "name": "Draw a Bead",
-  "icon": "assets/abilities/tristana/passive.png",
-  "desc": "Increases Tristana's Attack Range as she levels."
+  "name": "Rebirth",
+  "desc": "Upon dying, Anivia will revert into an egg. If the egg can survive for six seconds, she is gloriously reborn.",
+  "icon": "assets/abilities/anivia/passive.png"
  },
  {
-  "champ": "tristana",
+  "champ": "anivia",
   "slot": "Q",
-  "name": "Rapid Fire",
-  "icon": "assets/abilities/tristana/q.png",
-  "desc": "Tristana fires her weapon rapidly, increasing her Attack Speed for a short time."
+  "name": "Flash Frost",
+  "desc": "Anivia brings her wings together and summons a sphere of ice that flies towards her opponents, chilling and damaging anyone in its path. When the sphere explodes it does moderate damage in a radius, stunning anyone in the area.",
+  "icon": "assets/abilities/anivia/q.png"
  },
  {
-  "champ": "tristana",
+  "champ": "anivia",
   "slot": "W",
-  "name": "Rocket Jump",
-  "icon": "assets/abilities/tristana/w.png",
-  "desc": "Tristana fires at the ground to propel herself to a distant location, dealing damage and slowing surrounding units for 3 seconds where she lands."
+  "name": "Crystallize",
+  "desc": "Anivia condenses the moisture in the air into an impassable wall of ice to block all movement. The wall only lasts a short duration before it melts.",
+  "icon": "assets/abilities/anivia/w.png"
  },
  {
-  "champ": "tristana",
+  "champ": "anivia",
   "slot": "E",
-  "name": "Explosive Shot",
-  "icon": "assets/abilities/tristana/e.png",
-  "desc": "When Tristana kills a unit, her cannonballs burst into shrapnel, dealing damage to surrounding enemies. Can be activated to deal damage to target unit over time, and reduce healing received."
+  "name": "Frostbite",
+  "desc": "With a flap of her wings, Anivia blasts a freezing gust of wind at her target, dealing a medium amount of damage. If the target has been slowed by an ice effect, the damage they take is doubled.",
+  "icon": "assets/abilities/anivia/e.png"
  },
  {
-  "champ": "tristana",
+  "champ": "anivia",
   "slot": "R",
-  "name": "Buster Shot",
-  "icon": "assets/abilities/tristana/r.png",
-  "desc": "Tristana loads a massive cannonball into her weapon and fires it at an enemy unit. This deals Magic Damage and knocks the target back."
+  "name": "Glacial Storm",
+  "desc": "Anivia summons a driving rain of ice and hail to damage her enemies and slow their advance.",
+  "icon": "assets/abilities/anivia/r.png"
  },
  {
-  "champ": "tryndamere",
+  "champ": "janna",
   "slot": "P",
-  "name": "Battle Fury",
-  "icon": "assets/abilities/tryndamere/passive.png",
-  "desc": "Tryndamere gains Fury for each attack, critical strike, and killing blow he makes. Fury passively increases his Critical Strike Chance and can be consumed with his Bloodlust spell."
+  "name": "Tailwind",
+  "desc": "Janna and her allied champions gain 3% increased Movement Speed.",
+  "icon": "assets/abilities/janna/passive.png"
  },
  {
-  "champ": "tryndamere",
+  "champ": "janna",
   "slot": "Q",
-  "name": "Bloodlust",
-  "icon": "assets/abilities/tryndamere/q.png",
-  "desc": "Tryndamere thrives on the thrills of combat, increasing his Attack Damage as he is more and more wounded. He can cast Bloodlust to consume his Fury and heal himself."
+  "name": "Howling Gale",
+  "desc": "By creating a localized change in pressure and temperature, Janna is able to create a small storm that grows in size with time. She can active the spell again to release the storm. On release this storm will fly towards the direction it was cast in, dealing damage and knocking away any enemies in its path.",
+  "icon": "assets/abilities/janna/q.png"
  },
  {
-  "champ": "tryndamere",
+  "champ": "janna",
   "slot": "W",
-  "name": "Mocking Shout",
-  "icon": "assets/abilities/tryndamere/w.png",
-  "desc": "Tryndamere lets out an insulting cry, decreasing surrounding champions' Attack Damage. Enemies with their backs turned to Tryndamere also have their Movement Speed reduced."
+  "name": "Zephyr",
+  "desc": "Janna summons an air elemental that passively increases her Movement Speed and enables her to pass through units. She may also activate this ability to deal damage and slow an enemy's Movement Speed. The passive is lost while this ability is on cooldown.",
+  "icon": "assets/abilities/janna/w.png"
  },
  {
-  "champ": "tryndamere",
+  "champ": "janna",
   "slot": "E",
-  "name": "Spinning Slash",
-  "icon": "assets/abilities/tryndamere/e.png",
-  "desc": "Tryndamere slices toward a target unit, dealing damage to enemies in his path."
+  "name": "Eye Of The Storm",
+  "desc": "Janna conjures a defensive gale that shields an ally champion or turret from incoming damage and increases their Attack Damage.",
+  "icon": "assets/abilities/janna/e.png"
  },
  {
-  "champ": "tryndamere",
+  "champ": "janna",
   "slot": "R",
-  "name": "Undying Rage",
-  "icon": "assets/abilities/tryndamere/r.png",
-  "desc": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes."
+  "name": "Monsoon",
+  "desc": "Janna surrounds herself in a magical storm, throwing enemies back. After the storm has settled, soothing winds heal nearby allies while the ability is active.",
+  "icon": "assets/abilities/janna/r.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "P",
+  "name": "Voracity",
+  "desc": "Champion kills or assists reduce Katarina's cooldowns by 15 seconds.",
+  "icon": "assets/abilities/katarina/passive.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "Q",
+  "name": "Bouncing Blade",
+  "desc": "Katarina throws a dagger that bounces from enemy to enemy, dealing magic damage.",
+  "icon": "assets/abilities/katarina/q.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "W",
+  "name": "Sinister Steel",
+  "desc": "Katarina whirls her daggers around her, dealing magic damage to all enemies in the area. If she hits an enemy Champion, Katarina gains a burst of speed for a short duration.",
+  "icon": "assets/abilities/katarina/w.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "E",
+  "name": "Shunpo",
+  "desc": "Katarina instantly moves to her target's location and takes reduced damage from enemies for a few seconds. If the target is an enemy, she deals damage.",
+  "icon": "assets/abilities/katarina/e.png"
+ },
+ {
+  "champ": "katarina",
+  "slot": "R",
+  "name": "Death Lotus",
+  "desc": "Katarina becomes a flurry of blades, throwing daggers with unrivaled speed at up to three nearby Champions.",
+  "icon": "assets/abilities/katarina/r.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "P",
+  "name": "Death Defied",
+  "desc": "Upon dying, Karthus enters a spirit form that allows him to continue casting spells.",
+  "icon": "assets/abilities/karthus/passive.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "Q",
+  "name": "Lay Waste",
+  "desc": "Karthus unleashes a delayed blast at a location, dealing damage to nearby enemies.",
+  "icon": "assets/abilities/karthus/q.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "W",
+  "name": "Wall of Pain",
+  "desc": "Karthus creates a passable screen of leeching energy.  Any enemy units that walk through the screen have their Movement Speed and Magic Resist reduced for a period.",
+  "icon": "assets/abilities/karthus/w.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "E",
+  "name": "Defile",
+  "desc": "Karthus passively steals energy from his victims, gaining Mana on each kill.  Alternatively, Karthus can surround himself in the souls of his prey, dealing damage to nearby enemies, but quickly draining his own mana.",
+  "icon": "assets/abilities/karthus/e.png"
+ },
+ {
+  "champ": "karthus",
+  "slot": "R",
+  "name": "Requiem",
+  "desc": "After channeling for 3 seconds, Karthus deals damage to all enemy champions.",
+  "icon": "assets/abilities/karthus/r.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "P",
+  "name": "Sunlight",
+  "desc": "Damaging spells afflict enemies with Sunlight for 3.5 seconds. When allied Champions deal damage to those targets, they consume the Sunlight debuff to deal additional magic damage.",
+  "icon": "assets/abilities/leona/passive.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "Q",
+  "name": "Shield of Daybreak",
+  "desc": "Leona uses her shield to perform her next basic attack, dealing bonus magic damage and stunning the target.",
+  "icon": "assets/abilities/leona/q.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "W",
+  "name": "Eclipse",
+  "desc": "Leona raises her shield to gain Armor and Magic Resistance.  When the duration first ends, if there are nearby enemies she will deal magic damage to them and prolong the duration of the effect.",
+  "icon": "assets/abilities/leona/w.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "E",
+  "name": "Zenith Blade",
+  "desc": "Leona projects a solar image of her sword, dealing magic damage to all enemies in a line. When the image fades, the last enemy champion struck will be briefly immobilized and Leona will dash to them.",
+  "icon": "assets/abilities/leona/e.png"
+ },
+ {
+  "champ": "leona",
+  "slot": "R",
+  "name": "Solar Flare",
+  "desc": "Leona calls down a beam of solar energy, dealing damage to enemies in an area.  Enemies in the center of the area are stunned, while enemies on the outside are slowed.",
+  "icon": "assets/abilities/leona/r.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "P",
+  "name": "Flurry",
+  "desc": "After Lee Sin uses an ability, his next 2 basic attacks gain 40% Attack Speed and return 15 Energy each.",
+  "icon": "assets/abilities/lee-sin/passive.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "Q",
+  "name": "Sonic Wave / Resonating Strike",
+  "desc": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds.<br>Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing physical damage plus 8% of their missing health.",
+  "icon": "assets/abilities/lee-sin/q.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "W",
+  "name": "Safeguard / Iron Will",
+  "desc": "Safeguard: Lee Sin rushes towards a target ally, shielding them both from damage. After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds.<br>Iron Will: Lee Sin's intense training allows him to thrive in battle. For 5 seconds, Lee Sin gains Life Steal and Spell Vamp.",
+  "icon": "assets/abilities/lee-sin/w.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "E",
+  "name": "Tempest / Cripple",
+  "desc": "Tempest: Lee Sin smashes the ground sending out a shockwave that deals magic damage and reveals enemy units hit. If Tempest hits an enemy, Lee Sin can cast cripple for the next 3 seconds.<br>Cripple: Lee Sin cripples nearby enemies revealed by Tempest, reducing their Movement and Attack Speed for 4 seconds. Movement and Attack Speed recover gradually over the duration.",
+  "icon": "assets/abilities/lee-sin/e.png"
+ },
+ {
+  "champ": "lee-sin",
+  "slot": "R",
+  "name": "Dragon's Rage",
+  "desc": "Lee Sin performs a powerful roundhouse kick launching his target back, dealing physical damage to the target and any enemies they collide with. Enemies the target collides with are knocked into the air for a short duration. This technique was taught to him by Jesse Perring, although Lee Sin does not kick players off the map.",
+  "icon": "assets/abilities/lee-sin/r.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "P",
+  "name": "Cursed Touch",
+  "desc": "Amumu's attacks reduce his target's Magic Resist for 3 seconds.",
+  "icon": "assets/abilities/amumu/passive.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "Q",
+  "name": "Bandage Toss",
+  "desc": "Amumu tosses a sticky bandage at a target, stunning and damaging the target while he pulls himself to them.",
+  "icon": "assets/abilities/amumu/q.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "W",
+  "name": "Despair",
+  "desc": "Overcome by anguish, nearby enemies lose a percentage of their maximum health each second.",
+  "icon": "assets/abilities/amumu/w.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "E",
+  "name": "Tantrum",
+  "desc": "Permanently reduces the physical damage Amumu would take. Amumu can unleash his rage, dealing damage to surrounding enemies. Each time Amumu is hit, the cooldown on Tantrum is reduced.",
+  "icon": "assets/abilities/amumu/e.png"
+ },
+ {
+  "champ": "amumu",
+  "slot": "R",
+  "name": "Curse of the Sad Mummy",
+  "desc": "Amumu entangles surrounding enemy units in bandages, applying his <keywordMajor>Curse</keywordMajor>, damaging and stunning them.",
+  "icon": "assets/abilities/amumu/r.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "P",
+  "name": "Martial Cadence",
+  "desc": "Jarvan's first basic attack on an enemy deals bonus physical damage based on their current Health. This effect cannot occur again on the same enemy for a few seconds.",
+  "icon": "assets/abilities/jarvan-iv/passive.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "Q",
+  "name": "Dragon Strike",
+  "desc": "Jarvan IV extends his lance, dealing physical damage and lowering the Armor of all enemies in its path. Additionally, this will pull Jarvan to his Demacian Standard, knocking up enemies in his path.",
+  "icon": "assets/abilities/jarvan-iv/q.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "W",
+  "name": "Golden Aegis",
+  "desc": "Jarvan IV calls upon the ancient kings of Demacia to shield him from harm and slow surrounding enemies.",
+  "icon": "assets/abilities/jarvan-iv/w.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "E",
+  "name": "Demacian Standard",
+  "desc": "Jarvan IV carries the pride of Demacia, passively granting him bonus Attack Speed and Armor. Activating Demacian Standard allows Jarvan IV to place a Demacian flag that deals magic damage on impact and grants Attack Speed to nearby allied champions.",
+  "icon": "assets/abilities/jarvan-iv/e.png"
+ },
+ {
+  "champ": "jarvan-iv",
+  "slot": "R",
+  "name": "Cataclysm",
+  "desc": "Jarvan IV heroically leaps into battle at a target with such force that he terraforms the surrounding area to create an arena around them.",
+  "icon": "assets/abilities/jarvan-iv/r.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "P",
+  "name": "Illumination",
+  "desc": "Lux's damaging spells charge the target with energy for 6 seconds. Lux's next attack ignites the energy, dealing bonus magic damage (depending on Lux's level) to the target.",
+  "icon": "assets/abilities/lux/passive.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "Q",
+  "name": "Light Binding",
+  "desc": "Lux releases a sphere of light that binds and deals damage to up to two enemy units.",
+  "icon": "assets/abilities/lux/q.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "W",
+  "name": "Prismatic Barrier",
+  "desc": "Lux throws her wand and bends the light around any friendly target it touches, protecting them from enemy damage.",
+  "icon": "assets/abilities/lux/w.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "E",
+  "name": "Lucent Singularity",
+  "desc": "Fires an anomaly of twisted light to an area, which slows nearby enemies. Lux can detonate it to damage enemies in the area of effect.",
+  "icon": "assets/abilities/lux/e.png"
+ },
+ {
+  "champ": "lux",
+  "slot": "R",
+  "name": "Finales Funkeln",
+  "desc": "After gathering energy, Lux fires a beam of light that deals damage to all targets in the area.  In addition, triggers Lux's passive ability and refreshes the Illumination debuff duration.",
+  "icon": "assets/abilities/lux/r.png"
  },
  {
   "champ": "twisted-fate",
   "slot": "P",
   "name": "Loaded Dice",
-  "icon": "assets/abilities/twisted-fate/passive.png",
-  "desc": "Upon killing a unit, Twisted Fate rolls his 'lucky' dice receiving anywhere between 1 and 6 bonus gold."
+  "desc": "Twisted Fate and his allies receive an additional 2 gold per kill.",
+  "icon": "assets/abilities/twisted-fate/passive.png"
  },
  {
   "champ": "twisted-fate",
   "slot": "Q",
   "name": "Wild Cards",
-  "icon": "assets/abilities/twisted-fate/q.png",
-  "desc": "Twisted Fate throws three cards, dealing damage to each enemy unit they pass through."
+  "desc": "Twisted Fate throws three cards, dealing damage to each enemy unit they pass through.",
+  "icon": "assets/abilities/twisted-fate/q.png"
  },
  {
   "champ": "twisted-fate",
   "slot": "W",
   "name": "Pick A Card",
-  "icon": "assets/abilities/twisted-fate/w.png",
-  "desc": "Twisted Fate chooses a magic card from his deck, and uses that for his next attack, causing bonus effects."
+  "desc": "Twisted Fate chooses a magic card from his deck, and uses that for his next attack, causing bonus effects.",
+  "icon": "assets/abilities/twisted-fate/w.png"
  },
  {
   "champ": "twisted-fate",
   "slot": "E",
-  "name": "Stacked Deck",
-  "icon": "assets/abilities/twisted-fate/e.png",
-  "desc": "Every 4 attacks, Twisted Fate deals bonus damage. In addition, his Attack Speed is increased."
+  "name": "Gate",
+  "desc": "After channeling, Twisted Fate Teleports to any target location.",
+  "icon": "assets/abilities/twisted-fate/e.png"
  },
  {
   "champ": "twisted-fate",
   "slot": "R",
   "name": "Destiny",
-  "icon": "assets/abilities/twisted-fate/r.png",
-  "desc": "Twisted Fate predicts the fortunes of his foes, revealing all enemy champions and enabling the use of Gate, which teleports Twisted Fate to any target location in 1.5 seconds."
+  "desc": "Twisted Fate predicts the fortunes of his foes, revealing and slowing all enemy champions. Gate's channel time is also reduced during this duration.",
+  "icon": "assets/abilities/twisted-fate/r.png"
  },
  {
-  "champ": "twitch",
+  "champ": "lulu",
   "slot": "P",
-  "name": "Deadly Venom",
-  "icon": "assets/abilities/twitch/passive.png",
-  "desc": "Twitch's basic attacks infect the target, dealing true damage each second."
+  "name": "Pix, Faerie Companion",
+  "desc": "Pix is a wild Faerie that accompanies Lulu. Pix will fire a barrage of magical energy at targets that Lulu attacks.",
+  "icon": "assets/abilities/lulu/passive.png"
  },
  {
-  "champ": "twitch",
+  "champ": "lulu",
   "slot": "Q",
-  "name": "Ambush",
-  "icon": "assets/abilities/twitch/q.png",
-  "desc": "Twitch becomes invisible for a short duration and, while invisible, he gains Movement Speed. When leaving invisibility, Twitch gains Attack Speed for a short duration."
+  "name": "Glitterlance",
+  "desc": "Pix and Lulu each fire a bolt of magical energy that heavily slows all enemies it hits. An enemy can only be damaged by one bolt.",
+  "icon": "assets/abilities/lulu/q.png"
  },
  {
-  "champ": "twitch",
+  "champ": "lulu",
   "slot": "W",
-  "name": "Debilitating Poison",
-  "icon": "assets/abilities/twitch/w.png",
-  "desc": "Upon activation, slows nearby enemy champions by 30%, increased by 6% per Deadly Venom stack applied to them. Adding more Deadly Venom stacks after the slow is applied will further reduce their movement speed."
+  "name": "Whimsy",
+  "desc": "If cast on an ally, grants them movement speed and ability power for a short time. If cast on an enemy, turns them into an adorable critter that can't attack or cast spells.",
+  "icon": "assets/abilities/lulu/w.png"
  },
  {
-  "champ": "twitch",
+  "champ": "lulu",
   "slot": "E",
-  "name": "Expunge",
-  "icon": "assets/abilities/twitch/e.png",
-  "desc": "All nearby enemies secrete Twitch's toxic venoms from their bodies, dealing damage for each stack."
+  "name": "Help, Pix!",
+  "desc": "If cast on an ally, commands Pix to jump to an ally and shield them. He then follows them and aids their attacks. If cast on an enemy, commands Pix to jump to an enemy and damage them. He then follows them and grants you vision of that enemy.",
+  "icon": "assets/abilities/lulu/e.png"
  },
  {
-  "champ": "twitch",
+  "champ": "lulu",
   "slot": "R",
-  "name": "Spray and Pray",
-  "icon": "assets/abilities/twitch/r.png",
-  "desc": "Twitch closes his eyes and fires his crossbow, rapidly spraying powerful piercing bolts ahead of him."
- },
- {
-  "champ": "vayne",
-  "slot": "P",
-  "name": "Night Hunter",
-  "icon": "assets/abilities/vayne/passive.png",
-  "desc": "Vayne ruthlessly hunts evil-doers. She gains 30 Movement Speed when moving toward nearby enemy champions."
- },
- {
-  "champ": "vayne",
-  "slot": "Q",
-  "name": "Tumble",
-  "icon": "assets/abilities/vayne/q.png",
-  "desc": "Vayne tumbles, maneuvering to carefully place her next shot. Her next attack deals bonus damage."
- },
- {
-  "champ": "vayne",
-  "slot": "W",
-  "name": "Silver Bolts",
-  "icon": "assets/abilities/vayne/w.png",
-  "desc": "Vayne tips her bolts with a rare metal, toxic to evil things. The third consecutive attack or ability against the same target deals a percentage of the target's maximum Health as bonus true damage. (Max: 200 damage vs. Monsters)"
- },
- {
-  "champ": "vayne",
-  "slot": "E",
-  "name": "Condemn",
-  "icon": "assets/abilities/vayne/e.png",
-  "desc": "Vayne draws a heavy crossbow from her back, and fires a huge bolt at her target, knocking them back and dealing damage. If they collide with terrain, they are impaled, dealing bonus damage and stunning them."
- },
- {
-  "champ": "vayne",
-  "slot": "R",
-  "name": "Final Hour",
-  "icon": "assets/abilities/vayne/r.png",
-  "desc": "Readying herself for an epic confrontation, Vayne gains increased Attack Damage, invisibility during Tumble, and triple the bonus Movement Speed from Night Hunter."
+  "name": "Wild Growth",
+  "desc": "Lulu enlarges an ally, knocking nearby enemies into the air and granting the ally a large amount of bonus health. For the next few seconds, that ally gains an aura that slows nearby enemies.",
+  "icon": "assets/abilities/lulu/r.png"
  },
  {
   "champ": "veigar",
   "slot": "P",
   "name": "Equilibrium",
-  "icon": "assets/abilities/veigar/passive.png",
-  "desc": "Veigar's Mana Regen is increased by 1% for each 1% of Mana missing."
+  "desc": "Veigar's mana regeneration increases by 1% for each 1% of mana missing.",
+  "icon": "assets/abilities/veigar/passive.png"
  },
  {
   "champ": "veigar",
   "slot": "Q",
   "name": "Baleful Strike",
-  "icon": "assets/abilities/veigar/q.png",
-  "desc": "Unleashes dark energy at target enemy, dealing Magic Damage. If a unit is killed, Veigar gains some Ability Power permanently."
+  "desc": "Unleashes dark energy at target enemy, dealing magic damage. If a unit is killed, Veigar gains some Ability Power permanently.",
+  "icon": "assets/abilities/veigar/q.png"
  },
  {
   "champ": "veigar",
   "slot": "W",
   "name": "Dark Matter",
-  "icon": "assets/abilities/veigar/w.png",
-  "desc": "Veigar calls a great mass of dark matter to fall from the sky to the target location, dealing Magic Damage when it lands."
+  "desc": "Veigar calls a great mass of dark matter to fall from the sky to the target location, dealing magic damage when it lands.",
+  "icon": "assets/abilities/veigar/w.png"
  },
  {
   "champ": "veigar",
   "slot": "E",
   "name": "Event Horizon",
-  "icon": "assets/abilities/veigar/e.png",
-  "desc": "Veigar twists the edges of space around the target location for 3 seconds, stunning enemies who pass through the perimeter."
+  "desc": "Veigar twists the edges of space around the target location for 3 seconds, stunning enemies who pass through the perimeter for a short duration.",
+  "icon": "assets/abilities/veigar/e.png"
  },
  {
   "champ": "veigar",
   "slot": "R",
   "name": "Primordial Burst",
-  "icon": "assets/abilities/veigar/r.png",
-  "desc": "Blasts target enemy champion, dealing a large base amount of Magic Damage plus 80% of his target's Ability Power."
+  "desc": "Blasts target enemy champion, dealing a large base amount of magic damage plus 80% of his target's AP.",
+  "icon": "assets/abilities/veigar/r.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "P",
+  "name": "Fleet of Foot",
+  "desc": "Sivir gains a short burst of Movement Speed when she attacks an enemy champion.",
+  "icon": "assets/abilities/sivir/passive.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "Q",
+  "name": "Boomerang Blade",
+  "desc": "Sivir hurls her crossblade like a boomerang, dealing damage each way.",
+  "icon": "assets/abilities/sivir/q.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "W",
+  "name": "Ricochet",
+  "desc": "Sivir's next basic attack will bounce between targets, dealing reduced damage with each successive hit.",
+  "icon": "assets/abilities/sivir/w.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "E",
+  "name": "Spell Shield",
+  "desc": "Sivir creates a magical barrier on herself that blocks a single enemy ability. She regains Mana if an ability is successfully blocked.",
+  "icon": "assets/abilities/sivir/e.png"
+ },
+ {
+  "champ": "sivir",
+  "slot": "R",
+  "name": "On The Hunt",
+  "desc": "Sivir leads her allies into battle granting them increased Movement and Attack Speeds for a period of time.",
+  "icon": "assets/abilities/sivir/r.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "P",
+  "name": "Prowl",
+  "desc": "Moving through brush increases Nidalee's Movement Speed by 15% for 2 seconds.",
+  "icon": "assets/abilities/nidalee/passive.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "Q",
+  "name": "Javelin Toss / Takedown",
+  "desc": "In human form, Nidalee throws a spiked javelin at her target that gains damage as it flies.  As a cougar, her next attack will attempt to fatally wound her target, dealing more damage the less life they have.",
+  "icon": "assets/abilities/nidalee/q.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "W",
+  "name": "Bushwhack / Pounce",
+  "desc": "In human form, Nidalee lays a damaging trap for unwary opponents that, when sprung, reveals the target and reduces their Armor and Magic Resist for 12 seconds. As a cougar, she pounces forward, dealing a small amount of damage when she lands.",
+  "icon": "assets/abilities/nidalee/w.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "E",
+  "name": "Primal Surge / Swipe",
+  "desc": "In human form, Nidalee channels the spirit of the cougar to heal her allies and imbue them with attack speed for a short duration.  As a cougar, she rapidly claws enemies in front of her.",
+  "icon": "assets/abilities/nidalee/e.png"
+ },
+ {
+  "champ": "nidalee",
+  "slot": "R",
+  "name": "Aspect Of The Cougar",
+  "desc": "Nidalee transforms into a cougar, gaining new abilities and increased Movement Speed.",
+  "icon": "assets/abilities/nidalee/r.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "P",
+  "name": "Granite Shield",
+  "desc": "Malphite is shielded by a layer of rock which absorbs damage up to 10% of his maximum Health. If Malphite has not been hit for 10 seconds, this effect recharges.",
+  "icon": "assets/abilities/malphite/passive.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "Q",
+  "name": "Seismic Shard",
+  "desc": "Using his primal elemental magic, Malphite sends a shard of the earth through the ground at his foe, dealing damage upon impact and stealing movement speed for 4 seconds.",
+  "icon": "assets/abilities/malphite/q.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "W",
+  "name": "Brutal Strikes",
+  "desc": "Malphite starts to hit with such force that his attacks deal damage to all units in front of him. Activating Brutal Strikes greatly increases his Armor and Attack Damage for a short amount of time.",
+  "icon": "assets/abilities/malphite/w.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "E",
+  "name": "Ground Slam",
+  "desc": "Malphite slams the ground sending out a shockwave that deals magic damage based on his Armor as damage and reduces the Attack speed of enemies for a short duration.",
+  "icon": "assets/abilities/malphite/e.png"
+ },
+ {
+  "champ": "malphite",
+  "slot": "R",
+  "name": "Unstoppable Force",
+  "desc": "Malphite ferociously charges to a location, damaging enemies and knocking them into the air.",
+  "icon": "assets/abilities/malphite/r.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "P",
+  "name": "Focus",
+  "desc": "Ashe gains stacks of <spellName>Focus</spellName> while out-of-combat. When Ashe has 100 stacks of <spellName>Focus</spellName>, her next basic Attack will critically strike.",
+  "icon": "assets/abilities/ashe/passive.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "Q",
+  "name": "Frost Shot",
+  "desc": "While active, each of Ashe's basic attacks slow her targets. This drains Mana with each attack.",
+  "icon": "assets/abilities/ashe/q.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "W",
+  "name": "Volley",
+  "desc": "Ashe fires 7 arrows in a cone for increased damage.  Volley also applies Ashe's current level of Frost Shot.",
+  "icon": "assets/abilities/ashe/w.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "E",
+  "name": "Hawkshot",
+  "desc": "Each time Ashe kills a unit, she gains some extra gold. Ashe can activate to send her Hawk Spirit on a scouting mission.",
+  "icon": "assets/abilities/ashe/e.png"
+ },
+ {
+  "champ": "ashe",
+  "slot": "R",
+  "name": "Enchanted Crystal Arrow",
+  "desc": "Ashe fires a missile of ice in a straight line.  If the arrow collides with an enemy Champion, it deals damage and stuns the Champion for up to 3.5 seconds, based on how far the arrow has traveled.  In addition, surrounding enemy units take damage and are slowed.",
+  "icon": "assets/abilities/ashe/r.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "P",
+  "name": "Double Strike",
+  "desc": "Master Yi occassionaly strikes twice.",
+  "icon": "assets/abilities/master-yi/passive.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "Q",
+  "name": "Alpha Strike",
+  "desc": "Master Yi leaps across the battlefield with blinding speed, dealing physical damage to multiple units in his path. Alpha strike can critically strike and deals bonus physical damage to minions and monsters. Basic attacks reduce Alpha Strike's cooldown.",
+  "icon": "assets/abilities/master-yi/q.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "W",
+  "name": "Meditate",
+  "desc": "Master Yi rejuvenates his body by focus of mind, restoring Health and taking reduced damage for a short time.",
+  "icon": "assets/abilities/master-yi/w.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "E",
+  "name": "Wuju Style",
+  "desc": "Master Yi becomes skilled in the art of Wuju, passively increasing his Attack Damage.  Activating Wuju Style grants bonus true damage on basic attacks, but the passive bonus is then lost while on cooldown.",
+  "icon": "assets/abilities/master-yi/e.png"
+ },
+ {
+  "champ": "master-yi",
+  "slot": "R",
+  "name": "Highlander",
+  "desc": "Master Yi moves with unparalleled agility, temporarily increasing his Movement and Attack speeds as well as making him immune to all slowing effects. While active, Champion kills or assists extends Highlander's duration. Passively reduces cooldown for his other abilities on a kill or assist.",
+  "icon": "assets/abilities/master-yi/r.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "P",
+  "name": "Gemcraft",
+  "desc": "Taric loves to socket magical gems into all of his weapons, resulting in his basic attacks dealing bonus magic damage based on his maximum Mana.",
+  "icon": "assets/abilities/taric/passive.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "Q",
+  "name": "Imbue",
+  "desc": "Taric brings forth earthen energy to heal an ally and himself. This heal is more potent when Taric heals only himself. Additionally,Taric's basic attacks reduce Imbue's cooldown.",
+  "icon": "assets/abilities/taric/q.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "W",
+  "name": "Shatter",
+  "desc": "Taric is protected by a hardening aura, increasing the Armor of himself and nearby allied champions. He may choose to splinter the enchanted rocks surrounding him to deal damage and decrease the Armor of nearby enemies at the cost of some Armor for a short time.",
+  "icon": "assets/abilities/taric/w.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "E",
+  "name": "Dazzle",
+  "desc": "Taric emits a brilliant ball of prismatic light from his gemmed shield, stunning his target and damaging them based on how close he is to them.",
+  "icon": "assets/abilities/taric/e.png"
+ },
+ {
+  "champ": "taric",
+  "slot": "R",
+  "name": "Radiance",
+  "desc": "Taric slams his hammer into the ground to deal damage to nearby enemies. For a time after, Taric's gems radiate energy empowering Taric and his allies with bonus Attack Damage and Ability Power",
+  "icon": "assets/abilities/taric/r.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "P",
+  "name": "Mana Barrier",
+  "desc": "When Blitzcrank life is brought below 20% health they activate Mana Barrier. This creates a mana shield equal to 50% of their mana for 10 seconds. Mana Barrier can only occur once every 90 seconds.",
+  "icon": "assets/abilities/blitzcrank/passive.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "Q",
+  "name": "Rocket Grab",
+  "desc": "Blitzcrank fires their right hand to grab an opponent on its path, dealing damage and dragging it back to them.",
+  "icon": "assets/abilities/blitzcrank/q.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "W",
+  "name": "Overdrive",
+  "desc": "Blitzcrank supercharges themself to get dramatically increased movement and attack speed.",
+  "icon": "assets/abilities/blitzcrank/w.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "E",
+  "name": "Power Fist",
+  "desc": "Blitzcrank charges up their fist to make their next attack deal double damage and pop their target up in the air.",
+  "icon": "assets/abilities/blitzcrank/e.png"
+ },
+ {
+  "champ": "blitzcrank",
+  "slot": "R",
+  "name": "Static Field",
+  "desc": "Passively causes lightning bolts to damage a nearby enemy. Additionally, Blitzcrank can activate this ability to damage nearby enemies and silence them for 0.5 seconds, but doing so removes the passive lightning until Static Field becomes available again.",
+  "icon": "assets/abilities/blitzcrank/r.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "P",
+  "name": "Strut",
+  "desc": "After 5 seconds of not being attacked, Miss Fortune gains an additional <speed>25 Movement Speed</speed>. This bonus increases by 9 each second up to a maximum bonus of 70.",
+  "icon": "assets/abilities/miss-fortune/passive.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "Q",
+  "name": "Double Up",
+  "desc": "Miss Fortune fires a bullet at an enemy, damaging them and a target behind them.",
+  "icon": "assets/abilities/miss-fortune/q.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "W",
+  "name": "Impure Shots",
+  "desc": "Miss Fortune passively increases damage dealt to a target with each strike.  This ability can be activated to increase Miss Fortune's Attack Speed and cause her attacks to lower healing received by the target.",
+  "icon": "assets/abilities/miss-fortune/w.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "E",
+  "name": "Make It Rain",
+  "desc": "Miss Fortune unleashes a flurry of bullets at a location, dealing waves of damage to opponents and slowing them.",
+  "icon": "assets/abilities/miss-fortune/e.png"
+ },
+ {
+  "champ": "miss-fortune",
+  "slot": "R",
+  "name": "Bullet Time",
+  "desc": "Miss Fortune channels a flurry of bullets into a cone in front of her, dealing large amounts of damage to enemies.",
+  "icon": "assets/abilities/miss-fortune/r.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "P",
+  "name": "Grog-Soaked Blade",
+  "desc": "Gangplank's attacks apply a poison that deals magic damage per second, increasing with level.",
+  "icon": "assets/abilities/gangplank/passive.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "Q",
+  "name": "Parrrley",
+  "desc": "Gangplank takes aim and shoots an enemy unit with his pistol. If Parrrley deals a killing blow, he gains extra gold and half the mana cost is refunded.",
+  "icon": "assets/abilities/gangplank/q.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "W",
+  "name": "Remove Scurvy",
+  "desc": "Consumes a large quantity of citrus fruit which clears any crowd control effects on him and heals him.",
+  "icon": "assets/abilities/gangplank/w.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "E",
+  "name": "Raise Morale",
+  "desc": "Gangplank fires a shot into the air, increasing nearby allied champions' attack damage and movement speed.",
+  "icon": "assets/abilities/gangplank/e.png"
+ },
+ {
+  "champ": "gangplank",
+  "slot": "R",
+  "name": "Cannon Barrage",
+  "desc": "Gangplank signals his ship to fire upon an area for 7 seconds, slowing enemies and dealing damage in random locations within the area.",
+  "icon": "assets/abilities/gangplank/r.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "P",
+  "name": "Draw a Bead",
+  "desc": "Increases Tristana's attack range as she levels.",
+  "icon": "assets/abilities/tristana/passive.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "Q",
+  "name": "Rapid Fire",
+  "desc": "Tristana fires her weapon rapidly, increasing her attack speed for a short time.",
+  "icon": "assets/abilities/tristana/q.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "W",
+  "name": "Rocket Jump",
+  "desc": "Tristana fires at the ground to propel herself to a distant location, dealing damage and slowing surrounding units for 3 seconds where she lands.",
+  "icon": "assets/abilities/tristana/w.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "E",
+  "name": "Explosive Shot",
+  "desc": "When Tristana kills a unit, her cannonballs burst into shrapnel, dealing damage to surrounding enemies.  Can be activated to deal damage to target unit over time, and reduce healing received.",
+  "icon": "assets/abilities/tristana/e.png"
+ },
+ {
+  "champ": "tristana",
+  "slot": "R",
+  "name": "Buster Shot",
+  "desc": "Tristana loads a massive cannonball into her weapon and fires it at an enemy unit. This deals magic damage and knocks the target back.",
+  "icon": "assets/abilities/tristana/r.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "P",
+  "name": "Visionary",
+  "desc": "Nunu can cast a spell for free after 5 attacks.",
+  "icon": "assets/abilities/nunu/passive.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "Q",
+  "name": "Consume",
+  "desc": "Nunu commands the yeti to take a bite out of a target minion or monster, dealing heavy damage to it and healing himself.",
+  "icon": "assets/abilities/nunu/q.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "W",
+  "name": "Blood Boil",
+  "desc": "Nunu invigorates himself and an allied unit by heating their blood, increasing their Movement and Attack Speeds.",
+  "icon": "assets/abilities/nunu/w.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "E",
+  "name": "Ice Blast",
+  "desc": "Nunu launches a ball of ice at an enemy unit, dealing damage and temporarily slowing their Movement and Attack Speeds.",
+  "icon": "assets/abilities/nunu/e.png"
+ },
+ {
+  "champ": "nunu",
+  "slot": "R",
+  "name": "Absolute Zero",
+  "desc": "Nunu begins to sap the area of heat, slowing all nearby enemies. When the spell ends, he deals massive damage to all enemies caught in the area.",
+  "icon": "assets/abilities/nunu/r.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "P",
+  "name": "Feel No Pain",
+  "desc": "Sion has a 40% chance to ignore up to 30/40/50 damage each time he is attacked.",
+  "icon": "assets/abilities/sion/passive.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "Q",
+  "name": "Cryptic Gaze",
+  "desc": "Sion's stare terrifies a single enemy, dealing damage and stunning them.",
+  "icon": "assets/abilities/sion/q.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "W",
+  "name": "Death's Caress",
+  "desc": "Sion surrounds himself with a damage-absorbing shield.  If the shield is not destroyed in 10 seconds then it will explode, dealing damage to surrounding enemies. Cast again after 4 seconds to manually detonate.",
+  "icon": "assets/abilities/sion/w.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "E",
+  "name": "Enrage",
+  "desc": "While active Sion gains Attack Damage at the cost of Health on each basic attack. Additonally, he permanently increases his maximum Health whenever he kills a unit.",
+  "icon": "assets/abilities/sion/e.png"
+ },
+ {
+  "champ": "sion",
+  "slot": "R",
+  "name": "Cannibalism",
+  "desc": "Sion consumes some of his enemies' life force on each attack, leeching health to himself and nearby allies. The smell of flesh also renews Sion's fervor, increasing his Attack Speed.",
+  "icon": "assets/abilities/sion/r.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "P",
+  "name": "Backstab",
+  "desc": "Shaco deals 20% bonus damage when striking a unit from behind.",
+  "icon": "assets/abilities/shaco/passive.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "Q",
+  "name": "Deceive",
+  "desc": "Shaco becomes invisible and teleports to target location. His next attack is guaranteed to critically strike.",
+  "icon": "assets/abilities/shaco/q.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "W",
+  "name": "Jack In The Box",
+  "desc": "Shaco creates an animated Jack-in-the-Box at target location, which will wait, invisible, to Fear nearby units and attack them when some come nearby.",
+  "icon": "assets/abilities/shaco/w.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "E",
+  "name": "Two-Shiv Poison",
+  "desc": "Shaco's Shivs passively poison targets on hit, slowing them and applying a miss chance to minions. He can throw his Shivs to deal damage and poison the target.",
+  "icon": "assets/abilities/shaco/e.png"
+ },
+ {
+  "champ": "shaco",
+  "slot": "R",
+  "name": "Hallucinate",
+  "desc": "Shaco creates an illusion of himself near him, which can attack nearby enemies. Upon death, it explodes, dealing damage to nearby enemies.",
+  "icon": "assets/abilities/shaco/r.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "P",
+  "name": "Soul Eater",
+  "desc": "Nasus drains his foe's spiritual energy, giving him bonus Lifesteal.",
+  "icon": "assets/abilities/nasus/passive.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "Q",
+  "name": "Siphoning Strike",
+  "desc": "Nasus strikes his foe, dealing damage and increasing the power of his future Siphoning Strikes if he slays his target.",
+  "icon": "assets/abilities/nasus/q.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "W",
+  "name": "Wither",
+  "desc": "Nasus ages his target, decelerating their Movement and Attack Speeds over time.",
+  "icon": "assets/abilities/nasus/w.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "E",
+  "name": "Spirit Fire",
+  "desc": "Nasus unleashes a spirit flame at a location, dealing damage and reducing the Armor of enemies who stand on it.",
+  "icon": "assets/abilities/nasus/e.png"
+ },
+ {
+  "champ": "nasus",
+  "slot": "R",
+  "name": "Fury of the Sands",
+  "desc": "Nasus unleashes a mighty sandstorm that batters nearby enemies. While the storm rages, he gains increased Health, Attack Range, cast ranges, and drains nearby enemies' max Health converting into bonus damage for the duration.",
+  "icon": "assets/abilities/nasus/r.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "P",
+  "name": "Pyromania",
+  "desc": "After casting 4 spells, Annie's next offensive spell Stuns the target(s) for 1.75 seconds.",
+  "icon": "assets/abilities/annie/passive.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "Q",
+  "name": "Disintegrate",
+  "desc": "Annie hurls a mana-infused fireball, dealing damage and refunding the mana cost if it destroys the target.",
+  "icon": "assets/abilities/annie/q.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "W",
+  "name": "Incinerate",
+  "desc": "Annie casts a blazing cone of fire, dealing damage to all enemies in the area.",
+  "icon": "assets/abilities/annie/w.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "E",
+  "name": "Molten Shield",
+  "desc": "Increases Annie's Armor and Magic Resist and damages enemies who hit Annie with basic attacks.",
+  "icon": "assets/abilities/annie/e.png"
+ },
+ {
+  "champ": "annie",
+  "slot": "R",
+  "name": "Summon: Tibbers",
+  "desc": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+  "icon": "assets/abilities/annie/r.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "P",
+  "name": "Battle Fury",
+  "desc": "Tryndamere gains bonus critical strike chance, increased by his missing Health.",
+  "icon": "assets/abilities/tryndamere/passive.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "Q",
+  "name": "Bloodlust",
+  "desc": "Tryndamere thrives on the thrills of combat, gaining Fury that increasing his Attack and Critical Strike Damage as he kills enemies and deals critical strikes. He can cast Bloodlust to consume his Fury and heal himself.",
+  "icon": "assets/abilities/tryndamere/q.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "W",
+  "name": "Mocking Shout",
+  "desc": "Tryndamere mocks nearby champions for their cowardice, reducing their Attack Damage. Enemies with their backs turned to Tryndamere also have their Movement Speed reduced.",
+  "icon": "assets/abilities/tryndamere/w.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "E",
+  "name": "Spinning Slash",
+  "desc": "Tryndamere slices toward a target unit, dealing damage to enemies in his path.",
+  "icon": "assets/abilities/tryndamere/e.png"
+ },
+ {
+  "champ": "tryndamere",
+  "slot": "R",
+  "name": "Undying Rage",
+  "desc": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+  "icon": "assets/abilities/tryndamere/r.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "P",
+  "name": "Consecration",
+  "desc": "Increases surrounding allies' Magic Resist by 16.",
+  "icon": "assets/abilities/soraka/passive.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "Q",
+  "name": "Starcall",
+  "desc": "A shower of stars falls from the sky, striking all nearby enemies for magic damage and reducing their Magic Resist for a short duration.",
+  "icon": "assets/abilities/soraka/q.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "W",
+  "name": "Astral Blessing",
+  "desc": "Soraka blesses a friendly unit, restoring health and increasing Armor for a short time.",
+  "icon": "assets/abilities/soraka/w.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "E",
+  "name": "Infuse",
+  "desc": "Restores Mana to an ally, or deals damage to an enemy and silences them for a short duration.",
+  "icon": "assets/abilities/soraka/e.png"
+ },
+ {
+  "champ": "soraka",
+  "slot": "R",
+  "name": "Wish",
+  "desc": "Soraka fills her allies with hope, instantly restoring health to herself and all friendly champions.",
+  "icon": "assets/abilities/soraka/r.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "P",
+  "name": "Essence Theft",
+  "desc": "Gains a charge of Essence Theft whenever a spell hits an enemy. Upon reaching maximum charges, the next spell restores Ahri's Health.",
+  "icon": "assets/abilities/ahri/passive.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "Q",
+  "name": "Orb of Deception",
+  "desc": "Ahri sends out and pulls back her orb, dealing magic damage on the way out and true damage on the way back.",
+  "icon": "assets/abilities/ahri/q.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "W",
+  "name": "Fox-Fire",
+  "desc": "Ahri releases three fox-fires, that lock onto and attack nearby enemies.",
+  "icon": "assets/abilities/ahri/w.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "E",
+  "name": "Charm",
+  "desc": "Ahri blows a kiss that damages and Charms the first enemy hit. They also take more damage from her for several seconds.",
+  "icon": "assets/abilities/ahri/e.png"
+ },
+ {
+  "champ": "ahri",
+  "slot": "R",
+  "name": "Spirit Rush",
+  "desc": "Ahri dashes forward and fires essence bolts, damaging 3 nearby enemies (prioritizes Champions). Spirit Rush can be cast up to three times before going on cooldown.",
+  "icon": "assets/abilities/ahri/r.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "P",
+  "name": "Shadow Walk",
+  "desc": "When out of combat, Evelynn enters Camoflauge only being able to be seen by nearby enemy champions or true sight. While stealthed, she rapidly regenerates Mana.",
+  "icon": "assets/abilities/evelynn/passive.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "Q",
+  "name": "Hate Spike",
+  "desc": "Evelynn fires a line of spikes through an enemy, dealing damage to all enemies in its path.",
+  "icon": "assets/abilities/evelynn/q.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "W",
+  "name": "Dark Frenzy",
+  "desc": "Evelynn passively increases her Movement Speed when hitting enemy champions with her spells. Upon activation, Evelynn breaks free from slows affecting her and gains a massive Movement Speed boost for a short duration.",
+  "icon": "assets/abilities/evelynn/w.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "E",
+  "name": "Ravage",
+  "desc": "Evelynn slashes her target twice, dealing damage with each hit. She then gains increased Attack Speed for a short duration.",
+  "icon": "assets/abilities/evelynn/e.png"
+ },
+ {
+  "champ": "evelynn",
+  "slot": "R",
+  "name": "Agony's Embrace",
+  "desc": "Evelynn summons spikes from the ground to deal damage and slow enemies in the area. She then gains a shield based on how many enemy champions were hit.",
+  "icon": "assets/abilities/evelynn/r.png"
  },
  {
   "champ": "warwick",
   "slot": "P",
   "name": "Eternal Thirst",
-  "icon": "assets/abilities/warwick/passive.png",
-  "desc": "Each of Warwick's attacks will heal him. Each successive attack against the same target will steal more and more Health."
+  "desc": "Each of Warwick's attacks will heal him. Each successive attack against the same target will steal more and more Health.",
+  "icon": "assets/abilities/warwick/passive.png"
  },
  {
   "champ": "warwick",
   "slot": "Q",
   "name": "Hungering Strike",
-  "icon": "assets/abilities/warwick/q.png",
-  "desc": "Takes a bite out of an enemy unit and heals Warwick."
+  "desc": "Takes a bite out of an enemy unit and heals Warwick.",
+  "icon": "assets/abilities/warwick/q.png"
  },
  {
   "champ": "warwick",
   "slot": "W",
   "name": "Hunter's Call",
-  "icon": "assets/abilities/warwick/w.png",
-  "desc": "Warwick lets out a howl, increasing all nearby friendly champions' Attack Speed for a short time."
+  "desc": "Warwick lets out a howl, increasing all friendly champions' Attack Speed for a short time.",
+  "icon": "assets/abilities/warwick/w.png"
  },
  {
   "champ": "warwick",
   "slot": "E",
   "name": "Blood Scent",
-  "icon": "assets/abilities/warwick/e.png",
-  "desc": "Warwick passively senses weakened enemy champions around him. The scent of blood sends him into a fury, causing him to move at incredible speeds."
+  "desc": "Warwick passively senses weakened enemy champions around him.  The scent of blood sends him into a fury, causing him to move at incredible speeds.",
+  "icon": "assets/abilities/warwick/e.png"
  },
  {
   "champ": "warwick",
   "slot": "R",
   "name": "Infinite Duress",
-  "icon": "assets/abilities/warwick/r.png",
-  "desc": "Warwick lunges at an enemy champion, suppressing his target and dealing magic damage for a few seconds."
+  "desc": "Warwick lunges at an enemy champion, suppressing his target and dealing magic damage for a few seconds.",
+  "icon": "assets/abilities/warwick/r.png"
  },
  {
-  "champ": "wukong",
+  "champ": "rammus",
   "slot": "P",
-  "name": "Stone Skin",
-  "icon": "assets/abilities/wukong/passive.png",
-  "desc": "Increases Wukong's Armor and Magic Resistance for each nearby enemy champion."
+  "name": "Spiked Shell",
+  "desc": "Rammus gains additional damage as his shell becomes reinforced, converting 25% of his armor into Attack Damage.",
+  "icon": "assets/abilities/rammus/passive.png"
  },
  {
-  "champ": "wukong",
+  "champ": "rammus",
   "slot": "Q",
-  "name": "Crushing Blow",
-  "icon": "assets/abilities/wukong/q.png",
-  "desc": "Wukong's next attack deals additional physical damage, gains range, and reduces the enemy's Armor for a short duration."
+  "name": "Powerball",
+  "desc": "Rammus accelerates in a ball towards his enemies, dealing damage and slowing targets affected by the impact.",
+  "icon": "assets/abilities/rammus/q.png"
  },
  {
-  "champ": "wukong",
+  "champ": "rammus",
   "slot": "W",
-  "name": "Decoy",
-  "icon": "assets/abilities/wukong/w.png",
-  "desc": "Wukong becomes invisible for 1.5 seconds. An uncontrollable decoy is left behind that will deal Magic Damage to enemies near it after 1.5 seconds."
+  "name": "Defensive Ball Curl",
+  "desc": "Rammus goes into a defensive formation, vastly increasing his armor and magic resistance, while returning damage to attacks.",
+  "icon": "assets/abilities/rammus/w.png"
  },
  {
-  "champ": "wukong",
+  "champ": "rammus",
   "slot": "E",
-  "name": "Nimbus Strike",
-  "icon": "assets/abilities/wukong/e.png",
-  "desc": "Wukong dashes toward a target enemy and sends out images to attack up to 2 additional enemies near his target, dealing physical damage to each enemy struck."
+  "name": "Puncturing Taunt",
+  "desc": "Rammus taunts an enemy champion or monster into a reckless assault against Rammus' hard shell, reducing Armor temporarily.",
+  "icon": "assets/abilities/rammus/e.png"
  },
  {
-  "champ": "wukong",
+  "champ": "rammus",
   "slot": "R",
-  "name": "Cyclone",
-  "icon": "assets/abilities/wukong/r.png",
-  "desc": "Wukong's staff grows outward and he spins it around, dealing damage and knocking up enemies. Wukong gains Movement Speed over the duration of the spell."
+  "name": "Tremors",
+  "desc": "Rammus creates waves of destruction pulsing through the ground, causing damage to units and structures near him.",
+  "icon": "assets/abilities/rammus/r.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "P",
+  "name": "Trample",
+  "desc": "Each time Alistar casts a spell, he Tramples nearby units and turrets for a few seconds, dealing damage to units he walks over.",
+  "icon": "assets/abilities/alistar/passive.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "Q",
+  "name": "Pulverize",
+  "desc": "Alistar smashes the ground, dealing damage to all nearby enemies and tossing them into the air. On landing, enemies are stunned.",
+  "icon": "assets/abilities/alistar/q.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "W",
+  "name": "Headbutt",
+  "desc": "Alistar rams a target with his head, dealing damage and knocking the target back.",
+  "icon": "assets/abilities/alistar/w.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "E",
+  "name": "Triumphant Roar",
+  "desc": "Alistar lets out a commanding war cry, restoring health to himself and nearby allies. Nearby enemy deaths reduce the cooldown.",
+  "icon": "assets/abilities/alistar/e.png"
+ },
+ {
+  "champ": "alistar",
+  "slot": "R",
+  "name": "Unbreakable Will",
+  "desc": "Alistar lets out a wild roar, gaining bonus damage, removing all crowd-control effects on himself, and reducing incoming physical and magical damage for the duration.",
+  "icon": "assets/abilities/alistar/r.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "P",
+  "name": "Hextech Shrapnel Shells",
+  "desc": "Corki's basic attacks deal bonus true damage to minions, monsters, and champions.",
+  "icon": "assets/abilities/corki/passive.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "Q",
+  "name": "Phosphorus Bomb",
+  "desc": "Corki fires a flash bomb at a target location. This attack reveals non-stealthed units around the blast and champions for 6 seconds.",
+  "icon": "assets/abilities/corki/q.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "W",
+  "name": "Valkyrie",
+  "desc": "Corki surges to target location, dropping bombs that create a trail of destruction for opponents who remain in the fire.",
+  "icon": "assets/abilities/corki/w.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "E",
+  "name": "Gatling Gun",
+  "desc": "Corki's gatling gun rapidly fires in a cone in front of him, dealing damage and reducing enemy armor.",
+  "icon": "assets/abilities/corki/e.png"
+ },
+ {
+  "champ": "corki",
+  "slot": "R",
+  "name": "Missile Barrage",
+  "desc": "Corki fires a missile toward his target location that explodes on impact, dealing damage to enemies in an area. Corki stores one missile every 12 seconds up to 7 missiles total. Every 3rd missile will be a Big One, dealing extra damage.",
+  "icon": "assets/abilities/corki/r.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "P",
+  "name": "Equipment Mastery",
+  "desc": "Jax's gains bonus Health based on his bonus Attack Damage and Ability Power from items.",
+  "icon": "assets/abilities/jax/passive.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "Q",
+  "name": "Leap Strike",
+  "desc": "Jax leaps and strikes.",
+  "icon": "assets/abilities/jax/q.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "W",
+  "name": "Empower",
+  "desc": "Jax's next attack or Leap Strike deals bonus damage and damages nearby enemies.",
+  "icon": "assets/abilities/jax/w.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "E",
+  "name": "Counter Strike",
+  "desc": "Jax enters a defensive stance, dodging all incoming basic attacks and taking less damage from area of effect abilities. Then he stuns surrounding enemies and damages them.",
+  "icon": "assets/abilities/jax/e.png"
+ },
+ {
+  "champ": "jax",
+  "slot": "R",
+  "name": "Grandmaster's Might",
+  "desc": "Jax gains attack speed when he strikes. Every third consecutive attack deals bonus damage.",
+  "icon": "assets/abilities/jax/r.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "P",
+  "name": "Arcane Mastery",
+  "desc": "Ryze's abilities reduce the cooldown of all other abilities.",
+  "icon": "assets/abilities/ryze/passive.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "Q",
+  "name": "Overload",
+  "desc": "<spellPassive>Passive</spellPassive>: Ryze permanently gains Cooldown Reduction.<br><br><spellActive>Active</spellActive>: Ryze unleashes an orb of energy, dealing <magicDamage>magic damage</magicDamage> to his target.",
+  "icon": "assets/abilities/ryze/q.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "W",
+  "name": "Rune Prison",
+  "desc": "Ryze magically imprisons an enemy, <status>rooting</status> them and dealing <magicDamage>magic damage</magicDamage>.",
+  "icon": "assets/abilities/ryze/w.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "E",
+  "name": "Spell Flux",
+  "desc": "Ryze fires a chaotic bolt of magic that can bounce between enemies, dealing <magicDamage>magic damage</magicDamage> and reducing their <scaleMR>Magic Resist</scaleMR>.",
+  "icon": "assets/abilities/ryze/e.png"
+ },
+ {
+  "champ": "ryze",
+  "slot": "R",
+  "name": "Desperate Power",
+  "desc": "Ryze temporary harnesses his full powers, gaining <magicDamage>area of effect damage</magicDamage> on all abilities, <healing>Spell Vamp</healing>, and <speed>Move Speed</speed> for a short time.",
+  "icon": "assets/abilities/ryze/r.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "P",
+  "name": "Happy Hour",
+  "desc": "On ability use, Gragas takes a drink, restoring some of his Health.",
+  "icon": "assets/abilities/gragas/passive.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "Q",
+  "name": "Barrel Roll",
+  "desc": "Gragas rolls a barrel that explodes after a short delay, damaging and slowing Attack Speed. Recast to detonate the barrel early.",
+  "icon": "assets/abilities/gragas/q.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "W",
+  "name": "Drunken Rage",
+  "desc": "Gragas guzzles down brew from his cask, restoring Mana. He then gains Attack Damage and reduces damage taken for several seconds.",
+  "icon": "assets/abilities/gragas/w.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "E",
+  "name": "Body Slam",
+  "desc": "Gragas charges forward, colliding with the first enemy, damaging nearby enemies and Slowing them.",
+  "icon": "assets/abilities/gragas/e.png"
+ },
+ {
+  "champ": "gragas",
+  "slot": "R",
+  "name": "Explosive Cask",
+  "desc": "Gragas hurls his cask, damaging and Knocking Away enemies from the impact.",
+  "icon": "assets/abilities/gragas/r.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "P",
+  "name": "Deadly Venom",
+  "desc": "Twitch's basic attacks infect the target, dealing magic damage each second.",
+  "icon": "assets/abilities/twitch/passive.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "Q",
+  "name": "Ambush",
+  "desc": "Twitch turns Invisible for several seconds, gaining Move Speed. He then gains Attack Speed after coming out of Invisibility.",
+  "icon": "assets/abilities/twitch/q.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "W",
+  "name": "Venom Cask",
+  "desc": "Twitch hurls a cask of venom that explodes, inflicting Deadly Venom and slowing enemies in the area.",
+  "icon": "assets/abilities/twitch/w.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "E",
+  "name": "Expunge",
+  "desc": "All nearby enemies secrete Twitch's toxic venoms from their bodies, dealing damage for each stack.",
+  "icon": "assets/abilities/twitch/e.png"
+ },
+ {
+  "champ": "twitch",
+  "slot": "R",
+  "name": "Spray and Pray",
+  "desc": "Twitch closes his eyes and fires his crossbow, rapidly spraying powerful piercing bolts ahead of him.",
+  "icon": "assets/abilities/twitch/r.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "P",
+  "name": "Dread",
+  "desc": "Nearby enemies have reduced Magic Resist.",
+  "icon": "assets/abilities/fiddlesticks/passive.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "Q",
+  "name": "Terrify",
+  "desc": "Strikes a target unit with fear, causing it to flee in terror for a duration.",
+  "icon": "assets/abilities/fiddlesticks/q.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "W",
+  "name": "Drain",
+  "desc": "Fiddlesticks saps the life force of an enemy, dealing damage to a target over time and healing himself.",
+  "icon": "assets/abilities/fiddlesticks/w.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "E",
+  "name": "Dark Wind",
+  "desc": "A wisp of wind strikes an enemy unit and then bounces to nearby enemy units, dealing damage and silencing the victims.",
+  "icon": "assets/abilities/fiddlesticks/e.png"
+ },
+ {
+  "champ": "fiddlesticks",
+  "slot": "R",
+  "name": "Crowstorm",
+  "desc": "A murder of crows flock wildly around Fiddlesticks, dealing damage each second to all enemy units in the area.",
+  "icon": "assets/abilities/fiddlesticks/r.png"
  },
  {
   "champ": "zilean",
   "slot": "P",
   "name": "Heightened Learning",
-  "icon": "assets/abilities/zilean/passive.png",
-  "desc": "Zilean and his nearby allied champions receive 8% additional experience."
+  "desc": "Zilean and his allies gain additional experience.",
+  "icon": "assets/abilities/zilean/passive.png"
  },
  {
   "champ": "zilean",
   "slot": "Q",
   "name": "Time Bomb",
-  "icon": "assets/abilities/zilean/q.png",
-  "desc": "Places a bomb on any unit, allied or enemy, which detonates after 4 seconds, dealing area of effect damage."
+  "desc": "Zilean places a time bomb on his target, which damages nearby enemies once it expires.",
+  "icon": "assets/abilities/zilean/q.png"
  },
  {
   "champ": "zilean",
   "slot": "W",
   "name": "Rewind",
-  "icon": "assets/abilities/zilean/w.png",
-  "desc": "Zilean can prepare himself for future confrontations, reducing the cooldowns of all of his other abilities."
+  "desc": "Zilean reduces all of his other cooldowns.",
+  "icon": "assets/abilities/zilean/w.png"
  },
  {
   "champ": "zilean",
   "slot": "E",
   "name": "Time Warp",
-  "icon": "assets/abilities/zilean/e.png",
-  "desc": "Zilean bends time around any unit, decreasing an enemy's Movement Speed or increasing an ally's Movement Speed for a short time."
+  "desc": "Zilean increases an allied Champion's movement speed or slows an enemy champion.",
+  "icon": "assets/abilities/zilean/e.png"
  },
  {
   "champ": "zilean",
   "slot": "R",
   "name": "Chronoshift",
-  "icon": "assets/abilities/zilean/r.png",
-  "desc": "Zilean places a protective time rune on an allied champion, teleporting the champion back in time if they take lethal damage."
+  "desc": "Zilean marks himself or an allied champion with a protective time rune. If they would take lethal damage, they are instead transported back in time and healed.",
+  "icon": "assets/abilities/zilean/r.png"
  },
  {
-  "champ": "akali",
+  "champ": "kassadin",
   "slot": "P",
-  "name": "Twin Disciplines",
-  "icon": "assets/abilities/akali/passive.png",
-  "desc": "Discipline of Force: Akali's basic attacks deal an additional 6% bonus Magic Damage, increasing by 1% for every 6 Ability Power.\n\nDiscipline of Might: Akali gains 6% Spell Vamp, increasing by 1% for every 6 Bonus Attack Damage."
+  "name": "Void Stone",
+  "desc": "Kassadin takes 15% reduced <magicDamage>magic damage</magicDamage> and transforms this damage into bonus <attackSpeed>Attack Speed</attackSpeed>.",
+  "icon": "assets/abilities/kassadin/passive.png"
  },
  {
-  "champ": "akali",
+  "champ": "kassadin",
   "slot": "Q",
-  "name": "Mark of the Assassin",
-  "icon": "assets/abilities/akali/q.png",
-  "desc": "Akali spins her kama at a target enemy to deal Magic Damage and mark the target for 6 seconds. Akali's melee attacks against a marked target will trigger and consume the mark to cause additional damage and restore Energy."
+  "name": "Null Sphere",
+  "desc": "Kassadin fires an ethereal bolt of void energy, dealing damage and silencing the target for a duration.",
+  "icon": "assets/abilities/kassadin/q.png"
  },
  {
-  "champ": "akali",
+  "champ": "kassadin",
   "slot": "W",
-  "name": "Twilight Shroud",
-  "icon": "assets/abilities/akali/w.png",
-  "desc": "Akali throws down a cover of smoke. While inside the area, Akali becomes invisible and gains a short burst of Movement Speed. Attacking or using abilities will briefly reveal her. Enemies inside the smoke have their Movement Speed reduced."
+  "name": "Nether Blade",
+  "desc": "Passive: Kassadin's basic attacks restore Mana. The Mana restored is tripled against enemy champions. Active: Kassadin's basic attacks deal additional magic damage.",
+  "icon": "assets/abilities/kassadin/w.png"
  },
  {
-  "champ": "akali",
+  "champ": "kassadin",
   "slot": "E",
-  "name": "Crescent Slash",
-  "icon": "assets/abilities/akali/e.png",
-  "desc": "Akali flourishes her kamas, dealing damage based on her Attack Damage and Ability Power."
+  "name": "Force Pulse",
+  "desc": "Kassadin draws energy from spells cast in his vicinity. Upon charging up, Kassadin can use Force Pulse to damage and slow enemies in a cone in front of him.",
+  "icon": "assets/abilities/kassadin/e.png"
  },
  {
-  "champ": "akali",
+  "champ": "kassadin",
   "slot": "R",
-  "name": "Shadow Dance",
-  "icon": "assets/abilities/akali/r.png",
-  "desc": "Akali moves through shadows to quickly strike her target, dealing damage and consuming an Essence of Shadow charge. Akali recharges Essence of Shadow charges both periodically and upon kills and assists, max 3 stacks."
+  "name": "Riftwalk",
+  "desc": "Kassadin teleports to a nearby location dealing damage to nearby enemy units. Additionally, multiple Riftwalks in a short period of time cause them to cost additional Mana and deal additional damage.",
+  "icon": "assets/abilities/kassadin/r.png"
  },
  {
-  "champ": "caitlyn",
+  "champ": "dr-mundo",
   "slot": "P",
-  "name": "Headshot",
-  "icon": "assets/abilities/caitlyn/passive.png",
-  "desc": "Every few basic attacks, Caitlyn will fire a headshot dealing 150% damage to a champion or 250% damage to a minion."
+  "name": "Adrenaline Rush",
+  "desc": "Dr. Mundo regenerates 0.3% of his maximum Health each second.",
+  "icon": "assets/abilities/dr-mundo/passive.png"
  },
  {
-  "champ": "caitlyn",
+  "champ": "dr-mundo",
   "slot": "Q",
-  "name": "Piltover Peacemaker",
-  "icon": "assets/abilities/caitlyn/q.png",
-  "desc": "Caitlyn revs up her rifle for 1 second to unleash a penetrating shot that deals physical damage (deals less damage to subsequent targets)."
+  "name": "Infected Cleaver",
+  "desc": "Dr. Mundo hurls his cleaver, dealing damage based on his victims maximum health.",
+  "icon": "assets/abilities/dr-mundo/q.png"
  },
  {
-  "champ": "caitlyn",
+  "champ": "dr-mundo",
   "slot": "W",
-  "name": "Yordle Snap Trap",
-  "icon": "assets/abilities/caitlyn/w.png",
-  "desc": "Caitlyn sets a trap to find sneaky yordles. When sprung, the trap immobilizes the champion, reveals them for a short duration, and deals magic damage over 1.5 seconds."
+  "name": "Burning Agony",
+  "desc": "Dr. Mundo drains his health to reduce the duration of disables and deal continual damage to nearby enemies.",
+  "icon": "assets/abilities/dr-mundo/w.png"
  },
  {
-  "champ": "caitlyn",
+  "champ": "dr-mundo",
   "slot": "E",
-  "name": "90 Caliber Net",
-  "icon": "assets/abilities/caitlyn/e.png",
-  "desc": "Caitlyn fires a heavy net to slow her target. The recoil knocks Caitlyn back."
+  "name": "Masochism",
+  "desc": "Masochism increases Dr. Mundo's Attack Damage by a flat amount for 5 second. In addition, Dr. Mundo also gains an additional amount of Attack Damage for each percentage of Health he is missing.",
+  "icon": "assets/abilities/dr-mundo/e.png"
  },
  {
-  "champ": "caitlyn",
+  "champ": "dr-mundo",
   "slot": "R",
-  "name": "Ace in the Hole",
-  "icon": "assets/abilities/caitlyn/r.png",
-  "desc": "Caitlyn takes time to line up the perfect shot, dealing massive damage to a single target at a huge range. Enemy champions can intercept the bullet for their ally."
+  "name": "Sadism",
+  "desc": "Dr. Mundo sacrifices a portion of his Health for increased Movement Speed and drastically increased Health Regeneration.",
+  "icon": "assets/abilities/dr-mundo/r.png"
  },
  {
-  "champ": "fiora",
+  "champ": "kayle",
   "slot": "P",
-  "name": "Duelist",
-  "icon": "assets/abilities/fiora/passive.png",
-  "desc": "Fiora regenerates Health over 6 seconds each time she deals damage. Striking champions will cause this effect to stack up to 4 times."
+  "name": "Holy Fervor",
+  "desc": "Kayle gains a percentage of her Ability Power as Attack damage and a percentage of her Attack Damage as Ability Power.",
+  "icon": "assets/abilities/kayle/passive.png"
  },
  {
-  "champ": "fiora",
+  "champ": "kayle",
   "slot": "Q",
-  "name": "Lunge",
-  "icon": "assets/abilities/fiora/q.png",
-  "desc": "Fiora dashes forward to strike her target, dealing physical damage. Fiora can perform the dash a second time within a couple seconds at no Mana cost."
+  "name": "Reckoning",
+  "desc": "Kayle blasts a target, dealing damage, slowing their movement speed, and applying a stack of Holy Fervor.",
+  "icon": "assets/abilities/kayle/q.png"
  },
  {
-  "champ": "fiora",
+  "champ": "kayle",
   "slot": "W",
-  "name": "Riposte",
-  "icon": "assets/abilities/fiora/w.png",
-  "desc": "Fiora's Attack Damage is increased. When activated, Fiora parries the next basic attack and reflects magic damage back to the attacker. Works against champions, large monsters and large minions."
+  "name": "Divine Blessing",
+  "desc": "Kayle blesses an allied champion, increasing their movement speed and healing them.",
+  "icon": "assets/abilities/kayle/w.png"
  },
  {
-  "champ": "fiora",
+  "champ": "kayle",
   "slot": "E",
-  "name": "Burst of Speed",
-  "icon": "assets/abilities/fiora/e.png",
-  "desc": "Fiora temporarily gains additional Attack Speed. Each basic attack or Lunge she lands during this time increases her Movement Speed. Killing a champion refreshes the cooldown on Burst of Speed."
+  "name": "Righteous Fury",
+  "desc": "Kayle increases her attack range and her basic attacks deals additional damage to her target and nearby enemies.",
+  "icon": "assets/abilities/kayle/e.png"
  },
  {
-  "champ": "fiora",
+  "champ": "kayle",
   "slot": "R",
-  "name": "Blade Waltz",
-  "icon": "assets/abilities/fiora/r.png",
-  "desc": "Fiora dashes around the battlefield to deal physical damage to enemy champions. Successive strikes against the same target deal less damage."
+  "name": "Intervention",
+  "desc": "Bathes Kayle's target in a holy light, rendering them immune to all damage for a short time.",
+  "icon": "assets/abilities/kayle/r.png"
  },
  {
-  "champ": "graves",
+  "champ": "chogath",
   "slot": "P",
-  "name": "True Grit",
-  "icon": "assets/abilities/graves/passive.png",
-  "desc": "Graves gains increasing Armor and Magic Resistance the longer he remains in combat. "
+  "name": "Carnivore",
+  "desc": "Whenever Cho'Gath kills a unit, he recovers health and mana. The values restored increase with Cho'Gath's level.",
+  "icon": "assets/abilities/chogath/passive.png"
  },
  {
-  "champ": "graves",
+  "champ": "chogath",
   "slot": "Q",
-  "name": "Buckshot",
-  "icon": "assets/abilities/graves/q.png",
-  "desc": "Graves fires three bullets in a cone, damaging all enemies in their paths."
+  "name": "Rupture",
+  "desc": "Ruptures the ground at target location, popping enemy units into the air, dealing damage and slowing them.",
+  "icon": "assets/abilities/chogath/q.png"
  },
  {
-  "champ": "graves",
+  "champ": "chogath",
   "slot": "W",
-  "name": "Smoke Screen",
-  "icon": "assets/abilities/graves/w.png",
-  "desc": "Graves fires a smoke canister at the target area creating a cloud of smoke. Enemies inside the smoke cloud have reduced sight range and Movement Speed. "
+  "name": "Feral Scream",
+  "desc": "Cho'Gath unleashes a terrible scream at enemies in a cone, dealing magic damage and Silencing enemies for a few seconds.",
+  "icon": "assets/abilities/chogath/w.png"
  },
  {
-  "champ": "graves",
+  "champ": "chogath",
   "slot": "E",
-  "name": "Quickdraw",
-  "icon": "assets/abilities/graves/e.png",
-  "desc": "Graves dashes forward gaining an Attack Speed boost for several seconds. Hitting enemies with basic attacks lowers the cooldown of this skill. "
+  "name": "Vorpal Spikes",
+  "desc": "Cho'Gath's attacks passively release deadly spikes, dealing damage to all enemy units in front of him.",
+  "icon": "assets/abilities/chogath/e.png"
  },
  {
-  "champ": "graves",
+  "champ": "chogath",
   "slot": "R",
-  "name": "Collateral Damage",
-  "icon": "assets/abilities/graves/r.png",
-  "desc": "Graves fires an explosive shell dealing heavy damage to the first champion it hits. After hitting a champion or reaching the end of its range, the shell explodes dealing damage in a cone. "
+  "name": "Feast",
+  "desc": "Devours an enemy unit, dealing a high amount of true damage. If the target is killed, Cho'Gath grows, gaining maximum health (maximum 6 stacks). Cho'Gath loses half of his stacks upon death.",
+  "icon": "assets/abilities/chogath/r.png"
  },
  {
-  "champ": "irelia",
+  "champ": "morgana",
   "slot": "P",
-  "name": "Ionian Fervor",
-  "icon": "assets/abilities/irelia/passive.png",
-  "desc": "Reduces the duration of all disables for each nearby enemy champion.\n\n1 Champion: 10%\n2 Champions: 25%\n3 Champions: 40%"
+  "name": "Soul Siphon",
+  "desc": "Morgana has Spell Vamp, healing herself whenever she deals damage with her spells.",
+  "icon": "assets/abilities/morgana/passive.png"
  },
  {
-  "champ": "irelia",
+  "champ": "morgana",
   "slot": "Q",
-  "name": "Bladesurge",
-  "icon": "assets/abilities/irelia/q.png",
-  "desc": "Irelia dashes forward to strike her target. If it kills the target, Bladesurge's cooldown refreshes and refunds 35 Mana."
+  "name": "Dark Binding",
+  "desc": "Morgana releases a sphere of dark magic.  Upon contact with an enemy unit, the sphere will deal magic damage and force the unit to the ground for a period of time.",
+  "icon": "assets/abilities/morgana/q.png"
  },
  {
-  "champ": "irelia",
+  "champ": "morgana",
   "slot": "W",
-  "name": "Hiten Style",
-  "icon": "assets/abilities/irelia/w.png",
-  "desc": "Irelia is skilled in the art of Hiten, passively giving her physical attacks Health restoration. Activating Hiten Style doubles her Health restoration and gives her basic attacks true damage."
+  "name": "Tormented Soil",
+  "desc": "Infects an area with desecrated soil, causing enemy units who stand on the location to take continual damage.",
+  "icon": "assets/abilities/morgana/w.png"
  },
  {
-  "champ": "irelia",
+  "champ": "morgana",
   "slot": "E",
-  "name": "Equilibrium Strike",
-  "icon": "assets/abilities/irelia/e.png",
-  "desc": "Irelia's attack balances the scales, dealing damage and slowing the target. However, if the target has a higher Health % than Irelia, then the blow stuns the target instead of slowing."
+  "name": "Black Shield",
+  "desc": "Places a protective barrier around an allied champion, absorbing magical damage and disables until penetrated or the shield dissipates.",
+  "icon": "assets/abilities/morgana/e.png"
  },
  {
-  "champ": "irelia",
+  "champ": "morgana",
   "slot": "R",
-  "name": "Transcendent Blades",
-  "icon": "assets/abilities/irelia/r.png",
-  "desc": "Irelia summons 4 spirit blades that she can fling to deal physical damage and siphon life from enemies they pass through."
+  "name": "Soul Shackles",
+  "desc": "Latches chains of energy onto nearby enemy champions, dealing initial damage to them and slowing their Movement Speed, and then echoing the pain a few seconds later and stunning them if they remain close to Morgana.",
+  "icon": "assets/abilities/morgana/r.png"
  },
  {
-  "champ": "leblanc",
+  "champ": "heimerdinger",
   "slot": "P",
-  "name": "Mirror Image",
-  "icon": "assets/abilities/leblanc/passive.png",
-  "desc": "When LeBlanc drops below 40% Health, she becomes invisible for 1 second and creates a Mirror Image that deals no damage and lasts for up to 8 seconds.\n\nMirror Image has a 1 minute cooldown.\n\nMirror Image can be controlled by holding the Alt key and using the right mouse button."
+  "name": "Techmaturgical Repair Bots",
+  "desc": "Heimerdinger gives nearby allied Turrets and Champions increased Health Regeneration.",
+  "icon": "assets/abilities/heimerdinger/passive.png"
  },
  {
-  "champ": "leblanc",
+  "champ": "heimerdinger",
   "slot": "Q",
-  "name": "Sigil of Malice",
-  "icon": "assets/abilities/leblanc/q.png",
-  "desc": "LeBlanc projects an orb towards her target, dealing magic damage and marking the target for 3.5 seconds. If the target takes damage from one of LeBlanc's abilities, the sigil will trigger, dealing damage."
+  "name": "H-28G Evolution Turret",
+  "desc": "Heimerdinger lays down a machine gun turret. Turrets gain abilities as this skill is increased. (Turrets deal half damage to towers).",
+  "icon": "assets/abilities/heimerdinger/q.png"
  },
  {
-  "champ": "leblanc",
+  "champ": "heimerdinger",
   "slot": "W",
-  "name": "Distortion",
-  "icon": "assets/abilities/leblanc/w.png",
-  "desc": "LeBlanc rapidly dashes to a target location, dealing magic damage to nearby units. In the following 4 seconds, she can activate Distortion again to return to her starting location."
+  "name": "Hextech Micro-Rockets",
+  "desc": "Heimerdinger fires long-range rockets that hit the enemies closest to Heimerdinger.",
+  "icon": "assets/abilities/heimerdinger/w.png"
  },
  {
-  "champ": "leblanc",
+  "champ": "heimerdinger",
   "slot": "E",
-  "name": "Ethereal Chains",
-  "icon": "assets/abilities/leblanc/e.png",
-  "desc": "LeBlanc flings illusionary chains towards a target location. If it hits an enemy unit, it will deal initial magic damage and slow their Movement Speed by 25%. If the target remains shackled for 2 seconds, the target takes additional magic damage and is unable to move."
+  "name": "CH-1 Concussion Grenade",
+  "desc": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units as well as stunning anyone directly hit and blinding surrounding units.",
+  "icon": "assets/abilities/heimerdinger/e.png"
  },
  {
-  "champ": "leblanc",
+  "champ": "heimerdinger",
   "slot": "R",
-  "name": "Mimic",
-  "icon": "assets/abilities/leblanc/r.png",
-  "desc": "LeBlanc can cast a mimicked version of the previous spell she cast."
+  "name": "UPGRADE!!!",
+  "desc": "Passive / Active: Passively increases Cooldown Reduction.  Activate to heal all active Evolution Turrets and cause them to fire frost shots, which reduce Movement Speed, for a short time.",
+  "icon": "assets/abilities/heimerdinger/r.png"
  },
  {
-  "champ": "mordekaiser",
+  "champ": "vayne",
   "slot": "P",
-  "name": "Iron Man",
-  "icon": "assets/abilities/mordekaiser/passive.png",
-  "desc": "A percent of the damage dealt from abilities is converted into a temporary shield, absorbing incoming damage."
+  "name": "Night Hunter",
+  "desc": "Vayne ruthlessly hunts evil-doers. She gains 30 Movement Speed when moving toward nearby enemy champions.",
+  "icon": "assets/abilities/vayne/passive.png"
  },
  {
-  "champ": "mordekaiser",
+  "champ": "vayne",
   "slot": "Q",
-  "name": "Mace of Spades",
-  "icon": "assets/abilities/mordekaiser/q.png",
-  "desc": "On next hit, Mordekaiser swings his mace with such force that it echoes out, striking up to 3 additional nearby targets, dealing damage plus bonus damage. If the target is alone, the attack deals extra damage."
+  "name": "Tumble",
+  "desc": "Vayne tumbles, maneuvering to carefully place her next shot.  Her next attack deals bonus damage.",
+  "icon": "assets/abilities/vayne/q.png"
  },
  {
-  "champ": "mordekaiser",
+  "champ": "vayne",
   "slot": "W",
-  "name": "Creeping Death",
-  "icon": "assets/abilities/mordekaiser/w.png",
-  "desc": "Unleashes a protective cloud of metal shards to surround an ally, increasing their Armor and Magic Resistance and dealing damage per second to enemies in the cloud."
+  "name": "Silver Bolts",
+  "desc": "Vayne tips her bolts with a rare metal, toxic to evil things.  The third consecutive attack or ability against the same target deals a percentage of the target's maximum Health as bonus true damage. (Max: 200 damage vs. Monsters)",
+  "icon": "assets/abilities/vayne/w.png"
  },
  {
-  "champ": "mordekaiser",
+  "champ": "vayne",
   "slot": "E",
-  "name": "Siphon of Destruction",
-  "icon": "assets/abilities/mordekaiser/e.png",
-  "desc": "Mordekaiser deals damage to enemies in a cone in front of him. For each unit hit, Mordekaiser's shield absorbs energy."
+  "name": "Condemn",
+  "desc": "Vayne draws a heavy crossbow from her back, and fires a huge bolt at her target, dealing damage and knocking them back.  If they collide with terrain, they are impaled, dealing bonus damage and stunning them.",
+  "icon": "assets/abilities/vayne/e.png"
  },
  {
-  "champ": "mordekaiser",
+  "champ": "vayne",
   "slot": "R",
-  "name": "Children of the Grave",
-  "icon": "assets/abilities/mordekaiser/r.png",
-  "desc": "Mordekaiser curses an enemy, stealing a percent of their life initially and each second. If the target dies while the spell is active, their soul is enslaved and will follow Mordekaiser as a ghost for 30 seconds."
+  "name": "Final Hour",
+  "desc": "Readying herself for an epic confrontation, Vayne gains increased Attack Damage, invisibility during Tumble, and triple the bonus Movement Speed from Night Hunter.",
+  "icon": "assets/abilities/vayne/r.png"
  },
  {
-  "champ": "urgot",
+  "champ": "pantheon",
   "slot": "P",
-  "name": "Zaun-Touched Bolt Augmenter",
-  "icon": "assets/abilities/urgot/passive.png",
-  "desc": "Urgot's basic attacks and Acid Hunters reduce his targets' damage by 15% for 2.5 seconds."
+  "name": "Aegis Protection",
+  "desc": "After attacking or casting spells 4 times, Pantheon will block the next incoming basic attack or turret attack.",
+  "icon": "assets/abilities/pantheon/passive.png"
  },
  {
-  "champ": "urgot",
+  "champ": "pantheon",
   "slot": "Q",
-  "name": "Acid Hunter",
-  "icon": "assets/abilities/urgot/q.png",
-  "desc": "Urgot fires an Acid Hunter missile that collides with the first enemy it hits, slowing the target if he has his Terror Capacitor up. Acid Hunter missile-locks on enemies affected by Noxian Corrosive Charge."
+  "name": "Spear Shot",
+  "desc": "Pantheon hurls his spear at an opponent, dealing damage.",
+  "icon": "assets/abilities/pantheon/q.png"
  },
  {
-  "champ": "urgot",
+  "champ": "pantheon",
   "slot": "W",
-  "name": "Terror Capacitor",
-  "icon": "assets/abilities/urgot/w.png",
-  "desc": "Urgot charges up his capacitor to gain a shield. While the shield is active, Urgot gains slowing attacks."
+  "name": "Aegis of Zeonia",
+  "desc": "Pantheon leaps at an enemy and bashes the enemy with his shield, stunning them.  After finishing the attack, Pantheon readies himself to block the next attack.",
+  "icon": "assets/abilities/pantheon/w.png"
  },
  {
-  "champ": "urgot",
+  "champ": "pantheon",
   "slot": "E",
-  "name": "Noxian Corrosive Charge",
-  "icon": "assets/abilities/urgot/e.png",
-  "desc": "Urgot launches a corrosive charge that damages enemies in an area and reduces their Armor."
+  "name": "Heartseeker Strike",
+  "desc": "Pantheon focuses and unleashes 3 swift strikes to the area in front of him, dealing double damage to champions. Pantheon also becomes more aware of his enemy's vital spots, allowing him to always crit enemies below 15% health.",
+  "icon": "assets/abilities/pantheon/e.png"
  },
  {
-  "champ": "urgot",
+  "champ": "pantheon",
   "slot": "R",
-  "name": "Hyper-Kinetic Position Reverser",
-  "icon": "assets/abilities/urgot/r.png",
-  "desc": "Urgot charges up his Hyper-Kinetic Position Reverser, swapping positions with the target. His target is suppressed for the duration of the channel. He gains increased Armor and Magic Resist after the swap."
+  "name": "Grand Skyfall",
+  "desc": "Pantheon composes himself and then leaps into the air to a target, striking all enemy units in an area. Enemies closer to the impact point take more damage.",
+  "icon": "assets/abilities/pantheon/r.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "P",
+  "name": "Power Chord",
+  "desc": "After casting 3 spells, Sona's next attack deals bonus magic damage.",
+  "icon": "assets/abilities/sona/passive.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "Q",
+  "name": "Hymn of Valor",
+  "desc": "Sona plays the Hymn of Valor, granting nearby allied champions bonus Damage and Ability Power. Additionally, casting this ability sends out bolts of sound, dealing magic damage to the nearest two enemy champions or monsters.",
+  "icon": "assets/abilities/sona/q.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "W",
+  "name": "Aria of Perseverance",
+  "desc": "Sona plays the Aria of Perseverance, granting nearby allied champions bonus Armor and Magic Resist. Additionally, casting this ability sends out healing melodies, healing Sona and a nearby wounded ally.",
+  "icon": "assets/abilities/sona/w.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "E",
+  "name": "Song of Celerity",
+  "desc": "Sona plays the Song of Celerity, granting nearby allied champions bonus Movement Speed. Additionally, casting this ability energizes nearby allies with a burst of speed.",
+  "icon": "assets/abilities/sona/e.png"
+ },
+ {
+  "champ": "sona",
+  "slot": "R",
+  "name": "Crescendo",
+  "desc": "Sona plays her ultimate chord, forcing enemy champions to dance and dealing magic damage to them.",
+  "icon": "assets/abilities/sona/r.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "P",
+  "name": "Energize",
+  "desc": "Basic attacks lower all ability cooldowns by 0.5 seconds. Double effect when attacking champions.",
+  "icon": "assets/abilities/skarner/passive.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "Q",
+  "name": "Crystal Slash",
+  "desc": "Skarner lashes out with his claws, dealing physical damage to all nearby enemies and charging himself with Crystal Energy for several seconds if a unit is struck.  If he casts Crystal Slash again while powered by Crystal Energy, he deals bonus magic damage and slows all targets hit.",
+  "icon": "assets/abilities/skarner/q.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "W",
+  "name": "Crystalline Exoskeleton",
+  "desc": "Skarner gains a shield, and while the shield persists his movement speed and attack speed are both increased.",
+  "icon": "assets/abilities/skarner/w.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "E",
+  "name": "Fracture",
+  "desc": "Skarner summons a blast of crystalline energy which deals damage to enemies struck and marks them. Striking enemies will consume the mark to heal Skarner. Killing targets outright will also activate the heal.",
+  "icon": "assets/abilities/skarner/e.png"
+ },
+ {
+  "champ": "skarner",
+  "slot": "R",
+  "name": "Impale",
+  "desc": "Skarner suppresses an enemy champion and deals magic damage to it.  During this time, Skarner can move freely and will drag his helpless victim around with him.  When the effect ends, Skarner's target will be dealt additional damage.",
+  "icon": "assets/abilities/skarner/r.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "P",
+  "name": "Icathian Surprise",
+  "desc": "Upon dying, Kog'Maw starts a chain reaction in his body which causes him to detonate after 4 seconds; dealing magic damage to surrounding enemies.",
+  "icon": "assets/abilities/kogmaw/passive.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "Q",
+  "name": "Caustic Spittle",
+  "desc": "Passive: Increases Kog'Maw's Attack Speed. <br><br>Active: Kog'Maw launches a corrosive projectile which deals magic damage and corrodes the target's Armor and Magic Resist for 4 seconds.",
+  "icon": "assets/abilities/kogmaw/q.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "W",
+  "name": "Bio-Arcane Barrage",
+  "desc": "Kog'Maw's attacks gain range and deal a percent of the target's maximum health as magic damage.",
+  "icon": "assets/abilities/kogmaw/w.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "E",
+  "name": "Void Ooze",
+  "desc": "Kog'Maw launches a peculiar ooze which damages all enemies it passes through and leaves a trail which slows enemies who stand on it.",
+  "icon": "assets/abilities/kogmaw/e.png"
+ },
+ {
+  "champ": "kogmaw",
+  "slot": "R",
+  "name": "Living Artillery",
+  "desc": "Kog'Maw fires a living artillery shell at a great distance dealing damage and revealing targets.  Additionally, multiple Living Artilleries in a short period of time cause them to cost additional mana.",
+  "icon": "assets/abilities/kogmaw/r.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "P",
+  "name": "Blaze",
+  "desc": "Brand's spells light his targets ablaze, dealing 8% of their maximum Health in magic damage over 4 seconds.",
+  "icon": "assets/abilities/brand/passive.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "Q",
+  "name": "Sear",
+  "desc": "Brand launches a ball of fire forward that deals magic damage. If the target is ablaze, Sear will stun the target.",
+  "icon": "assets/abilities/brand/q.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "W",
+  "name": "Pillar of Flame",
+  "desc": "After a short delay, Brand creates a pillar of flame at a target area, dealing magic damage to enemy units with the area. Units that are ablaze take additional damage",
+  "icon": "assets/abilities/brand/w.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "E",
+  "name": "Conflagration",
+  "desc": "Brand conjures a powerful blast at his target, dealing magic damage to them. If the target is ablaze, Conflagration spreads to nearby enemies.",
+  "icon": "assets/abilities/brand/e.png"
+ },
+ {
+  "champ": "brand",
+  "slot": "R",
+  "name": "Pyroclasm",
+  "desc": "Brand unleashes a devastating torrent of fire, dealing magic damage each time it bounces. If a target is ablaze, Pyroclasm will priotize champions for the next bounce.",
+  "icon": "assets/abilities/brand/r.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "P",
+  "name": "Stone Skin",
+  "desc": "Increases Wukong's armor and magic resistance for each nearby enemy champion.",
+  "icon": "assets/abilities/wukong/passive.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "Q",
+  "name": "Crushing Blow",
+  "desc": "Wukong's next attack gains extra range, deals bonus damage, and reduces the enemy's Armor.",
+  "icon": "assets/abilities/wukong/q.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "W",
+  "name": "Decoy",
+  "desc": "Wukong becomes invisible for 1.5 seconds. An uncontrollable decoy is left behind that will deal magic damage to enemies near it after 1.5 seconds.",
+  "icon": "assets/abilities/wukong/w.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "E",
+  "name": "Nimbus Strike",
+  "desc": "Wukong dashes toward a target enemy and sends out images to attack up to 2 additional enemies near his target, dealing physical damage to each enemy struck.",
+  "icon": "assets/abilities/wukong/e.png"
+ },
+ {
+  "champ": "wukong",
+  "slot": "R",
+  "name": "Cyclone",
+  "desc": "Wukong's staff grows outward and he spins it around, dealing damage and knocking up enemies. Wukong gains movement speed over the duration of the spell.",
+  "icon": "assets/abilities/wukong/r.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "P",
+  "name": "Summon Voidling",
+  "desc": "Every few spells, Malzahar summons an uncontrollable Voidling to engage his enemies. Voidlings grow over time, gaining armor, damage, and attack speed.",
+  "icon": "assets/abilities/malzahar/passive.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "Q",
+  "name": "Call of the Void",
+  "desc": "Malzahar opens up two portals to the Void. After a short delay, they fire projectiles that deal Magic Damage and silence enemy champions.",
+  "icon": "assets/abilities/malzahar/q.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "W",
+  "name": "Null Zone",
+  "desc": "Malzahar creates a zone of negative energy that damages nearby enemies each second.",
+  "icon": "assets/abilities/malzahar/w.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "E",
+  "name": "Malefic Visions",
+  "desc": "Malzahar infects his target's mind, dealing damage over time. If the target dies during this time, the visions pass to a nearby enemy and Malzahar gains mana.",
+  "icon": "assets/abilities/malzahar/e.png"
+ },
+ {
+  "champ": "malzahar",
+  "slot": "R",
+  "name": "Nether Grasp",
+  "desc": "Malzahar channels the essence of the Void to suppress target champion while dealing magic damage over time.",
+  "icon": "assets/abilities/malzahar/r.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "P",
+  "name": "Berserker Rage",
+  "desc": "Olaf's Attack Speed increases as his Health decreases.",
+  "icon": "assets/abilities/olaf/passive.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "Q",
+  "name": "Undertow",
+  "desc": "Olaf throws an axe into the ground at a target location, dealing damage to units it passes through and slowing their movement speed. If Olaf picks up the axe, the ability's cooldown is reduced.",
+  "icon": "assets/abilities/olaf/q.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "W",
+  "name": "Vicious Strikes",
+  "desc": "Olaf's attack damage is increased, based on his health, and he gains massive lifesteal and spell vamp.",
+  "icon": "assets/abilities/olaf/w.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "E",
+  "name": "Reckless Swing",
+  "desc": "Olaf attacks with such force that it deals true damage to his target and himself.",
+  "icon": "assets/abilities/olaf/e.png"
+ },
+ {
+  "champ": "olaf",
+  "slot": "R",
+  "name": "Ragnarok",
+  "desc": "Olaf temporarily becomes immune to disables and gains bonus Armor, Magic Resist, and Lethality.",
+  "icon": "assets/abilities/olaf/r.png"
  }
 ]

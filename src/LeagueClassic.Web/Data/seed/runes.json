@@ -1,723 +1,354 @@
 [
  {
-  "name": "Greater Mark of Ability Power",
-  "slug": "greater-mark-of-ability-power",
-  "slot": "mark",
-  "desc": "+0.59 ability power",
-  "icon": "assets/runes/greater-mark-of-ability-power.png"
+  "ddragonId": 775297,
+  "name": "Glyph of Ability Power",
+  "slug": "glyph-of-ability-power",
+  "slot": "glyph",
+  "desc": "+1.2 ability power",
+  "icon": "assets/runes/glyph-of-ability-power.png"
  },
  {
-  "name": "Greater Mark of Armor",
-  "slug": "greater-mark-of-armor",
-  "slot": "mark",
-  "desc": "+0.91 armor",
-  "icon": "assets/runes/greater-mark-of-armor.png"
+  "ddragonId": 775295,
+  "name": "Glyph of Cooldown Reduction",
+  "slug": "glyph-of-cooldown-reduction",
+  "slot": "glyph",
+  "desc": "0.8% cooldown reduction",
+  "icon": "assets/runes/glyph-of-cooldown-reduction.png"
  },
  {
-  "name": "Greater Mark of Armor Penetration",
-  "slug": "greater-mark-of-armor-penetration",
-  "slot": "mark",
-  "desc": "+1.28 armor penetration",
-  "icon": "assets/runes/greater-mark-of-armor-penetration.png"
+  "ddragonId": 775289,
+  "name": "Glyph of Magic Resist",
+  "slug": "glyph-of-magic-resist",
+  "slot": "glyph",
+  "desc": "+1.4 magic resist",
+  "icon": "assets/runes/glyph-of-magic-resist.png"
  },
  {
-  "name": "Greater Mark of Attack Damage",
-  "slug": "greater-mark-of-attack-damage",
-  "slot": "mark",
-  "desc": "+0.95 attack damage",
-  "icon": "assets/runes/greater-mark-of-attack-damage.png"
+  "ddragonId": 775299,
+  "name": "Glyph of Mana",
+  "slug": "glyph-of-mana",
+  "slot": "glyph",
+  "desc": "+12 mana",
+  "icon": "assets/runes/glyph-of-mana.png"
  },
  {
-  "name": "Greater Mark of Attack Speed",
-  "slug": "greater-mark-of-attack-speed",
+  "ddragonId": 775298,
+  "name": "Glyph of Scaling Ability Power",
+  "slug": "glyph-of-scaling-ability-power",
+  "slot": "glyph",
+  "desc": "+0.2 ability power per level (+3.6 at champion level 18)",
+  "icon": "assets/runes/glyph-of-scaling-ability-power.png"
+ },
+ {
+  "ddragonId": 775296,
+  "name": "Glyph of Scaling Cooldown Reduction",
+  "slug": "glyph-of-scaling-cooldown-reduction",
+  "slot": "glyph",
+  "desc": "0.1% cooldown reduction per level (1.8% at champion level 18)",
+  "icon": "assets/runes/glyph-of-scaling-cooldown-reduction.png"
+ },
+ {
+  "ddragonId": 775290,
+  "name": "Glyph of Scaling Magic Resist",
+  "slug": "glyph-of-scaling-magic-resist",
+  "slot": "glyph",
+  "desc": "+0.2 magic resist per level (+3.6 at champion level 18)",
+  "icon": "assets/runes/glyph-of-scaling-magic-resist.png"
+ },
+ {
+  "ddragonId": 775287,
+  "name": "Minor Glyph of Armor",
+  "slug": "minor-glyph-of-armor",
+  "slot": "glyph",
+  "desc": "+0.8 armor",
+  "icon": "assets/runes/minor-glyph-of-armor.png"
+ },
+ {
+  "ddragonId": 775277,
+  "name": "Minor Glyph of Attack Speed",
+  "slug": "minor-glyph-of-attack-speed",
+  "slot": "glyph",
+  "desc": "+0.8% attack speed",
+  "icon": "assets/runes/minor-glyph-of-attack-speed.png"
+ },
+ {
+  "ddragonId": 775279,
+  "name": "Minor Glyph of Critical Damage",
+  "slug": "minor-glyph-of-critical-damage",
+  "slot": "glyph",
+  "desc": "+0.7% critical damage",
+  "icon": "assets/runes/minor-glyph-of-critical-damage.png"
+ },
+ {
+  "ddragonId": 775285,
+  "name": "Minor Glyph of Health",
+  "slug": "minor-glyph-of-health",
+  "slot": "glyph",
+  "desc": "+3 health",
+  "icon": "assets/runes/minor-glyph-of-health.png"
+ },
+ {
+  "ddragonId": 775245,
+  "name": "Mark of Attack Damage",
+  "slug": "mark-of-attack-damage",
+  "slot": "mark",
+  "desc": "+1 attack damage",
+  "icon": "assets/runes/mark-of-attack-damage.png"
+ },
+ {
+  "ddragonId": 775247,
+  "name": "Mark of Attack Speed",
+  "slug": "mark-of-attack-speed",
   "slot": "mark",
   "desc": "+1.7% attack speed",
-  "icon": "assets/runes/greater-mark-of-attack-speed.png"
+  "icon": "assets/runes/mark-of-attack-speed.png"
  },
  {
-  "name": "Greater Mark of Cooldown Reduction",
-  "slug": "greater-mark-of-cooldown-reduction",
+  "ddragonId": 775251,
+  "name": "Mark of Critical Chance",
+  "slug": "mark-of-critical-chance",
   "slot": "mark",
-  "desc": "-0.2% cooldowns",
-  "icon": "assets/runes/greater-mark-of-cooldown-reduction.png"
+  "desc": "+1% critical chance",
+  "icon": "assets/runes/mark-of-critical-chance.png"
  },
  {
-  "name": "Greater Mark of Critical Chance",
-  "slug": "greater-mark-of-critical-chance",
+  "ddragonId": 775249,
+  "name": "Mark of Critical Damage",
+  "slug": "mark-of-critical-damage",
   "slot": "mark",
-  "desc": "+0.93% critical chance",
-  "icon": "assets/runes/greater-mark-of-critical-chance.png"
+  "desc": "+2% critical damage",
+  "icon": "assets/runes/mark-of-critical-damage.png"
  },
  {
-  "name": "Greater Mark of Critical Damage",
-  "slug": "greater-mark-of-critical-damage",
+  "ddragonId": 775253,
+  "name": "Mark of Lethality",
+  "slug": "mark-of-lethality",
   "slot": "mark",
-  "desc": "+2.23% critical damage",
-  "icon": "assets/runes/greater-mark-of-critical-damage.png"
+  "desc": "+1.25 lethality",
+  "icon": "assets/runes/mark-of-lethality.png"
  },
  {
-  "name": "Greater Mark of Health",
-  "slug": "greater-mark-of-health",
+  "ddragonId": 775273,
+  "name": "Mark of Magic Penetration",
+  "slug": "mark-of-magic-penetration",
   "slot": "mark",
-  "desc": "+3.47 health",
-  "icon": "assets/runes/greater-mark-of-health.png"
+  "desc": "+1 magic penetration",
+  "icon": "assets/runes/mark-of-magic-penetration.png"
  },
  {
-  "name": "Greater Mark of Hybrid Penetration",
-  "slug": "greater-mark-of-hybrid-penetration",
+  "ddragonId": 775246,
+  "name": "Mark of Scaling Attack Damage",
+  "slug": "mark-of-scaling-attack-damage",
   "slot": "mark",
-  "desc": "+0.9 Armor Penetration / +0.62 Magic Penetration",
-  "icon": "assets/runes/greater-mark-of-hybrid-penetration.png"
+  "desc": "+0.15 attack damage per level (+2.7 at champion level 18)",
+  "icon": "assets/runes/mark-of-scaling-attack-damage.png"
  },
  {
-  "name": "Greater Mark of Magic Penetration",
-  "slug": "greater-mark-of-magic-penetration",
+  "ddragonId": 775257,
+  "name": "Minor Mark of Armor",
+  "slug": "minor-mark-of-armor",
   "slot": "mark",
-  "desc": "+0.87 magic penetration",
-  "icon": "assets/runes/greater-mark-of-magic-penetration.png"
+  "desc": "+0.8 armor",
+  "icon": "assets/runes/minor-mark-of-armor.png"
  },
  {
-  "name": "Greater Mark of Magic Resist",
-  "slug": "greater-mark-of-magic-resist",
+  "ddragonId": 775265,
+  "name": "Minor Mark of Cooldown Reduction",
+  "slug": "minor-mark-of-cooldown-reduction",
   "slot": "mark",
-  "desc": "+0.77 magic resist",
-  "icon": "assets/runes/greater-mark-of-magic-resist.png"
+  "desc": "0.3% cooldown reduction",
+  "icon": "assets/runes/minor-mark-of-cooldown-reduction.png"
  },
  {
-  "name": "Greater Mark of Mana",
-  "slug": "greater-mark-of-mana",
+  "ddragonId": 775255,
+  "name": "Minor Mark of Health",
+  "slug": "minor-mark-of-health",
   "slot": "mark",
-  "desc": "+5.91 mana",
-  "icon": "assets/runes/greater-mark-of-mana.png"
+  "desc": "+3 health",
+  "icon": "assets/runes/minor-mark-of-health.png"
  },
  {
-  "name": "Greater Mark of Mana Regeneration",
-  "slug": "greater-mark-of-mana-regeneration",
-  "slot": "mark",
-  "desc": "+0.26 mana regen / 5 sec.",
-  "icon": "assets/runes/greater-mark-of-mana-regeneration.png"
- },
- {
-  "name": "Greater Mark of Scaling Ability Power",
-  "slug": "greater-mark-of-scaling-ability-power",
-  "slot": "mark",
-  "desc": "+0.1 ability power per level (+1.8 at champion level 18)",
-  "icon": "assets/runes/greater-mark-of-scaling-ability-power.png"
- },
- {
-  "name": "Greater Mark of Scaling Attack Damage",
-  "slug": "greater-mark-of-scaling-attack-damage",
-  "slot": "mark",
-  "desc": "+0.13 attack damage per level (+2.43 at champion level 18)",
-  "icon": "assets/runes/greater-mark-of-scaling-attack-damage.png"
- },
- {
-  "name": "Greater Mark of Scaling Health",
-  "slug": "greater-mark-of-scaling-health",
-  "slot": "mark",
-  "desc": "+0.54 health per level (+9.72 at champion level 18)",
-  "icon": "assets/runes/greater-mark-of-scaling-health.png"
- },
- {
-  "name": "Greater Mark of Scaling Magic Resist",
-  "slug": "greater-mark-of-scaling-magic-resist",
-  "slot": "mark",
-  "desc": "+0.07 magic resist per level (+1.26 at champion level 18)",
-  "icon": "assets/runes/greater-mark-of-scaling-magic-resist.png"
- },
- {
-  "name": "Greater Mark of Scaling Mana",
-  "slug": "greater-mark-of-scaling-mana",
-  "slot": "mark",
-  "desc": "+1.17 mana per level (+21.06 at champion level 18)",
-  "icon": "assets/runes/greater-mark-of-scaling-mana.png"
- },
- {
-  "name": "Greater Seal of Ability Power",
-  "slug": "greater-seal-of-ability-power",
-  "slot": "seal",
-  "desc": "+0.59 ability power",
-  "icon": "assets/runes/greater-seal-of-ability-power.png"
- },
- {
-  "name": "Greater Seal of Armor",
-  "slug": "greater-seal-of-armor",
-  "slot": "seal",
-  "desc": "+1 armor",
-  "icon": "assets/runes/greater-seal-of-armor.png"
- },
- {
-  "name": "Greater Seal of Attack Damage",
-  "slug": "greater-seal-of-attack-damage",
-  "slot": "seal",
-  "desc": "+0.43 attack damage",
-  "icon": "assets/runes/greater-seal-of-attack-damage.png"
- },
- {
-  "name": "Greater Seal of Attack Speed",
-  "slug": "greater-seal-of-attack-speed",
-  "slot": "seal",
-  "desc": "+0.76% attack speed",
-  "icon": "assets/runes/greater-seal-of-attack-speed.png"
- },
- {
-  "name": "Greater Seal of Cooldown Reduction",
-  "slug": "greater-seal-of-cooldown-reduction",
-  "slot": "seal",
-  "desc": "-0.36% cooldowns",
-  "icon": "assets/runes/greater-seal-of-cooldown-reduction.png"
- },
- {
-  "name": "Greater Seal of Critical Chance",
-  "slug": "greater-seal-of-critical-chance",
-  "slot": "seal",
-  "desc": "+0.42% critical chance",
-  "icon": "assets/runes/greater-seal-of-critical-chance.png"
- },
- {
-  "name": "Greater Seal of Critical Damage",
-  "slug": "greater-seal-of-critical-damage",
-  "slot": "seal",
-  "desc": "+0.78% critical damage",
-  "icon": "assets/runes/greater-seal-of-critical-damage.png"
- },
- {
-  "name": "Greater Seal of Energy Regeneration",
-  "slug": "greater-seal-of-energy-regeneration",
-  "slot": "seal",
-  "desc": "+0.63 Energy regen/5 sec",
-  "icon": "assets/runes/greater-seal-of-energy-regeneration.png"
- },
- {
-  "name": "Greater Seal of Gold",
-  "slug": "greater-seal-of-gold",
-  "slot": "seal",
-  "desc": "+0.25 gold / 10 sec.",
-  "icon": "assets/runes/greater-seal-of-gold.png"
- },
- {
-  "name": "Greater Seal of Health",
-  "slug": "greater-seal-of-health",
-  "slot": "seal",
-  "desc": "+8 health",
-  "icon": "assets/runes/greater-seal-of-health.png"
- },
- {
-  "name": "Greater Seal of Health Regeneration",
-  "slug": "greater-seal-of-health-regeneration",
-  "slot": "seal",
-  "desc": "+0.56 health regen / 5 sec.",
-  "icon": "assets/runes/greater-seal-of-health-regeneration.png"
- },
- {
-  "name": "Greater Seal of Magic Resist",
-  "slug": "greater-seal-of-magic-resist",
-  "slot": "seal",
-  "desc": "+0.74 magic resist",
-  "icon": "assets/runes/greater-seal-of-magic-resist.png"
- },
- {
-  "name": "Greater Seal of Mana",
-  "slug": "greater-seal-of-mana",
-  "slot": "seal",
-  "desc": "+6.89 mana",
-  "icon": "assets/runes/greater-seal-of-mana.png"
- },
- {
-  "name": "Greater Seal of Mana Regeneration",
-  "slug": "greater-seal-of-mana-regeneration",
-  "slot": "seal",
-  "desc": "+0.41 mana regen / 5 sec.",
-  "icon": "assets/runes/greater-seal-of-mana-regeneration.png"
- },
- {
-  "name": "Greater Seal of Percent Health",
-  "slug": "greater-seal-of-percent-health",
-  "slot": "seal",
-  "desc": "+0.5% Health.",
-  "icon": "assets/runes/greater-seal-of-percent-health.png"
- },
- {
-  "name": "Greater Seal of Scaling Ability Power",
-  "slug": "greater-seal-of-scaling-ability-power",
-  "slot": "seal",
-  "desc": "+0.1 ability power per level (+1.8 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-ability-power.png"
- },
- {
-  "name": "Greater Seal of Scaling Armor",
-  "slug": "greater-seal-of-scaling-armor",
-  "slot": "seal",
-  "desc": "+0.16 armor per level (+3 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-armor.png"
- },
- {
-  "name": "Greater Seal of Scaling Attack Damage",
-  "slug": "greater-seal-of-scaling-attack-damage",
-  "slot": "seal",
-  "desc": "+0.06 attack damage per level (+1.09 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-attack-damage.png"
- },
- {
-  "name": "Greater Seal of Scaling Energy Regeneration",
-  "slug": "greater-seal-of-scaling-energy-regeneration",
-  "slot": "seal",
-  "desc": "+0.064 Energy regen/5 sec per level (+1.15 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-energy-regeneration.png"
- },
- {
-  "name": "Greater Seal of Scaling Health",
-  "slug": "greater-seal-of-scaling-health",
-  "slot": "seal",
-  "desc": "+1.33 health per level (+24 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-health.png"
- },
- {
-  "name": "Greater Seal of Scaling Health Regeneration",
-  "slug": "greater-seal-of-scaling-health-regeneration",
-  "slot": "seal",
-  "desc": "+0.11 health regen / 5 sec. per level (+1.98 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-health-regeneration.png"
- },
- {
-  "name": "Greater Seal of Scaling Magic Resist",
-  "slug": "greater-seal-of-scaling-magic-resist",
-  "slot": "seal",
-  "desc": "+0.1 magic resist per level (+1.8 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-magic-resist.png"
- },
- {
-  "name": "Greater Seal of Scaling Mana",
-  "slug": "greater-seal-of-scaling-mana",
-  "slot": "seal",
-  "desc": "+1.17 mana per level (+21.06 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-mana.png"
- },
- {
-  "name": "Greater Seal of Scaling Mana Regeneration",
-  "slug": "greater-seal-of-scaling-mana-regeneration",
-  "slot": "seal",
-  "desc": "+0.065 mana regen / 5 sec. per level (+1.17 at champion level 18)",
-  "icon": "assets/runes/greater-seal-of-scaling-mana-regeneration.png"
- },
- {
-  "name": "Greater Glyph of Ability Power",
-  "slug": "greater-glyph-of-ability-power",
-  "slot": "glyph",
-  "desc": "+1.19 ability power",
-  "icon": "assets/runes/greater-glyph-of-ability-power.png"
- },
- {
-  "name": "Greater Glyph of Armor",
-  "slug": "greater-glyph-of-armor",
-  "slot": "glyph",
-  "desc": "+0.7 armor",
-  "icon": "assets/runes/greater-glyph-of-armor.png"
- },
- {
-  "name": "Greater Glyph of Attack Damage",
-  "slug": "greater-glyph-of-attack-damage",
-  "slot": "glyph",
-  "desc": "+0.28 attack damage",
-  "icon": "assets/runes/greater-glyph-of-attack-damage.png"
- },
- {
-  "name": "Greater Glyph of Attack Speed",
-  "slug": "greater-glyph-of-attack-speed",
-  "slot": "glyph",
-  "desc": "+0.64% attack speed",
-  "icon": "assets/runes/greater-glyph-of-attack-speed.png"
- },
- {
-  "name": "Greater Glyph of Cooldown Reduction",
-  "slug": "greater-glyph-of-cooldown-reduction",
-  "slot": "glyph",
-  "desc": "-0.83% cooldowns",
-  "icon": "assets/runes/greater-glyph-of-cooldown-reduction.png"
- },
- {
-  "name": "Greater Glyph of Critical Chance",
-  "slug": "greater-glyph-of-critical-chance",
-  "slot": "glyph",
-  "desc": "+0.28% critical chance",
-  "icon": "assets/runes/greater-glyph-of-critical-chance.png"
- },
- {
-  "name": "Greater Glyph of Critical Damage",
-  "slug": "greater-glyph-of-critical-damage",
-  "slot": "glyph",
-  "desc": "+0.56% critical damage",
-  "icon": "assets/runes/greater-glyph-of-critical-damage.png"
- },
- {
-  "name": "Greater Glyph of Energy",
-  "slug": "greater-glyph-of-energy",
-  "slot": "glyph",
-  "desc": "+2.2 Energy",
-  "icon": "assets/runes/greater-glyph-of-energy.png"
- },
- {
-  "name": "Greater Glyph of Health",
-  "slug": "greater-glyph-of-health",
-  "slot": "glyph",
-  "desc": "+2.67 health",
-  "icon": "assets/runes/greater-glyph-of-health.png"
- },
- {
-  "name": "Greater Glyph of Health Regeneration",
-  "slug": "greater-glyph-of-health-regeneration",
-  "slot": "glyph",
-  "desc": "+0.27 health regen / 5 sec.",
-  "icon": "assets/runes/greater-glyph-of-health-regeneration.png"
- },
- {
-  "name": "Greater Glyph of Magic Penetration",
-  "slug": "greater-glyph-of-magic-penetration",
-  "slot": "glyph",
-  "desc": "+0.63 magic penetration",
-  "icon": "assets/runes/greater-glyph-of-magic-penetration.png"
- },
- {
-  "name": "Greater Glyph of Magic Resist",
-  "slug": "greater-glyph-of-magic-resist",
-  "slot": "glyph",
-  "desc": "+1.34 magic resist",
-  "icon": "assets/runes/greater-glyph-of-magic-resist.png"
- },
- {
-  "name": "Greater Glyph of Mana",
-  "slug": "greater-glyph-of-mana",
-  "slot": "glyph",
-  "desc": "+11.25 mana",
-  "icon": "assets/runes/greater-glyph-of-mana.png"
- },
- {
-  "name": "Greater Glyph of Mana Regeneration",
-  "slug": "greater-glyph-of-mana-regeneration",
-  "slot": "glyph",
-  "desc": "+0.33 mana regen / 5 sec.",
-  "icon": "assets/runes/greater-glyph-of-mana-regeneration.png"
- },
- {
-  "name": "Greater Glyph of Scaling Ability Power",
-  "slug": "greater-glyph-of-scaling-ability-power",
-  "slot": "glyph",
-  "desc": "+0.17 ability power per level (+3.06 at champion level 18)",
-  "icon": "assets/runes/greater-glyph-of-scaling-ability-power.png"
- },
- {
-  "name": "Greater Glyph of Scaling Attack Damage",
-  "slug": "greater-glyph-of-scaling-attack-damage",
-  "slot": "glyph",
-  "desc": "+0.04 attack damage per level (+0.73 at champion level 18)",
-  "icon": "assets/runes/greater-glyph-of-scaling-attack-damage.png"
- },
- {
-  "name": "Greater Glyph of Scaling Cooldown Reduction",
-  "slug": "greater-glyph-of-scaling-cooldown-reduction",
-  "slot": "glyph",
-  "desc": "-0.09% cooldowns per level (-1.67% at champion level 18)",
-  "icon": "assets/runes/greater-glyph-of-scaling-cooldown-reduction.png"
- },
- {
-  "name": "Greater Glyph of Scaling Energy",
-  "slug": "greater-glyph-of-scaling-energy",
-  "slot": "glyph",
-  "desc": "+0.161 Energy/level (+2.89 at level 18)",
-  "icon": "assets/runes/greater-glyph-of-scaling-energy.png"
- },
- {
-  "name": "Greater Glyph of Scaling Health",
-  "slug": "greater-glyph-of-scaling-health",
-  "slot": "glyph",
-  "desc": "+0.54 health per level (+9.72 at champion level 18)",
-  "icon": "assets/runes/greater-glyph-of-scaling-health.png"
- },
- {
-  "name": "Greater Glyph of Scaling Magic Resist",
-  "slug": "greater-glyph-of-scaling-magic-resist",
-  "slot": "glyph",
-  "desc": "+0.16 magic resist per level (+3 at champion level 18)",
-  "icon": "assets/runes/greater-glyph-of-scaling-magic-resist.png"
- },
- {
-  "name": "Greater Glyph of Scaling Mana",
-  "slug": "greater-glyph-of-scaling-mana",
-  "slot": "glyph",
-  "desc": "+1.42 mana per level (+25.56 at champion level 18)",
-  "icon": "assets/runes/greater-glyph-of-scaling-mana.png"
- },
- {
-  "name": "Greater Glyph of Scaling Mana Regeneration",
-  "slug": "greater-glyph-of-scaling-mana-regeneration",
-  "slot": "glyph",
-  "desc": "+0.06 mana regen / 5 sec. per level (+1.2 at champion level 18)",
-  "icon": "assets/runes/greater-glyph-of-scaling-mana-regeneration.png"
- },
- {
-  "name": "Greater Quintessence of Ability Power",
-  "slug": "greater-quintessence-of-ability-power",
+  "ddragonId": 775357,
+  "name": "Quintessence of Ability Power",
+  "slug": "quintessence-of-ability-power",
   "slot": "quintessence",
-  "desc": "+4.95 ability power",
-  "icon": "assets/runes/greater-quintessence-of-ability-power.png"
+  "desc": "+5 ability power",
+  "icon": "assets/runes/quintessence-of-ability-power.png"
  },
  {
-  "name": "Greater Quintessence of Armor",
-  "slug": "greater-quintessence-of-armor",
+  "ddragonId": 775347,
+  "name": "Quintessence of Armor",
+  "slug": "quintessence-of-armor",
   "slot": "quintessence",
-  "desc": "+4.26 armor",
-  "icon": "assets/runes/greater-quintessence-of-armor.png"
+  "desc": "+4.3 armor",
+  "icon": "assets/runes/quintessence-of-armor.png"
  },
  {
-  "name": "Greater Quintessence of Armor Penetration",
-  "slug": "greater-quintessence-of-armor-penetration",
-  "slot": "quintessence",
-  "desc": "+2.56 armor penetration",
-  "icon": "assets/runes/greater-quintessence-of-armor-penetration.png"
- },
- {
-  "name": "Greater Quintessence of Attack Damage",
-  "slug": "greater-quintessence-of-attack-damage",
+  "ddragonId": 775335,
+  "name": "Quintessence of Attack Damage",
+  "slug": "quintessence-of-attack-damage",
   "slot": "quintessence",
   "desc": "+2.25 attack damage",
-  "icon": "assets/runes/greater-quintessence-of-attack-damage.png"
+  "icon": "assets/runes/quintessence-of-attack-damage.png"
  },
  {
-  "name": "Greater Quintessence of Attack Speed",
-  "slug": "greater-quintessence-of-attack-speed",
+  "ddragonId": 775337,
+  "name": "Quintessence of Attack Speed",
+  "slug": "quintessence-of-attack-speed",
   "slot": "quintessence",
   "desc": "+4.5% attack speed",
-  "icon": "assets/runes/greater-quintessence-of-attack-speed.png"
+  "icon": "assets/runes/quintessence-of-attack-speed.png"
  },
  {
-  "name": "Greater Quintessence of Cooldown Reduction",
-  "slug": "greater-quintessence-of-cooldown-reduction",
+  "ddragonId": 775339,
+  "name": "Quintessence of Critical Damage",
+  "slug": "quintessence-of-critical-damage",
   "slot": "quintessence",
-  "desc": "-2.5% cooldowns",
-  "icon": "assets/runes/greater-quintessence-of-cooldown-reduction.png"
+  "desc": "+4.5% critical damage",
+  "icon": "assets/runes/quintessence-of-critical-damage.png"
  },
  {
-  "name": "Greater Quintessence of Critical Chance",
-  "slug": "greater-quintessence-of-critical-chance",
-  "slot": "quintessence",
-  "desc": "+1.86% critical chance",
-  "icon": "assets/runes/greater-quintessence-of-critical-chance.png"
- },
- {
-  "name": "Greater Quintessence of Critical Damage",
-  "slug": "greater-quintessence-of-critical-damage",
-  "slot": "quintessence",
-  "desc": "+4.46% critical damage",
-  "icon": "assets/runes/greater-quintessence-of-critical-damage.png"
- },
- {
-  "name": "Greater Quintessence of Energy",
-  "slug": "greater-quintessence-of-energy",
-  "slot": "quintessence",
-  "desc": "+5.4 Energy",
-  "icon": "assets/runes/greater-quintessence-of-energy.png"
- },
- {
-  "name": "Greater Quintessence of Energy Regeneration",
-  "slug": "greater-quintessence-of-energy-regeneration",
-  "slot": "quintessence",
-  "desc": "+1.575 Energy regen/5 sec",
-  "icon": "assets/runes/greater-quintessence-of-energy-regeneration.png"
- },
- {
-  "name": "Greater Quintessence of Experience",
-  "slug": "greater-quintessence-of-experience",
+  "ddragonId": 775368,
+  "name": "Quintessence of Experience",
+  "slug": "quintessence-of-experience",
   "slot": "quintessence",
   "desc": "+2% experience gained",
-  "icon": "assets/runes/greater-quintessence-of-experience.png"
+  "icon": "assets/runes/quintessence-of-experience.png"
  },
  {
-  "name": "Greater Quintessence of Frosty Health",
-  "slug": "greater-quintessence-of-frosty-health",
-  "slot": "quintessence",
-  "desc": "+26 health",
-  "icon": "assets/runes/greater-quintessence-of-frosty-health.png"
- },
- {
-  "name": "Greater Quintessence of Gold",
-  "slug": "greater-quintessence-of-gold",
+  "ddragonId": 775367,
+  "name": "Quintessence of Gold",
+  "slug": "quintessence-of-gold",
   "slot": "quintessence",
   "desc": "+1 gold / 10 sec.",
-  "icon": "assets/runes/greater-quintessence-of-gold.png"
+  "icon": "assets/runes/quintessence-of-gold.png"
  },
  {
-  "name": "Greater Quintessence of Health",
-  "slug": "greater-quintessence-of-health",
+  "ddragonId": 775345,
+  "name": "Quintessence of Health",
+  "slug": "quintessence-of-health",
   "slot": "quintessence",
   "desc": "+26 health",
-  "icon": "assets/runes/greater-quintessence-of-health.png"
+  "icon": "assets/runes/quintessence-of-health.png"
  },
  {
-  "name": "Greater Quintessence of Health Regeneration",
-  "slug": "greater-quintessence-of-health-regeneration",
+  "ddragonId": 775412,
+  "name": "Quintessence of Life Steal",
+  "slug": "quintessence-of-life-steal",
   "slot": "quintessence",
-  "desc": "+2.7 health regen / 5 sec.",
-  "icon": "assets/runes/greater-quintessence-of-health-regeneration.png"
+  "desc": "+1.5% life steal",
+  "icon": "assets/runes/quintessence-of-life-steal.png"
  },
  {
-  "name": "Greater Quintessence of Hybrid Penetration",
-  "slug": "greater-quintessence-of-hybrid-penetration",
-  "slot": "quintessence",
-  "desc": "+1.79 Armor Penetration / +1.4 Magic Penetration",
-  "icon": "assets/runes/greater-quintessence-of-hybrid-penetration.png"
- },
- {
-  "name": "Greater Quintessence of Life Steal",
-  "slug": "greater-quintessence-of-life-steal",
-  "slot": "quintessence",
-  "desc": "+1.5% Life Steal.",
-  "icon": "assets/runes/greater-quintessence-of-life-steal.png"
- },
- {
-  "name": "Greater Quintessence of Magic Penetration",
-  "slug": "greater-quintessence-of-magic-penetration",
-  "slot": "quintessence",
-  "desc": "+2.01 magic penetration",
-  "icon": "assets/runes/greater-quintessence-of-magic-penetration.png"
- },
- {
-  "name": "Greater Quintessence of Magic Resist",
-  "slug": "greater-quintessence-of-magic-resist",
-  "slot": "quintessence",
-  "desc": "+4 magic resist",
-  "icon": "assets/runes/greater-quintessence-of-magic-resist.png"
- },
- {
-  "name": "Greater Quintessence of Mana",
-  "slug": "greater-quintessence-of-mana",
-  "slot": "quintessence",
-  "desc": "+37.5 mana",
-  "icon": "assets/runes/greater-quintessence-of-mana.png"
- },
- {
-  "name": "Greater Quintessence of Mana Regeneration",
-  "slug": "greater-quintessence-of-mana-regeneration",
-  "slot": "quintessence",
-  "desc": "+1.25 mana regen / 5 sec.",
-  "icon": "assets/runes/greater-quintessence-of-mana-regeneration.png"
- },
- {
-  "name": "Greater Quintessence of Movement Speed",
-  "slug": "greater-quintessence-of-movement-speed",
+  "ddragonId": 775365,
+  "name": "Quintessence of Movement Speed",
+  "slug": "quintessence-of-movement-speed",
   "slot": "quintessence",
   "desc": "+1.5% movement speed",
-  "icon": "assets/runes/greater-quintessence-of-movement-speed.png"
+  "icon": "assets/runes/quintessence-of-movement-speed.png"
  },
  {
-  "name": "Greater Quintessence of Percent Health",
-  "slug": "greater-quintessence-of-percent-health",
+  "ddragonId": 775406,
+  "name": "Quintessence of Percent Health",
+  "slug": "quintessence-of-percent-health",
   "slot": "quintessence",
-  "desc": "+1.5% increased health.",
-  "icon": "assets/runes/greater-quintessence-of-percent-health.png"
+  "desc": "+1.5% percent health",
+  "icon": "assets/runes/quintessence-of-percent-health.png"
  },
  {
-  "name": "Greater Quintessence of Revival",
-  "slug": "greater-quintessence-of-revival",
+  "ddragonId": 775409,
+  "name": "Quintessence of Spell Vamp",
+  "slug": "quintessence-of-spell-vamp",
   "slot": "quintessence",
-  "desc": "-5% time dead",
-  "icon": "assets/runes/greater-quintessence-of-revival.png"
+  "desc": "+2% spell vamp",
+  "icon": "assets/runes/quintessence-of-spell-vamp.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Ability Power",
-  "slug": "greater-quintessence-of-scaling-ability-power",
-  "slot": "quintessence",
-  "desc": "+0.43 ability power per level (+7.74 at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-ability-power.png"
+  "ddragonId": 775307,
+  "name": "Minor Seal of Attack Speed",
+  "slug": "minor-seal-of-attack-speed",
+  "slot": "seal",
+  "desc": "+0.8% attack speed",
+  "icon": "assets/runes/minor-seal-of-attack-speed.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Armor",
-  "slug": "greater-quintessence-of-scaling-armor",
-  "slot": "quintessence",
-  "desc": "+0.38 armor per level (+6.84 at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-armor.png"
+  "ddragonId": 775311,
+  "name": "Minor Seal of Critical Chance",
+  "slug": "minor-seal-of-critical-chance",
+  "slot": "seal",
+  "desc": "+0.45% critical chance",
+  "icon": "assets/runes/minor-seal-of-critical-chance.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Attack Damage",
-  "slug": "greater-quintessence-of-scaling-attack-damage",
-  "slot": "quintessence",
-  "desc": "+0.25 attack damage per level (+4.5 at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-attack-damage.png"
+  "ddragonId": 775309,
+  "name": "Minor Seal of Critical Damage",
+  "slug": "minor-seal-of-critical-damage",
+  "slot": "seal",
+  "desc": "+0.7% critical damage",
+  "icon": "assets/runes/minor-seal-of-critical-damage.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Cooldown Reduction",
-  "slug": "greater-quintessence-of-scaling-cooldown-reduction",
-  "slot": "quintessence",
-  "desc": "-0.28% cooldowns per level (-5% at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-cooldown-reduction.png"
+  "ddragonId": 775319,
+  "name": "Minor Seal of Magic Resist",
+  "slug": "minor-seal-of-magic-resist",
+  "slot": "seal",
+  "desc": "+0.75 magic resist",
+  "icon": "assets/runes/minor-seal-of-magic-resist.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Health",
-  "slug": "greater-quintessence-of-scaling-health",
-  "slot": "quintessence",
-  "desc": "+2.7 health per level (+48.6 at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-health.png"
+  "ddragonId": 775317,
+  "name": "Seal of Armor",
+  "slug": "seal-of-armor",
+  "slot": "seal",
+  "desc": "+1 armor",
+  "icon": "assets/runes/seal-of-armor.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Health Regeneration",
-  "slug": "greater-quintessence-of-scaling-health-regeneration",
-  "slot": "quintessence",
-  "desc": "+0.28 health regen / 5 sec. per level (+5.04 at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-health-regeneration.png"
+  "ddragonId": 775403,
+  "name": "Seal of Gold",
+  "slug": "seal-of-gold",
+  "slot": "seal",
+  "desc": "+0.25 gold / 10 sec.",
+  "icon": "assets/runes/seal-of-gold.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Magic Resist",
-  "slug": "greater-quintessence-of-scaling-magic-resist",
-  "slot": "quintessence",
-  "desc": "+0.37 magic resist per level (+6.66 at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-magic-resist.png"
+  "ddragonId": 775315,
+  "name": "Seal of Health",
+  "slug": "seal-of-health",
+  "slot": "seal",
+  "desc": "+8 health",
+  "icon": "assets/runes/seal-of-health.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Mana",
-  "slug": "greater-quintessence-of-scaling-mana",
-  "slot": "quintessence",
-  "desc": "+4.17 mana per level (+75.06 at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-mana.png"
+  "ddragonId": 775321,
+  "name": "Seal of Health Regeneration",
+  "slug": "seal-of-health-regeneration",
+  "slot": "seal",
+  "desc": "+0.5 health regen / 5 sec.",
+  "icon": "assets/runes/seal-of-health-regeneration.png"
  },
  {
-  "name": "Greater Quintessence of Scaling Mana Regeneration",
-  "slug": "greater-quintessence-of-scaling-mana-regeneration",
-  "slot": "quintessence",
-  "desc": "+0.24 mana regen / 5 sec. per level (+4.32 at champion level 18)",
-  "icon": "assets/runes/greater-quintessence-of-scaling-mana-regeneration.png"
+  "ddragonId": 775331,
+  "name": "Seal of Mana Regeneration",
+  "slug": "seal-of-mana-regeneration",
+  "slot": "seal",
+  "desc": "+0.4 mana regen / 5 sec.",
+  "icon": "assets/runes/seal-of-mana-regeneration.png"
  },
  {
-  "name": "Greater Quintessence of Spell Vamp",
-  "slug": "greater-quintessence-of-spell-vamp",
-  "slot": "quintessence",
-  "desc": "+2% Spellvamp.",
-  "icon": "assets/runes/greater-quintessence-of-spell-vamp.png"
+  "ddragonId": 775318,
+  "name": "Seal of Scaling Armor",
+  "slug": "seal-of-scaling-armor",
+  "slot": "seal",
+  "desc": "+0.15 armor per level (+2.7 at champion level 18)",
+  "icon": "assets/runes/seal-of-scaling-armor.png"
  },
  {
-  "name": "Greater Quintessence of Studio Rumble",
-  "slug": "greater-quintessence-of-studio-rumble",
-  "slot": "quintessence",
-  "desc": "+1.5% movement speed",
-  "icon": "assets/runes/greater-quintessence-of-studio-rumble.png"
- },
- {
-  "name": "Greater Quintessence of Sugar Rush",
-  "slug": "greater-quintessence-of-sugar-rush",
-  "slot": "quintessence",
-  "desc": "+1.5% movement speed",
-  "icon": "assets/runes/greater-quintessence-of-sugar-rush.png"
- },
- {
-  "name": "Greater Quintessence of the Deadly Wreath",
-  "slug": "greater-quintessence-of-the-deadly-wreath",
-  "slot": "quintessence",
-  "desc": "+2.56 armor penetration",
-  "icon": "assets/runes/greater-quintessence-of-the-deadly-wreath.png"
- },
- {
-  "name": "Greater Quintessence of the Piercing Present",
-  "slug": "greater-quintessence-of-the-piercing-present",
-  "slot": "quintessence",
-  "desc": "+2.01 magic penetration",
-  "icon": "assets/runes/greater-quintessence-of-the-piercing-present.png"
+  "ddragonId": 775316,
+  "name": "Seal of Scaling Health",
+  "slug": "seal-of-scaling-health",
+  "slot": "seal",
+  "desc": "+1.3 health per level (+23.4 at champion level 18)",
+  "icon": "assets/runes/seal-of-scaling-health.png"
  }
 ]

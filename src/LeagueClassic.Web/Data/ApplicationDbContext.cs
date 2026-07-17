@@ -112,6 +112,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             e.Property(i => i.Name).HasMaxLength(80);
             e.Property(i => i.Slug).HasMaxLength(80);
             e.Property(i => i.Category).HasMaxLength(40);
+            e.Property(i => i.IsAvailable).HasDefaultValue(true);
         });
 
         builder.Entity<SummonerSpell>(e =>
@@ -138,9 +139,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         {
             e.HasIndex(r => r.Slug).IsUnique();
             e.HasIndex(r => r.Slot);
+            e.HasIndex(r => r.DdragonId);
             e.Property(r => r.Name).HasMaxLength(100);
             e.Property(r => r.Slug).HasMaxLength(100);
             e.Property(r => r.Slot).HasMaxLength(20);
+            e.Property(r => r.IsAvailable).HasDefaultValue(true);
         });
 
         builder.Entity<Mastery>(e =>
@@ -149,6 +152,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             e.HasIndex(m => new { m.Tree, m.Row, m.Col });
             e.Property(m => m.Name).HasMaxLength(80);
             e.Property(m => m.Tree).HasMaxLength(20);
+            e.Property(m => m.IsAvailable).HasDefaultValue(true);
         });
 
         builder.Entity<GuideRune>(e =>

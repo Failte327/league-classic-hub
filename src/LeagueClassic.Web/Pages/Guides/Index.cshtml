@@ -47,7 +47,7 @@ else
                 <td class="board-name">
                     <a asp-page="/Guides/Details" asp-route-slug="@g.Slug">@g.Title</a>
                 </td>
-                <td class="stat">@g.Author.Display("—")</td>
+                <td class="stat">@g.Author.Display("staff")</td>
                 <td class="stat">@g.UpdatedAt.ToString("MMM d, yyyy")</td>
             </tr>
         }

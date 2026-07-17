@@ -14,6 +14,6 @@ public class MasteriesModel : PageModel
 
     public async Task OnGetAsync()
     {
-        Masteries = await _db.Masteries.OrderBy(m => m.Row).ThenBy(m => m.Col).AsNoTracking().ToListAsync();
+        Masteries = await _db.Masteries.Where(m => m.IsAvailable).OrderBy(m => m.Row).ThenBy(m => m.Col).AsNoTracking().ToListAsync();
     }
 }

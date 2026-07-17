@@ -1,0 +1,326 @@
+{
+  "baseUrl": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default",
+  "branch": "pbe",
+  "sources": {
+    "champions/60001.json": {
+      "fetchedAt": "2026-07-17T18:05:26Z",
+      "sha256": "3275713e208cf40142e5996a96cec244f6cb30885d1226dfaa0daed36b93d589",
+      "url": "v1/champions/60001.json"
+    },
+    "champions/60002.json": {
+      "fetchedAt": "2026-07-17T18:05:32Z",
+      "sha256": "df0c19f4c30aa570c2c60c0af7e57c82d7683ec97e3872a78c6769d24b940530",
+      "url": "v1/champions/60002.json"
+    },
+    "champions/60004.json": {
+      "fetchedAt": "2026-07-17T18:05:22Z",
+      "sha256": "047d89f08e017051b93dd9d626c6aa50aff7999921f2d6ccdb6f5b08ed32490f",
+      "url": "v1/champions/60004.json"
+    },
+    "champions/60009.json": {
+      "fetchedAt": "2026-07-17T18:05:29Z",
+      "sha256": "566b6c5319c846584bd6d48b2d83e9d4f8545b8658d122dc294ea6764d13bbc3",
+      "url": "v1/champions/60009.json"
+    },
+    "champions/60010.json": {
+      "fetchedAt": "2026-07-17T18:05:29Z",
+      "sha256": "cdf682fc0cc1cb163b4e44e810e053e24820a5218a6f0f35bf905dfc86d54508",
+      "url": "v1/champions/60010.json"
+    },
+    "champions/60011.json": {
+      "fetchedAt": "2026-07-17T18:05:24Z",
+      "sha256": "d2a98cb42393b665e8e539a6a87c16f948ee6f1537a7d8d22279d5375c9a74d0",
+      "url": "v1/champions/60011.json"
+    },
+    "champions/60012.json": {
+      "fetchedAt": "2026-07-17T18:05:27Z",
+      "sha256": "2b014aef21796b718c84b2aa990b4bb05ebde9d81842180778a4956582c1191b",
+      "url": "v1/champions/60012.json"
+    },
+    "champions/60013.json": {
+      "fetchedAt": "2026-07-17T18:05:28Z",
+      "sha256": "1643a5eed91f670b72d2e59d145ac58d4697a2597fde5b6b40f7d9d7bd500021",
+      "url": "v1/champions/60013.json"
+    },
+    "champions/60014.json": {
+      "fetchedAt": "2026-07-17T18:05:25Z",
+      "sha256": "e271e07b2dadb8918aace9af5d8ff68b8f65c074fa82b59258493bd88e75b3b7",
+      "url": "v1/champions/60014.json"
+    },
+    "champions/60015.json": {
+      "fetchedAt": "2026-07-17T18:05:23Z",
+      "sha256": "da1cd8bf744a485675af82f86be99356efe68a30f6abd9013a528fbb900272ef",
+      "url": "v1/champions/60015.json"
+    },
+    "champions/60016.json": {
+      "fetchedAt": "2026-07-17T18:05:26Z",
+      "sha256": "c7cd64ac2be4337b13420a8ad4f008593c1a1013c99819e943cb53bb877627b1",
+      "url": "v1/champions/60016.json"
+    },
+    "champions/60017.json": {
+      "fetchedAt": "2026-07-17T18:05:20Z",
+      "sha256": "6dfd4ad07c5cb8523128c791304215eb2c9750b541dee850c016fb8c63233d6b",
+      "url": "v1/champions/60017.json"
+    },
+    "champions/60018.json": {
+      "fetchedAt": "2026-07-17T18:05:25Z",
+      "sha256": "3e1682e81808754a7f74ce8a86c766f7318ae86a7326a62de1f6dbcfc5d1b370",
+      "url": "v1/champions/60018.json"
+    },
+    "champions/60019.json": {
+      "fetchedAt": "2026-07-17T18:05:27Z",
+      "sha256": "a34662fae2ef279f52c4d18c84d9719f47220aaabfcaf96d311a00a20dab56a6",
+      "url": "v1/champions/60019.json"
+    },
+    "champions/60020.json": {
+      "fetchedAt": "2026-07-17T18:05:25Z",
+      "sha256": "00bf83bcc770fffd32ec8e3129c747148aeb66509fcbc67936ebf347531bcf56",
+      "url": "v1/champions/60020.json"
+    },
+    "champions/60021.json": {
+      "fetchedAt": "2026-07-17T18:05:25Z",
+      "sha256": "1241a686513996f92e3a3832846a4cbae395a92709c0e6d7bf6e82f7b108ba88",
+      "url": "v1/champions/60021.json"
+    },
+    "champions/60022.json": {
+      "fetchedAt": "2026-07-17T18:05:24Z",
+      "sha256": "365e84f168bcceca91454e5389c156138e527b9d8e711bcaf87f74eb2af79cac",
+      "url": "v1/champions/60022.json"
+    },
+    "champions/60023.json": {
+      "fetchedAt": "2026-07-17T18:05:26Z",
+      "sha256": "b15a72980bad0442e7a246d8dc7a4718001e2ca80f1f9855b4c18e926f2f6596",
+      "url": "v1/champions/60023.json"
+    },
+    "champions/60024.json": {
+      "fetchedAt": "2026-07-17T18:05:28Z",
+      "sha256": "44727e9b54d2543b98bb412e49c0a8afd02be42d0ff0afbd933d33cf20ab82c9",
+      "url": "v1/champions/60024.json"
+    },
+    "champions/60025.json": {
+      "fetchedAt": "2026-07-17T18:05:30Z",
+      "sha256": "a71e9c0014912462d476bc9ca4139bc13012cca04a20662319430655da290c11",
+      "url": "v1/champions/60025.json"
+    },
+    "champions/60026.json": {
+      "fetchedAt": "2026-07-17T18:05:29Z",
+      "sha256": "3cb5ea1ddc6f917303372cc8bcd321dc431617c480182fa3925248c552ab048a",
+      "url": "v1/champions/60026.json"
+    },
+    "champions/60027.json": {
+      "fetchedAt": "2026-07-17T18:05:20Z",
+      "sha256": "22fdb2e6070b267d8110c2a2d3cfc28240f5d763190e099a6a01732d5a07976f",
+      "url": "v1/champions/60027.json"
+    },
+    "champions/60028.json": {
+      "fetchedAt": "2026-07-17T18:05:27Z",
+      "sha256": "e20963ca148b024ec9ca5b3c92c88157f7061c7d35b00fc2c05d316262d63b72",
+      "url": "v1/champions/60028.json"
+    },
+    "champions/60029.json": {
+      "fetchedAt": "2026-07-17T18:05:28Z",
+      "sha256": "b4b21f79ab8765af8c45016abf11a071bbc89df9c178ac3f356201cbe3f93fc8",
+      "url": "v1/champions/60029.json"
+    },
+    "champions/60030.json": {
+      "fetchedAt": "2026-07-17T18:05:21Z",
+      "sha256": "bfa8f145564c6000a2e0a832046b015bf4c230fc50b70a964cb48585fc656baa",
+      "url": "v1/champions/60030.json"
+    },
+    "champions/60031.json": {
+      "fetchedAt": "2026-07-17T18:05:30Z",
+      "sha256": "658cef2b6a9c4a4ba46887a6c7b678982daf682969d566dddc49bf9b613cbda8",
+      "url": "v1/champions/60031.json"
+    },
+    "champions/60032.json": {
+      "fetchedAt": "2026-07-17T18:05:22Z",
+      "sha256": "4b82977de52608b7bfe6674d372163eb50ed759b7f0f27a71e03917edf354a92",
+      "url": "v1/champions/60032.json"
+    },
+    "champions/60033.json": {
+      "fetchedAt": "2026-07-17T18:05:27Z",
+      "sha256": "0b7395c36f031d268abf9e69d33c1268fdedf54802556f32be3cedb52c44ab3f",
+      "url": "v1/champions/60033.json"
+    },
+    "champions/60034.json": {
+      "fetchedAt": "2026-07-17T18:05:21Z",
+      "sha256": "d9f0db16c375bdc1846fdabbb467bd5313691adbf08870d3124290c4efbae00f",
+      "url": "v1/champions/60034.json"
+    },
+    "champions/60035.json": {
+      "fetchedAt": "2026-07-17T18:05:26Z",
+      "sha256": "6315b0281c12692a7c755273c6dd70d04c3c6baca20e3548e6528fb9dce167db",
+      "url": "v1/champions/60035.json"
+    },
+    "champions/60036.json": {
+      "fetchedAt": "2026-07-17T18:05:29Z",
+      "sha256": "f9ae43c7c7661804867377af134177a02bdf6709502d66c8d24906ce5e4e66bc",
+      "url": "v1/champions/60036.json"
+    },
+    "champions/60037.json": {
+      "fetchedAt": "2026-07-17T18:05:31Z",
+      "sha256": "4e4b5f201e712fa2069ae8ad225ed44c78291236b32a940d6e8e0508ded4c83b",
+      "url": "v1/champions/60037.json"
+    },
+    "champions/60038.json": {
+      "fetchedAt": "2026-07-17T18:05:29Z",
+      "sha256": "0b19821b22273efaefdd00425b6ee0ed3e1571fb60722907c0579a84f7439d12",
+      "url": "v1/champions/60038.json"
+    },
+    "champions/60040.json": {
+      "fetchedAt": "2026-07-17T18:05:21Z",
+      "sha256": "21ca88818499950c6a7bfa1fe39eeee3587ecfd6e1d18ba7d675bb45239edf0a",
+      "url": "v1/champions/60040.json"
+    },
+    "champions/60041.json": {
+      "fetchedAt": "2026-07-17T18:05:25Z",
+      "sha256": "19f9e0fdf45868e2af5140cf2a569c114444844afcb79ef61e43d9cf71d25d52",
+      "url": "v1/champions/60041.json"
+    },
+    "champions/60042.json": {
+      "fetchedAt": "2026-07-17T18:05:28Z",
+      "sha256": "be9ec35aafb7906e3253215a85fe1e7d0bcc296beff6cf260d585714b63c13d4",
+      "url": "v1/champions/60042.json"
+    },
+    "champions/60044.json": {
+      "fetchedAt": "2026-07-17T18:05:24Z",
+      "sha256": "b10a04fa42c2f09f6c8caa1972d7dd090e8cadc6b078d847250176b479f1f30f",
+      "url": "v1/champions/60044.json"
+    },
+    "champions/60045.json": {
+      "fetchedAt": "2026-07-17T18:05:23Z",
+      "sha256": "a7f65fd7d4f593e8746fcdb8c4a23c0b929915ea6ae0150bd46b93f2a3666af6",
+      "url": "v1/champions/60045.json"
+    },
+    "champions/60053.json": {
+      "fetchedAt": "2026-07-17T18:05:24Z",
+      "sha256": "3c3052b99d83e8b6ae4fcb89b54b0d725b14302e64ec7913d416f54c7d3a3366",
+      "url": "v1/champions/60053.json"
+    },
+    "champions/60054.json": {
+      "fetchedAt": "2026-07-17T18:05:23Z",
+      "sha256": "e78e4395f71eb19769708a289777d04a8f44b6b1e1d397442384e50aa75f5b38",
+      "url": "v1/champions/60054.json"
+    },
+    "champions/60055.json": {
+      "fetchedAt": "2026-07-17T18:05:21Z",
+      "sha256": "80703a7db96bbb22de851d58b55f7fcd9196b3f437c5b3f3ebf1bd4527467ee6",
+      "url": "v1/champions/60055.json"
+    },
+    "champions/60059.json": {
+      "fetchedAt": "2026-07-17T18:05:22Z",
+      "sha256": "18fea2d9e38c13c3b417f795dceba8daa4874bbbb5cec5fe03843fa635fb7185",
+      "url": "v1/champions/60059.json"
+    },
+    "champions/60062.json": {
+      "fetchedAt": "2026-07-17T18:05:32Z",
+      "sha256": "3ada4ee3246ed5cf349ff60651b62959580d6cb385476eb52e7cf502b50fba37",
+      "url": "v1/champions/60062.json"
+    },
+    "champions/60063.json": {
+      "fetchedAt": "2026-07-17T18:05:31Z",
+      "sha256": "768a268221ef97d199939e3b6d30f64fd5cc083b7cf7dd2bc5f90d19596c2475",
+      "url": "v1/champions/60063.json"
+    },
+    "champions/60064.json": {
+      "fetchedAt": "2026-07-17T18:05:22Z",
+      "sha256": "63fffd0bd39bb8673ba4c84b44d8f377ce74e45bc10ca2db6f63125dcbac8ad1",
+      "url": "v1/champions/60064.json"
+    },
+    "champions/60067.json": {
+      "fetchedAt": "2026-07-17T18:05:30Z",
+      "sha256": "aee9cfbbcb8cc864c7047ae1078764931b0f50e0237bf8affd5e89397492f626",
+      "url": "v1/champions/60067.json"
+    },
+    "champions/60072.json": {
+      "fetchedAt": "2026-07-17T18:05:31Z",
+      "sha256": "03c820b8a32dec0223a226c7f56599d535b524a49b3b86632a66d8fb7066d09a",
+      "url": "v1/champions/60072.json"
+    },
+    "champions/60074.json": {
+      "fetchedAt": "2026-07-17T18:05:30Z",
+      "sha256": "f0057fac7147dce6d7da73284ccd1544bb649be74c28cff982d7fd7f6d393796",
+      "url": "v1/champions/60074.json"
+    },
+    "champions/60075.json": {
+      "fetchedAt": "2026-07-17T18:05:26Z",
+      "sha256": "1333fd2e55da725cc3611950aaa30005b9829dfe3ee92e8495ae79aaeaac015d",
+      "url": "v1/champions/60075.json"
+    },
+    "champions/60076.json": {
+      "fetchedAt": "2026-07-17T18:05:23Z",
+      "sha256": "0a40115c20b8fe35404db401a5bdc5ba7419d0c2ce3cb417c1a72e4da921b6dd",
+      "url": "v1/champions/60076.json"
+    },
+    "champions/60079.json": {
+      "fetchedAt": "2026-07-17T18:05:28Z",
+      "sha256": "7094c96701bbaab0539b5b70f423fdfba4db7b30a8c9909c53f0426062299075",
+      "url": "v1/champions/60079.json"
+    },
+    "champions/60080.json": {
+      "fetchedAt": "2026-07-17T18:05:30Z",
+      "sha256": "022ace6a8b935e809fd4c176e7e94982befd80d6d4e619a0a40969cfca6b8f53",
+      "url": "v1/champions/60080.json"
+    },
+    "champions/60081.json": {
+      "fetchedAt": "2026-07-17T18:05:20Z",
+      "sha256": "33be118e72581e4a9fa149806a83649395ebb49c01b095616b484ec6ebe9606d",
+      "url": "v1/champions/60081.json"
+    },
+    "champions/60086.json": {
+      "fetchedAt": "2026-07-17T18:05:20Z",
+      "sha256": "5b425c3331e6d015e3ef7ccfd20a671f8e240e8e45a0a3619132713c0f83e6a6",
+      "url": "v1/champions/60086.json"
+    },
+    "champions/60089.json": {
+      "fetchedAt": "2026-07-17T18:05:21Z",
+      "sha256": "11f0248dac8644dcd87fa73ff818a2d9f657df36537d936d11b14fa6532a2a62",
+      "url": "v1/champions/60089.json"
+    },
+    "champions/60090.json": {
+      "fetchedAt": "2026-07-17T18:05:32Z",
+      "sha256": "d8f7535ba152b9901270c5e25e6ce979c7c49937556c00fbf0b7796d2e5430af",
+      "url": "v1/champions/60090.json"
+    },
+    "champions/60096.json": {
+      "fetchedAt": "2026-07-17T18:05:31Z",
+      "sha256": "7f923a1d72238c3fb7cb6a01969fd59a6b55848cf350822f7b4bcaf8ca607d87",
+      "url": "v1/champions/60096.json"
+    },
+    "champions/60099.json": {
+      "fetchedAt": "2026-07-17T18:05:22Z",
+      "sha256": "30e5652559b37204e8faa26fdd691958105f1d9519181a755e1556aeeae44324",
+      "url": "v1/champions/60099.json"
+    },
+    "champions/60103.json": {
+      "fetchedAt": "2026-07-17T18:05:27Z",
+      "sha256": "1c9795dc517e0b8afcbd73406afe337661e15e43340ecd19c11ec47d43d9bfe9",
+      "url": "v1/champions/60103.json"
+    },
+    "champions/60117.json": {
+      "fetchedAt": "2026-07-17T18:05:23Z",
+      "sha256": "18f5e8220cf68d9cfea6a012ca9d7371d015c5a2351ab8c1a887116c3f9bae02",
+      "url": "v1/champions/60117.json"
+    },
+    "items.json": {
+      "fetchedAt": "2026-07-17T17:50:26Z",
+      "sha256": "a6608504758a83206a8b79fc034762a843a534ff0835e23ac0f1c20f4317d92d",
+      "url": "items.json"
+    },
+    "jade-champions.json": {
+      "fetchedAt": "2026-07-17T18:05:19Z",
+      "sha256": "748325e81674eaa98e888a4e81f4f2f9bb0a12bb61dd3b3fae541f1402b24848",
+      "url": "v1/jade-champions.json"
+    },
+    "jade-mastery-display.json": {
+      "fetchedAt": "2026-07-17T17:48:19Z",
+      "sha256": "5191955c34a62a2cafcae2e04bbc53da2a55f9c7630d39a5e6ee18ee602f235b",
+      "url": "v1/jade-mastery-display.json"
+    },
+    "jade-perks.json": {
+      "fetchedAt": "2026-07-17T17:47:41Z",
+      "sha256": "27505c5e1b594a5e2a5cbdc31f3bc89ae6449912d81b5707d61f24e6a01332bb",
+      "url": "v1/jade-perks.json"
+    }
+  }
+}

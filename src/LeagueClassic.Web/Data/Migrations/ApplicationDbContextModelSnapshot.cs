@@ -402,6 +402,11 @@ namespace LeagueClassic.Web.Data.Migrations
                     b.Property<string>("IconPath")
                         .HasColumnType("text");
 
+                    b.Property<bool>("IsAvailable")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true);
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(80)
@@ -441,6 +446,11 @@ namespace LeagueClassic.Web.Data.Migrations
 
                     b.Property<string>("IconPath")
                         .HasColumnType("text");
+
+                    b.Property<bool>("IsAvailable")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -585,11 +595,19 @@ namespace LeagueClassic.Web.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("DdragonId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
                     b.Property<string>("IconPath")
                         .HasColumnType("text");
+
+                    b.Property<bool>("IsAvailable")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -607,6 +625,8 @@ namespace LeagueClassic.Web.Data.Migrations
                         .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("DdragonId");
 
                     b.HasIndex("Slot");
 

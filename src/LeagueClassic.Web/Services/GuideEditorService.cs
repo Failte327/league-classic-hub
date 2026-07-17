@@ -22,10 +22,10 @@ public class GuideEditorService
     public async Task<GuideEditorVm> BuildVmAsync(
         Champion champion, GuideInput input, bool isEdit, string heading, string initialStateJson = "null")
     {
-        var items = await _db.Items.OrderBy(i => i.Category).ThenBy(i => i.Name).AsNoTracking().ToListAsync();
+        var items = await _db.Items.Where(i => i.IsAvailable).OrderBy(i => i.Category).ThenBy(i => i.Name).AsNoTracking().ToListAsync();
         var spells = await _db.SummonerSpells.OrderBy(s => s.Name).AsNoTracking().ToListAsync();
-        var runes = await _db.Runes.AsNoTracking().ToListAsync();
-        var masteries = await _db.Masteries.OrderBy(m => m.Row).ThenBy(m => m.Col).AsNoTracking().ToListAsync();
+        var runes = await _db.Runes.Where(r => r.IsAvailable).AsNoTracking().ToListAsync();
+        var masteries = await _db.Masteries.Where(m => m.IsAvailable).OrderBy(m => m.Row).ThenBy(m => m.Col).AsNoTracking().ToListAsync();
         var slotOrder = new[] { "mark", "seal", "glyph", "quintessence" };
         return new GuideEditorVm
         {

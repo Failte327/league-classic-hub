@@ -43,6 +43,7 @@ public class Item
     public required string Category { get; set; }
     public string? IconPath { get; set; }
     public string? Description { get; set; }   // classic stats/passive text (DDragon 5.1.1)
+    public bool IsAvailable { get; set; } = true;   // false = no longer in the real Classic item pool
 }
 
 public class SummonerSpell
@@ -54,18 +55,21 @@ public class SummonerSpell
     public string? Description { get; set; }
 }
 
-// A classic rune (Greater tier), sourced from DDragon 5.1.1.
+// A classic rune. DdragonId is the game's rune id (null for old guessed rows that
+// predate League Classic's real PBE data and have no natural key to match on).
 public class Rune
 {
     public int Id { get; set; }
+    public int? DdragonId { get; set; }
     public required string Name { get; set; }
     public required string Slug { get; set; }
     public required string Slot { get; set; }   // mark / seal / glyph / quintessence
     public string? IconPath { get; set; }
     public string? Description { get; set; }
+    public bool IsAvailable { get; set; } = true;   // false = no longer in the real Classic rune pool
 }
 
-// A classic mastery node in the Offense/Defense/Utility trees (DDragon 5.1.1).
+// A classic mastery node in the Offense/Defense/Utility trees.
 // DdragonId is the game's mastery id (used in guide allocations + prereqs).
 public class Mastery
 {
@@ -79,6 +83,7 @@ public class Mastery
     public int? PrereqDdragonId { get; set; }    // mastery that must be maxed first
     public string? IconPath { get; set; }
     public string? Description { get; set; }
+    public bool IsAvailable { get; set; } = true;   // false = no longer in the real Classic mastery tree
 }
 
 // A rune choice on a guide, with a count (e.g. 9x Greater Mark of Attack Damage).

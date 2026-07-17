@@ -14,7 +14,7 @@ public class ItemsModel : PageModel
 
     public async Task OnGetAsync()
     {
-        var items = await _db.Items.OrderBy(i => i.Category).ThenBy(i => i.Name).AsNoTracking().ToListAsync();
+        var items = await _db.Items.Where(i => i.IsAvailable).OrderBy(i => i.Category).ThenBy(i => i.Name).AsNoTracking().ToListAsync();
         ByCategory = items.ToLookup(i => i.Category);
     }
 }
