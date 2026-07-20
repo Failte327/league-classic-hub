@@ -667,7 +667,7 @@ public static class DbSeeder
     {
         (
             "miss-fortune", "AD Carry Miss Fortune", "miss-fortune-ad-carry", "flash", "barrier",
-            "Q,Q,Q,Q,Q,R,W,W,W,W,R,W,E,E,E,R,E,E",
+            "Q,W,E,Q,W,R,Q,W,Q,W,R,Q,W,E,E,R,E,E",
             "512:4,522:4,531:3,532:1,541:2,542:2,551:1,552:3,562:1,613:4,614:2,621:3",
             new[] { ("mark-of-attack-damage", 9), ("minor-seal-of-attack-speed", 9), ("minor-glyph-of-armor", 9), ("quintessence-of-critical-damage", 3) },
             new[] { "dorans-blade", "berserkers-greaves", "the-bloodthirster", "infinity-edge", "phantom-dancer", "guardian-angel", "last-whisper" },
@@ -675,7 +675,7 @@ public static class DbSeeder
         ),
         (
             "nunu", "AP Jungle Nunu - Absolute Zero Tank Items", "nunu-ap-jungle", "flash", "smite",
-            "E,E,E,E,E,R,Q,Q,Q,Q,R,Q,W,W,W,R,W,W",
+            "E,Q,W,E,Q,R,E,Q,E,Q,R,E,Q,W,W,R,W,W",
             "513:4,523:4,531:3,533:1,543:3,544:1,553:4,562:1,613:4,614:2,621:3",
             new[] { ("mark-of-magic-penetration", 9), ("seal-of-armor", 9), ("glyph-of-cooldown-reduction", 9), ("quintessence-of-ability-power", 3) },
             new[] { "spirit-stone", "spirit-of-the-spectral-wraith", "sorcerers-shoes", "liandrys-torment", "rabadons-deathcap", "zhonyas-hourglass", "abyssal-scepter" },
@@ -683,7 +683,7 @@ public static class DbSeeder
         ),
         (
             "gragas", "AP Gragas \"If you're buyin', I'm in!\"", "gragas-ap-gragas", "flash", "ignite",
-            "Q,Q,Q,Q,Q,R,E,E,E,E,R,E,W,W,W,R,W,W",
+            "Q,E,W,Q,E,R,Q,E,Q,E,R,Q,E,W,W,R,W,W",
             "513:4,523:4,531:3,533:1,543:3,544:1,553:4,562:1,613:4,614:2,621:3",
             new[] { ("mark-of-magic-penetration", 9), ("minor-glyph-of-armor", 9), ("seal-of-health", 9), ("quintessence-of-ability-power", 3) },
             new[] { "dorans-ring", "dorans-ring", "dorans-ring", "sorcerers-shoes", "rod-of-ages", "rabadons-deathcap", "rylais-crystal-scepter", "void-staff", "abyssal-scepter" },
@@ -691,7 +691,7 @@ public static class DbSeeder
         ),
         (
             "gangplank", "Critplank", "gangplank-critplank", "flash", "ignite",
-            "Q,Q,Q,Q,Q,R,E,E,E,E,R,E,W,W,W,R,W,W",
+            "Q,E,W,Q,E,R,Q,E,Q,E,R,Q,E,W,W,R,W,W",
             "512:4,522:4,531:3,532:1,541:2,542:2,551:1,552:3,562:1,613:4,614:2,621:3",
             new[] { ("mark-of-attack-damage", 9), ("seal-of-armor", 9), ("glyph-of-cooldown-reduction", 9), ("quintessence-of-critical-damage", 3) },
             new[] { "dorans-blade", "boots-of-swiftness", "infinity-edge", "trinity-force", "phantom-dancer", "warmogs-armor" },
@@ -699,7 +699,7 @@ public static class DbSeeder
         ),
         (
             "soraka", "Support Soraka Banana Supreme", "soraka-support", "flash", "exhaust",
-            "W,W,W,W,W,R,E,E,E,E,R,E,Q,Q,Q,R,Q,Q",
+            "W,E,Q,W,E,R,W,E,W,E,R,W,E,Q,Q,R,Q,Q",
             "613:4,614:2,621:3,713:3,714:1,721:1,722:3,732:1,733:3,743:3,744:1,751:1,752:3,762:1",
             new[] { ("mark-of-magic-penetration", 9), ("minor-glyph-of-armor", 9), ("seal-of-mana-regeneration", 9), ("quintessence-of-ability-power", 3) },
             new[] { "philosophers-stone", "boots-of-mobility", "sightstone", "mikaels-crucible", "aegis-of-the-legion", "locket-of-the-iron-solari" },
@@ -720,10 +720,11 @@ public static class DbSeeder
             var existing = await db.Guides.FirstOrDefaultAsync(g => g.Slug == spec.Slug);
             if (existing is not null)
             {
-                if (existing.Title != spec.Title || existing.BodyMarkdown != spec.Body)
+                if (existing.Title != spec.Title || existing.BodyMarkdown != spec.Body || existing.SkillOrder != spec.SkillOrder)
                 {
                     existing.Title = spec.Title;
                     existing.BodyMarkdown = spec.Body;
+                    existing.SkillOrder = spec.SkillOrder;
                     await db.SaveChangesAsync();
                 }
                 continue;
