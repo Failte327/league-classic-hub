@@ -625,8 +625,7 @@ public static class DbSeeder
 
     private const string DevUpdatesOpeningPost =
         "Official announcements and site updates from the League Classic Archive team will be posted " +
-        "here. This thread is locked to keep it a clean, single-source feed — for discussion, feedback, " +
-        "or bug reports, please start a new thread in the forums.";
+        "here.";
 
     // Pinned + locked announcements thread. Replies are disabled for everyone
     // (including moderators) via the normal reply form; new entries are added
