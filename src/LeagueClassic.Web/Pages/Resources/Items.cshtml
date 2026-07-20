@@ -8,22 +8,27 @@
 
 <p class="muted">League Classic Items</p>
 
-@foreach (var group in Model.ByCategory)
-{
-    <div class="item-group">
-        <h3>@group.Key</h3>
-        <div class="item-row">
-            @foreach (var item in group)
-            {
-                <div class="item-opt" data-name="@item.Name" data-desc="@item.Description">
-                    <img src="~/@item.IconPath" alt="@item.Name" loading="lazy" />
-                    <span class="item-opt-name">@item.Name</span>
-                </div>
-            }
+<input type="search" id="item-search" class="item-search-input" placeholder="Search items…" />
+
+<div id="item-list">
+    @foreach (var group in Model.ByCategory)
+    {
+        <div class="item-group">
+            <h3>@group.Key</h3>
+            <div class="item-row">
+                @foreach (var item in group)
+                {
+                    <div class="item-opt" data-name="@item.Name" data-desc="@item.Description">
+                        <img src="~/@item.IconPath" alt="@item.Name" loading="lazy" />
+                        <span class="item-opt-name">@item.Name</span>
+                    </div>
+                }
+            </div>
         </div>
-    </div>
-}
+    }
+</div>
 
 @section Scripts {
     <script src="~/js/hover-panel.js" asp-append-version="true"></script>
+    <script src="~/js/item-search.js" asp-append-version="true"></script>
 }

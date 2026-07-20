@@ -173,6 +173,11 @@ button.btn:hover { background: var(--brand-dark); }
 
 /* Champion picker */
 .filter-box { max-width: 360px; margin: 10px 0 16px; }
+
+.item-search-input {
+    display: block; width: 100%; max-width: 360px; margin: 10px 0 14px;
+    padding: 7px 10px; border: 1px solid var(--line); font: inherit; background: var(--panel); color: var(--ink);
+}
 .champ-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); gap: 10px; }
 .champ-tile {
     display: flex; flex-direction: column; align-items: center; gap: 5px;

@@ -132,7 +132,8 @@
         <div class="build-strip" id="build-strip">
             <span class="build-empty">Click items below to add them to the build in order.</span>
         </div>
-        <div class="item-palette">
+        <input type="search" id="item-search" class="item-search-input" placeholder="Search items…" />
+        <div class="item-palette" id="item-list">
             @foreach (var group in Model.ItemsByCategory)
             {
                 <div class="item-group">
