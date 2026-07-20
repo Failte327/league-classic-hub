@@ -18,6 +18,11 @@ public class Champion
     public string? Lore { get; set; }           // full backstory; paragraphs separated by "\n\n",
                                                  // a leading "> " paragraph is the closing flavor quote
 
+    // Bullet points on how this champion's kit differs from the modern live game.
+    // Sourced from Riot's own champ-select "Classic changes" tooltip text; one bullet
+    // per "\n", no leading "- " (stripped at seed time). Null = not yet matched/seeded.
+    public string? ClassicChanges { get; set; }
+
     public List<ChampionAbility> Abilities { get; set; } = new();
 }
 

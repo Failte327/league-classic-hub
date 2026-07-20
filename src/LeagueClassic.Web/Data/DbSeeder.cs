@@ -172,6 +172,7 @@ public static class DbSeeder
         await BackfillNewChampionsAsync(db, seedDir);
         await BackfillItemsAsync(db, seedDir);
         await BackfillChampionLoreAsync(db, seedDir);
+        await BackfillClassicChangesAsync(db, seedDir);
         await BackfillAbilityNamesAsync(db, seedDir);
         await BackfillRunesAsync(db, seedDir);
         await BackfillMasteriesAsync(db, seedDir);
@@ -311,6 +312,30 @@ public static class DbSeeder
                 champ.Lore = c.Lore;
                 champ.Blurb = c.Blurb;
                 champ.Title = c.Title;
+                changed = true;
+            }
+        }
+
+        if (changed) await db.SaveChangesAsync();
+    }
+
+    // Syncs ClassicChanges from classic-changes.json by champion slug — unlike the
+    // lore backfill above, this always overwrites (not just fills nulls), so
+    // correcting or adding a champion's text later is just a seed-file edit plus a
+    // restart. Not every champion has a row yet (the source text only matches
+    // champions whose blurb explicitly names an ability); champions without one
+    // simply keep ClassicChanges = null.
+    private static async Task BackfillClassicChangesAsync(ApplicationDbContext db, string seedDir)
+    {
+        var bySlug = Load<ClassicChangesSeed>(seedDir, "classic-changes.json").ToDictionary(c => c.Slug, c => c.Changes);
+
+        var changed = false;
+        foreach (var champ in await db.Champions.ToListAsync())
+        {
+            var text = bySlug.GetValueOrDefault(champ.Slug);
+            if (champ.ClassicChanges != text)
+            {
+                champ.ClassicChanges = text;
                 changed = true;
             }
         }
@@ -776,4 +801,5 @@ public static class DbSeeder
     private sealed record AbilitySeed(string Champ, string Slot, string Name, string? Icon, string? Desc);
     private sealed record RuneSeed(int DdragonId, string Name, string Slug, string Slot, string? Icon, string? Desc);
     private sealed record MasterySeed(int Id, string Name, string Tree, int Row, int Col, int Ranks, int? Prereq, string? Icon, string? Desc);
+    private sealed record ClassicChangesSeed(string Slug, string Changes);
 }

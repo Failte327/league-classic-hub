@@ -1,0 +1,206 @@
+[
+ {
+  "slug": "ahri",
+  "changes": "Orb of Deception (Q) grants movement speed when in the air\nEssence Theft (P) is stacked on damaging enemies\nSpirit Rush (R) doesn't reset"
+ },
+ {
+  "slug": "alistar",
+  "changes": "Trample (P) and Triumphant Roar (E) have swapped\nCan build Ability Power\nCan solo lane"
+ },
+ {
+  "slug": "amumu",
+  "changes": "Bandage Toss (Q) doesn't have extra charges\nCursed Touch (P) reduces magic resist on basic attacks only"
+ },
+ {
+  "slug": "anivia",
+  "changes": "Frostbite (E) doesn't have Chill passive\nGlacial Storm (R) slow also affects attack speed"
+ },
+ {
+  "slug": "annie",
+  "changes": "Tibbers (R) dies when Annie does\nPyromania (P) Stacks reset on death\nMolten Shield (E) doesn't grant movement speed"
+ },
+ {
+  "slug": "ashe",
+  "changes": "Frost Shot (Q) toggles slowing basic attacks\nFocus (P) builds up critical strikes out of combat\nHawkshot (E) grants bonus gold on kill"
+ },
+ {
+  "slug": "blitzcrank",
+  "changes": "Static Field (R) passive zaps nearby enemies"
+ },
+ {
+  "slug": "brand",
+  "changes": "Ablaze (P) explosions do not occur"
+ },
+ {
+  "slug": "chogath",
+  "changes": "Feast (R) stacks max 6 times, is lost on kill but can be stacked on anything\nVorpal Spikes (E) toggles the spikes that go through players"
+ },
+ {
+  "slug": "corki",
+  "changes": "Phosphorus Bomb (Q) is an instant explosion"
+ },
+ {
+  "slug": "dr-mundo",
+  "changes": "Burning Agony (W) is a toggle of damage AoE around him\nMasochism (E) is a buff for a time not an attack\nAdrenaline Rush (P) regenerates health over time"
+ },
+ {
+  "slug": "ezreal",
+  "changes": "Essence Flux (W) passes through all units dealing damage to enemies and granting allies attack speed\nTrueshot Barrage (R) deals less damage per enemy hit"
+ },
+ {
+  "slug": "fiddlesticks",
+  "changes": "The Abilities are completely different, except for the ultimate Crowstorm (R)\nFiddlesticks fear makes the enemy walk randomly"
+ },
+ {
+  "slug": "gangplank",
+  "changes": "Cannon Barrage (R) has random cannonballs instead of consistent AOE damage\nRaise Morale (E) grants move speed and Attack damage both passively and upon activation\nParrrley (Q) grants gold (no more silver serpents)"
+ },
+ {
+  "slug": "garen",
+  "changes": "Demacian Justice (R) does magic damage"
+ },
+ {
+  "slug": "gragas",
+  "changes": "Barrel Roll (Q) does full damage no matter time it is on the ground\nDrunken Rage (W) last for a long time"
+ },
+ {
+  "slug": "heimerdinger",
+  "changes": "The abilities may look similar but are very different\nUPGRADE!!! (R) is a buff that lasts a set time not a single ability\nH-28G Evolution Turrets (Q) are active globally but die when Heimerdinger does"
+ },
+ {
+  "slug": "janna",
+  "changes": "Tailwind (P) grants global movement speed"
+ },
+ {
+  "slug": "jarvan-iv",
+  "changes": "Cataclysm (R) is single target\nDemacian Standard (E) passive grants armor"
+ },
+ {
+  "slug": "jax",
+  "changes": "Grandmaster's Might (R) grants stacking attack speed per strike\nEquipment Mastery (P) grants health for power"
+ },
+ {
+  "slug": "kassadin",
+  "changes": "Force Pulse (E) requires 6 casts around him to then cast\nRiftwalk (R) can stack 10 times\nVoid Stone (P) transforms some magic damage prevented into attack speed"
+ },
+ {
+  "slug": "katarina",
+  "changes": "Killer Instincts (W) enhances her other basic abilities\nVoracity (P) grants gold and reduces cooldowns on kill"
+ },
+ {
+  "slug": "kayle",
+  "changes": "The Abilities are completely different, except for Divine Blessing (W)\nLeveling up doesn't change her attacks\nHoly Fervor (P) grants Attack Damage as Ability Power and vice versa"
+ },
+ {
+  "slug": "kogmaw",
+  "changes": "Caustic Spittle (Q) is point and click"
+ },
+ {
+  "slug": "lulu",
+  "changes": "Glitterdance (Q) bolts can not deal damage to the same target"
+ },
+ {
+  "slug": "lux",
+  "changes": "Light Binding's (Q) second target is half as affective\nFinal Spark (R) is now German - Finales Funkeln"
+ },
+ {
+  "slug": "malphite",
+  "changes": "Brutal Strikes (W) cleave is a passive and actively increases his damage"
+ },
+ {
+  "slug": "malzahar",
+  "changes": "Null Zone (W) is an AoE area for a short time\nSummon Voidling (P) creates a voidling after a number of casts\nNether Grasp (R) does not have the null zone around the target"
+ },
+ {
+  "slug": "master-yi",
+  "changes": "Wuju Style (E) passive increases attack damage doubled when active\nDouble Strike (P) is percent chance based\nAlpha Strike (Q) can not be directed after finishing movements"
+ },
+ {
+  "slug": "miss-fortune",
+  "changes": "Strut (P) moved from W\nImpure Shots (W) passive deals magic damage on each hit with active increasing attack speed and applying grievous wounds"
+ },
+ {
+  "slug": "nasus",
+  "changes": "Fury of the Sands (R) magic damage temporarily converts a percentage into Attack Damage"
+ },
+ {
+  "slug": "nidalee",
+  "changes": "Aspect of the Cougar (R) does not start with a level\nProwl (P) has Hunt passive removed\nBushwhack (W) does insane damage"
+ },
+ {
+  "slug": "nunu",
+  "changes": "Blood Boil (W) grants attack and movement speed\nIce Blast (E) a single point and click snowball\nConsume (Q) can't target champions but gain buffs based on whats eaten\nVisionary (P) every 5 basic attacks the next spell costs no mana - Nunu & Willump get an extra line as they are 2 characters"
+ },
+ {
+  "slug": "olaf",
+  "changes": "Vicious Strikes (W) grants Attack Damage, Lifesteal and Spell Vamp\nReckless Swing (E) does not heal the health cost"
+ },
+ {
+  "slug": "pantheon",
+  "changes": "Aegis Protection (P) blocks damage after casting multiple times\nGrand Skyfall (R) is a circle AoE\nHeartseeker Strike (E) - Pantheon stands still and strikes"
+ },
+ {
+  "slug": "rammus",
+  "changes": "Tremors (R) is a repeating AoE around him\nAll other abilities are ok"
+ },
+ {
+  "slug": "shaco",
+  "changes": "Hallucinate (R) clone explodes dealing more damage but doesn't spawn boxes\nJack in the box (W) can be placed closer together"
+ },
+ {
+  "slug": "singed",
+  "changes": "Empowered Bulwark (P) gains health with Mana"
+ },
+ {
+  "slug": "sivir",
+  "changes": "Ricochet (W) toggles bouncing randomly attacks\nSpell Shield (E) gain mana instead of health when triggered"
+ },
+ {
+  "slug": "skarner",
+  "changes": "The Abilities are completely different\nBruiser and auto attacker\nImpale (R) is a single target point and click"
+ },
+ {
+  "slug": "sona",
+  "changes": "Auras of basic abilities are persistent\nPower Chord (P) does bonus damage\nCrescendo (R) is wider"
+ },
+ {
+  "slug": "soraka",
+  "changes": "The Abilities are completely different, except for the ultimate Wish (R)\nCan solo lane\nHas a point and click silence"
+ },
+ {
+  "slug": "teemo",
+  "changes": "Noxious Trap's (R) don't bounce"
+ },
+ {
+  "slug": "tristana",
+  "changes": "Explosive Shot (E) is a DoT ability"
+ },
+ {
+  "slug": "twisted-fate",
+  "changes": "Gate (E) is a global teleport\nDestiny (R) is a global slow and reveal\nLoaded Dice (P) grants all allies and himself gold on kill"
+ },
+ {
+  "slug": "twitch",
+  "changes": "Deliberating Poison (W) is an AoE spell around him\nAmbush (Q) can last up to 50 seconds\nExpunge (E) removes poison stacks on enemies"
+ },
+ {
+  "slug": "vayne",
+  "changes": "Final Hour (R) can not be extended"
+ },
+ {
+  "slug": "veigar",
+  "changes": "Baleful Strike (Q) is point and click\nEvent Horizon (E) is instant\nEquilibrium (P) gains increased mana regeneration based on missing mana"
+ },
+ {
+  "slug": "warwick",
+  "changes": "The Abilities are completely different\nInfinite Duress (R) is a point and click suppress"
+ },
+ {
+  "slug": "wukong",
+  "changes": "Decoy (W) does not mirror other abilities used and does not auto attack\nCyclone (R) only has 1 activation"
+ },
+ {
+  "slug": "zilean",
+  "changes": "Time Bomb (Q) is point and click\nHeightened Learning (P) grants experience to his entire team"
+ }
+]

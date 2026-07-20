@@ -46,6 +46,19 @@
         </div>
     }
 
+    @if (Model.Champion.ClassicChanges is not null)
+    {
+        <div class="loadout-block">
+            <h3>Changes from the Modern Game</h3>
+            <ul class="classic-changes-list">
+                @foreach (var line in Model.Champion.ClassicChanges.Split('\n', StringSplitOptions.RemoveEmptyEntries))
+                {
+                    <li>@line</li>
+                }
+            </ul>
+        </div>
+    }
+
     @if (Model.Champion.Lore is not null)
     {
         <div class="lore-block">
