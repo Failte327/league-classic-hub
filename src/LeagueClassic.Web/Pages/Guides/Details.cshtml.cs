@@ -128,7 +128,7 @@ public class DetailsModel : PageModel
 
         MasteryPoints = ParseMasteries(guide.MasteryAllocations);
         if (MasteryPoints.Count > 0)
-            Masteries = await _db.Masteries.OrderBy(m => m.Row).ThenBy(m => m.Col).AsNoTracking().ToListAsync();
+            Masteries = await _db.Masteries.Where(m => m.IsAvailable).OrderBy(m => m.Row).ThenBy(m => m.Col).AsNoTracking().ToListAsync();
 
         Comments = await _db.Comments
             .Where(c => c.GuideId == guide.Id)

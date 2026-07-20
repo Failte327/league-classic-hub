@@ -67,7 +67,10 @@
                 @foreach (var t in Model.LatestThreads)
                 {
                     <li>
-                        <a asp-page="/Forums/Thread" asp-route-id="@t.Id" asp-route-slug="@t.Slug">@t.Title</a>
+                        <a asp-page="/Forums/Thread" asp-route-id="@t.Id" asp-route-slug="@t.Slug">
+                            @if (t.IsPinned) { <span class="pin" title="Pinned">📌</span> }
+                            @t.Title
+                        </a>
                         <span class="tf-meta">@t.Author.Display("staff") &middot; @t.LastPostAt.ToString("MMM d")</span>
                     </li>
                 }

@@ -33,11 +33,24 @@ public class IndexModel : PageModel
             .AsNoTracking()
             .ToListAsync();
 
-        LatestThreads = await _db.Threads
+        // Pinned threads (e.g. Dev Updates) always lead the feed, regardless of
+        // recency, then the rest fill in by latest activity.
+        var pinned = await _db.Threads
+            .Where(t => t.IsPinned)
             .Include(t => t.Author)
             .OrderByDescending(t => t.LastPostAt)
-            .Take(6)
+            .Take(2)
             .AsNoTracking()
             .ToListAsync();
+
+        var rest = await _db.Threads
+            .Where(t => !t.IsPinned)
+            .Include(t => t.Author)
+            .OrderByDescending(t => t.LastPostAt)
+            .Take(6 - pinned.Count)
+            .AsNoTracking()
+            .ToListAsync();
+
+        LatestThreads = pinned.Concat(rest).ToList();
     }
 }

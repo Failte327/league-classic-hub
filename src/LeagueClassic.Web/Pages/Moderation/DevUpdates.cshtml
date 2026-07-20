@@ -1,0 +1,50 @@
+@page
+@using LeagueClassic.Web.Data
+@inject MarkdownRenderer Markdown
+@model LeagueClassic.Web.Pages.Moderation.DevUpdatesModel
+@{
+    ViewData["Title"] = "Post Dev Update";
+}
+
+<div class="page-head"><h1>Post a Dev Update</h1></div>
+<p class="muted">
+    Posts here appear in the pinned
+    <a asp-page="/Forums/Thread" asp-route-id="@Model.Thread.Id" asp-route-slug="@Model.Thread.Slug">Dev Updates</a>
+    thread, authored as “Staff” — never attributed to your account.
+</p>
+
+<section class="panel reply-box">
+    <form method="post">
+        <div asp-validation-summary="All" class="validation-summary"></div>
+        <div class="markdown-help">
+            <strong>Formatting:</strong>
+            <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
+            <code>*italic*</code> &middot; <code>[link](https://…)</code> &middot; blank line = new paragraph.
+        </div>
+        <textarea asp-for="Body" rows="8" placeholder="Write the update…"></textarea>
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Post Update</button>
+        </div>
+    </form>
+</section>
+
+<h2>Previous updates</h2>
+@if (Model.Posts.Count == 0)
+{
+    <div class="empty">Nothing posted yet.</div>
+}
+else
+{
+    <div class="posts">
+        @foreach (var p in Model.Posts)
+        {
+            <article class="post">
+                <div class="post-author">
+                    <span class="pa-name">Staff</span>
+                    <span class="pa-meta">@p.CreatedAt.ToString("MMM d, yyyy · h:mm tt")</span>
+                </div>
+                <div class="post-body">@Markdown.ToHtml(p.BodyMarkdown)</div>
+            </article>
+        }
+    </div>
+}

@@ -24,6 +24,7 @@ public static class DbSeeder
 
         await SeedReferenceAsync(db, env.ContentRootPath);
         await SeedWelcomeThreadAsync(db);
+        await SeedDevUpdatesThreadAsync(db);
         await SeedStaffGuidesAsync(db);
         await BackfillDisplayNamesAsync(db);
         await SeedModeratorsAsync(scope.ServiceProvider, env);
@@ -616,6 +617,40 @@ public static class DbSeeder
             LastPostAt = now,
         };
         thread.Posts.Add(new Post { BodyMarkdown = WelcomePost, CreatedAt = now }); // null author = staff
+        db.Threads.Add(thread);
+        await db.SaveChangesAsync();
+    }
+
+    public const string DevUpdatesSlug = "dev-updates";
+
+    private const string DevUpdatesOpeningPost =
+        "Official announcements and site updates from the League Classic Archive team will be posted " +
+        "here. This thread is locked to keep it a clean, single-source feed — for discussion, feedback, " +
+        "or bug reports, please start a new thread in the forums.";
+
+    // Pinned + locked announcements thread. Replies are disabled for everyone
+    // (including moderators) via the normal reply form; new entries are added
+    // only through the moderator-only composer at /Moderation/DevUpdates,
+    // which always posts with a null AuthorId so it renders as "Staff" rather
+    // than attributing updates to whichever moderator's account posted them.
+    private static async Task SeedDevUpdatesThreadAsync(ApplicationDbContext db)
+    {
+        var existing = await db.Threads.FirstOrDefaultAsync(t => t.Slug == DevUpdatesSlug);
+        if (existing is not null) return;
+
+        var now = DateTimeOffset.UtcNow;
+        var thread = new ForumThread
+        {
+            Title = "Dev Updates",
+            Slug = DevUpdatesSlug,
+            Excerpt = Excerpt(DevUpdatesOpeningPost),
+            IsPinned = true,
+            IsLocked = true,
+            ReplyCount = 0,
+            CreatedAt = now,
+            LastPostAt = now,
+        };
+        thread.Posts.Add(new Post { BodyMarkdown = DevUpdatesOpeningPost, CreatedAt = now }); // null author = staff
         db.Threads.Add(thread);
         await db.SaveChangesAsync();
     }
