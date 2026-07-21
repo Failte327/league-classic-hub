@@ -82,6 +82,38 @@
         </div>
     </section>
 
+    <section class="panel">
+        <h2>Tournament Details <small>(optional)</small></h2>
+        <p class="hint">Rules, start-time notes, format clarifications — whatever players should know. You can edit this later too.</p>
+        <div class="markdown-help">
+            <div>
+                <strong>Formatting:</strong>
+                <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
+                <code>*italic*</code> or <code>&lt;u&gt;underline&lt;/u&gt;</code> &middot;
+                <code>- list item</code> &middot;
+                <code>[link](https://…)</code> &middot;
+                <code>`code`</code> &middot; blank line = new paragraph.
+            </div>
+            <div>
+                <strong>Sections:</strong>
+                <code>## Section Title</code> for a heading &middot;
+                <code>&gt; callout text</code> for a highlighted note &middot;
+                <code>---</code> for a divider &middot;
+                <code>| Col A | Col B |</code> / <code>|---|---|</code> for a table.
+            </div>
+        </div>
+        <div class="editor-split">
+            <textarea asp-for="Input.DetailsMarkdown" rows="12"
+                      placeholder="e.g. best-of-1 until finals, 15 minute check-in window, no-show forfeits after 10 minutes…"
+                      hx-post="/tournaments/details-preview" hx-trigger="load, keyup changed delay:400ms"
+                      hx-target="#details-preview" hx-swap="innerHTML"></textarea>
+            <div class="md-preview-wrap">
+                <div class="md-preview-label">Live Preview</div>
+                <div id="details-preview" class="md-preview guide-body"></div>
+            </div>
+        </div>
+    </section>
+
     <div class="form-actions">
         <button type="submit" class="btn-primary">Create Tournament</button>
     </div>

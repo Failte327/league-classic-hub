@@ -14,12 +14,15 @@ public class DetailsModel : PageModel
     private readonly ApplicationDbContext _db;
     private readonly UserManager<ApplicationUser> _users;
     private readonly TournamentService _tournaments;
+    private readonly ContentModerationService _moderation;
 
-    public DetailsModel(ApplicationDbContext db, UserManager<ApplicationUser> users, TournamentService tournaments)
+    public DetailsModel(ApplicationDbContext db, UserManager<ApplicationUser> users,
+        TournamentService tournaments, ContentModerationService moderation)
     {
         _db = db;
         _users = users;
         _tournaments = tournaments;
+        _moderation = moderation;
     }
 
     public Tournament Tournament { get; private set; } = default!;
@@ -33,6 +36,9 @@ public class DetailsModel : PageModel
 
     [BindProperty]
     public Dictionary<int, int> GroupRanks { get; set; } = new();
+
+    [BindProperty]
+    public DetailsEditInput Input { get; set; } = new();
 
     public async Task<IActionResult> OnGetAsync(string slug)
     {
@@ -99,6 +105,24 @@ public class DetailsModel : PageModel
         return RedirectToPage(new { slug });
     }
 
+    public async Task<IActionResult> OnPostUpdateDetailsAsync(string slug)
+    {
+        var submitted = Input.DetailsMarkdown; // captured before LoadAsync repopulates Input from the DB
+        if (!await LoadAsync(slug)) return NotFound();
+        if (!CanManage) return Forbid();
+
+        if (_moderation.Validate(submitted, "Details", 20_000) is { } de)
+        {
+            Input.DetailsMarkdown = submitted; // keep the organizer's draft visible instead of reverting it
+            ModelState.AddModelError("Input.DetailsMarkdown", de);
+            return Page();
+        }
+
+        Tournament.DetailsMarkdown = string.IsNullOrWhiteSpace(submitted) ? null : submitted;
+        await _db.SaveChangesAsync();
+        return RedirectToPage(new { slug });
+    }
+
     public async Task<IActionResult> OnPostGenerateBracketAsync(string slug)
     {
         if (!await LoadAsync(slug)) return NotFound();
@@ -145,6 +169,12 @@ public class DetailsModel : PageModel
         foreach (var g in Tournament.Groups.Where(g => !g.IsConcluded))
             GroupStandings[g.Id] = await _tournaments.ComputeGroupStandingsAsync(g.Id);
 
+        Input.DetailsMarkdown = Tournament.DetailsMarkdown;
         return true;
     }
+}
+
+public class DetailsEditInput
+{
+    public string? DetailsMarkdown { get; set; }
 }

@@ -53,6 +53,7 @@ public class CreateModel : PageModel
             PrizeAmount = Input.PrizeType == PrizeType.Cash ? Input.PrizeAmount : null,
             PrizeCurrency = Input.PrizeType == PrizeType.Cash ? Input.PrizeCurrency?.Trim() : null,
             ScheduledAt = new DateTimeOffset(DateTime.SpecifyKind(Input.ScheduledAtDate, DateTimeKind.Utc)),
+            DetailsMarkdown = string.IsNullOrWhiteSpace(Input.DetailsMarkdown) ? null : Input.DetailsMarkdown,
             CreatedAt = now,
         };
 
@@ -89,6 +90,9 @@ public class CreateModel : PageModel
             if (string.IsNullOrWhiteSpace(Input.PrizeCurrency))
                 ModelState.AddModelError("Input.PrizeCurrency", "Enter a currency (e.g. USD).");
         }
+
+        if (_moderation.Validate(Input.DetailsMarkdown, "Details", 20_000) is { } de)
+            ModelState.AddModelError("Input.DetailsMarkdown", de);
     }
 
     private async Task<string> UniqueSlugAsync(string name)
@@ -116,4 +120,5 @@ public class CreateInput
     public decimal? PrizeAmount { get; set; }
     public string? PrizeCurrency { get; set; }
     public DateTime ScheduledAtDate { get; set; } = DateTime.UtcNow.Date.AddDays(7);
+    public string? DetailsMarkdown { get; set; }
 }

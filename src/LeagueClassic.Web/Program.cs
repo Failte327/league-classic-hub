@@ -148,6 +148,14 @@ app.MapPost("/guides/preview", async (HttpContext ctx, MarkdownRenderer md) =>
     return Results.Content(md.ToHtml(body).Value ?? string.Empty, "text/html");
 }).RequireAuthorization().DisableAntiforgery();
 
+// Live markdown preview for the tournament details/rules editor.
+app.MapPost("/tournaments/details-preview", async (HttpContext ctx, MarkdownRenderer md) =>
+{
+    var form = await ctx.Request.ReadFormAsync();
+    var body = form["Input.DetailsMarkdown"].ToString();
+    return Results.Content(md.ToHtml(body).Value ?? string.Empty, "text/html");
+}).RequireAuthorization().DisableAntiforgery();
+
 // Apply migrations + seed starter content on startup.
 await DbSeeder.MigrateAndSeedAsync(app.Services);
 

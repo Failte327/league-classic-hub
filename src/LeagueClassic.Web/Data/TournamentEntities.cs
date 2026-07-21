@@ -21,6 +21,11 @@ public class Tournament
     public required string Name { get; set; }
     public required string Slug { get; set; }
 
+    // Organizer-authored freeform info — rules, start-time notes, format clarifications,
+    // whatever's relevant — rendered as markdown. Content-moderated same as every other
+    // free-text field on the site; null/blank = nothing posted yet.
+    public string? DetailsMarkdown { get; set; }
+
     public TournamentFormat Format { get; set; }
     public TournamentStatus Status { get; set; } = TournamentStatus.RegistrationOpen;
 

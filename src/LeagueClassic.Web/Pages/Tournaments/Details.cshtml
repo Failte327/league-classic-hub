@@ -3,6 +3,7 @@
 @using Microsoft.AspNetCore.Identity
 @model LeagueClassic.Web.Pages.Tournaments.DetailsModel
 @inject SignInManager<ApplicationUser> SignInManager
+@inject LeagueClassic.Web.Services.MarkdownRenderer Markdown
 @{
     ViewData["Title"] = Model.Tournament.Name;
     var t = Model.Tournament;
@@ -33,6 +34,52 @@ else
 }
 
 <div asp-validation-summary="All" class="validation-summary"></div>
+
+@if (!Model.CanManage && !string.IsNullOrWhiteSpace(t.DetailsMarkdown))
+{
+    <div class="panel">
+        <h2>Tournament Details</h2>
+        <div class="guide-body">@Markdown.ToHtml(t.DetailsMarkdown)</div>
+    </div>
+}
+@if (Model.CanManage)
+{
+    <section class="panel">
+        <h2>Tournament Details <small>(rules, start-time notes, anything players should know)</small></h2>
+        <form method="post" asp-page-handler="UpdateDetails" asp-route-slug="@t.Slug">
+            <div class="markdown-help">
+                <div>
+                    <strong>Formatting:</strong>
+                    <code>**bold**</code> or <code>&lt;b&gt;bold&lt;/b&gt;</code> &middot;
+                    <code>*italic*</code> or <code>&lt;u&gt;underline&lt;/u&gt;</code> &middot;
+                    <code>- list item</code> &middot;
+                    <code>[link](https://…)</code> &middot;
+                    <code>`code`</code> &middot; blank line = new paragraph.
+                </div>
+                <div>
+                    <strong>Sections:</strong>
+                    <code>## Section Title</code> for a heading &middot;
+                    <code>&gt; callout text</code> for a highlighted note &middot;
+                    <code>---</code> for a divider &middot;
+                    <code>| Col A | Col B |</code> / <code>|---|---|</code> for a table.
+                </div>
+            </div>
+            <div class="editor-split">
+                <textarea asp-for="Input.DetailsMarkdown" rows="10"
+                          placeholder="e.g. best-of-1 until finals, 15 minute check-in window, no-show forfeits after 10 minutes…"
+                          hx-post="/tournaments/details-preview" hx-trigger="load, keyup changed delay:400ms"
+                          hx-target="#details-preview" hx-swap="innerHTML"></textarea>
+                <div class="md-preview-wrap">
+                    <div class="md-preview-label">Live Preview</div>
+                    <div id="details-preview" class="md-preview guide-body">@Markdown.ToHtml(t.DetailsMarkdown)</div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn-plain">Save Details</button>
+            </div>
+        </form>
+    </section>
+}
 
 @if (t.Status == TournamentStatus.Completed)
 {
