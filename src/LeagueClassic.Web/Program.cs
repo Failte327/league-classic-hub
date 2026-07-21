@@ -72,6 +72,8 @@ builder.Services.AddSingleton<ContentModerationService>();
 builder.Services.AddScoped<GuideEditorService>();
 builder.Services.AddScoped<VotingService>();
 builder.Services.AddScoped<VisitRecorder>();
+builder.Services.AddSingleton<TournamentBracketService>();
+builder.Services.AddScoped<TournamentService>();
 
 // Rate limiting to blunt spam-flooding of the posting endpoints. The "post"
 // policy is applied at the PageModel level (Razor Pages doesn't honor

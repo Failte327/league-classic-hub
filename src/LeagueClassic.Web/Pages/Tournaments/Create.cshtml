@@ -1,0 +1,114 @@
+@page
+@using LeagueClassic.Web.Data
+@model LeagueClassic.Web.Pages.Tournaments.CreateModel
+@{
+    ViewData["Title"] = "New Tournament";
+}
+
+<div class="page-head">
+    <h1>New Tournament</h1>
+</div>
+
+<form method="post" class="guide-form" id="tournament-create-form">
+    <div asp-validation-summary="All" class="validation-summary"></div>
+
+    <section class="panel">
+        <div class="field">
+            <label asp-for="Input.Name">Tournament Name</label>
+            <input asp-for="Input.Name" placeholder="e.g. League Classic Launch Cup" maxlength="120" />
+        </div>
+        <div class="field">
+            <label asp-for="Input.ScheduledAtDate">Scheduled Date</label>
+            <input asp-for="Input.ScheduledAtDate" type="date" />
+        </div>
+        <div class="field">
+            <label asp-for="Input.Format">Format</label>
+            <select asp-for="Input.Format" id="format-select">
+                <option value="@TournamentFormat.SingleElimination">Single Elimination</option>
+                <option value="@TournamentFormat.DoubleElimination">Double Elimination</option>
+                <option value="@TournamentFormat.RoundRobinToSingleElim">Round Robin &rarr; Single Elimination</option>
+                <option value="@TournamentFormat.RoundRobinToDoubleElim">Round Robin &rarr; Double Elimination</option>
+            </select>
+        </div>
+        <div class="field">
+            <label asp-for="Input.MaxTeams">Max Teams (2&ndash;64)</label>
+            <input asp-for="Input.MaxTeams" type="number" min="2" max="64" />
+        </div>
+    </section>
+
+    <section class="panel" id="seeding-section">
+        <h2>Seeding</h2>
+        <div class="field">
+            <label asp-for="Input.SeedingMode">Seeding Mode</label>
+            <select asp-for="Input.SeedingMode">
+                <option value="@SeedingMode.Random">Random</option>
+                <option value="@SeedingMode.Chosen">Chosen (you assign seeds before starting)</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="panel" id="group-section" hidden>
+        <h2>Group Stage</h2>
+        <p class="hint">The number of groups is computed automatically from however many teams register.</p>
+        <div class="field">
+            <label asp-for="Input.TeamsPerGroup">Teams per Group</label>
+            <input asp-for="Input.TeamsPerGroup" type="number" min="2" value="4" />
+        </div>
+        <div class="field">
+            <label asp-for="Input.AdvancePerGroup">Advance per Group</label>
+            <input asp-for="Input.AdvancePerGroup" type="number" min="1" value="2" />
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Prize</h2>
+        <div class="field">
+            <label asp-for="Input.PrizeType">Prize</label>
+            <select asp-for="Input.PrizeType" id="prize-select">
+                <option value="@PrizeType.BraggingRights">Bragging Rights</option>
+                <option value="@PrizeType.Cash">Enter a Prize Amount</option>
+            </select>
+        </div>
+        <div id="prize-amount-section" hidden>
+            <div class="field">
+                <label asp-for="Input.PrizeAmount">Amount</label>
+                <input asp-for="Input.PrizeAmount" type="number" step="0.01" min="0" />
+            </div>
+            <div class="field">
+                <label asp-for="Input.PrizeCurrency">Currency</label>
+                <input asp-for="Input.PrizeCurrency" placeholder="e.g. USD" maxlength="20" />
+            </div>
+            <partial name="_PrizeDisclaimer" />
+        </div>
+    </section>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-primary">Create Tournament</button>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        (function () {
+            'use strict';
+            var format = document.getElementById('format-select');
+            var seeding = document.getElementById('seeding-section');
+            var groups = document.getElementById('group-section');
+            var prize = document.getElementById('prize-select');
+            var prizeAmount = document.getElementById('prize-amount-section');
+
+            function isRoundRobin(v) { return v === '@TournamentFormat.RoundRobinToSingleElim' || v === '@TournamentFormat.RoundRobinToDoubleElim'; }
+            function syncFormat() {
+                var rr = isRoundRobin(format.value);
+                groups.hidden = !rr;
+                seeding.hidden = rr;
+            }
+            function syncPrize() { prizeAmount.hidden = prize.value !== '@PrizeType.Cash'; }
+
+            format.addEventListener('change', syncFormat);
+            prize.addEventListener('change', syncPrize);
+            syncFormat();
+            syncPrize();
+        })();
+    </script>
+}

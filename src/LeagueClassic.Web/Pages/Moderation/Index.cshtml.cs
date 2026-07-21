@@ -48,12 +48,16 @@ public class IndexModel : PageModel
 
         var postIds = reports.Where(r => r.TargetType == ReportTargetType.Post).Select(r => r.TargetId).Distinct().ToList();
         var guideIds = reports.Where(r => r.TargetType == ReportTargetType.Guide).Select(r => r.TargetId).Distinct().ToList();
+        var teamIds = reports.Where(r => r.TargetType == ReportTargetType.Team).Select(r => r.TargetId).Distinct().ToList();
 
         var posts = await _db.Posts.Where(p => postIds.Contains(p.Id))
             .Include(p => p.Thread).Include(p => p.Author).AsNoTracking()
             .ToDictionaryAsync(p => p.Id);
         var guides = await _db.Guides.Where(g => guideIds.Contains(g.Id)).AsNoTracking()
             .ToDictionaryAsync(g => g.Id);
+        var teams = await _db.TournamentTeams.Where(t => teamIds.Contains(t.Id))
+            .Include(t => t.Tournament).AsNoTracking()
+            .ToDictionaryAsync(t => t.Id);
 
         Groups = reports
             .GroupBy(r => new { r.TargetType, r.TargetId })
@@ -74,14 +78,26 @@ public class IndexModel : PageModel
                         ThreadId = p?.ThreadId, Slug = p?.Thread?.Slug,
                     };
                 }
-                guides.TryGetValue(g.Key.TargetId, out var gd);
+                if (g.Key.TargetType == ReportTargetType.Guide)
+                {
+                    guides.TryGetValue(g.Key.TargetId, out var gd);
+                    return new ReportGroup
+                    {
+                        Type = ReportTargetType.Guide, TargetId = g.Key.TargetId, Count = g.Count(),
+                        Reasons = reasons, Reporters = reporters, LatestAt = g.Max(r => r.CreatedAt),
+                        Missing = gd is null,
+                        Title = gd is null ? "(deleted guide)" : $"Guide: “{gd.Title}”",
+                        Slug = gd?.Slug,
+                    };
+                }
+                teams.TryGetValue(g.Key.TargetId, out var tm);
                 return new ReportGroup
                 {
-                    Type = ReportTargetType.Guide, TargetId = g.Key.TargetId, Count = g.Count(),
+                    Type = ReportTargetType.Team, TargetId = g.Key.TargetId, Count = g.Count(),
                     Reasons = reasons, Reporters = reporters, LatestAt = g.Max(r => r.CreatedAt),
-                    Missing = gd is null,
-                    Title = gd is null ? "(deleted guide)" : $"Guide: “{gd.Title}”",
-                    Slug = gd?.Slug,
+                    Missing = tm is null,
+                    Title = tm is null ? "(deleted team)" : $"Tournament team: “{tm.Name}” in {tm.Tournament?.Name}",
+                    Slug = tm?.Tournament?.Slug,
                 };
             })
             .OrderByDescending(g => g.Count).ThenByDescending(g => g.LatestAt)
@@ -101,6 +117,28 @@ public class IndexModel : PageModel
         {
             var guide = await _db.Guides.FirstOrDefaultAsync(g => g.Id == id);
             if (guide is not null) _db.Guides.Remove(guide);
+        }
+        else if (type == ReportTargetType.Team)
+        {
+            var team = await _db.TournamentTeams.Include(t => t.Players).FirstOrDefaultAsync(t => t.Id == id);
+            if (team is not null)
+            {
+                var referenced = await _db.TournamentMatches.AnyAsync(m =>
+                    m.TeamAId == id || m.TeamBId == id || m.WinnerTeamId == id);
+                if (referenced)
+                {
+                    // A bracket already links to this team — redact in place rather than
+                    // hard-deleting, so existing match links stay valid.
+                    team.Name = "[removed]";
+                    foreach (var p in team.Players) p.Name = "[removed]";
+                }
+                else
+                {
+                    var tournament = await _db.Tournaments.FirstOrDefaultAsync(t => t.Id == team.TournamentId);
+                    if (tournament is not null) tournament.RegisteredTeamCount = Math.Max(0, tournament.RegisteredTeamCount - 1);
+                    _db.TournamentTeams.Remove(team);
+                }
+            }
         }
         else
         {

@@ -1,6 +1,6 @@
 namespace LeagueClassic.Web.Data;
 
-public enum ReportTargetType { Post = 0, Guide = 1 }
+public enum ReportTargetType { Post = 0, Guide = 1, Team = 2 }
 
 public enum ReportReason { Spam = 0, Harassment = 1, HateSpeech = 2, Nsfw = 3, OffTopic = 4, Other = 5 }
 

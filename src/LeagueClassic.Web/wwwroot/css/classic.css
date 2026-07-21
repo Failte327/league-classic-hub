@@ -48,12 +48,12 @@ a:hover { text-decoration: underline; }
 }
 
 /* Light content panels keep dark, readable text. */
-.forum-table, .guide-view, .guide-form .panel, .champ-tile,
+.forum-table, .guide-view, .panel, .champ-tile,
 .spell-opt, .empty, .markdown-help, .filter-box { color: var(--ink); }
 
 /* Page-level headings/intros sit on navy — keep them light. */
 h1, h2 { color: #e6ecf3; }
-.guide-view h1, .guide-view h2, .guide-form .panel h2 { color: var(--ink); }
+.guide-view h1, .guide-view h2, .panel h2 { color: var(--ink); }
 
 /* Header / masthead */
 .site-header { border: 1px solid var(--brand-dark); border-bottom: 2px solid var(--gold); background: var(--header); }
@@ -198,12 +198,12 @@ button.btn:hover { background: var(--brand-dark); }
 .champ-icon-lg { width: 72px; height: 72px; border: 2px solid var(--brand-dark); }
 .champ-cell { display: flex; align-items: center; gap: 8px; }
 
-/* Editor form */
-.guide-form .panel {
+/* Panels — light parchment content blocks used across guide forms, tournaments, etc. */
+.panel {
     background: var(--panel); border: 1px solid var(--line); padding: 12px 14px; margin: 14px 0;
 }
-.guide-form .panel h2 { margin: 0 0 10px; font-size: 15px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
-.guide-form .panel h2 small { color: var(--muted); font-weight: normal; }
+.panel h2 { margin: 0 0 10px; font-size: 15px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.panel h2 small { color: var(--muted); font-weight: normal; }
 .field { margin: 10px 0; }
 .field label { display: block; font-weight: bold; margin-bottom: 4px; }
 .compose-title { display: flex; align-items: center; gap: 10px; }
@@ -707,4 +707,57 @@ body { overflow-x: hidden; }
        labels; drop them and let the tooltip (title attr) carry the date. */
     .stats-bar-label { display: none; }
 }
+
+/* ---- Tournaments ---- */
+
+.forum-table-wrap { overflow-x: auto; }
+
+.tourney-status {
+    display: inline-block; padding: 3px 10px; font-size: 11px; font-weight: bold;
+    text-transform: uppercase; letter-spacing: .5px; border-radius: 2px;
+    background: #e2e9f1; color: var(--brand-dark);
+}
+.status-inprogress { background: var(--gold); color: var(--brand-dark); }
+.status-completed { background: var(--brand-dark); color: var(--gold); }
+
+.prize-line { color: #c6d2e0; }
+.prize-disclaimer {
+    background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold-dark);
+    padding: 10px 14px; margin: 8px 0 16px; font-size: 13px; color: var(--ink); line-height: 1.6;
+}
+
+.final-standings { text-align: center; }
+.podium { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 10px; }
+.podium-spot {
+    background: var(--row-alt); border: 1px solid var(--line); border-radius: 4px;
+    padding: 14px 20px; min-width: 140px;
+}
+.podium-1 { border-color: var(--gold-dark); background: #f5e6b8; }
+.podium-label { font-weight: bold; text-transform: uppercase; font-size: 12px; color: var(--brand-dark); margin-bottom: 6px; }
+.podium-team { font-size: 15px; color: var(--ink); }
+
+.organizer-panel { background: var(--row-alt); color: var(--ink); }
+.organizer-panel h3 { color: var(--ink); }
+.seed-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; max-width: 320px; padding: 4px 0; }
+.seed-row input[type=number] { width: 70px; margin-bottom: 0; }
+
+.group-block { margin-bottom: 22px; }
+.group-block h3 { font-size: 14px; color: var(--brand-dark); margin: 0 0 6px; }
+.standings-row.advancing td { background: #f5e6b8; }
+.group-matches { margin-top: 8px; }
+.match-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.match-winner { color: var(--brand-dark); font-weight: bold; }
+.inline-form { display: inline-flex; gap: 6px; }
+
+.bracket-side-label { font-size: 12px; text-transform: uppercase; color: var(--brand-dark); font-weight: bold; margin: 14px 0 6px; }
+.bracket { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 8px; }
+.bracket-round { display: flex; flex-direction: column; justify-content: space-around; gap: 14px; min-width: 190px; }
+.bracket-round-label { font-size: 11px; text-transform: uppercase; color: var(--muted); text-align: center; }
+.bracket-match { background: var(--panel); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.bracket-slot {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 6px 10px; font-size: 13px; color: var(--ink); border-bottom: 1px solid var(--line);
+}
+.bracket-slot:last-child { border-bottom: none; }
+.bracket-slot.winner { border-left: 3px solid var(--gold); font-weight: bold; background: #f5e6b8; }
 

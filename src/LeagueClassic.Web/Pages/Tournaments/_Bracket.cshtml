@@ -1,0 +1,51 @@
+@model LeagueClassic.Web.Pages.Tournaments.BracketVm
+@using LeagueClassic.Web.Data
+@{
+    var sides = Model.Matches
+        .Select(m => m.BracketSide!.Value)
+        .Distinct()
+        .OrderBy(s => s == BracketSide.Winners ? 0 : s == BracketSide.Losers ? 1 : 2)
+        .ToList();
+}
+@foreach (var side in sides)
+{
+    var sideMatches = Model.Matches.Where(m => m.BracketSide == side).ToList();
+    var rounds = sideMatches.Select(m => m.Round!.Value).Distinct().OrderBy(r => r).ToList();
+    var maxRound = rounds.Count > 0 ? rounds.Max() : 0;
+    <div class="bracket-side-label">@side</div>
+    <div class="bracket">
+        @foreach (var r in rounds)
+        {
+            <div class="bracket-round">
+                <div class="bracket-round-label">
+                    @(side == BracketSide.GrandFinal ? "Grand Final" : r == maxRound ? "Final" : r == maxRound - 1 ? "Semifinals" : "Round " + r)
+                </div>
+                @foreach (var m in sideMatches.Where(x => x.Round == r).OrderBy(x => x.SlotIndex))
+                {
+                    <div class="bracket-match">
+                        <div class="bracket-slot @(m.WinnerTeamId.HasValue && m.WinnerTeamId == m.TeamAId ? "winner" : "")">
+                            <span>@(m.TeamAIsBye ? "(bye)" : m.TeamA?.Name ?? "TBD")</span>
+                            @if (Model.CanManage && m.Status == MatchStatus.Ready && m.TeamA is not null)
+                            {
+                                <form method="post" asp-page-handler="RecordMatchResult" asp-route-slug="@Model.TournamentSlug" class="inline-form">
+                                    <input type="hidden" name="matchId" value="@m.Id" />
+                                    <button type="submit" name="winnerTeamId" value="@m.TeamAId" class="mini-btn">Winner</button>
+                                </form>
+                            }
+                        </div>
+                        <div class="bracket-slot @(m.WinnerTeamId.HasValue && m.WinnerTeamId == m.TeamBId ? "winner" : "")">
+                            <span>@(m.TeamBIsBye ? "(bye)" : m.TeamB?.Name ?? "TBD")</span>
+                            @if (Model.CanManage && m.Status == MatchStatus.Ready && m.TeamB is not null)
+                            {
+                                <form method="post" asp-page-handler="RecordMatchResult" asp-route-slug="@Model.TournamentSlug" class="inline-form">
+                                    <input type="hidden" name="matchId" value="@m.Id" />
+                                    <button type="submit" name="winnerTeamId" value="@m.TeamBId" class="mini-btn">Winner</button>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+}

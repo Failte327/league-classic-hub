@@ -1,0 +1,41 @@
+@page "{slug}"
+@model LeagueClassic.Web.Pages.Tournaments.RegisterModel
+@{
+    ViewData["Title"] = "Register — " + Model.Tournament.Name;
+}
+
+<div class="page-head">
+    <h1>Register for @Model.Tournament.Name</h1>
+</div>
+
+@if (Model.Tournament.PrizeType == LeagueClassic.Web.Data.PrizeType.Cash)
+{
+    <partial name="_PrizeDisclaimer" />
+}
+
+<form method="post" class="guide-form" id="register-form">
+    <div asp-validation-summary="All" class="validation-summary"></div>
+    <input type="hidden" asp-for="Input.PlayerNamesCsv" id="player-names-csv" />
+
+    <section class="panel">
+        <div class="field">
+            <label asp-for="Input.TeamName">Team Name</label>
+            <input asp-for="Input.TeamName" placeholder="e.g. Baron Barons" maxlength="60" />
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Players</h2>
+        <p class="hint">Player names aren't verified — placeholders are fine if your roster is still coming together.</p>
+        <div id="player-rows"></div>
+        <button type="button" id="add-player-row" class="btn-plain">+ Add Player</button>
+    </section>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-primary">Register Team</button>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="~/js/tournament-register.js" asp-append-version="true"></script>
+}

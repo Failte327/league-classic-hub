@@ -1,0 +1,155 @@
+@page "{slug}"
+@using LeagueClassic.Web.Data
+@using Microsoft.AspNetCore.Identity
+@model LeagueClassic.Web.Pages.Tournaments.DetailsModel
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    ViewData["Title"] = Model.Tournament.Name;
+    var t = Model.Tournament;
+    var isRoundRobin = t.Format is TournamentFormat.RoundRobinToSingleElim or TournamentFormat.RoundRobinToDoubleElim;
+    var bracketMatches = Model.Matches.Where(m => m.Stage == MatchStage.Bracket).ToList();
+    var groupMatches = Model.Matches.Where(m => m.Stage == MatchStage.GroupStage).ToList();
+    var bracketGenerated = bracketMatches.Count > 0;
+}
+
+<div class="page-head">
+    <h1>@t.Name</h1>
+    <span class="tourney-status status-@t.Status.ToString().ToLowerInvariant()">@t.Status.DisplayName()</span>
+</div>
+
+<p class="muted">
+    @t.Format.DisplayName() &middot; organized by @t.Organizer.Display("staff") &middot; @t.ScheduledAt.ToString("MMM d, yyyy")
+    &middot; @t.RegisteredTeamCount / @t.MaxTeams teams
+</p>
+
+@if (t.PrizeType == PrizeType.Cash)
+{
+    <p class="prize-line"><strong>Prize:</strong> @t.PrizeAmount @t.PrizeCurrency</p>
+    <partial name="_PrizeDisclaimer" />
+}
+else
+{
+    <p class="prize-line"><strong>Prize:</strong> Bragging rights</p>
+}
+
+<div asp-validation-summary="All" class="validation-summary"></div>
+
+@if (t.Status == TournamentStatus.Completed)
+{
+    <div class="panel final-standings">
+        <h2>Final Standings</h2>
+        <div class="podium">
+            @foreach (var (rank, label) in new[] { (1, "1st"), (2, "2nd"), (3, "3rd") })
+            {
+                var teams = t.Teams.Where(x => x.FinalRank == rank).ToList();
+                if (teams.Count > 0)
+                {
+                    <div class="podium-spot podium-@rank">
+                        <div class="podium-label">@label</div>
+                        @foreach (var team in teams)
+                        {
+                            <div class="podium-team">@team.Name</div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (t.Status == TournamentStatus.RegistrationOpen && SignInManager.IsSignedIn(User) && !Model.AlreadyRegistered && t.RegisteredTeamCount < t.MaxTeams)
+{
+    <p><a class="btn-primary" asp-page="/Tournaments/Register" asp-route-slug="@t.Slug">Register a Team</a></p>
+}
+@if (Model.AlreadyRegistered)
+{
+    <p class="muted">You're registered for this tournament.</p>
+}
+
+@if (Model.CanManage)
+{
+    <section class="panel organizer-panel">
+        <h2>Organizer Controls</h2>
+
+        @if (t.Status == TournamentStatus.RegistrationOpen)
+        {
+            @if (t.SeedingMode == SeedingMode.Chosen && !isRoundRobin)
+            {
+                <form method="post" asp-page-handler="AssignSeeds" asp-route-slug="@t.Slug">
+                    <h3>Assign Seeds</h3>
+                    @foreach (var team in t.Teams.OrderBy(x => x.Seed ?? 999).ThenBy(x => x.Name))
+                    {
+                        <div class="seed-row">
+                            <span>@team.Name</span>
+                            <input type="number" name="Seeds[@team.Id]" value="@team.Seed" min="1" max="@t.MaxTeams" />
+                        </div>
+                    }
+                    <button type="submit" class="btn-plain">Save Seeds</button>
+                </form>
+            }
+            <form method="post" asp-page-handler="Start" asp-route-slug="@t.Slug"
+                  onsubmit="return confirm('Start the tournament? Registration will close.');">
+                <button type="submit" class="btn-primary">Start Tournament</button>
+            </form>
+        }
+
+        @if (isRoundRobin && groupMatches.Count > 0 && !bracketGenerated && t.Groups.Count > 0 && t.Groups.All(g => g.IsConcluded))
+        {
+            <form method="post" asp-page-handler="GenerateBracket" asp-route-slug="@t.Slug">
+                <button type="submit" class="btn-primary">Generate Playoff Bracket</button>
+            </form>
+        }
+    </section>
+}
+
+@if (isRoundRobin && t.Groups.Count > 0)
+{
+    <section class="panel">
+        <h2>Groups</h2>
+        @foreach (var group in t.Groups.OrderBy(g => g.Index))
+        {
+            var order = Model.GroupStandings.TryGetValue(group.Id, out var live)
+                ? live
+                : group.Teams.OrderBy(x => x.GroupRank ?? 999).ToList();
+            <partial name="_GroupStandings" model="@(new GroupStandingsVm(t.Slug, group, groupMatches.Where(m => m.GroupId == group.Id).ToList(), order, t.AdvancePerGroup ?? 0, Model.CanManage))" />
+        }
+    </section>
+}
+
+@if (bracketGenerated)
+{
+    <section class="panel">
+        <h2>Bracket</h2>
+        <partial name="_Bracket" model="@(new BracketVm(t.Slug, bracketMatches, Model.CanManage))" />
+    </section>
+}
+
+<section class="panel">
+    <h2>Registered Teams (@t.Teams.Count)</h2>
+    @if (t.Teams.Count == 0)
+    {
+        <div class="empty">No teams registered yet.</div>
+    }
+    else
+    {
+        <div class="posts">
+            @foreach (var team in t.Teams.OrderBy(x => x.RegisteredAt))
+            {
+                <article class="post">
+                    <div class="post-author">
+                        <span class="pa-name">@team.Name@(team.Seed.HasValue ? $" (seed {team.Seed})" : "")</span>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <a class="report-link" asp-page="/Report" asp-route-type="Team" asp-route-id="@team.Id">&#9873; Report</a>
+                        }
+                    </div>
+                    <div class="post-body">
+                        @string.Join(", ", team.Players.OrderBy(p => p.Sort).Select(p => p.Name))
+                    </div>
+                </article>
+            }
+        </div>
+    }
+</section>
+
+<p><a asp-page="/Tournaments/Index">&larr; All tournaments</a></p>

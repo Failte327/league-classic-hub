@@ -25,6 +25,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Report> Reports => Set<Report>();
     public DbSet<Vote> Votes => Set<Vote>();
     public DbSet<PageView> PageViews => Set<PageView>();
+    public DbSet<Tournament> Tournaments => Set<Tournament>();
+    public DbSet<TournamentGroup> TournamentGroups => Set<TournamentGroup>();
+    public DbSet<TournamentTeam> TournamentTeams => Set<TournamentTeam>();
+    public DbSet<TournamentPlayer> TournamentPlayers => Set<TournamentPlayer>();
+    public DbSet<TournamentMatch> TournamentMatches => Set<TournamentMatch>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -208,6 +213,92 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         {
             e.HasIndex(v => v.OccurredAt);
             e.Property(v => v.Path).HasMaxLength(300);
+        });
+
+        builder.Entity<Tournament>(e =>
+        {
+            e.HasIndex(t => t.Slug).IsUnique();
+            e.HasIndex(t => new { t.Status, t.ScheduledAt });
+            e.Property(t => t.Name).HasMaxLength(120);
+            e.Property(t => t.Slug).HasMaxLength(140);
+            e.Property(t => t.PrizeCurrency).HasMaxLength(20);
+            e.Property(t => t.PrizeAmount).HasPrecision(12, 2);
+            e.HasOne(t => t.Organizer)
+                .WithMany()
+                .HasForeignKey(t => t.OrganizerId)
+                .OnDelete(DeleteBehavior.SetNull);
+        });
+
+        builder.Entity<TournamentGroup>(e =>
+        {
+            e.HasIndex(g => new { g.TournamentId, g.Index }).IsUnique();
+            e.HasOne(g => g.Tournament)
+                .WithMany(t => t.Groups)
+                .HasForeignKey(g => g.TournamentId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        builder.Entity<TournamentTeam>(e =>
+        {
+            e.HasIndex(t => t.TournamentId);
+            e.HasIndex(t => new { t.TournamentId, t.Seed });
+            e.Property(t => t.Name).HasMaxLength(60);
+            e.HasOne(t => t.Tournament)
+                .WithMany(tn => tn.Teams)
+                .HasForeignKey(t => t.TournamentId)
+                .OnDelete(DeleteBehavior.Cascade);
+            e.HasOne(t => t.Captain)
+                .WithMany()
+                .HasForeignKey(t => t.CaptainId)
+                .OnDelete(DeleteBehavior.SetNull);
+            e.HasOne(t => t.Group)
+                .WithMany(g => g.Teams)
+                .HasForeignKey(t => t.GroupId)
+                .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        builder.Entity<TournamentPlayer>(e =>
+        {
+            e.HasIndex(p => p.TeamId);
+            e.Property(p => p.Name).HasMaxLength(60);
+            e.HasOne(p => p.Team)
+                .WithMany(t => t.Players)
+                .HasForeignKey(p => p.TeamId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        builder.Entity<TournamentMatch>(e =>
+        {
+            e.HasIndex(m => new { m.TournamentId, m.Stage, m.BracketSide, m.Round, m.SlotIndex });
+            e.HasIndex(m => new { m.TournamentId, m.GroupId, m.GroupRound });
+            e.HasOne(m => m.Tournament)
+                .WithMany(t => t.Matches)
+                .HasForeignKey(m => m.TournamentId)
+                .OnDelete(DeleteBehavior.Cascade);
+            e.HasOne(m => m.Group)
+                .WithMany()
+                .HasForeignKey(m => m.GroupId)
+                .OnDelete(DeleteBehavior.Restrict);
+            e.HasOne(m => m.TeamA)
+                .WithMany()
+                .HasForeignKey(m => m.TeamAId)
+                .OnDelete(DeleteBehavior.Restrict);
+            e.HasOne(m => m.TeamB)
+                .WithMany()
+                .HasForeignKey(m => m.TeamBId)
+                .OnDelete(DeleteBehavior.Restrict);
+            e.HasOne(m => m.WinnerTeam)
+                .WithMany()
+                .HasForeignKey(m => m.WinnerTeamId)
+                .OnDelete(DeleteBehavior.Restrict);
+            e.HasOne(m => m.NextMatch)
+                .WithMany()
+                .HasForeignKey(m => m.NextMatchId)
+                .OnDelete(DeleteBehavior.Restrict);
+            e.HasOne(m => m.LoserNextMatch)
+                .WithMany()
+                .HasForeignKey(m => m.LoserNextMatchId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
     }
 }

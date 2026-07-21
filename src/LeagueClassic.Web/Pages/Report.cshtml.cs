@@ -75,6 +75,8 @@ public class ReportModel : PageModel
         ReportTargetType.Guide => await _db.Guides.Where(g => g.Id == id).Select(g => "guide: " + g.Title).FirstOrDefaultAsync(),
         ReportTargetType.Post => await _db.Posts.Where(p => p.Id == id)
             .Select(p => "post by " + (p.Author!.DisplayName ?? "a summoner")).FirstOrDefaultAsync(),
+        ReportTargetType.Team => await _db.TournamentTeams.Where(t => t.Id == id)
+            .Select(t => "tournament team: " + t.Name).FirstOrDefaultAsync(),
         _ => null,
     };
 
@@ -84,6 +86,12 @@ public class ReportModel : PageModel
         {
             var slug = await _db.Guides.Where(g => g.Id == id).Select(g => g.Slug).FirstOrDefaultAsync();
             return RedirectToPage("/Guides/Details", new { slug });
+        }
+        if (type == ReportTargetType.Team)
+        {
+            var slug = await _db.TournamentTeams.Where(t => t.Id == id)
+                .Select(t => t.Tournament!.Slug).FirstOrDefaultAsync();
+            return RedirectToPage("/Tournaments/Details", new { slug });
         }
         var thread = await _db.Posts.Where(p => p.Id == id)
             .Select(p => new { p.ThreadId, p.Thread!.Slug }).FirstOrDefaultAsync();

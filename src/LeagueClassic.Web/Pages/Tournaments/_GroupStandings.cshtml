@@ -1,0 +1,67 @@
+@model LeagueClassic.Web.Pages.Tournaments.GroupStandingsVm
+@using LeagueClassic.Web.Data
+@{
+    var group = Model.Group;
+    var name = "Group " + (char)('A' + group.Index);
+}
+<div class="group-block">
+    <h3>@name @(group.IsConcluded ? "(final)" : "")</h3>
+    <div class="forum-table-wrap">
+        <table class="forum-table standings-table">
+            <thead><tr><th>#</th><th>Team</th><th>W</th><th>L</th></tr></thead>
+            <tbody>
+                @{ var rank = 1; }
+                @foreach (var team in Model.StandingsOrder)
+                {
+                    <tr class="standings-row @(rank <= Model.AdvancePerGroup ? "advancing" : "")">
+                        <td>@(group.IsConcluded ? team.GroupRank?.ToString() : rank.ToString())</td>
+                        <td>@team.Name</td>
+                        <td>@team.Wins</td>
+                        <td>@team.Losses</td>
+                    </tr>
+                    rank++;
+                }
+            </tbody>
+        </table>
+    </div>
+
+    @if (Model.Matches.Count > 0)
+    {
+        <div class="group-matches">
+            @foreach (var m in Model.Matches.OrderBy(x => x.GroupRound))
+            {
+                <div class="match-row">
+                    <span>R@(m.GroupRound): @m.TeamA?.Name vs @m.TeamB?.Name</span>
+                    @if (m.Status == MatchStatus.Completed)
+                    {
+                        <span class="match-winner">Winner: @m.WinnerTeam?.Name</span>
+                    }
+                    else if (Model.CanManage)
+                    {
+                        <form method="post" asp-page-handler="RecordMatchResult" asp-route-slug="@Model.TournamentSlug" class="inline-form">
+                            <input type="hidden" name="matchId" value="@m.Id" />
+                            <button type="submit" name="winnerTeamId" value="@m.TeamAId" class="mini-btn">@m.TeamA?.Name wins</button>
+                            <button type="submit" name="winnerTeamId" value="@m.TeamBId" class="mini-btn">@m.TeamB?.Name wins</button>
+                        </form>
+                    }
+                </div>
+            }
+        </div>
+    }
+
+    @if (!group.IsConcluded && Model.CanManage)
+    {
+        <form method="post" asp-page-handler="ConfirmGroupStandings" asp-route-slug="@Model.TournamentSlug" asp-route-groupId="@group.Id">
+            <p class="hint">Ties beyond two teams need a manual rank below (lower number = higher place).</p>
+            @{ var r = 1; }
+            @foreach (var team in Model.StandingsOrder)
+            {
+                <div class="seed-row">
+                    <span>@team.Name</span>
+                    <input type="number" name="GroupRanks[@team.Id]" value="@(r++)" min="1" max="@Model.StandingsOrder.Count" />
+                </div>
+            }
+            <button type="submit" class="btn-plain">Confirm Standings</button>
+        </form>
+    }
+</div>

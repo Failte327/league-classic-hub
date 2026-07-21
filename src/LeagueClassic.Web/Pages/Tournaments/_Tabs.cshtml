@@ -1,0 +1,5 @@
+@model string
+<nav class="ref-tabs">
+    <a asp-page="/Tournaments/Index" asp-route-tab="upcoming" class="@(Model == "upcoming" ? "active" : "")">Upcoming Tournaments</a>
+    <a asp-page="/Tournaments/Index" asp-route-tab="past" class="@(Model == "past" ? "active" : "")">Past Tournaments</a>
+</nav>

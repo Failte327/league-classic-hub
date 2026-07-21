@@ -1,0 +1,65 @@
+@page
+@using LeagueClassic.Web.Data
+@using Microsoft.AspNetCore.Identity
+@model LeagueClassic.Web.Pages.Tournaments.IndexModel
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    ViewData["Title"] = "Tournaments";
+}
+
+<div class="page-head">
+    <h1>Tournaments</h1>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <a class="btn-primary" asp-page="/Tournaments/Create">+ New Tournament</a>
+    }
+</div>
+
+<partial name="_Tabs" model="Model.Tab" />
+
+@if (Model.Tournaments.Count == 0)
+{
+    <div class="empty">No @(Model.Tab == "past" ? "past" : "upcoming") tournaments yet.</div>
+}
+else
+{
+    <div class="forum-table-wrap">
+        <table class="forum-table">
+            <thead>
+                <tr>
+                    <th>Tournament</th>
+                    <th>Format</th>
+                    <th>Teams</th>
+                    <th>@(Model.Tab == "past" ? "Result" : "Date")</th>
+                    @if (Model.Tab != "past")
+                    {
+                        <th>Status</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var t in Model.Tournaments)
+                {
+                    <tr>
+                        <td>
+                            <a class="board-name" asp-page="/Tournaments/Details" asp-route-slug="@t.Slug">@t.Name</a>
+                            <div class="board-desc">by @t.Organizer.Display("staff")</div>
+                        </td>
+                        <td>@t.Format.DisplayName()</td>
+                        <td class="stat">@t.RegisteredTeamCount / @t.MaxTeams</td>
+                        @if (Model.Tab == "past")
+                        {
+                            var first = t.Teams.FirstOrDefault(x => x.FinalRank == 1);
+                            <td><text>@(first?.Name ?? "—") &mdash; 1st</text></td>
+                        }
+                        else
+                        {
+                            <td>@t.ScheduledAt.ToString("MMM d, yyyy")</td>
+                            <td><span class="tourney-status status-@t.Status.ToString().ToLowerInvariant()">@t.Status.DisplayName()</span></td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

@@ -38,6 +38,10 @@ else
                         {
                             <a asp-page="/Forums/Thread" asp-route-id="@g.ThreadId" asp-route-slug="@g.Slug">@g.Title</a>
                         }
+                        else if (!g.Missing && g.Type == ReportTargetType.Team)
+                        {
+                            <a asp-page="/Tournaments/Details" asp-route-slug="@g.Slug">@g.Title</a>
+                        }
                         else
                         {
                             @g.Title
