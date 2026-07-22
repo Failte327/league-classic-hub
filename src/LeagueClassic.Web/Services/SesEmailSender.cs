@@ -12,13 +12,19 @@ namespace LeagueClassic.Web.Services;
 public class SesEmailSender : IEmailSender
 {
     private readonly IConfiguration _config;
+    private readonly ILogger<SesEmailSender> _logger;
 
-    public SesEmailSender(IConfiguration config) => _config = config;
+    public SesEmailSender(IConfiguration config, ILogger<SesEmailSender> logger)
+    {
+        _config = config;
+        _logger = logger;
+    }
 
     public async Task SendEmailAsync(string email, string subject, string htmlMessage)
     {
         var section = _config.GetSection("Email");
         var host = section["Host"] ?? throw new InvalidOperationException("Email:Host is not configured.");
+        var port = int.Parse(section["Port"] ?? "587");
         var fromAddress = section["FromAddress"] ?? throw new InvalidOperationException("Email:FromAddress is not configured.");
         var smtpUsername = section["SmtpUsername"] ?? throw new InvalidOperationException("Email:SmtpUsername is not configured.");
         var smtpPassword = section["SmtpPassword"] ?? throw new InvalidOperationException("Email:SmtpPassword is not configured.");
@@ -30,10 +36,50 @@ public class SesEmailSender : IEmailSender
         message.Body = new TextPart("html") { Text = htmlMessage };
 
         using var client = new SmtpClient();
-        await client.ConnectAsync(host, int.Parse(section["Port"] ?? "587"), SecureSocketOptions.StartTls);
-        await client.AuthenticateAsync(smtpUsername, smtpPassword);
-        await client.SendAsync(message);
-        await client.DisconnectAsync(true);
+
+        // Split into per-stage try/catch — SES SMTP failures (bad creds, a
+        // sender identity that isn't verified yet, the account still being in
+        // the SES sandbox, a network/firewall issue reaching the host) throw
+        // at different stages and look identical to the caller ("send
+        // failed") unless we log which stage actually blew up and why.
+        try
+        {
+            _logger.LogInformation(
+                "Connecting to SMTP {Host}:{Port} to send {Subject} to {Email}", host, port, subject, email);
+            await client.ConnectAsync(host, port, SecureSocketOptions.StartTls);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "SMTP connect to {Host}:{Port} failed", host, port);
+            throw;
+        }
+
+        try
+        {
+            await client.AuthenticateAsync(smtpUsername, smtpPassword);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "SMTP authentication failed for user {SmtpUsername} against {Host}", smtpUsername, host);
+            throw;
+        }
+
+        try
+        {
+            await client.SendAsync(message);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(
+                ex, "SMTP send failed: {Subject} to {Email} from {FromAddress}", subject, email, fromAddress);
+            throw;
+        }
+        finally
+        {
+            await client.DisconnectAsync(true);
+        }
+
+        _logger.LogInformation("Sent {Subject} to {Email}", subject, email);
     }
 }
 
