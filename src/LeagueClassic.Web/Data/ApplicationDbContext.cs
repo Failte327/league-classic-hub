@@ -24,7 +24,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<GuideRune> GuideRunes => Set<GuideRune>();
     public DbSet<Report> Reports => Set<Report>();
     public DbSet<Vote> Votes => Set<Vote>();
-    public DbSet<PageView> PageViews => Set<PageView>();
+    public DbSet<LegacyPageView> LegacyPageViews => Set<LegacyPageView>();
     public DbSet<Tournament> Tournaments => Set<Tournament>();
     public DbSet<TournamentGroup> TournamentGroups => Set<TournamentGroup>();
     public DbSet<TournamentTeam> TournamentTeams => Set<TournamentTeam>();
@@ -209,8 +209,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 .OnDelete(DeleteBehavior.Cascade);
         });
 
-        builder.Entity<PageView>(e =>
+        builder.Entity<LegacyPageView>(e =>
         {
+            e.ToTable("PageViewsLegacy");
             e.HasIndex(v => v.OccurredAt);
             e.Property(v => v.Path).HasMaxLength(300);
         });

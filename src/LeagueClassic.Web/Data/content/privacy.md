@@ -14,29 +14,31 @@ League Classic Archive ("we," "us") runs this site at leagueclassicarchive.net. 
 
 **Technical data.** Like any web service, our hosting infrastructure processes IP addresses to serve pages and to rate-limit posting (this is how we blunt spam floods) — this isn't stored in our database, though it may appear transiently in standard server logs.
 
-**Visit counts.** We record a basic hit counter for pages on the site: a timestamp and the page path, so we can see how much traffic the site gets. We don't store your IP address, browser/device info, or any cookie or identifier alongside it — there's nothing in that record that ties a visit back to you or lets us tell one visitor from another. It isn't shared with any third party or ad network.
+**Visit counts.** We use [Plausible Analytics](https://plausible.io) to see how much traffic the site gets and which pages are popular. Plausible doesn't use cookies, doesn't collect or store any personal data, and can't identify or follow you across visits or between sites — it only reports aggregate numbers (like "this page got 40 views today"). We also run Google-served ads on the site (see below), which involve Google's own ad-related data practices; we don't otherwise run additional third-party trackers ourselves.
 
 ## What we don't do
 
-- We don't run ads or third-party trackers on this site, and we don't share any data with ad networks or analytics vendors.
+- We don't share your account information or content with ad networks or analytics vendors.
 - We don't sell or rent your information to anyone, ever.
 - We don't email you anything except account-related messages (like password resets). No newsletters, no marketing.
 
 ## Cookies
 
-We use two kinds of cookies, both strictly functional:
+We set two cookies ourselves, both strictly functional:
 
 - An **authentication cookie**, so you stay logged in between visits.
 - An **anti-forgery cookie**, a security measure that protects your account from a class of attack called cross-site request forgery.
 
-Neither is used for tracking or advertising. You can block cookies in your browser, but you won't be able to log in or post if you do.
+Neither of ours is used for tracking or advertising, and you can block cookies in your browser, though you won't be able to log in or post if you do. Google AdSense may set additional cookies of its own for ad delivery — those are governed by Google's privacy policy, not this one.
 
 ## Who else sees this data
 
 - **Amazon Web Services** hosts our server and database.
 - **Amazon SES** delivers account emails (like password resets) on our behalf.
+- **Plausible Analytics** processes anonymous, aggregate traffic counts for us, as described above.
+- **Google AdSense** serves ads on the site and may set its own cookies/identifiers under Google's own privacy policy, separate from ours.
 
-Neither is permitted to use your data for their own purposes — they process it only to provide the hosting/email service to us.
+The hosting and email providers aren't permitted to use your data for their own purposes — they process it only to provide that service to us.
 
 ## How long we keep it
 

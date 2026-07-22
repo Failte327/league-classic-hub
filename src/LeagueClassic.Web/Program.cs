@@ -3,7 +3,6 @@ using LeagueClassic.Web.Data;
 using Microsoft.AspNetCore.DataProtection;
 using LeagueClassic.Web.Services;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
@@ -71,7 +70,6 @@ builder.Services.AddSingleton<MarkdownRenderer>();
 builder.Services.AddSingleton<ContentModerationService>();
 builder.Services.AddScoped<GuideEditorService>();
 builder.Services.AddScoped<VotingService>();
-builder.Services.AddScoped<VisitRecorder>();
 builder.Services.AddSingleton<TournamentBracketService>();
 builder.Services.AddScoped<TournamentService>();
 
@@ -117,27 +115,40 @@ app.UseAuthorization();
 
 app.UseRateLimiter();
 
-// Super-lightweight visitor counter: one row per real page GET. Placed
-// before UseOutputCache so cached hits still get counted, and gated on
-// PageActionDescriptor so it only fires for actual Razor Pages (not static
-// assets, the guide-preview endpoint, 404s, etc).
-app.Use(async (context, next) =>
-{
-    if (HttpMethods.IsGet(context.Request.Method)
-        && context.GetEndpoint()?.Metadata.GetMetadata<PageActionDescriptor>() is not null)
-    {
-        var recorder = context.RequestServices.GetRequiredService<VisitRecorder>();
-        await recorder.RecordAsync(context.Request.Path.Value ?? "/");
-    }
-
-    await next();
-});
-
 app.UseOutputCache();
 
 app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();
+
+// Sitemap for search engines — static top-level pages plus every published
+// guide, champion, and tournament. Regenerated per-request; traffic here is
+// low enough that querying fresh each time isn't worth caching.
+app.MapGet("/sitemap.xml", async (ApplicationDbContext db) =>
+{
+    const string siteUrl = "https://leagueclassicarchive.net";
+    var urls = new List<string>
+    {
+        siteUrl,
+        $"{siteUrl}/Guides",
+        $"{siteUrl}/Champions",
+        $"{siteUrl}/Forums",
+        $"{siteUrl}/Resources/Items",
+        $"{siteUrl}/Tournaments",
+        $"{siteUrl}/Rules",
+    };
+
+    urls.AddRange(await db.Champions.Select(c => $"{siteUrl}/Champions/Details/{c.Slug}").ToListAsync());
+    urls.AddRange(await db.Guides
+        .Where(g => g.Status == GuideStatus.Published)
+        .Select(g => $"{siteUrl}/Guides/Details/{g.Slug}")
+        .ToListAsync());
+    urls.AddRange(await db.Tournaments.Select(t => $"{siteUrl}/Tournaments/Details/{t.Slug}").ToListAsync());
+
+    var body = string.Concat(urls.Select(u => $"<url><loc>{u}</loc></url>"));
+    var xml = $"""<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{body}</urlset>""";
+    return Results.Text(xml, "application/xml");
+});
 
 // Live markdown preview for the guide editor — renders through the same
 // sanitizer as the real page, so the preview matches what gets published.

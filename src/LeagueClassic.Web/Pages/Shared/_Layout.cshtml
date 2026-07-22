@@ -1,13 +1,40 @@
 @inject SignInManager<ApplicationUser> SignInManager
+@{
+    // Central spot for the site-identity metadata every page needs — canonical
+    // URL, description, and social preview tags. Individual pages can override
+    // the description via ViewData["Description"] before this layout renders.
+    const string SiteUrl = "https://leagueclassicarchive.net";
+    var pageTitle = ViewData["Title"] as string ?? "League Classic Archive";
+    var description = ViewData["Description"] as string
+        ?? "Guides, champion info, forums, and community tournaments for League Classic — Riot's legacy throwback mode.";
+    var canonicalUrl = SiteUrl + Context.Request.Path;
+    var ogImage = SiteUrl + "/assets/brand/league-classic-logo.png";
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - League Classic Archive</title>
+    <title>@pageTitle - League Classic Archive</title>
+    <meta name="description" content="@description" />
+    <link rel="canonical" href="@canonicalUrl" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="League Classic Archive" />
+    <meta property="og:title" content="@pageTitle - League Classic Archive" />
+    <meta property="og:description" content="@description" />
+    <meta property="og:url" content="@canonicalUrl" />
+    <meta property="og:image" content="@ogImage" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@pageTitle - League Classic Archive" />
+    <meta name="twitter:description" content="@description" />
+    <meta name="twitter:image" content="@ogImage" />
+
     <link rel="stylesheet" href="~/css/classic.css" asp-append-version="true" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9565092722653347"
             crossorigin="anonymous"></script>
+    <script defer data-domain="leagueclassicarchive.net" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
     <div class="site-wrap">

@@ -36,13 +36,13 @@ public class IndexModel : PageModel
         var windowStartDate = todayUtc.AddDays(-13); // 14-day window including today
         var windowStart = new DateTimeOffset(windowStartDate, TimeSpan.Zero);
 
-        TotalViews = await _db.PageViews.CountAsync();
+        TotalViews = await _db.LegacyPageViews.CountAsync();
 
         // One query for the whole 14-day window; both the daily breakdown and
         // the last-7-days figures are derived from it in memory. Fine at this
         // site's traffic volume and avoids fighting the Npgsql date-grouping
         // translator.
-        var recent = await _db.PageViews
+        var recent = await _db.LegacyPageViews
             .Where(v => v.OccurredAt >= windowStart)
             .Select(v => new { v.OccurredAt, v.Path })
             .ToListAsync();
