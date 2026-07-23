@@ -16,14 +16,16 @@ public class ComposeModel : PageModel
     private readonly UserManager<ApplicationUser> _users;
     private readonly GuideEditorService _editor;
     private readonly ContentModerationService _moderation;
+    private readonly DiscordService _discord;
 
     public ComposeModel(ApplicationDbContext db, UserManager<ApplicationUser> users,
-        GuideEditorService editor, ContentModerationService moderation)
+        GuideEditorService editor, ContentModerationService moderation, DiscordService discord)
     {
         _db = db;
         _users = users;
         _editor = editor;
         _moderation = moderation;
+        _discord = discord;
     }
 
     public GuideEditorVm Vm { get; private set; } = default!;
@@ -69,6 +71,13 @@ public class ComposeModel : PageModel
 
         _db.Guides.Add(guide);
         await _db.SaveChangesAsync();
+
+        if (guide.Status == GuideStatus.Published)
+        {
+            await _discord.NotifyGuidePublishedAsync(
+                guide.Title, champ.Name, User.Identity?.Name ?? "a Summoner",
+                $"https://leagueclassicarchive.net/Guides/Details/{guide.Slug}");
+        }
 
         return RedirectToPage("/Guides/Details", new { slug = guide.Slug });
     }
