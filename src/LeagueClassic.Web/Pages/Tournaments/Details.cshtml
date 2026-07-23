@@ -104,7 +104,7 @@ else
     </div>
 }
 
-@if (t.Status == TournamentStatus.RegistrationOpen && SignInManager.IsSignedIn(User) && !Model.AlreadyRegistered && t.RegisteredTeamCount < t.MaxTeams)
+@if (t.Status == TournamentStatus.RegistrationOpen && !Model.AlreadyRegistered && t.RegisteredTeamCount < t.MaxTeams)
 {
     <p><a class="btn-primary" asp-page="/Tournaments/Register" asp-route-slug="@t.Slug">Register a Team</a></p>
 }
